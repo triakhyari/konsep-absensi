@@ -283,7 +283,7 @@
 
 .demo-table .table th,
 .demo-table .table td {
-  white-space: nowrap; }
+  white-space: normal; }
 
 .demo-animate-media {
   flex-direction: column;

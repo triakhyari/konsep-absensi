@@ -2304,7 +2304,7 @@ progress {
   .table > tbody {
     vertical-align: inherit; }
   .table > thead {
-    vertical-align: bottom; }
+    vertical-align: middle; }
 
 .table-group-divider {
   border-top: 2px solid currentcolor; }
@@ -12625,7 +12625,7 @@ table.dataTable {
   table.dataTable thead .sorting_asc,
   table.dataTable thead .sorting_desc {
     background-image: none;
-    background-color: #eceff3;
+    background-color: transparent;
     position: relative; }
     table.dataTable thead .sorting_asc::after,
     table.dataTable thead .sorting_desc::after {
@@ -12655,7 +12655,7 @@ table.dataTable {
       content: '\EA4E';
       top: 60%; }
   table.dataTable tbody td.sorting_1 {
-    background-color: #f3f4f7; }
+    background-color: transparent; } 
   table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::before, table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::before {
     top: 9.5px;
     left: 7px;
