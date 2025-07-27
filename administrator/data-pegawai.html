@@ -1,668 +1,724 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Twitter -->
+        <meta name="twitter:site" content="@themepixels" />
+        <meta name="twitter:creator" content="@themepixels" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="DashForge" />
+        <meta name="twitter:description" content="Responsive Bootstrap 5 Dashboard Template" />
+        <meta name="twitter:image" content="http://themepixels.me/dashforge/img/dashforge-social.png" />
 
-    <!-- Twitter -->
-    <meta name="twitter:site" content="@themepixels">
-    <meta name="twitter:creator" content="@themepixels">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DashForge">
-    <meta name="twitter:description" content="Responsive Bootstrap 5 Dashboard Template">
-    <meta name="twitter:image" content="http://themepixels.me/dashforge/img/dashforge-social.png">
+        <!-- Facebook -->
+        <meta property="og:url" content="http://themepixels.me/dashforge" />
+        <meta property="og:title" content="DashForge" />
+        <meta property="og:description" content="Responsive Bootstrap 5 Dashboard Template" />
 
-    <!-- Facebook -->
-    <meta property="og:url" content="http://themepixels.me/dashforge">
-    <meta property="og:title" content="DashForge">
-    <meta property="og:description" content="Responsive Bootstrap 5 Dashboard Template">
+        <meta property="og:image" content="http://themepixels.me/dashforge/img/dashforge-social.png" />
+        <meta property="og:image:secure_url" content="http://themepixels.me/dashforge/img/dashforge-social.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
 
-    <meta property="og:image" content="http://themepixels.me/dashforge/img/dashforge-social.png">
-    <meta property="og:image:secure_url" content="http://themepixels.me/dashforge/img/dashforge-social.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="600">
+        <!-- Meta -->
+        <meta name="description" content="Responsive Bootstrap 5 Dashboard Template" />
+        <meta name="author" content="ThemePixels" />
 
-    <!-- Meta -->
-    <meta name="description" content="Responsive Bootstrap 5 Dashboard Template">
-    <meta name="author" content="ThemePixels">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png" />
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+        <title>Data Pegawai | Absensi Online</title>
 
-    <title>Data Pegawai | Absensi Online</title>
+        <!-- vendor css -->
+        <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+        <link href="../lib/typicons.font/src/font/typicons.css" rel="stylesheet" />
+        <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet" />
+        <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet" />
+        <link href="../lib/prismjs/themes/prism-vs.css" rel="stylesheet" />
+        <link href="../lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" />
+        <link href="../lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet" />
+        <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />
 
-    <!-- vendor css -->
-    <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="../lib/typicons.font/src/font/typicons.css" rel="stylesheet">
-    <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet">
-    <link href="../lib/prismjs/themes/prism-vs.css" rel="stylesheet">
-    <link href="../lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="../lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
-    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
+        <!-- DashForge CSS -->
+        <link rel="stylesheet" href="../assets/css/dashforge.css" />
+        <link rel="stylesheet" href="../assets/css/dashforge.dashboard.css" />
 
-    <!-- DashForge CSS -->
-    <link rel="stylesheet" href="../assets/css/dashforge.css">
-    <link rel="stylesheet" href="../assets/css/dashforge.dashboard.css">
-
-    <!-- DashForge CSS -->
-    <link rel="stylesheet" href="../assets/css/dashforge.css">
-    <link rel="stylesheet" href="../assets/css/skin.deepblue.css">
-		<link rel="stylesheet" href="../assets/css/dashforge.demo.css">
-  </head>
-  <body>
-
-    <aside class="aside aside-fixed">
-      <div class="aside-header">
-        <a href="../index.html" class="aside-logo">K-<span>Mob</span></a>
-        <a href="" class="aside-menu-link">
-          <i data-feather="menu"></i>
-          <i data-feather="x"></i>
-        </a>
-      </div>
-      <div class="aside-body">
-        <div class="aside-loggedin">
-          <div class="d-flex align-items-center justify-content-start">
-            <a href="" class="avatar"><img src="../assets/img/profile-default.png" class="rounded-circle" alt=""></a>
-            <div class="aside-alert-link">
-              <a href="../page-signin.html" data-bs-toggle="tooltip" title="Sign out"><i data-feather="log-out"></i></a>
+        <!-- DashForge CSS -->
+        <link rel="stylesheet" href="../assets/css/dashforge.css" />
+        <link rel="stylesheet" href="../assets/css/skin.deepblue.css" />
+        <link rel="stylesheet" href="../assets/css/dashforge.demo.css" />
+    </head>
+    <body>
+        <aside class="aside aside-fixed">
+            <div class="aside-header">
+                <a href="../index.html" class="aside-logo">K-<span>Mob</span></a>
+                <a href="" class="aside-menu-link">
+                    <i data-feather="menu"></i>
+                    <i data-feather="x"></i>
+                </a>
             </div>
-          </div>
-          <div class="aside-loggedin-user">
-            <a href="#loggedinMenu" class="d-flex align-items-center justify-content-between mg-b-2" data-bs-toggle="collapse">
-              <h6 class="tx-semibold mg-b-0">Tri Akhyari Romadhon</h6>
-              <i data-feather="chevron-down"></i>
-            </a>
-            <p class="tx-color-03 tx-12 mg-b-0">Super Administrator</p>
-          </div>
-          <div class="collapse" id="loggedinMenu">
-            <ul class="nav nav-aside mg-b-0">
-              <li class="nav-item"><a href="profile.html" class="nav-link"><i data-feather="user"></i> <span>View Profile</span></a></li>
-              <li class="nav-item"><a href="LogAktivitas.html" class="nav-link"><i data-feather="info"></i> <span>Log Aktivitas</span></a></li>
-              <li class="nav-item"><a href="UbahPassword.html" class="nav-link"><i data-feather="edit"></i> <span>Ubah Password</span></a></li>
-              <li class="nav-item"><a href="../page-signin.html" class="nav-link"><i data-feather="log-out"></i> <span>Sign Out</span></a></li>
-            </ul>
-          </div>
-        </div>
-        <ul class="nav nav-aside">
-          <li class="nav-label">Dashboard</li>
-          <li class="nav-item"><a href="dashboard-one.html" class="nav-link"><i data-feather="activity"></i> <span>Lap Utama Harian </span></a></li>
-          <li class="nav-item"><a href="dashboard-two.html" class="nav-link"><i data-feather="bar-chart-2"></i> <span>Statistik Bulanan</span></a></li>
-          <li class="nav-item"><a href="dashboard-three.html" class="nav-link"><i data-feather="pie-chart"></i> <span>Statistik Pegawai</span></a></li>
-          <!-- DATA MASTER KEPEGAWAIAN -->
-          <li class="nav-label mg-t-25">Data Master Kepegawaian</li>
-          <li class="nav-item active"><a href="data-pegawai.html" class="nav-link"><i data-feather="user-plus"></i> <span>Pegawai ASN</span></a></li>
-          <li class="nav-item"><a href="PegawaiNonAsn.html" class="nav-link"><i data-feather="user-minus"></i> <span>Pegawai Non ASN</span></a></li>
-          <li class="nav-item"><a href="StrukturOrganisasi.html" class="nav-link"><i data-feather="layout"></i> <span>Struktur Organisasi</span></a></li>
-          <li class="nav-item"><a href="SatuanOrgnisasi.html" class="nav-link"><i data-feather="layers"></i> <span>Satuan Organisasi</span></a></li>
-          <li class="nav-item"><a href="UnitKerja.html" class="nav-link"><i data-feather="file"></i> <span>Unit Kerja</span></a></li>
-          <li class="nav-item"><a href="JenisJabatan.html" class="nav-link"><i data-feather="file-text"></i> <span>Jenis Jabatan</span></a></li>
-          <li class="nav-item"><a href="NamaJabatan.html" class="nav-link"><i data-feather="clipboard"></i> <span>Nama Jabatan</span></a></li>
-          <li class="nav-item"><a href="TugasTambahan.html" class="nav-link"><i data-feather="file-plus"></i> <span>Tugas Tambahan</span></a></li>
-          <li class="nav-item"><a href="MutasiPegawai.html" class="nav-link"><i data-feather="list"></i> <span>Mutasi Pegawai</span></a></li>
-          
-          <!-- Master Absensi-->
-          <li class="nav-label mg-t-25">Master Absensi</li>
-          <li class="nav-item"><a href="TipeKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Tipe Kerja</span></a></li>
-          <li class="nav-item"><a href="WaktuKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Waktu Kerja</span></a></li>
-          <li class="nav-item"><a href="SkemaKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Skema Waktu Kerja</span></a></li>
-          <li class="nav-item"><a href="PegawaiAbsensiMobile.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Pegawai Absensi Mobile</span></a></li>
-          <li class="nav-item"><a href="JenisCuti.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Jenis Cuti</span></a></li>
-          <li class="nav-item"><a href="JenisDinas.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Jenis Dinas</span></a></li>
-          <li class="nav-item"><a href="PemotonganAbsensi.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Pemotongan Absensi</span></a></li>
-
-          <!-- Pengajuan Ketidakhadiran -->
-          <li class="nav-label mg-t-25">Pengajuan Ketidakhadiran</li>
-          <li class="nav-item"><a href="PengajuanDinas.html" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas </span></a></li>
-          <li class="nav-item"><a href="PengajuanIzin.html" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin </span></a></li>
-          <li class="nav-item"><a href="PengajuanSakit.html" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a></li>
-          <li class="nav-item"><a href="PengajuanCuti.html" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a></li>
-
-          
-          <!-- Monitoring Absensi -->
-          <li class="nav-label mg-t-25">Monitoring Absensi</li>
-          <li class="nav-item"><a href="AgendaPegawai.html" class="nav-link"><i data-feather="archive"></i> <span>Agenda Pegawai</span></a></li>
-          <li class="nav-item with-sub">
-            <a href="" class="nav-link"><i data-feather="clock"></i> <span>Jadwal Pegawai</span></a>
-            <ul>
-              <li><a href="JadwalUtama.html">Jadwal Utama</a></li>
-              <li><a href="JadwalTambahan.html">Jadwal Tambahan</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a href="KeluarKantor.html" class="nav-link"><i data-feather="external-link"></i> <span>Keluar Kantor</span></a></li>
-          <li class="nav-item with-sub">
-            <a href="" class="nav-link"><i data-feather="database"></i> <span>Mesin Absensi</span></a>
-            <ul>
-              <li><a href="AbsensiMesinHarian.html">Absensi Mesin Harian</a></li>
-              <li><a href="AbsensiMesinPegawai.html">Absensi Mesin Pegawai</a></li>
-            </ul>
-          </li>
-          <li class="nav-item with-sub">
-            <a href="" class="nav-link"><i data-feather="smartphone"></i> <span>Absensi Mobile</span></a>
-            <ul>
-              <li><a href="AbsensiMobileHarian.html">Absensi Mobile Harian</a></li>
-              <li><a href="AbsensiMobilePegawai.html">Absensi Mobile Pegawai</a></li>
-            </ul>
-          </li>
-          <li class="nav-item with-sub">
-            <a href="" class="nav-link"><i data-feather="book"></i> <span>Laporan Presensi</span></a>
-            <ul>
-              <li><a href="LaporanHarian.html">Laporan Harian</a></li>
-              <li><a href="LaporanBulanan.html">Laporan Bulanan</a></li>
-              <li><a href="LaporanTahunan.html">Laporan Tahunan</a></li>
-              <li><a href="LaporanBermasalah.html">Laporan Bermasalah</a></li>
-              <li><a href="LogAbsensiMobile.html">Log Absensi Mobile</a></li>
-            </ul>
-          </li>          
-        </ul>
-      </div>
-    </aside>
-
-    <div class="content ht-100v pd-0">
-      <div class="content-header"></div><!-- content-header -->
-
-      <div class="content-body">
-        <div class="container pd-x-0">
-          <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
-            <div>
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb breadcrumb-style1 mg-b-10">
-                  <li class="breadcrumb-item"><a href="#">Data Kepegawaian</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Data Pegawai ASN</li>
-                </ol>
-              </nav>
-              <h4 class="mg-b-0 tx-spacing--1">Data Pegawai ASN</h4>
-            </div>
-            <div class="d-none d-md-block">
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <button class="btn btn-sm pd-x-15 btn-outline-primary btn-uppercase"><i data-feather="upload" class="wd-10"></i></button>
-                <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="file-text" class="wd-10"></i></button>
-              </div>
-              <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Tambah Data</button>
-            </div>
-          </div>
-          <div class="modal fade" id="ModalTambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true" data-bs-backdrop="static">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-              <div class="modal-content tx-14">
-                <div class="modal-header">
-                  <h6 class="modal-title tx-bold" id="exampleModalLabel4">Tambah Data Pegawai</h6>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"></span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="form-group row">
-                      <label for="NIPPegawai" class="col-sm-3 col-form-label tx-bold">NIP Pegawai <span class="tx-danger">*</span></label>
-                      <div class="col-sm-9">
-                        <input type="number" class="form-control" id="NIPPegawai" placeholder="Masukkan NIP Pegawai Anda" required>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="NIKKTP" class="col-sm-3 col-form-label tx-bold">NIK KTP <span class="tx-danger">*</span></label>
-                      <div class="col-sm-9">
-                        <input type="number" class="form-control" id="NIKKTP" placeholder="Masukkan NIK KTP Anda" required>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="NamaLengkap" class="col-sm-3 col-form-label tx-bold">Nama Lengkap <span class="tx-danger">*</span></label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" id="NamaLengkap" placeholder="Masukkan Nama Lengkap Anda" required>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="GelarDepan" class="col-sm-3 col-form-label tx-bold">Gelar Depan</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" id="GelarDepan" placeholder="Masukkan Gelar Depan Anda">
-                        <div class="tx-gray-500 tx-italic">Contoh : </div>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="GelarBelakang" class="col-sm-3 col-form-label tx-bold">Gelar Belakang</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" id="GelarBelakang" placeholder="Masukkan Gelar Belakang Anda">
-                        <div class="tx-gray-500 tx-italic">Contoh : </div>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="Email" class="col-sm-3 col-form-label tx-bold">Email <span class="tx-danger">*</span></label>
-                      <div class="col-sm-9">
-                        <input type="email" class="form-control" id="Email" placeholder="Masukkan Email Anda">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="NoHandphone" class="col-sm-3 col-form-label tx-bold">No. Handphone <span class="tx-danger">*</span></label>
-                      <div class="col-sm-9">
-                        <input type="NoHandphone" class="form-control" id="NoHandphone" placeholder="Masukkan No. Handphone Anda">
-                        <div class="tx-gray-500 tx-italic">Contoh : 08xxxxxxxxxx</div>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="JenisPegawai" class="col-sm-3 col-form-label tx-bold">Jenis Pegawai <span class="tx-danger">*</span></label>
-                      <div class="col-sm-9">
-                      <select class="form-control" id="JenisPegawai" name="JenisPegawai" required>
-                        <option label="Pilih Jenis Pegawai"></option>
-                        <option value="PNS">PNS</option>
-                        <option value="PPPK">PPPK</option>
-                      </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="Pangkat" class="col-sm-3 col-form-label tx-bold">Golongan/Pangkat <span class="tx-danger">*</span></label>
-                      <div class="col-sm-9">
-                      <select class="form-control" id="Pangkat" name="Pangkat" required>
-                        <option label="Pilih Golongan/Pangkat"></option>
-                        <option value="PNS">PNS</option>
-                        <option value="PPPK">PPPK</option>
-                      </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="Eselon" class="col-sm-3 col-form-label tx-bold">Eselon <span class="tx-danger">*</span></label>
-                      <div class="col-sm-9">
-                      <select class="form-control" id="Eselon" name="Eselon" required>
-                          <option value="">Pilih Eselon</option>
-                          <option value="I.a">I.a</option>
-                          <option value="I.b">I.b</option>
-                          <option value="II.a">II.a</option>
-                          <option value="II.b">II.b</option>
-                          <option value="III.a">III.a</option>
-                          <option value="III.b">III.b</option>
-                          <option value="IV.a">IV.a</option>
-                          <option value="IV.b">IV.b</option>
-                          <option value="V.a">V.a</option>
-                          <option value="Non-Eselon">Non-Eselon</option>
-                      </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="SatuanOrganisasi" class="col-sm-3 col-form-label tx-bold">Satuan Organisasi <span class="tx-danger">*</span></label>
-                      <div class="col-sm-9">
-                      <select class="form-control" id="SatuanOrganisasi" name="SatuanOrganisasi" required>
-                        <option label="Pilih Satuan Organisasi"></option>
-                        <option value="PNS">PNS</option>
-                        <option value="PPPK">PPPK</option>
-                      </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="UnitKerja" class="col-sm-3 col-form-label tx-bold">Unit Kerja <span class="tx-danger">*</span></label>
-                      <div class="col-sm-9">
-                      <select class="form-control" id="UnitKerja" name="UnitKerja" required>
-                        <option label="Pilih Unit Kerja"></option>
-                        <option value="PNS">PNS</option>
-                        <option value="PPPK">PPPK</option>
-                      </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="JenisJabatan" class="col-sm-3 col-form-label tx-bold">Jenis Jabatan <span class="tx-danger">*</span></label>
-                      <div class="col-sm-9">
-                      <select class="form-control" id="JenisJabatan" name="JenisJabatan" required>
-                        <option label="Pilih Jenis Jabatan"></option>
-                        <option value="Struktural">Struktural</option>
-                        <option value="Fungsional Tertentu">Fungsional Tertentu</option>
-                        <option value="Pelaksana">Pelaksana</option>
-                      </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="NamaJabatan" class="col-sm-3 col-form-label tx-bold">Nama Jabatan <span class="tx-danger">*</span></label>
-                      <div class="col-sm-9">
-                      <select class="form-control" id="NamaJabatan" name="NamaJabatan" required>
-                        <option label="Pilih Nama Jabatan"></option>
-                        <option value="PNS">PNS</option>
-                        <option value="PPPK">PPPK</option>
-                      </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="KelasJabatan" class="col-sm-3 col-form-label tx-bold">Kelas Jabatan</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" id="KelasJabatan" readonly>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="TugasTambahan" class="col-sm-3 col-form-label tx-bold">Tugas Tambahan <span class="tx-danger">*</span></label>
-                      <div class="col-sm-9">
-                      <select class="form-control" id="TugasTambahan" name="TugasTambahan" required>
-                        <option label="Pilih Tugas Tambahan"></option>
-                        <option value="Kepala Sekolah">Kepala Sekolah</option>
-                        <option value="Kepala Puskesmas">Kepala Puskesmas</option>
-                        <option value="Kepala Sub Bagian Tata Usaha Puskesmas">Kepala Sub Bagian Tata Usaha Puskesmas</option>
-                      </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="PosisiJabatan" class="col-sm-3 col-form-label tx-bold">Posisi Jabatan <span class="tx-danger">*</span></label>
-                      <div class="col-sm-9">
-                      <select class="form-control" id="PosisiJabatan" name="PosisiJabatan" required>
-                        <option label="Pilih Posisi Jabatan"></option>
-                        <option value="PNS">PNS</option>
-                        <option value="PPPK">PPPK</option>
-                      </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="StatusKepegawaian" class="col-sm-3 col-form-label tx-bold">Status Kepegawaian <span class="tx-danger">*</span></label>
-                      <div class="col-sm-9">
-                      <select class="form-control" id="StatusKepegawaian" name="StatusKepegawaian" required>
-                        <option label="Pilih Status Kepegawaian"></option>
-                        <option value="Aktif">Aktif</option>
-                        <option value="Pensiun">Pensiun</option>
-                        <option value="Meninggal Dunia">Meninggal Dunia</option>
-                        <option value="Tugas Belajar">Tugas Belajar</option>
-                        <option value="Dipekerjakan">Dipekerjakan</option>
-                      </select>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary tx-13" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-success tx-13"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Simpan</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="ModalInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true" data-bs-backdrop="static">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-              <div class="modal-content tx-14">
-                <div class="modal-header">
-                  <h6 class="modal-title tx-bold" id="exampleModalLabel4">Detail Data Pegawai</h6>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"></span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="row mg-b-25">
-                            <div class="col-sm-4 text-center">
-                              <img src="https://placehold.co/500" class="img wd-100 ht-100 rounded-circle" alt="">
-                              <h5 class="mg-y-5">ROSNAINI</h5>
-                              <p class="tx-color-03 tx-spacing--1">KEPALA SUB BIDANG PENILAIAN DAN EVALUASI KINERJA APARATUR I</p>
-                            </div>
-                            <div class="col-sm-8">
-                              <div class="card-header pd-y-5 pd-x-0 mg-b-10 d-flex align-items-center justify-content-between">
-                                <h6 class="tx-uppercase tx-semibold mg-b-0 tx-primary">Informasi Pegawai</h6>
-                                <nav class="nav nav-icon-only">
-                                  <span class="badge text-bg-danger"><i class="fa fa-times-circle" aria-hidden="true"></i> Tidak Aktif</span>
-                                </nav>
-                              </div><!-- card-header -->
-                              <div class="row">
-                                <div class="col-sm-7 mg-b-15">
-                                  <h6 class="mg-0">NIP Pegawai</h6>
-                                  <span>196704221989032002</span>
-                                </div>
-                                <div class="col-sm-5 mg-b-15">
-                                  <h6 class="mg-0">NIK KTP</h6>
-                                  <span>16741003930009</span>
-                                </div>
-                                <div class="col-sm-7 mg-b-15">
-                                  <h6 class="mg-0">Nama Lengkap</h6>
-                                  <span>Rosnaini</span>
-                                </div>
-                                <div class="col-sm-5 mg-b-15">
-                                  <h6 class="mg-0">Jenis Kelamin</h6>
-                                  <span>Perempuan</span>
-                                </div>
-                                <div class="col-sm-7 mg-b-15">
-                                  <h6 class="mg-0">Gelar Depan</h6>
-                                  <span>-</span>
-                                </div>
-                                <div class="col-sm-5 mg-b-15">
-                                  <h6 class="mg-0">Gelar Belakang</h6>
-                                  <span>S.Sos., M.Si.</span>
-                                </div>
-                                <div class="col-sm-12 mg-b-15">
-                                  <h6 class="mg-0">Jenis Pegawai</h6>
-                                  <span>PPPK</span>
-                                </div>
-                                <div class="col-sm-7 mg-b-15">
-                                  <h6 class="mg-0">Pangkat</h6>
-                                  <span>Pembina</span>
-                                </div>
-                                <div class="col-sm-5 mg-b-15">
-                                  <h6 class="mg-0">Golongan</h6>
-                                  <span>IV/a</span>
-                                </div>
-                                <div class="col-sm-7 mg-b-15">
-                                  <h6 class="mg-0">Email</h6>
-                                  <span>johndoe@gmail.com</span>
-                                </div>
-                                <div class="col-sm-5 mg-b-15">
-                                  <h6 class="mg-0">No. Handphone</h6>
-                                  <span>08111111111</span>
-                                </div>
-                                <div class="col-sm-12">
-                                  <div class="card-header pd-y-5 pd-x-0 mg-b-10 d-flex align-items-center justify-content-between">
-                                    <h6 class="tx-uppercase tx-semibold mg-b-0 tx-primary">Informasi Pegawai</h6>
-                                  </div>
-                                </div>
-                                <div class="col-sm-7 mg-b-15">
-                                  <h6 class="mg-0">Satuan Organisasi</h6>
-                                  <span>Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</span>
-                                </div>
-                                <div class="col-sm-5 mg-b-15">
-                                  <h6 class="mg-0">Unit Kerja</h6>
-                                  <span>Sub Bidang Penilaian dan Evaluasi Kinerja Aparatur I</span>
-                                </div>
-                                <div class="col-sm-7 mg-b-15">
-                                  <h6 class="mg-0">Jenis Jabatan</h6>
-                                  <span>Struktural</span>
-                                </div>
-                                <div class="col-sm-5 mg-b-15">
-                                  <h6 class="mg-0">Eselon</h6>
-                                  <span>Non-Eselon</span>
-                                </div>
-                                <div class="col-sm-7 mg-b-15">
-                                  <h6 class="mg-0">Nama Jabatan</h6>
-                                  <span>Kepala Sub Bidang Penilaian Dan Evaluasi Kinerja Aparatur I</span>
-                                </div>
-                                <div class="col-sm-5 mg-b-15">
-                                  <h6 class="mg-0">Kelas Jabatan</h6>
-                                  <span>-</span>
-                                </div>
-                                <div class="col-sm-12 mg-b-15">
-                                  <h6 class="mg-0">Tugas Tambahan</h6>
-                                  <span>-</span>
-                                </div>
-                                <div class="col-sm-12">
-                                  <div class="card-header pd-y-5 pd-x-0 mg-b-10 d-flex align-items-center justify-content-between">
-                                    <h6 class="tx-uppercase tx-semibold mg-b-0 tx-primary">Informasi Atasan</h6>
-                                  </div>
-                                </div>
-                                <div class="col-sm-7 mg-b-15">
-                                  <h6 class="mg-0">NIP Atasan</h6>
-                                  <span>197403312002121002</span>
-                                </div>
-                                <div class="col-sm-5 mg-b-15">
-                                  <h6 class="mg-0">Nama Atasan</h6>
-                                  <span>Ediyus</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+            <div class="aside-body">
+                <div class="aside-loggedin">
+                    <div class="d-flex align-items-center justify-content-start">
+                        <a href="" class="avatar"><img src="../assets/img/profile-default.png" class="rounded-circle" alt="" /></a>
+                        <div class="aside-alert-link">
+                            <a href="../page-signin.html" data-bs-toggle="tooltip" title="Sign out"><i data-feather="log-out"></i></a>
                         </div>
-                      </div>
                     </div>
-                  </div>                    
+                    <div class="aside-loggedin-user">
+                        <a href="#loggedinMenu" class="d-flex align-items-center justify-content-between mg-b-2" data-bs-toggle="collapse">
+                            <h6 class="tx-semibold mg-b-0">Tri Akhyari Romadhon</h6>
+                            <i data-feather="chevron-down"></i>
+                        </a>
+                        <p class="tx-color-03 tx-12 mg-b-0">Super Administrator</p>
+                    </div>
+                    <div class="collapse" id="loggedinMenu">
+                        <ul class="nav nav-aside mg-b-0">
+                            <li class="nav-item">
+                                <a href="profile.html" class="nav-link"><i data-feather="user"></i> <span>View Profile</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="LogAktivitas.html" class="nav-link"><i data-feather="info"></i> <span>Log Aktivitas</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="UbahPassword.html" class="nav-link"><i data-feather="edit"></i> <span>Ubah Password</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../page-signin.html" class="nav-link"><i data-feather="log-out"></i> <span>Sign Out</span></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary tx-13" data-bs-dismiss="modal">Tutup</button>
-                </div>
-              </div>
+                <ul class="nav nav-aside">
+                    <li class="nav-label">Dashboard</li>
+                    <li class="nav-item">
+                        <a href="dashboard-one.html" class="nav-link"><i data-feather="activity"></i> <span>Lap Utama Harian </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dashboard-two.html" class="nav-link"><i data-feather="bar-chart-2"></i> <span>Statistik Bulanan</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dashboard-three.html" class="nav-link"><i data-feather="pie-chart"></i> <span>Statistik Pegawai</span></a>
+                    </li>
+                    <!-- DATA MASTER KEPEGAWAIAN -->
+                    <li class="nav-label mg-t-25">Data Master Kepegawaian</li>
+                    <li class="nav-item active">
+                        <a href="data-pegawai.html" class="nav-link"><i data-feather="user-plus"></i> <span>Pegawai ASN</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PegawaiNonAsn.html" class="nav-link"><i data-feather="user-minus"></i> <span>Pegawai Non ASN</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="StrukturOrganisasi.html" class="nav-link"><i data-feather="layout"></i> <span>Struktur Organisasi</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="SatuanOrgnisasi.html" class="nav-link"><i data-feather="layers"></i> <span>Satuan Organisasi</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="UnitKerja.html" class="nav-link"><i data-feather="file"></i> <span>Unit Kerja</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="JenisJabatan.html" class="nav-link"><i data-feather="file-text"></i> <span>Jenis Jabatan</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="NamaJabatan.html" class="nav-link"><i data-feather="clipboard"></i> <span>Nama Jabatan</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="TugasTambahan.html" class="nav-link"><i data-feather="file-plus"></i> <span>Tugas Tambahan</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="MutasiPegawai.html" class="nav-link"><i data-feather="list"></i> <span>Mutasi Pegawai</span></a>
+                    </li>
+
+                    <!-- Master Absensi-->
+                    <li class="nav-label mg-t-25">Master Absensi</li>
+                    <li class="nav-item">
+                        <a href="TipeKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Tipe Kerja</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="WaktuKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Waktu Kerja</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="SkemaKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Skema Waktu Kerja</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PegawaiAbsensiMobile.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Pegawai Absensi Mobile</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="JenisCuti.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Jenis Cuti</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="JenisDinas.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Jenis Dinas</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PemotonganAbsensi.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Pemotongan Absensi</span></a>
+                    </li>
+
+                    <!-- Pengajuan Ketidakhadiran -->
+                    <li class="nav-label mg-t-25">Pengajuan Ketidakhadiran</li>
+                    <li class="nav-item">
+                        <a href="PengajuanDinas.html" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PengajuanIzin.html" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PengajuanSakit.html" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PengajuanCuti.html" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
+                    </li>
+
+                    <!-- Monitoring Absensi -->
+                    <li class="nav-label mg-t-25">Monitoring Absensi</li>
+                    <li class="nav-item">
+                        <a href="AgendaPegawai.html" class="nav-link"><i data-feather="archive"></i> <span>Agenda Pegawai</span></a>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="clock"></i> <span>Jadwal Pegawai</span></a>
+                        <ul>
+                            <li><a href="JadwalUtama.html">Jadwal Utama</a></li>
+                            <li><a href="JadwalTambahan.html">Jadwal Tambahan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="KeluarKantor.html" class="nav-link"><i data-feather="external-link"></i> <span>Keluar Kantor</span></a>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="database"></i> <span>Mesin Absensi</span></a>
+                        <ul>
+                            <li><a href="AbsensiMesinHarian.html">Absensi Mesin Harian</a></li>
+                            <li><a href="AbsensiMesinPegawai.html">Absensi Mesin Pegawai</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="smartphone"></i> <span>Absensi Mobile</span></a>
+                        <ul>
+                            <li><a href="AbsensiMobileHarian.html">Absensi Mobile Harian</a></li>
+                            <li><a href="AbsensiMobilePegawai.html">Absensi Mobile Pegawai</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="book"></i> <span>Laporan Presensi</span></a>
+                        <ul>
+                            <li><a href="LaporanHarian.html">Laporan Harian</a></li>
+                            <li><a href="LaporanBulanan.html">Laporan Bulanan</a></li>
+                            <li><a href="LaporanTahunan.html">Laporan Tahunan</a></li>
+                            <li><a href="LaporanBermasalah.html">Laporan Bermasalah</a></li>
+                            <li><a href="LogAbsensiMobile.html">Log Absensi Mobile</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-          </div>
-          <div class="row row-xs">
-            <div class="col-sm-12 col-lg-12">
-              <div data-label="List Data Pegawai" class="df-example demo-table">
-                <div class="row row-sm mg-b-20">
-                  <div class="col-lg-4">
-                    <select class="form-control select2-so">
-                      <option label="Choose one">Pilih Satuan Organisasi</option>
-                      <option value="Badan Kepegawaian dan Pengembangan Sumber Daya Manusia">Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-4">
-                    <select class="form-control select2-clear">
-                      <option label="Choose one">Pilih Unit Kerja</option>
-                      <option value="Sub Bidang Penilaian dan Evaluasi Kinerja Aparatur I">Sub Bidang Penilaian dan Evaluasi Kinerja Aparatur I</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2">
-                    <select class="form-control select2-status">
-                      <option value="Aktif">Aktif</option>
-                      <option value="Pensiun">Pensiun</option>
-                      <option value="Meninggal Dunia">Meninggal Dunia</option>
-                      <option value="Tugas Belajar">Tugas Belajar</option>
-                      <option value="Dipekerjakan">Dipekerjakan</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2">
-                    <button class="btn btn-outline-primary btn-uppercase"><i data-feather="refresh-cw" class="wd-10 mg-r-5"></i> Filter</button>
-                  </div>
-                </div><!-- row -->
-                <table id="example2" class="table table-hover" style="width:100%;">
-                  <thead class="thead-primary">
-                    <tr>
-                      <th>NIP</th>
-                      <th>NAMA LENGKAP</th>
-                      <th>SATUAN ORGANISASI</th>
-                      <th>UNIT KERJA</th>
-                      <th>STATUS PEGAWAI</th>
-                      <th>AKSI</th>
-                    </tr>
-                  </thead>	
-                  <tbody>
-                    <tr>
-                      <td>196708142001121002</td>
-                      <td>
-                        <h6 class="tx-13 mg-b-2 tx-primary">Katherine Lumaad</h6>
-                        <p class="tx-12 mg-b-10">Pengadministrasi Persuratan</p>
-                      </td>
-                      <td>Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</td>
-                      <td>Sub Bagian Umum dan Kepegawaian</td>
-                      <td>Aktif</td>
-                      <td>
-                        <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
-                        <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
-                        <button type="button" class="btn btn-outline-dark btn-icon mg-b-4"><i data-feather="key"></i></button>
-                        <button type="button" class="btn btn-outline-warning btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalInfo"><i data-feather="info"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>196704221989032002</td>
-                      <td>
-                        <h6 class="tx-13 mg-b-2 tx-primary">Rosnaini, S.Sos., M.Si.</h6>
-                        <p class="tx-12 mg-b-10">Kepala Sub Bidang Penilaian Dan Evaluasi Kinerja Aparatur I</p>
-                      </td>
-                      <td>Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</td>
-                      <td>Sub Bidang Penilaian dan Evaluasi Kinerja Aparatur I</td>
-                      <td>Aktif</td>
-                      <td>
-                        <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
-                        <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
-                        <button type="button" class="btn btn-outline-dark btn-icon mg-b-4"><i data-feather="key"></i></button>
-                        <button type="button" class="btn btn-outline-warning btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalInfo"><i data-feather="info"></i></button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div><!-- df-example -->
-            </div><!-- col -->            
-          </div><!-- row -->
-        </div><!-- container -->
-      </div>
-    </div>
+        </aside>
 
-    <script src="../lib/jquery/jquery.min.js"></script>
-    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../lib/feather-icons/feather.min.js"></script>
-    <script src="../lib/ionicons/ionicons/ionicons.esm.js" type="module"></script>
-    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="../lib/jquery.flot/jquery.flot.js"></script>
-    <script src="../lib/jquery.flot/jquery.flot.stack.js"></script>
-    <script src="../lib/jquery.flot/jquery.flot.resize.js"></script>
-    <script src="../lib/jqvmap/jquery.vmap.min.js"></script>
-    <script src="../lib/jqvmap/maps/jquery.vmap.usa.js"></script>
-    <script src="../lib/prismjs/prism.js"></script>
-    <script src="../lib/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="../lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
-    <script src="../lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
-    <script src="../lib/select2/js/select2.min.js"></script>
+        <div class="content ht-100v pd-0">
+            <div class="content-header"></div>
+            <!-- content-header -->
 
-    <script src="../assets/js/dashforge.js"></script>
-    <script src="../assets/js/dashforge.aside.js"></script>
-    <script src="../assets/js/dashforge.sampledata.js"></script>
+            <div class="content-body">
+                <div class="container pd-x-0">
+                    <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+                        <div>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+                                    <li class="breadcrumb-item"><a href="#">Data Kepegawaian</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data Pegawai ASN</li>
+                                </ol>
+                            </nav>
+                            <h4 class="mg-b-0 tx-spacing--1">Data Pegawai ASN</h4>
+                        </div>
+                        <div class="d-none d-md-block">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button class="btn btn-sm pd-x-15 btn-outline-primary btn-uppercase"><i data-feather="upload" class="wd-10"></i></button>
+                                <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="file-text" class="wd-10"></i></button>
+                            </div>
+                            <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Tambah Data</button>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="ModalTambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true" data-bs-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content tx-14">
+                                <div class="modal-header">
+                                    <h6 class="modal-title tx-bold" id="exampleModalLabel4">Tambah Data Pegawai</h6>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group row">
+                                            <label for="NIPPegawai" class="col-sm-3 col-form-label tx-bold">NIP Pegawai <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="number" class="form-control" id="NIPPegawai" placeholder="Masukkan NIP Pegawai Anda" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="NIKKTP" class="col-sm-3 col-form-label tx-bold">NIK KTP <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="number" class="form-control" id="NIKKTP" placeholder="Masukkan NIK KTP Anda" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="NamaLengkap" class="col-sm-3 col-form-label tx-bold">Nama Lengkap <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="NamaLengkap" placeholder="Masukkan Nama Lengkap Anda" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="GelarDepan" class="col-sm-3 col-form-label tx-bold">Gelar Depan</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="GelarDepan" placeholder="Masukkan Gelar Depan Anda" />
+                                                <div class="tx-gray-500 tx-italic">Contoh :</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="GelarBelakang" class="col-sm-3 col-form-label tx-bold">Gelar Belakang</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="GelarBelakang" placeholder="Masukkan Gelar Belakang Anda" />
+                                                <div class="tx-gray-500 tx-italic">Contoh :</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="Email" class="col-sm-3 col-form-label tx-bold">Email <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="email" class="form-control" id="Email" placeholder="Masukkan Email Anda" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="NoHandphone" class="col-sm-3 col-form-label tx-bold">No. Handphone <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="NoHandphone" class="form-control" id="NoHandphone" placeholder="Masukkan No. Handphone Anda" />
+                                                <div class="tx-gray-500 tx-italic">Contoh : 08xxxxxxxxxx</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="JenisPegawai" class="col-sm-3 col-form-label tx-bold">Jenis Pegawai <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" id="JenisPegawai" name="JenisPegawai" required>
+                                                    <option label="Pilih Jenis Pegawai"></option>
+                                                    <option value="PNS">PNS</option>
+                                                    <option value="PPPK">PPPK</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="Pangkat" class="col-sm-3 col-form-label tx-bold">Golongan/Pangkat <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" id="Pangkat" name="Pangkat" required>
+                                                    <option label="Pilih Golongan/Pangkat"></option>
+                                                    <option value="PNS">PNS</option>
+                                                    <option value="PPPK">PPPK</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="Eselon" class="col-sm-3 col-form-label tx-bold">Eselon <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" id="Eselon" name="Eselon" required>
+                                                    <option value="">Pilih Eselon</option>
+                                                    <option value="I.a">I.a</option>
+                                                    <option value="I.b">I.b</option>
+                                                    <option value="II.a">II.a</option>
+                                                    <option value="II.b">II.b</option>
+                                                    <option value="III.a">III.a</option>
+                                                    <option value="III.b">III.b</option>
+                                                    <option value="IV.a">IV.a</option>
+                                                    <option value="IV.b">IV.b</option>
+                                                    <option value="V.a">V.a</option>
+                                                    <option value="Non-Eselon">Non-Eselon</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="SatuanOrganisasi" class="col-sm-3 col-form-label tx-bold">Satuan Organisasi <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" id="SatuanOrganisasi" name="SatuanOrganisasi" required>
+                                                    <option label="Pilih Satuan Organisasi"></option>
+                                                    <option value="PNS">PNS</option>
+                                                    <option value="PPPK">PPPK</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="UnitKerja" class="col-sm-3 col-form-label tx-bold">Unit Kerja <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" id="UnitKerja" name="UnitKerja" required>
+                                                    <option label="Pilih Unit Kerja"></option>
+                                                    <option value="PNS">PNS</option>
+                                                    <option value="PPPK">PPPK</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="JenisJabatan" class="col-sm-3 col-form-label tx-bold">Jenis Jabatan <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" id="JenisJabatan" name="JenisJabatan" required>
+                                                    <option label="Pilih Jenis Jabatan"></option>
+                                                    <option value="Struktural">Struktural</option>
+                                                    <option value="Fungsional Tertentu">Fungsional Tertentu</option>
+                                                    <option value="Pelaksana">Pelaksana</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="NamaJabatan" class="col-sm-3 col-form-label tx-bold">Nama Jabatan <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" id="NamaJabatan" name="NamaJabatan" required>
+                                                    <option label="Pilih Nama Jabatan"></option>
+                                                    <option value="PNS">PNS</option>
+                                                    <option value="PPPK">PPPK</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="KelasJabatan" class="col-sm-3 col-form-label tx-bold">Kelas Jabatan</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="KelasJabatan" readonly />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="TugasTambahan" class="col-sm-3 col-form-label tx-bold">Tugas Tambahan <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" id="TugasTambahan" name="TugasTambahan" required>
+                                                    <option label="Pilih Tugas Tambahan"></option>
+                                                    <option value="Kepala Sekolah">Kepala Sekolah</option>
+                                                    <option value="Kepala Puskesmas">Kepala Puskesmas</option>
+                                                    <option value="Kepala Sub Bagian Tata Usaha Puskesmas">Kepala Sub Bagian Tata Usaha Puskesmas</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="PosisiJabatan" class="col-sm-3 col-form-label tx-bold">Posisi Jabatan <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" id="PosisiJabatan" name="PosisiJabatan" required>
+                                                    <option label="Pilih Posisi Jabatan"></option>
+                                                    <option value="PNS">PNS</option>
+                                                    <option value="PPPK">PPPK</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="StatusKepegawaian" class="col-sm-3 col-form-label tx-bold">Status Kepegawaian <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" id="StatusKepegawaian" name="StatusKepegawaian" required>
+                                                    <option label="Pilih Status Kepegawaian"></option>
+                                                    <option value="Aktif">Aktif</option>
+                                                    <option value="Pensiun">Pensiun</option>
+                                                    <option value="Meninggal Dunia">Meninggal Dunia</option>
+                                                    <option value="Tugas Belajar">Tugas Belajar</option>
+                                                    <option value="Dipekerjakan">Dipekerjakan</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary tx-13" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success tx-13"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Simpan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="ModalInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true" data-bs-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content tx-14">
+                                <div class="modal-header">
+                                    <h6 class="modal-title tx-bold" id="exampleModalLabel4">Detail Data Pegawai</h6>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="row mg-b-25">
+                                                        <div class="col-sm-4 text-center">
+                                                            <img src="https://placehold.co/500" class="img wd-100 ht-100 rounded-circle" alt="" />
+                                                            <h5 class="mg-y-5">ROSNAINI</h5>
+                                                            <p class="tx-color-03 tx-spacing--1">KEPALA SUB BIDANG PENILAIAN DAN EVALUASI KINERJA APARATUR I</p>
+                                                        </div>
+                                                        <div class="col-sm-8">
+                                                            <div class="card-header pd-y-5 pd-x-0 mg-b-10 d-flex align-items-center justify-content-between">
+                                                                <h6 class="tx-uppercase tx-semibold mg-b-0 tx-primary">Informasi Pegawai</h6>
+                                                                <nav class="nav nav-icon-only">
+                                                                    <span class="badge text-bg-danger"><i class="fa fa-times-circle" aria-hidden="true"></i> Tidak Aktif</span>
+                                                                </nav>
+                                                            </div>
+                                                            <!-- card-header -->
+                                                            <div class="row">
+                                                                <div class="col-sm-7 mg-b-15">
+                                                                    <h6 class="mg-0">NIP Pegawai</h6>
+                                                                    <span>196704221989032002</span>
+                                                                </div>
+                                                                <div class="col-sm-5 mg-b-15">
+                                                                    <h6 class="mg-0">NIK KTP</h6>
+                                                                    <span>16741003930009</span>
+                                                                </div>
+                                                                <div class="col-sm-7 mg-b-15">
+                                                                    <h6 class="mg-0">Nama Lengkap</h6>
+                                                                    <span>Rosnaini</span>
+                                                                </div>
+                                                                <div class="col-sm-5 mg-b-15">
+                                                                    <h6 class="mg-0">Jenis Kelamin</h6>
+                                                                    <span>Perempuan</span>
+                                                                </div>
+                                                                <div class="col-sm-7 mg-b-15">
+                                                                    <h6 class="mg-0">Gelar Depan</h6>
+                                                                    <span>-</span>
+                                                                </div>
+                                                                <div class="col-sm-5 mg-b-15">
+                                                                    <h6 class="mg-0">Gelar Belakang</h6>
+                                                                    <span>S.Sos., M.Si.</span>
+                                                                </div>
+                                                                <div class="col-sm-12 mg-b-15">
+                                                                    <h6 class="mg-0">Jenis Pegawai</h6>
+                                                                    <span>PPPK</span>
+                                                                </div>
+                                                                <div class="col-sm-7 mg-b-15">
+                                                                    <h6 class="mg-0">Pangkat</h6>
+                                                                    <span>Pembina</span>
+                                                                </div>
+                                                                <div class="col-sm-5 mg-b-15">
+                                                                    <h6 class="mg-0">Golongan</h6>
+                                                                    <span>IV/a</span>
+                                                                </div>
+                                                                <div class="col-sm-7 mg-b-15">
+                                                                    <h6 class="mg-0">Email</h6>
+                                                                    <span>johndoe@gmail.com</span>
+                                                                </div>
+                                                                <div class="col-sm-5 mg-b-15">
+                                                                    <h6 class="mg-0">No. Handphone</h6>
+                                                                    <span>08111111111</span>
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                                                    <div class="card-header pd-y-5 pd-x-0 mg-b-10 d-flex align-items-center justify-content-between">
+                                                                        <h6 class="tx-uppercase tx-semibold mg-b-0 tx-primary">Informasi Pegawai</h6>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-7 mg-b-15">
+                                                                    <h6 class="mg-0">Satuan Organisasi</h6>
+                                                                    <span>Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</span>
+                                                                </div>
+                                                                <div class="col-sm-5 mg-b-15">
+                                                                    <h6 class="mg-0">Unit Kerja</h6>
+                                                                    <span>Sub Bidang Penilaian dan Evaluasi Kinerja Aparatur I</span>
+                                                                </div>
+                                                                <div class="col-sm-7 mg-b-15">
+                                                                    <h6 class="mg-0">Jenis Jabatan</h6>
+                                                                    <span>Struktural</span>
+                                                                </div>
+                                                                <div class="col-sm-5 mg-b-15">
+                                                                    <h6 class="mg-0">Eselon</h6>
+                                                                    <span>Non-Eselon</span>
+                                                                </div>
+                                                                <div class="col-sm-7 mg-b-15">
+                                                                    <h6 class="mg-0">Nama Jabatan</h6>
+                                                                    <span>Kepala Sub Bidang Penilaian Dan Evaluasi Kinerja Aparatur I</span>
+                                                                </div>
+                                                                <div class="col-sm-5 mg-b-15">
+                                                                    <h6 class="mg-0">Kelas Jabatan</h6>
+                                                                    <span>-</span>
+                                                                </div>
+                                                                <div class="col-sm-12 mg-b-15">
+                                                                    <h6 class="mg-0">Tugas Tambahan</h6>
+                                                                    <span>-</span>
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                                                    <div class="card-header pd-y-5 pd-x-0 mg-b-10 d-flex align-items-center justify-content-between">
+                                                                        <h6 class="tx-uppercase tx-semibold mg-b-0 tx-primary">Informasi Atasan</h6>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-7 mg-b-15">
+                                                                    <h6 class="mg-0">NIP Atasan</h6>
+                                                                    <span>197403312002121002</span>
+                                                                </div>
+                                                                <div class="col-sm-5 mg-b-15">
+                                                                    <h6 class="mg-0">Nama Atasan</h6>
+                                                                    <span>Ediyus</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary tx-13" data-bs-dismiss="modal">Tutup</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-xs">
+                        <div class="col-sm-12 col-lg-12">
+                            <div data-label="List Data Pegawai" class="df-example demo-table">
+                                <div class="row row-sm mg-b-20">
+                                    <div class="col-lg-4">
+                                        <select class="form-control select2-so">
+                                            <option label="Choose one">Pilih Satuan Organisasi</option>
+                                            <option value="Badan Kepegawaian dan Pengembangan Sumber Daya Manusia">Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <select class="form-control select2-clear">
+                                            <option label="Choose one">Pilih Unit Kerja</option>
+                                            <option value="Sub Bidang Penilaian dan Evaluasi Kinerja Aparatur I">Sub Bidang Penilaian dan Evaluasi Kinerja Aparatur I</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <select class="form-control select2-status">
+                                            <option value="Aktif">Aktif</option>
+                                            <option value="Pensiun">Pensiun</option>
+                                            <option value="Meninggal Dunia">Meninggal Dunia</option>
+                                            <option value="Tugas Belajar">Tugas Belajar</option>
+                                            <option value="Dipekerjakan">Dipekerjakan</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <button class="btn btn-outline-primary btn-uppercase"><i data-feather="refresh-cw" class="wd-10 mg-r-5"></i> Filter</button>
+                                    </div>
+                                </div>
+                                <!-- row -->
+                                <table id="example2" class="table table-hover" style="width: 100%;">
+                                    <thead class="thead-primary">
+                                        <tr>
+                                            <th>NIP Pegawai</th>
+                                            <th>Nama Lengkap</th>
+                                            <th>Satuan Organisasi</th>
+                                            <th>Unit Kerja</th>
+                                            <th>AKSI</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>196708142001121002</td>
+                                            <td>
+                                                <h6 class="tx-13 mg-b-2 tx-primary">Katherine Lumaad</h6>
+                                                <p class="tx-12 mg-b-10">Pengadministrasi Persuratan</p>
+                                            </td>
+                                            <td>Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</td>
+                                            <td>Sub Bagian Umum dan Kepegawaian</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
+                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
+                                                <button type="button" class="btn btn-outline-dark btn-icon mg-b-4"><i data-feather="key"></i></button>
+                                                <button type="button" class="btn btn-outline-warning btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalInfo"><i data-feather="info"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>196704221989032002</td>
+                                            <td>
+                                                <h6 class="tx-13 mg-b-2 tx-primary">Rosnaini, S.Sos., M.Si.</h6>
+                                                <p class="tx-12 mg-b-10">Kepala Sub Bidang Penilaian Dan Evaluasi Kinerja Aparatur I</p>
+                                            </td>
+                                            <td>Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</td>
+                                            <td>Sub Bidang Penilaian dan Evaluasi Kinerja Aparatur I</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
+                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
+                                                <button type="button" class="btn btn-outline-dark btn-icon mg-b-4"><i data-feather="key"></i></button>
+                                                <button type="button" class="btn btn-outline-warning btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalInfo"><i data-feather="info"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- df-example -->
+                        </div>
+                        <!-- col -->
+                    </div>
+                    <!-- row -->
+                </div>
+                <!-- container -->
+            </div>
+        </div>
 
-    <!-- append theme customizer -->
-    <script src="../lib/js-cookie/js.cookie.js"></script>
-    <script src="../assets/js/dashboard-one.js"></script>
-    <script>
-      $(function(){
-        'use strict'
-        $('#example2').DataTable({
-          responsive: true,
-          language: {
-            searchPlaceholder: 'Pencarian',
-            sSearch: '',
-            lengthMenu: '_MENU_ items/page',
-          }
-        });
+        <script src="../lib/jquery/jquery.min.js"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../lib/feather-icons/feather.min.js"></script>
+        <script src="../lib/ionicons/ionicons/ionicons.esm.js" type="module"></script>
+        <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <script src="../lib/jquery.flot/jquery.flot.js"></script>
+        <script src="../lib/jquery.flot/jquery.flot.stack.js"></script>
+        <script src="../lib/jquery.flot/jquery.flot.resize.js"></script>
+        <script src="../lib/jqvmap/jquery.vmap.min.js"></script>
+        <script src="../lib/jqvmap/maps/jquery.vmap.usa.js"></script>
+        <script src="../lib/prismjs/prism.js"></script>
+        <script src="../lib/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="../lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+        <script src="../lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="../lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+        <script src="../lib/select2/js/select2.min.js"></script>
 
-        $('.select2').select2({
-          placeholder: 'Pilih Status Pegawai',
-          searchInputPlaceholder: 'Pilihan Pencarian'
-        });
-        
-        $('.select2-so').select2({
-          placeholder: 'Pilih Satuan Organisasi',
-          searchInputPlaceholder: 'Pilihan Pencarian',
-          allowClear: true
-        });
+        <script src="../assets/js/dashforge.js"></script>
+        <script src="../assets/js/dashforge.aside.js"></script>
+        <script src="../assets/js/dashforge.sampledata.js"></script>
 
-        $('.select2-clear').select2({
-          minimumResultsForSearch: Infinity,
-          placeholder: 'Pilih Unit Kerja',
-          allowClear: true
-        });
+        <!-- append theme customizer -->
+        <script src="../lib/js-cookie/js.cookie.js"></script>
+        <script src="../assets/js/dashboard-one.js"></script>
+        <script>
+            $(function () {
+                "use strict";
+                $("#example2").DataTable({
+                    responsive: true,
+                    language: {
+                        searchPlaceholder: "Pencarian",
+                        sSearch: "",
+                        lengthMenu: "_MENU_ items/page",
+                    },
+                });
 
-        $('.select2-status').select2({
-           minimumResultsForSearch: Infinity,
-            placeholder: 'Pilih Status',
-            allowClear: true
-        });
-        
-        // Select2
-        $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
+                $(".select2").select2({
+                    placeholder: "Pilih Status Pegawai",
+                    searchInputPlaceholder: "Pilihan Pencarian",
+                });
 
-      });
+                $(".select2-so").select2({
+                    placeholder: "Pilih Satuan Organisasi",
+                    searchInputPlaceholder: "Pilihan Pencarian",
+                    allowClear: true,
+                });
 
-      $(function(){
-        'use strict'
+                $(".select2-clear").select2({
+                    minimumResultsForSearch: Infinity,
+                    placeholder: "Pilih Unit Kerja",
+                    allowClear: true,
+                });
 
-        $('#modal6').on('show.bs.modal', function (event) {
+                $(".select2-status").select2({
+                    minimumResultsForSearch: Infinity,
+                    placeholder: "Pilih Status",
+                    allowClear: true,
+                });
 
-          var animation = $(event.relatedTarget).data('animation');
-          $(this).addClass(animation);
-        })
+                // Select2
+                $(".dataTables_length select").select2({ minimumResultsForSearch: Infinity });
+            });
 
-        // hide modal with effect
-        $('#modal6').on('hidden.bs.modal', function (e) {
-          $(this).removeClass (function (index, className) {
-              return (className.match (/(^|\s)effect-\S+/g) || []).join(' ');
-          });
-        });
+            $(function () {
+                "use strict";
 
-      });
-    </script>
-  </body>
+                $("#modal6").on("show.bs.modal", function (event) {
+                    var animation = $(event.relatedTarget).data("animation");
+                    $(this).addClass(animation);
+                });
+
+                // hide modal with effect
+                $("#modal6").on("hidden.bs.modal", function (e) {
+                    $(this).removeClass(function (index, className) {
+                        return (className.match(/(^|\s)effect-\S+/g) || []).join(" ");
+                    });
+                });
+            });
+        </script>
+    </body>
 </html>
