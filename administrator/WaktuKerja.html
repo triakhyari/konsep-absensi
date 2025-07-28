@@ -31,7 +31,7 @@
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png" />
 
-        <title>Data Absensi Mesin Harian | Absensi Online</title>
+        <title>Waktu Kerja | Absensi Online</title>
 
         <!-- vendor css -->
         <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
@@ -41,7 +41,7 @@
         <link href="../lib/prismjs/themes/prism-vs.css" rel="stylesheet" />
         <link href="../lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" />
         <link href="../lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet" />
-        <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />
+        <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />        
 
         <!-- DashForge CSS -->
         <link rel="stylesheet" href="../assets/css/dashforge.css" />
@@ -139,7 +139,7 @@
                     <li class="nav-item">
                         <a href="TipeKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Tipe Kerja</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a href="WaktuKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Waktu Kerja</span></a>
                     </li>
                     <li class="nav-item">
@@ -148,7 +148,7 @@
                     <li class="nav-item">
                         <a href="PegawaiAbsensiMobile.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Pegawai Absensi Mobile</span></a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a href="JenisCuti.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Jenis Cuti</span></a>
                     </li>
                     <li class="nav-item">
@@ -188,10 +188,10 @@
                     <li class="nav-item">
                         <a href="KeluarKantor.html" class="nav-link"><i data-feather="external-link"></i> <span>Keluar Kantor</span></a>
                     </li>
-                    <li class="nav-item with-sub active show">
+                    <li class="nav-item with-sub">
                         <a href="" class="nav-link"><i data-feather="database"></i> <span>Mesin Absensi</span></a>
                         <ul>
-                            <li class="active"><a href="AbsensiMesinHarian.html">Absensi Mesin Harian</a></li>
+                            <li><a href="AbsensiMesinHarian.html">Absensi Mesin Harian</a></li>
                             <li><a href="AbsensiMesinPegawai.html">Absensi Mesin Pegawai</a></li>
                         </ul>
                     </li>
@@ -219,92 +219,130 @@
         <div class="content ht-100v pd-0">
             <div class="content-header"></div>
             <!-- content-header -->
+
             <div class="content-body">
                 <div class="container pd-x-0">
                     <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
                         <div>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb breadcrumb-style1 mg-b-10">
-                                    <li class="breadcrumb-item"><a href="#">Mesin Absensi</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Data Absensi Mesin Harian</li>
+                                    <li class="breadcrumb-item"><a href="#">Master Absensi</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data Waktu Kerja</li>
                                 </ol>
                             </nav>
-                            <h4 class="mg-b-0 tx-spacing--1">Data Absensi Mesin Harian</h4>
+                            <h4 class="mg-b-0 tx-spacing--1">Data Waktu Kerja</h4>
                         </div>
                         <div class="d-none d-md-block">
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <button class="btn btn-sm pd-x-15 btn-outline-primary btn-uppercase"><i data-feather="upload" class="wd-10"></i></button>
                                 <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="file-text" class="wd-10"></i></button>
                             </div>
+                            <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Tambah Data</button>
                         </div>
                     </div>
+                    <div class="modal fade" id="ModalTambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true" data-bs-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content tx-14">
+                                <div class="modal-header">
+                                    <h6 class="modal-title tx-bold" id="exampleModalLabel4">Tambah Waktu Kerja</h6>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group row">
+                                            <label for="NamaSkema" class="col-sm-3 col-form-label tx-bold">Nama Skema <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="NamaSkema" placeholder="Masukkan Nama Skema" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="Hari" class="col-sm-3 col-form-label tx-bold">Hari <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-select select2" multiple id="Hari" name="Hari" required>
+                                                    <option label="Pilihan"></option>
+                                                    <option value="Senin">Pilih Semua</option>
+                                                    <option value="Senin">Senin</option>
+                                                    <option value="Selasa">Selasa</option>
+                                                    <option value="Rabu">Rabu</option>
+                                                    <option value="Kamis">Kamis</option>
+                                                    <option value="Jum'at">Jum'at</option>
+                                                    <option value="Sabtu">Sabtu</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="AbsenDatang" class="col-sm-3 col-form-label tx-bold">Absen Datang <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="time" step="1" class="form-control" id="AbsenDatang" placeholder="Masukkan Absen Datang" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="AbsenPulang" class="col-sm-3 col-form-label tx-bold">Absen Pulang <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="time" step="1" class="form-control" id="AbsenPulang" placeholder="Masukkan Absen Pulang" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="Status" class="col-sm-3 col-form-label tx-bold">Status <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-select select2">
+                                                    <option label="Pilih Status"></option>
+                                                    <option value="Ya">Ya</option>
+                                                    <option value="Tidak">Tidak</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary tx-13" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success tx-13"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Simpan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
                     <div class="row row-xs">
                         <div class="col-sm-12 col-lg-12">
-                            <div data-label="List Data Pegawai" class="df-example demo-table">
-                                <div class="row row-sm mg-b-20">
-                                    <div class="col-lg-4">
-                                        <select class="form-control select2-so">
-                                            <option label="Choose one">Pilih Satuan Organisasi</option>
-                                            <option value="Badan Kepegawaian dan Pengembangan Sumber Daya Manusia">Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <select class="form-control select2-clear">
-                                            <option label="Choose one">Pilih Unit Kerja</option>
-                                            <option value="Sub Bidang Penilaian dan Evaluasi Kinerja Aparatur I">Sub Bidang Penilaian dan Evaluasi Kinerja Aparatur I</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <select class="form-control select2-status">
-                                            <option value="Aktif">Aktif</option>
-                                            <option value="Pensiun">Pensiun</option>
-                                            <option value="Meninggal Dunia">Meninggal Dunia</option>
-                                            <option value="Tugas Belajar">Tugas Belajar</option>
-                                            <option value="Dipekerjakan">Dipekerjakan</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <button class="btn btn-outline-primary btn-uppercase"><i data-feather="refresh-cw" class="wd-10 mg-r-5"></i> Filter</button>
-                                    </div>
-                                </div>
+                            <div data-label="List Data Waktu Kerja" class="df-example demo-table">
                                 <!-- row -->
-                                <table id="example2" class="table table-hover" style="width: 100%;">
+                                <table id="datatables" class="table table-hover" style="width: 100%;">
                                     <thead class="thead-primary">
                                         <tr>
                                             <th>No.</th>
-                                            <th>NIP Pegawai</th>
-                                            <th>Nama Lengkap</th>
+                                            <th>Nama Skema</th>
+                                            <th>Hari</th>
                                             <th>Waktu Datang</th>
                                             <th>Waktu Pulang</th>
-                                            <th>Device</th>
-                                            <th>File</th>
-                                            <th>Rev</th>
+                                            <th>Status</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td>196708142001121002</td>
+                                            <td>Senin-Kamis (5 Hari Kerja)</td>
+                                            <td>["Senin","Selasa","Rabu","Kamis"]</td>
+                                            <td>07:30:00</td>
+                                            <td>16:00:00</td>
+                                            <td>Ya</td>
                                             <td>
-                                                <h6 class="tx-13 mg-b-2 tx-primary">Katherine Lumaad</h6>
-                                                <p class="tx-12 mg-b-10">Pengadministrasi Persuratan</p>
+                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
+                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
                                             </td>
-                                            <td>02/01/2023 07:04:50</td>
-                                            <td>02/01/2023 16:04:50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Jumat (5 Hari Kerja)</td>
+                                            <td>["Jumat"]</td>
+                                            <td>07:30:00</td>
+                                            <td>16:30:00</td>
+                                            <td>Ya</td>
                                             <td>
-                                                <h6 class="tx-13 mg-b-2 tx-dark tx-medium">CQLN230660015(a SETDA FaceID Umum)</h6>
-                                                <p class="tx-12 mg-b-10">Fingerprint</p>
+                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
+                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
                                             </td>
-                                            <td>
-                                                <a
-                                                    href="http://103.165.236.206:8081/iclock/file/upload/thumbnail/CQLN230660017/2025/0321/164256_198202122001121004.jpg"
-                                                    target="_blank"
-                                                    class="wd-100 wd-md-50 wd-lg-100 ht-60 ht-md-40 ht-lg-60"
-                                                >
-                                                    <img src="http://103.165.236.206:8081/iclock/file/upload/thumbnail/CQLN230660017/2025/0321/164256_198202122001121004.jpg" class="img-fit-cover" alt="" />
-                                                </a>
-                                            </td>
-                                            <td>Mesin</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -346,7 +384,7 @@
         <script>
             $(function () {
                 "use strict";
-                $("#example2").DataTable({
+                $("#datatables").DataTable({
                     responsive: true,
                     language: {
                         searchPlaceholder: "Pencarian",
@@ -355,47 +393,16 @@
                     },
                 });
 
-                $(".select2").select2({
-                    placeholder: "Pilih Status Pegawai",
-                    searchInputPlaceholder: "Pilihan Pencarian",
-                });
 
-                $(".select2-so").select2({
-                    placeholder: "Pilih Satuan Organisasi",
-                    searchInputPlaceholder: "Pilihan Pencarian",
-                    allowClear: true,
-                });
-
-                $(".select2-clear").select2({
+                $('.select2').select2({
+                    placeholder: 'Pilihan',
+                    searchInputPlaceholder: 'Pencarian',
                     minimumResultsForSearch: Infinity,
-                    placeholder: "Pilih Unit Kerja",
-                    allowClear: true,
+                    width: '100%',
+                    dropdownParent: $('#ModalTambah')
                 });
-
-                $(".select2-status").select2({
-                    minimumResultsForSearch: Infinity,
-                    placeholder: "Pilih Status",
-                    allowClear: true,
-                });
-
                 // Select2
                 $(".dataTables_length select").select2({ minimumResultsForSearch: Infinity });
-            });
-
-            $(function () {
-                "use strict";
-
-                $("#modal6").on("show.bs.modal", function (event) {
-                    var animation = $(event.relatedTarget).data("animation");
-                    $(this).addClass(animation);
-                });
-
-                // hide modal with effect
-                $("#modal6").on("hidden.bs.modal", function (e) {
-                    $(this).removeClass(function (index, className) {
-                        return (className.match(/(^|\s)effect-\S+/g) || []).join(" ");
-                    });
-                });
             });
         </script>
     </body>
