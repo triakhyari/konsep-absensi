@@ -31,7 +31,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png" />
 
-    <title>Laporan Utama Harian | Absensi Online</title>
+    <title>Statistik Bulanan | Absensi Online</title>
 
     <!-- vendor css -->
     <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
@@ -95,14 +95,14 @@
         </div>
         <ul class="nav nav-aside">
           <li class="nav-label">Dashboard</li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a href="dashboard-harian.html" class="nav-link"><i data-feather="activity"></i> <span>Lap Utama Harian </span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a href="dashboard-bulanan.html" class="nav-link"><i data-feather="bar-chart-2"></i> <span>Statistik Bulanan</span></a>
           </li>
           <li class="nav-item">
-            <a href="statistik-pegawai.html" class="nav-link"><i data-feather="pie-chart"></i> <span>Statistik Pegawai</span></a>
+            <a href="dashboard-three.html" class="nav-link"><i data-feather="pie-chart"></i> <span>Statistik Pegawai</span></a>
           </li>
           <!-- DATA MASTER KEPEGAWAIAN -->
           <li class="nav-label mg-t-25">Data Master Kepegawaian</li>
@@ -227,199 +227,24 @@
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb breadcrumb-style1 mg-b-10">
                   <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Laporan Utama Harian</li>
+                  <li class="breadcrumb-item active" aria-current="page">Statistik Bulanan Pegawai</li>
                 </ol>
               </nav>
-              <h4 class="mg-b-0 tx-spacing--1">Welcome to Dashboard</h4>
+              <h4 class="mg-b-0 tx-spacing--1">Statistik Bulanan Pegawai</h4>
             </div>
           </div>
 
           <div class="row row-xs">
-            <div class="col-lg-3 col-md-6 mg-t-10">
-              <div class="card">
-                <div class="card-body pd-y-20 pd-x-25">
-                  <div class="row row-sm">
-                    <div class="col-8">
-                      <h6 class="tx-12 tx-semibold tx-spacing-1 tx-primary mg-b-5">Total Pegawai</h6>
-                      <h3 class="tx-normal tx-rubik tx-spacing--1 mg-b-5">34,430</h3>
-                      <p class="tx-12 tx-semibold mg-b-0">PEGAWAI</p>
-                    </div>
-                    <div class="col-4">
-                      <div class="tx-40 tx-lg-50 lh-0 tx-primary text-center"><i class="typcn typcn-group-outline"></i></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- card-body -->
-              </div>
-              <!-- card -->
-            </div>
-            <!-- col -->
-            <div class="col-lg-3 col-md-6 mg-t-10">
-              <div class="card">
-                <div class="card-body pd-y-20 pd-x-25">
-                  <div class="row row-sm">
-                    <div class="col-8">
-                      <h6 class="tx-12 tx-semibold tx-spacing-1 tx-success mg-b-5">Kehadiran</h6>
-                      <h3 class="tx-normal tx-rubik tx-spacing--1 mg-b-5">0.22%</h3>
-                      <p class="tx-12 tx-semibold mg-b-0">75 PEGAWAI</p>
-                    </div>
-                    <div class="col-4">
-                      <div class="tx-40 tx-lg-50 lh-0 tx-success text-center"><ion-icon name="business-outline"></ion-icon></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- card-body -->
-              </div>
-              <!-- card -->
-            </div>
-            <!-- col -->
-            <div class="col-lg-3 col-md-6 mg-t-10">
-              <div class="card">
-                <div class="card-body pd-y-20 pd-x-25">
-                  <div class="row row-sm">
-                    <div class="col-8">
-                      <h6 class="tx-12 tx-semibold tx-spacing-1 tx-danger mg-b-5">Alpha</h6>
-                      <h3 class="tx-normal tx-rubik tx-spacing--1 mg-b-5">99.77%</h3>
-                      <p class="tx-12 tx-semibold mg-b-0">34,351 PEGAWAI</p>
-                    </div>
-                    <div class="col-4">
-                      <div class="tx-40 tx-lg-50 lh-0 tx-danger text-center"><i class="typcn typcn-power-outline"></i></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- card-body -->
-              </div>
-              <!-- card -->
-            </div>
-            <!-- col -->
-            <div class="col-lg-3 col-md-6 mg-t-10">
-              <div class="card">
-                <div class="card-body pd-y-20 pd-x-25">
-                  <div class="row row-sm">
-                    <div class="col-8">
-                      <h6 class="tx-12 tx-semibold tx-spacing-1 tx-warning mg-b-5">Cuti</h6>
-                      <h3 class="tx-normal tx-rubik tx-spacing--1 mg-b-5">0.01%</h3>
-                      <p class="tx-12 tx-semibold mg-b-0">4 PEGAWAI</p>
-                    </div>
-                    <div class="col-4">
-                      <div class="tx-40 tx-lg-50 lh-0 tx-warning text-center"><ion-icon name="calendar-outline"></ion-icon></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- card-body -->
-              </div>
-              <!-- card -->
-            </div>
-            <!-- col -->
             <div class="col-lg-12 mg-t-10">
               <div class="card">
                 <div class="card-header">
-                  <h6 class="mg-b-0">Kehadiran Berdasarkan Skema Kerja</h6>
+                  <h6 class="mg-b-0">Statistik Kehadiran</h6>
+                  <p class="tx-12 tx-color-03 mg-b-0">Bulanan Tahun 2025</p>
                 </div>
-                <!-- card-header -->
-                <div class="card-body pd-10">
-                  <div class="progress bg-transparent op-7 ht-40 mg-b-15">
-                    <div class="progress-bar bg-primary wd-50p" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                      <h6 class="tx-white tx-12 mg-0">50.00%</h6>
-                      <p class="tx-white tx-12 mg-0">Dinas Kantor (60 Pegawai)</p>
-                    </div>
-                    <div class="progress-bar bg-teal wd-20p bd-l bd-white" role="progressbar" aria-valuenow="2.67" aria-valuemin="0" aria-valuemax="100">
-                      <h6 class="tx-white tx-12 mg-0">2.67%</h6>
-                      <p class="tx-white tx-12 mg-0">WFH/WFA (13 Pegawai)</p>
-                    </div>
-                    <div class="progress-bar bg-success wd-10p bd-l bd-white" role="progressbar" aria-valuenow="17.33" aria-valuemin="0" aria-valuemax="100">
-                      <h6 class="tx-white tx-12 mg-0">17.33%</h6>
-                      <p class="tx-white tx-12 mg-0">Dinas Luar/Tugas Lain (13 Pegawai)</p>
-                    </div>
-                    <div class="progress-bar bg-pink wd-15p bd-l bd-white" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">
-                      <h6 class="tx-white tx-12 mg-0">5%</h6>
-                      <p class="tx-white tx-12 mg-0">Izin/Sakit (5 Pegawai)</p>
-                    </div>
-                    <div class="progress-bar bg-warning wd-5p bd-l bd-white" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-                      <h6 class="tx-white tx-12 mg-0">5%</h6>
-                      <p class="tx-white tx-12 mg-0">Cuti (5 Pegawai)</p>
-                    </div>
-                  </div>
-                  <div class="row row-sm">
-                    <div class="col-6">
-                      <div class="table-responsive">
-                        <table class="table mg-b-0">
-                          <thead>
-                            <tr>
-                              <th scope="col">Skema Ketidakhadiran Kantor</th>
-                              <th class="text-end">Total</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>Dinas Luar/Tugas Lain Full</td>
-                              <td class="text-end">0</td>
-                            </tr>
-                            <tr>
-                              <td>Dinas Luar/Tugas Lain, Tidak Absen Masuk</td>
-                              <td class="text-end">0</td>
-                            </tr>
-                            <tr>
-                              <td>Dinas Luar/Tugas Lain, Tidak Absen Pulang</td>
-                              <td class="text-end">0</td>
-                            </tr>
-                            <tr>
-                              <td>Izin/Sakit Full</td>
-                              <td class="text-end">0</td>
-                            </tr>
-                            <tr>
-                              <td>Izin/Sakit, Terlambat</td>
-                              <td class="text-end">0</td>
-                            </tr>
-                            <tr>
-                              <td>Izin/Sakit, Pulang Cepat</td>
-                              <td class="text-end">0</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <!-- table-responsive -->
-                    </div>
-                    <div class="col-6">
-                      <div class="table-responsive">
-                        <table class="table mg-b-0">
-                          <thead>
-                            <tr>
-                              <th scope="col">Skema Cuti</th>
-                              <th class="text-end">Total</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>Cuti Tahunan</td>
-                              <td class="text-end">0</td>
-                            </tr>
-                            <tr>
-                              <td>Cuti Sakit</td>
-                              <td class="text-end">0</td>
-                            </tr>
-                            <tr>
-                              <td>Cuti Alasan Penting</td>
-                              <td class="text-end">0</td>
-                            </tr>
-                            <tr>
-                              <td>Cuti Melahirkan</td>
-                              <td class="text-end">0</td>
-                            </tr>
-                            <tr>
-                              <td>Cuti Besar</td>
-                              <td class="text-end">0</td>
-                            </tr>
-                            <tr>
-                              <td>Cuti Diluar Tanggungan Negara</td>
-                              <td class="text-end">0</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <!-- table-responsive -->
-                    </div>
-                  </div>
+                <div class="card-body pd-y-20 pd-x-25">
+                  <figure class="highcharts-figure">
+                    <div id="container"></div>
+                  </figure>
                 </div>
                 <!-- card-body -->
               </div>
@@ -436,72 +261,131 @@
             </div>
             <div class="col">
               <div class="card">
-                <div data-label="Rekap Kehadiran Pegawai" class="df-example demo-table">
-                  <table id="example2" class="table table-hover table-bordered" style="width: 100%;">
+                <div data-label="Rekap Kehadiran Bulanan" class="df-example demo-table">
+                  <table id="" class="table table-hover table-bordered" style="width: 100%;">
                     <thead class="thead-primary">
                       <tr>
-                        <th rowspan="2">Rank</th>
-                        <th rowspan="2">Nama SKPD</th>
-                        <th rowspan="2">Pegawai</th>
+                        <th rowspan="2" class="text-center">Bulan Ke-</th>
                         <th colspan="3" class="text-center">Kehadiran</th>
                         <th colspan="5" class="text-center">Absen Kantor</th>
-                        <th rowspan="2">Persentase</th>
                       </tr>
                       <tr>
-                        <th>Kantor</th>
-                        <th>WFH/WFA</th>
-                        <th>Total</th>
-                        <th>Alpha</th>
-                        <th>DL/Tugas Lain</th>
-                        <th>Izi/Sakit</th>
-                        <th>Cuti</th>
-                        <th>Total</th>
-                      </tr>
-                    </thead>
-                    <thead class="bg-transparent">
-                      <tr>
-                        <td class="text-start"><strong>Urutan</strong></td>
-                        <td class="text-start"><strong>Total</strong></td>
-                        <td class="text-end"><strong>22</strong></td>
-                        <td class="text-end"><strong>5,628</strong></td>
-                        <td class="text-end"><strong>25.60%</strong></td>
-                        <td class="text-end"><strong>1.92</strong></td>
-                        <td class="text-end"><strong>00:01:05</strong></td>
-                        <td class="text-end"><strong>340,103</strong></td>
-                        <td class="text-end"><strong>$2.65M</strong></td>
-                        <td class="text-end"><strong>4.50%</strong></td>
-                        <td class="text-end"><strong>$2.65M</strong></td>
-                        <td class="text-end"><strong>4.50%</strong></td>
+                        <th class="text-center">Kantor</th>
+                        <th class="text-center">WFH/WFA</th>
+                        <th class="text-center">Alpha</th>
+                        <th class="text-center">DL/Tugas Lain</th>
+                        <th class="text-center">Izin/Sakit</th>
+                        <th class="text-center">Cuti</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="text-start">1</td>
-                        <td class="text-start">Dinas Pendidikan</td>
-                        <td class="text-end">7,800</td>
+                        <td class="text-center">1</td>
                         <td class="text-end">5,628</td>
                         <td class="text-end">25.60%</td>
                         <td class="text-end">1.92</td>
                         <td class="text-end">190,92</td>
                         <td class="text-end">340,103</td>
                         <td class="text-end">$2.65M</td>
-                        <td class="text-end">4.50%</td>
-                        <td class="text-end">$2.65M</td>
-                        <td class="text-end">4.50%</td>
                       </tr>
                       <tr>
-                        <td class="text-start">2</td>
-                        <td class="text-start">Dinas Kesehatan</td>
-                        <td class="text-end">7,800</td>
+                        <td class="text-center">2</td>
                         <td class="text-end">5,628</td>
                         <td class="text-end">25.60%</td>
                         <td class="text-end">1.92</td>
                         <td class="text-end">190,92</td>
                         <td class="text-end">340,103</td>
                         <td class="text-end">$2.65M</td>
-                        <td class="text-end">4.50%</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">3</td>
+                        <td class="text-end">5,628</td>
+                        <td class="text-end">25.60%</td>
+                        <td class="text-end">1.92</td>
+                        <td class="text-end">190,92</td>
+                        <td class="text-end">340,103</td>
                         <td class="text-end">$2.65M</td>
-                        <td class="text-end">4.50%</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">4</td>
+                        <td class="text-end">5,628</td>
+                        <td class="text-end">25.60%</td>
+                        <td class="text-end">1.92</td>
+                        <td class="text-end">190,92</td>
+                        <td class="text-end">340,103</td>
+                        <td class="text-end">$2.65M</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">5</td>
+                        <td class="text-end">5,628</td>
+                        <td class="text-end">25.60%</td>
+                        <td class="text-end">1.92</td>
+                        <td class="text-end">190,92</td>
+                        <td class="text-end">340,103</td>
+                        <td class="text-end">$2.65M</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">6</td>
+                        <td class="text-end">5,628</td>
+                        <td class="text-end">25.60%</td>
+                        <td class="text-end">1.92</td>
+                        <td class="text-end">190,92</td>
+                        <td class="text-end">340,103</td>
+                        <td class="text-end">$2.65M</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">7</td>
+                        <td class="text-end">5,628</td>
+                        <td class="text-end">25.60%</td>
+                        <td class="text-end">1.92</td>
+                        <td class="text-end">190,92</td>
+                        <td class="text-end">340,103</td>
+                        <td class="text-end">$2.65M</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">8</td>
+                        <td class="text-end">5,628</td>
+                        <td class="text-end">25.60%</td>
+                        <td class="text-end">1.92</td>
+                        <td class="text-end">190,92</td>
+                        <td class="text-end">340,103</td>
+                        <td class="text-end">$2.65M</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">9</td>
+                        <td class="text-end">5,628</td>
+                        <td class="text-end">25.60%</td>
+                        <td class="text-end">1.92</td>
+                        <td class="text-end">190,92</td>
+                        <td class="text-end">340,103</td>
+                        <td class="text-end">$2.65M</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">10</td>
+                        <td class="text-end">5,628</td>
+                        <td class="text-end">25.60%</td>
+                        <td class="text-end">1.92</td>
+                        <td class="text-end">190,92</td>
+                        <td class="text-end">340,103</td>
+                        <td class="text-end">$2.65M</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">11</td>
+                        <td class="text-end">5,628</td>
+                        <td class="text-end">25.60%</td>
+                        <td class="text-end">1.92</td>
+                        <td class="text-end">190,92</td>
+                        <td class="text-end">340,103</td>
+                        <td class="text-end">$2.65M</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">12</td>
+                        <td class="text-end">5,628</td>
+                        <td class="text-end">25.60%</td>
+                        <td class="text-end">1.92</td>
+                        <td class="text-end">190,92</td>
+                        <td class="text-end">340,103</td>
+                        <td class="text-end">$2.65M</td>
                       </tr>
                     </tbody>
                   </table>
@@ -537,13 +421,92 @@
     <script src="../../assets/js/dashforge.aside.js"></script>
     <script src="../../assets/js/dashforge.sampledata.js"></script>
 
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/themes/adaptive.js"></script>
+
     <!-- append theme customizer -->
     <script src="../../lib/js-cookie/js.cookie.js"></script>
     <script>
+      Highcharts.chart('container', {
+        chart: {
+          type: 'line'
+        },
+      title: {
+          useHTML: true,
+          text: '<h6 class="mg-0">Pemerintah Kota Palembang</h6>',
+          align: 'center'
+      },
+      subtitle: {
+        text: '<p class="tx-12 tx-color-03 mg-0">Kehadiran Bulanan Tahun 2025</p>',
+        align: 'center'
+      },
+      yAxis: {
+          title: {
+              text: 'Persentase'
+          }
+      },
+
+      xAxis: {
+        categories: [
+            'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September',
+            'Oktober', 'November', 'Desember'
+        ]
+      },
+
+      plotOptions: {
+        line: {
+            dataLabels: {
+                enabled: true
+            },
+            enableMouseTracking: false
+        }
+    },
+
+      series: [{
+          name: 'Kehadiran (Kantor/WFH/WFA)',
+          data: [
+              43934, 48656, 65165, 81827, 112143, 142383,
+              171533, 165174, 155157, 161454, 154610, 168960
+          ]
+      }, {
+          name: 'Dinas Kantor',
+          data: [
+              24916, 37941, 29742, 29851, 32490, 30282,
+              38121, 36885, 33726, 34243, 31050, 33099
+          ]
+      }, {
+          name: 'DL/Tugas Lain',
+          data: [
+              11744, 30000, 16005, 19771, 20185, 24377,
+              32147, 30912, 29243, 29213, 25663, 28978
+          ]
+      }, {
+          name: 'Izin/Sakit',
+          data: [
+              null, null, null, null, null, null, null,
+              null, 11164, 11218, 10077, 12530
+          ]
+      }, {
+          name: 'Cuti',
+          data: [
+              21908, 5548, 8105, 11248, 8989, 11816, 18274,
+              17300, 13053, 11906, 10073, 11471
+          ]
+      }],
+
+     });
+
+
       $(function () {
         "use strict";
         $("#example2").DataTable({
           responsive: true,
+          pageLength: 12,
+          lengthMenu: [ [12, 25, 50, 100], [12, 25, 50, 100] ],
           language: {
             searchPlaceholder: "Pencarian",
             sSearch: "",
