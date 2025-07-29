@@ -348,12 +348,11 @@
                                     <thead class="thead-primary">
                                         <tr>
                                             <th>No.</th>
-                                            <th>Jenis Pengajuan</th>
-                                            <th>Jenis Ketidakhadiran</th>
-                                            <th>Absen Datang?</th>
-                                            <th>Absen Pulang?</th>
-                                            <th>Batas Absen Datang</th>
-                                            <th>Batas Absen Pulang</th>
+                                            <th>Nama Pegawai</th>
+                                            <th>Tipe Dinas</th>
+                                            <th>Tanggal Dinas</th>
+                                            <th>Keterangan</th>
+                                            <th>Dokumen Pendukung</th>
                                             <th>Status</th>
                                             <th>Aksi</th>
                                         </tr>
@@ -361,156 +360,23 @@
                                     <tbody>
                                         <tr>
                                             <td>1</td>
+                                            <td>
+                                                <h6 class="tx-13 mg-b-2 tx-primary">Katherine Lumaad</h6>
+                                                <p class="tx-12 mg-b-10">196708142001121002</p>
+                                            </td>
                                             <td>Dinas Luar Full</td>
-                                            <td>Dinas</td>
-                                            <td>Tidak Ada</td>
-                                            <td>Tidak Ada</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>Ya</td>
+                                            <td>02/01/2023</td>
+                                            <td>Kordinasi Ke Kemendagri</td>
                                             <td>
-                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
-                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
+                                                <a href="form-elements.html" class="tx-medium d-flex align-items-center gap-1">Lihat Dokumen <ion-icon name="arrow-forward-outline" aria-label="arrow forward outline" role="img" class="md hydrated"></ion-icon></a>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Dinas Luar, Tidak Absen Masuk</td>
-                                            <td>Dinas</td>
-                                            <td>Tidak Ada</td>
-                                            <td>Ada</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>Ya</td>
                                             <td>
-                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
-                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
+                                                <p class="tx-12 mg-b-10">Fingerprint</p>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Dinas Luar, Tidak Absen Pulang</td>
-                                            <td>Dinas</td>
-                                            <td>Ada</td>
-                                            <td>Tidak Ada</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>Ya</td>
                                             <td>
                                                 <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
                                                 <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Tugas Lain Full</td>
-                                            <td>Dinas</td>
-                                            <td>Tidak Ada</td>
-                                            <td>Tidak Ada</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>Ya</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
-                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Tugas Lain, Tidak Absen Masuk</td>
-                                            <td>Dinas</td>
-                                            <td>Ada</td>
-                                            <td>Tidak Ada</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>Ya</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
-                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Tugas Lain, Tidak Absen Pulang</td>
-                                            <td>Dinas</td>
-                                            <td>Ada</td>
-                                            <td>Tidak Ada</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>Ya</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
-                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>7</td>
-                                            <td>Tugas Lain, Apel Gabungan</td>
-                                            <td>Dinas</td>
-                                            <td>Ada</td>
-                                            <td>Tidak Ada</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>Ya</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
-                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>8</td>
-                                            <td>Tugas Lain, Gotong Royong</td>
-                                            <td>Dinas</td>
-                                            <td>Ada</td>
-                                            <td>Tidak Ada</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>Ya</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
-                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>9</td>
-                                            <td>Izin Full</td>
-                                            <td>Izin</td>
-                                            <td>Tidak Ada</td>
-                                            <td>Tidak Ada</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>Ya</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
-                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>10</td>
-                                            <td>Izin Terlambat</td>
-                                            <td>Izin</td>
-                                            <td>Tidak Ada</td>
-                                            <td>Tidak Ada</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>Ya</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
-                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>10</td>
-                                            <td>Izin Terlambat</td>
-                                            <td>Izin</td>
-                                            <td>Tidak Ada</td>
-                                            <td>Ada</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>Ya</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
-                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
+                                                <button type="button" class="btn btn-outline-warning btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalInfo"><i data-feather="info"></i></button>
                                             </td>
                                         </tr>
                                     </tbody>
