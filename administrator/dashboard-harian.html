@@ -217,8 +217,15 @@
     </aside>
 
     <div class="content ht-100v pd-0">
-      <div class="content-header"></div>
-      <!-- content-header -->
+      <div class="content-header">
+        <div class="content-search">
+          <label for="Periode" class="mg-r-5 nav-link">Periode :</label>
+          <select class="form-select wd-75 border-0 shadow-none bg-transparent">
+            <option value="2024">2024</option>
+            <option value="2025" selected>2025</option>
+          </select>
+        </div>
+      </div><!-- content-header -->
 
       <div class="content-body">
         <div class="container pd-x-0">
@@ -550,6 +557,7 @@
             lengthMenu: "_MENU_ items/page",
           },
         });
+
 
         // Select2
         $(".dataTables_length select").select2({ minimumResultsForSearch: Infinity });
