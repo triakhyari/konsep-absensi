@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Twitter -->
+        <meta name="twitter:site" content="@themepixels" />
+        <meta name="twitter:creator" content="@themepixels" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="DashForge" />
+        <meta name="twitter:description" content="Responsive Bootstrap 5 Dashboard Template" />
+        <meta name="twitter:image" content="http://themepixels.me/dashforge/img/dashforge-social.png" />
+
+        <!-- Facebook -->
+        <meta property="og:url" content="http://themepixels.me/dashforge" />
+        <meta property="og:title" content="DashForge" />
+        <meta property="og:description" content="Responsive Bootstrap 5 Dashboard Template" />
+
+        <meta property="og:image" content="http://themepixels.me/dashforge/img/dashforge-social.png" />
+        <meta property="og:image:secure_url" content="http://themepixels.me/dashforge/img/dashforge-social.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
+
+        <!-- Meta -->
+        <meta name="description" content="Responsive Bootstrap 5 Dashboard Template" />
+        <meta name="author" content="ThemePixels" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png" />
+
+        <title>Rekap Dinas Pegawai | Absensi Online</title>
+
+        <!-- vendor css -->
+        <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+        <link href="../lib/typicons.font/src/font/typicons.css" rel="stylesheet" />
+        <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet" />
+        <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet" />
+        <link href="../lib/prismjs/themes/prism-vs.css" rel="stylesheet" />
+        <link href="../lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" />
+        <link href="../lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet" />
+        <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+        <!-- DashForge CSS -->
+        <link rel="stylesheet" href="../assets/css/dashforge.css" />
+        <link rel="stylesheet" href="../assets/css/dashforge.dashboard.css" />
+
+        <!-- DashForge CSS -->
+        <link rel="stylesheet" href="../assets/css/dashforge.css" />
+        <link rel="stylesheet" href="../assets/css/skin.deepblue.css" />
+        <link rel="stylesheet" href="../assets/css/dashforge.demo.css" />
+        <style>
+            .accordion-button::after {
+                display: none !important;
+            }
+        </style>
+    </head>
+    <body>
+        <aside class="aside aside-fixed">
+            <div class="aside-header">
+                <a href="../index.html" class="aside-logo">K-<span>Mob</span></a>
+                <a href="" class="aside-menu-link">
+                    <i data-feather="menu"></i>
+                    <i data-feather="x"></i>
+                </a>
+            </div>
+            <div class="aside-body">
+                <div class="aside-loggedin">
+                    <div class="d-flex align-items-center justify-content-start">
+                        <a href="" class="avatar"><img src="../assets/img/profile-default.png" class="rounded-circle" alt="" /></a>
+                        <div class="aside-alert-link">
+                            <a href="../page-signin.html" data-bs-toggle="tooltip" title="Sign out"><i data-feather="log-out"></i></a>
+                        </div>
+                    </div>
+                    <div class="aside-loggedin-user">
+                        <a href="#loggedinMenu" class="d-flex align-items-center justify-content-between mg-b-2" data-bs-toggle="collapse">
+                            <h6 class="tx-semibold mg-b-0">Tri Akhyari Romadhon</h6>
+                            <i data-feather="chevron-down"></i>
+                        </a>
+                        <p class="tx-color-03 tx-12 mg-b-0">Super Administrator</p>
+                    </div>
+                    <div class="collapse" id="loggedinMenu">
+                        <ul class="nav nav-aside mg-b-0">
+                            <li class="nav-item">
+                                <a href="profile.html" class="nav-link"><i data-feather="user"></i> <span>View Profile</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="LogAktivitas.html" class="nav-link"><i data-feather="info"></i> <span>Log Aktivitas</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="UbahPassword.html" class="nav-link"><i data-feather="edit"></i> <span>Ubah Password</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../page-signin.html" class="nav-link"><i data-feather="log-out"></i> <span>Sign Out</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="nav nav-aside">
+                    <li class="nav-label">Dashboard</li>
+                    <li class="nav-item active">
+                        <a href="dashboard-harian.html" class="nav-link"><i data-feather="activity"></i> <span>Lap Utama Harian </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dashboard-bulanan.html" class="nav-link"><i data-feather="bar-chart-2"></i> <span>Statistik Bulanan</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="statistik-pegawai.html" class="nav-link"><i data-feather="pie-chart"></i> <span>Statistik Pegawai</span></a>
+                    </li>
+                    <!-- DATA MASTER KEPEGAWAIAN -->
+                    <li class="nav-label mg-t-25">Data Master Kepegawaian</li>
+                    <li class="nav-item">
+                        <a href="data-pegawai.html" class="nav-link"><i data-feather="user-plus"></i> <span>Pegawai ASN</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PegawaiNonAsn.html" class="nav-link"><i data-feather="user-minus"></i> <span>Pegawai Non ASN</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="StrukturOrganisasi.html" class="nav-link"><i data-feather="layout"></i> <span>Struktur Organisasi</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="SatuanOrgnisasi.html" class="nav-link"><i data-feather="layers"></i> <span>Satuan Organisasi</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="UnitKerja.html" class="nav-link"><i data-feather="file"></i> <span>Unit Kerja</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="JenisJabatan.html" class="nav-link"><i data-feather="file-text"></i> <span>Jenis Jabatan</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="NamaJabatan.html" class="nav-link"><i data-feather="clipboard"></i> <span>Nama Jabatan</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="TugasTambahan.html" class="nav-link"><i data-feather="file-plus"></i> <span>Tugas Tambahan</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="MutasiPegawai.html" class="nav-link"><i data-feather="repeat"></i> <span>Mutasi Pegawai</span></a>
+                    </li>
+
+                    <!-- Master Absensi-->
+                    <li class="nav-label mg-t-25">Master Absensi</li>
+                    <li class="nav-item">
+                        <a href="TipeKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Tipe Kerja</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="WaktuKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Waktu Kerja</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="SkemaKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Skema Waktu Kerja</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PegawaiAbsensiMobile.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Pegawai Absensi Mobile</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="JenisCuti.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Jenis Cuti</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="JenisKetidakhadiran.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Jenis Ketidakhadiran</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PemotonganAbsensi.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Pemotongan Absensi</span></a>
+                    </li>
+
+                    <!-- Pengajuan Ketidakhadiran -->
+                    <li class="nav-label mg-t-25">Pengajuan Ketidakhadiran</li>
+                    <li class="nav-item with-sub active show">
+                        <a href="" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas</span></a>
+                        <ul>
+                            <li><a href="PengajuanDinas.html">Pengajuan</a></li>
+                            <li><a href="RekapPengajuanDinas.html">Rekap Dinas SKPD</a></li>
+                            <li class="active"><a href="RekapPengajuanDinasPegawai.html">Rekap Dinas Pegawai</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin</span></a>
+                        <ul>
+                            <li><a href="PengajuanIzin.html">Pengajuan</a></li>
+                            <li><a href="LaporanPengajuanIzin.html">Laporan Pengajuan Izin</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
+                        <ul>
+                            <li><a href="PengajuanSakit.html">Pengajuan</a></li>
+                            <li><a href="LaporanPengajuanSakit.html">Laporan Pengajuan Sakit</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
+                        <ul>
+                            <li><a href="PengajuanCuti.html">Pengajuan</a></li>
+                            <li><a href="LaporanPengajuanCuti.html">Laporan Pengajuan Cuti</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Monitoring Absensi -->
+                    <li class="nav-label mg-t-25">Monitoring Absensi</li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="archive"></i> <span>Agenda Absensi</span></a>
+                        <ul>
+                            <li><a href="AgendaSKPD.html">Agenda SKPD</a></li>
+                            <li><a href="AgendaPegawai.html">Agenda Pegawai</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="clock"></i> <span>Jadwal Pegawai</span></a>
+                        <ul>
+                            <li><a href="JadwalUtama.html">Jadwal Utama</a></li>
+                            <li><a href="JadwalTambahan.html">Jadwal Tambahan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="KeluarKantor.html" class="nav-link"><i data-feather="external-link"></i> <span>Keluar Kantor</span></a>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="database"></i> <span>Mesin Absensi</span></a>
+                        <ul>
+                            <li><a href="AbsensiMesinHarian.html">Absensi Mesin Harian</a></li>
+                            <li><a href="AbsensiMesinPegawai.html">Absensi Mesin Pegawai</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="smartphone"></i> <span>Absensi Mobile</span></a>
+                        <ul>
+                            <li><a href="AbsensiMobileHarian.html">Absensi Mobile Harian</a></li>
+                            <li><a href="AbsensiMobilePegawai.html">Absensi Mobile Pegawai</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="book"></i> <span>Laporan Presensi</span></a>
+                        <ul>
+                            <li><a href="LaporanHarian.html">Laporan Harian</a></li>
+                            <li><a href="LaporanBulanan.html">Laporan Bulanan</a></li>
+                            <li><a href="LaporanTahunan.html">Laporan Tahunan</a></li>
+                            <li><a href="LaporanBermasalah.html">Laporan Bermasalah</a></li>
+                            <li><a href="LogAbsensiMobile.html">Log Absensi Mobile</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="content ht-100v pd-0">
+            <div class="content-header">
+                <div class="content-search">
+                <label for="Periode" class="mg-r-5 nav-link">Periode :</label>
+                <select class="form-select wd-75 border-0 shadow-none bg-transparent">
+                    <option value="2024">2024</option>
+                    <option value="2025" selected>2025</option>
+                </select>
+                </div>
+            </div><!-- content-header -->
+
+            <div class="content-body">
+                <div class="container pd-x-0">
+                    <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+                        <div>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+                                    <li class="breadcrumb-item"><a href="#">Pengajuan Ketidakhadiran</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Rekap Dinas Pegawai</li>
+                                </ol>
+                            </nav>
+                            <h4 class="mg-b-0 tx-spacing--1">Rekap Dinas Pegawai</h4>
+                        </div>
+                        <div class="d-none d-md-block">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="file-text" class="wd-10"></i></button>
+                            </div>
+                        </div>
+                    </div>             
+                    <div class="row row-xs">
+                        <div class="col-sm-12 col-lg-12">
+                            <div data-label="List Data Pengajuan Dinas" class="df-example demo-table">
+                                <div class="accordion mg-b-20" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                        <button class="accordion-button bg-primary text-white tx-14 pd-13" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <i class="fas fa-filter mg-r-5"></i> Filter Data
+                                        </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row row-sm">
+                                                    <div class="col-lg-6">                                        
+                                                        <div class="form-group">
+                                                            <label for="formGroup" class="d-block">SKPD</label>
+                                                            <select class="form-select select2">
+                                                                <option label="Pilih SKPD"></option>
+                                                                <option value="Dinas">Dinas Kantor</option>
+                                                                <option value="WFH">Work From Home (WFH)</option>
+                                                                <option value="WFA">Work From Anyware (WFA)</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <label for="formGroup" class="d-block">Unit Kerja</label>
+                                                            <select class="form-select select2">
+                                                                <option label="Pilih Unit Kerja"></option>
+                                                                <option value="Dinas">Dinas Kantor</option>
+                                                                <option value="WFH">Work From Home (WFH)</option>
+                                                                <option value="WFA">Work From Anyware (WFA)</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <div class="form-group">
+                                                            <label for="formGroup" class="d-block">Tipe Dinas</label>
+                                                            <select class="form-select select2">
+                                                                <option label="Pilih Tipe Dinas"></option>
+                                                                <option value="Dinas">Dinas Luar</option>
+                                                                <option value="Dinas">Tugas Lain</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="form-group">
+                                                            <label for="formGroup" class="d-block">Bulan</label>
+                                                            <select class="form-control select2">
+                                                                <option label="Pilih Bulan"></option>
+                                                                <option value="Januari">Januari</option>
+                                                                <option value="Februari">Februari</option>
+                                                                <option value="Maret">Maret</option>
+                                                                <option value="April">April</option>
+                                                                <option value="Mei">Mei</option>
+                                                                <option value="Juni">Juni</option>
+                                                                <option value="Juli">Juli</option>
+                                                                <option value="Agustus">Agustus</option>
+                                                                <option value="September">September</option>
+                                                                <option value="Oktober">Oktober</option>
+                                                                <option value="November">November</option>
+                                                                <option value="Desember">Desember</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="form-group">
+                                                            <label for="formGroup" class="d-block">&nbsp;</label>
+                                                            <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="refresh-cw" class="wd-10 mg-r-5"></i> Filter</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                         
+                                <!-- row -->
+                                <table id="datatables" class="table table-hover" style="width: 100%;">
+                                    <thead class="thead-primary">
+                                        <tr>
+                                            <th rowspan="2">No.</th>
+                                            <th rowspan="2">Nama Pegawai</th>
+                                            <th colspan="4" class="text-center">Dinas Luar</th>
+                                            <th colspan="6" class="text-center">Tugas Lain</th>
+                                            <th rowspan="2">Persentase</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Dinas Luar Full</th>
+                                            <th>Dinas Luar, Tidak Absen Masuk</th>
+                                            <th>Dinas Luar, Tidak Absen Pulang</th>
+                                            <th>Total</th>
+                                            <th>Tugas Lain Full</th>
+                                            <th>Tugas Lain, Tidak Absen Masuk</th>
+                                            <th>Tugas Lain, Tidak Absen Pulang</th>
+                                            <th>Tugas Lain, Apel Gabungan</th>
+                                            <th>Tugas Lain, Gotong Royong</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <h6 class="tx-13 mg-b-2 tx-primary">Katherine Lumaad</h6>
+                                                <p class="tx-12 mg-b-10">196708142001121002</p>
+                                            </td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- df-example -->
+                        </div>
+                        <!-- col -->
+                    </div>
+                    <!-- row -->
+                </div>
+                <!-- container -->
+            </div>
+        </div>
+
+        <script src="../lib/jquery/jquery.min.js"></script>
+        <script src="../lib/jqueryui/jquery-ui.min.js"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../lib/feather-icons/feather.min.js"></script>
+        <script src="../lib/ionicons/ionicons/ionicons.esm.js" type="module"></script>
+        <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <script src="../lib/jquery.flot/jquery.flot.js"></script>
+        <script src="../lib/jquery.flot/jquery.flot.stack.js"></script>
+        <script src="../lib/jquery.flot/jquery.flot.resize.js"></script>
+        <script src="../lib/jqvmap/jquery.vmap.min.js"></script>
+        <script src="../lib/jqvmap/maps/jquery.vmap.usa.js"></script>
+        <script src="../lib/prismjs/prism.js"></script>
+        <script src="../lib/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="../lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+        <script src="../lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="../lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+        <script src="../lib/select2/js/select2.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+        <script src="../assets/js/dashforge.js"></script>
+        <script src="../assets/js/dashforge.aside.js"></script>
+        <script src="../assets/js/dashforge.sampledata.js"></script>
+
+        <!-- append theme customizer -->
+        <script src="../lib/js-cookie/js.cookie.js"></script>
+        <script src="../assets/js/dashboard-one.js"></script>
+        <script>
+            $(function () {
+                "use strict";
+                $("#datatables").DataTable({
+                    order: [],
+                    columnDefs: [
+                        { orderable: false, targets: 0 }
+                    ],
+                    responsive: true,
+                    language: {
+                        searchPlaceholder: "Pencarian",
+                        sSearch: "",
+                        lengthMenu: "_MENU_ items/page",
+                    },
+                });
+                
+                //Select
+                 $('.select2').select2({
+                    placeholder: 'Pilihan',
+                    searchInputPlaceholder: 'Search options',
+                    width: '100%'
+                });
+                
+                 $('.selectPencarian').select2({
+                    placeholder: 'Pilihan',
+                    searchInputPlaceholder: 'Pencarian',
+                    width: '100%',
+                    dropdownParent: $('#ModalTambah')
+                });
+                // Disable search
+                $('.select2-no-search').select2({
+                    minimumResultsForSearch: Infinity,
+                    placeholder: 'Choose one'
+                });
+
+                flatpickr("#TanggalDinas", {
+                    mode: "multiple",       // ⬅️ untuk multi tanggal
+                    dateFormat: "Y-m-d",    // format tanggal
+                });
+
+                // Select2
+                $(".dataTables_length select").select2({ minimumResultsForSearch: Infinity });
+            });
+
+        </script>
+    </body>
+</html>
