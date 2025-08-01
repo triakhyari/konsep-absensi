@@ -170,29 +170,32 @@
                         <a href="" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas</span></a>
                         <ul>
                             <li class="active"><a href="PengajuanDinas.html">Pengajuan</a></li>
-                            <li><a href="RekapPengajuanDinas.html">Rekap Dinas SKPD</a></li>
-                            <li><a href="LaporanPengajuanDinas.html">Laporan Dinas Pegawai</a></li>
+                            <li><a href="RekapDinasSKPD.html">Rekap Dinas SKPD</a></li>
+                            <li><a href="RekapDinasPegawai.html">Rekap Dinas Pegawai</a></li>
                         </ul>
                     </li>
                     <li class="nav-item with-sub">
                         <a href="" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin</span></a>
                         <ul>
                             <li><a href="PengajuanIzin.html">Pengajuan</a></li>
-                            <li><a href="LaporanPengajuanIzin.html">Laporan Pengajuan Izin</a></li>
+                            <li><a href="RekapIzinSKPD.html">Rekap Izin SKPD</a></li>
+                            <li><a href="RekapIzinPegawai.html">Rekap Izin Pegawai</a></li>
                         </ul>
                     </li>
                     <li class="nav-item with-sub">
                         <a href="" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
                         <ul>
                             <li><a href="PengajuanSakit.html">Pengajuan</a></li>
-                            <li><a href="LaporanPengajuanSakit.html">Laporan Pengajuan Sakit</a></li>
+                            <li><a href="RekapSakitSKPD.html">Rekap Sakit SKPD</a></li>
+                            <li><a href="RekapSakitPegawai.html">Rekap Sakit Pegawai</a></li>
                         </ul>
                     </li>
                     <li class="nav-item with-sub">
                         <a href="" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
                         <ul>
                             <li><a href="PengajuanCuti.html">Pengajuan</a></li>
-                            <li><a href="LaporanPengajuanCuti.html">Laporan Pengajuan Cuti</a></li>
+                            <li><a href="RekapCutiSKPD.html">Rekap Cuti SKPD</a></li>
+                            <li><a href="RekapCutiPegawai.html">Rekap Cuti Pegawai</a></li>
                         </ul>
                     </li>
                     
@@ -255,7 +258,7 @@
             </div><!-- content-header -->
 
             <div class="content-body">
-                <div class="container pd-x-0">
+                <div class="pd-x-0">
                     <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
                         <div>
                             <nav aria-label="breadcrumb">
@@ -268,7 +271,7 @@
                         </div>
                         <div class="d-none d-md-block">
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button class="btn btn-sm pd-x-15 btn-outline-primary btn-uppercase"><i data-feather="upload" class="wd-10"></i></button>
+                                <button class="btn btn-sm pd-x-15 btn-outline-primary btn-uppercase" data-bs-toggle="modal" data-bs-target="#ModalImport"><i data-feather="upload" class="wd-10"></i></button>
                                 <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="file-text" class="wd-10"></i></button>
                             </div>
                             <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Tambah Data</button>
@@ -332,8 +335,8 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary tx-13" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-success tx-13"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Simpan</button>
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Close</button>
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Simpan</button>
                                 </div>
                             </div>
                         </div>
@@ -421,7 +424,7 @@
                                                         <div class="form-group">
                                                             <label for="formGroup" class="d-block">&nbsp;</label>
                                                             <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="refresh-cw" class="wd-10 mg-r-5"></i> Filter</button>
-                                                            <button class="btn btn-sm pd-x-15 btn-danger btn-uppercase"><i data-feather="trash" class="wd-10 mg-r-5"></i> Hapus Data</button>                                   
+                                                            <button class="btn btn-sm pd-x-15 btn-danger btn-uppercase disabled" id="HapusAll" data-bs-toggle="modal" data-bs-target="#ModalHapus" aria-disabled="true"><i data-feather="trash" class="wd-10 mg-r-5"></i> Hapus Data</button>                                   
                                                         </div>
                                                     </div>
                                                 </div>
@@ -443,16 +446,37 @@
                                             <p class="mg-b-0">Apakah anda yakin akan menghapus yang Dipilih?</p>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                            <button type="button" class="btn btn-primary">Hapus</button>
+                                            <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
+                                            <button type="button" class="btn btn-sm pd-x-15 btn-danger btn-uppercase"><i data-feather="trash" class="wd-10 mg-r-5"></i> Hapus</button>
                                         </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Modal Hapus -->
+                                <div class="modal fade" id="ModalImport" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
+                                    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h6 class="modal-title">Import Data</h6>
+                                            <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </a>
+                                        </div>
+                                        <div class="modal-body">
+                                            <input class="form-control" type="file" id="formFile">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
+                                            <button type="button" class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="upload" class="wd-10 mg-r-5"></i> Import</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal Import -->
                                 <table id="datatables" class="table table-hover" style="width: 100%;">
                                     <thead class="thead-primary">
                                         <tr>
-                                            <th class="text-center"><input type="checkbox" onchange="checkAll(this)" class="custom-control-input"></th>
+                                            <th class="text-center"><input type="checkbox" class="custom-control-input" id="checkAll" onclick="checkAll(this)"></th>
                                             <th>No.</th>
                                             <th>Nama Pegawai</th>
                                             <th>Tipe Dinas</th>
@@ -465,8 +489,39 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="text-center"><input type="checkbox" class="custom-control-input"/></td>
+                                            <td class="text-center"><input type="checkbox" class="custom-control-input" onchange="toggleHapusButton()"></td>
                                             <td>1</td>
+                                            <td>
+                                                <h6 class="tx-13 mg-b-2 tx-primary">Katherine Lumaad</h6>
+                                                <p class="tx-12 mg-b-10">196708142001121002</p>
+                                            </td>
+                                            <td>
+                                                Dinas Luar Full
+                                            </td>
+                                            <td>
+                                                <p class="mg-0">28/07/2025, 29/07/2025, 30/07/2025</p>
+                                                <small class="tx-12 mg-0">
+                                                    <strong>Dibuat Tanggal :</strong> 27/07/2025 10:02:20
+                                                </small>   
+                                                <p class="tx-12 mg-0"><strong>Divalidasi Tanggal :</strong> 27/07/2025 10:02:20</p>
+                                            </td>
+                                            <td>Kordinasi Ke Kemendagri</td>
+                                            <td>
+                                                <a href="#" target="_blank" class="tx-medium d-flex align-items-center gap-1 text-decoration-underline">Lihat Dokumen <ion-icon name="arrow-forward-outline" aria-label="arrow forward outline" role="img" class="md hydrated"></ion-icon></a>
+                                            </td>
+                                            <td>
+                                                <span class="badge text-bg-success">Validasi Atasan</span>
+                                                <h6 class="tx-13 mg-0 tx-primary">Katherine Lumaad</h6>
+                                                <p class="tx-12 mg-b-10">196708142001121002</p>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
+                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalHapus"><i data-feather="trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><input type="checkbox" class="custom-control-input" onchange="toggleHapusButton()"></td>
+                                            <td>2</td>
                                             <td>
                                                 <h6 class="tx-13 mg-b-2 tx-primary">Katherine Lumaad</h6>
                                                 <p class="tx-12 mg-b-10">196708142001121002</p>
@@ -536,6 +591,13 @@
         <script src="../assets/js/dashboard-one.js"></script>
         <script>
             $(function () {
+                function toggleHapusButton() {
+                    const adaYangDicek = $('.data-check:checked').length > 0;
+                    $('#hapusBtn').prop('disabled', !adaYangDicek);
+                }
+
+
+
                 "use strict";
                 $("#datatables").DataTable({
                     order: [],
@@ -579,21 +641,36 @@
             });
 
             function checkAll(box) {
-                let checkboxes = document.getElementsByTagName('input');
-                if (box.checked) { // jika checkbox teratar dipilih maka semua tag input juga dipilih
-                    for (let i = 0; i < checkboxes.length; i++) {
+                let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                for (let i = 0; i < checkboxes.length; i++) {
                     if (checkboxes[i].type == 'checkbox') {
-                    checkboxes[i].checked = true;
-                    }
-                    }
-                } else { // jika checkbox teratas tidak dipilih maka semua tag input juga tidak dipilih
-                    for (let i = 0; i < checkboxes.length; i++) {
-                    if (checkboxes[i].type == 'checkbox') {
-                    checkboxes[i].checked = false;
-                    }
+                    checkboxes[i].checked = box.checked;
                     }
                 }
-            }
+                toggleHapusButton(); // Pastikan tombol diperbarui
+                }
+
+                function toggleHapusButton() {
+                    let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                    let hapusButton = document.getElementById('HapusAll');
+
+                    const isAnyChecked = Array.from(checkboxes).some(cb =>
+                        cb.id !== 'checkAll' && cb.checked
+                    );
+
+                    if (isAnyChecked) {
+                        hapusButton.classList.remove('disabled');
+                        hapusButton.setAttribute('aria-disabled', 'false');
+                    } else {
+                        hapusButton.classList.add('disabled');
+                        hapusButton.setAttribute('aria-disabled', 'true');
+                    }
+                }
+
+                // Nonaktifkan tombol saat pertama kali halaman dimuat
+                document.addEventListener('DOMContentLoaded', function () {
+                toggleHapusButton();
+            });
         </script>
     </body>
 </html>
