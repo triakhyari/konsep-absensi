@@ -42,6 +42,7 @@
         <link href="../lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" />
         <link href="../lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet" />
         <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
         <!-- DashForge CSS -->
         <link rel="stylesheet" href="../assets/css/dashforge.css" />
@@ -51,6 +52,11 @@
         <link rel="stylesheet" href="../assets/css/dashforge.css" />
         <link rel="stylesheet" href="../assets/css/skin.deepblue.css" />
         <link rel="stylesheet" href="../assets/css/dashforge.demo.css" />
+        <style>
+            .accordion-button::after {
+                display: none !important;
+            }
+        </style>
     </head>
     <body>
         <aside class="aside aside-fixed">
@@ -148,7 +154,7 @@
                     <li class="nav-item">
                         <a href="PegawaiAbsensiMobile.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Pegawai Absensi Mobile</span></a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a href="JenisCuti.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Jenis Cuti</span></a>
                     </li>
                     <li class="nav-item">
@@ -160,17 +166,37 @@
 
                     <!-- Pengajuan Ketidakhadiran -->
                     <li class="nav-label mg-t-25">Pengajuan Ketidakhadiran</li>
-                    <li class="nav-item">
-                        <a href="PengajuanDinas.html" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas </span></a>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas</span></a>
+                        <ul>
+                            <li><a href="PengajuanDinas.html">Pengajuan</a></li>
+                            <li><a href="RekapDinasSKPD.html">Rekap Dinas SKPD</a></li>
+                            <li><a href="RekapDinasPegawai.html">Rekap Dinas Pegawai</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="PengajuanIzin.html" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin </span></a>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin</span></a>
+                        <ul>
+                            <li><a href="PengajuanIzin.html">Pengajuan</a></li>
+                            <li><a href="RekapIzinSKPD.html">Rekap Izin SKPD</a></li>
+                            <li><a href="RekapIzinPegawai.html">Rekap Izin Pegawai</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="PengajuanSakit.html" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
+                        <ul>
+                            <li><a href="PengajuanSakit.html">Pengajuan</a></li>
+                            <li><a href="RekapSakitSKPD.html">Rekap Sakit SKPD</a></li>
+                            <li><a href="RekapSakitPegawai.html">Rekap Sakit Pegawai</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="PengajuanCuti.html" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
+                        <ul>
+                            <li><a href="PengajuanCuti.html">Pengajuan</a></li>
+                            <li><a href="RekapCutiSKPD.html">Rekap Cuti SKPD</a></li>
+                            <li><a href="RekapCutiPegawai.html">Rekap Cuti Pegawai</a></li>
+                        </ul>
                     </li>
 
                     <!-- Monitoring Absensi -->
@@ -217,10 +243,17 @@
         </aside>
 
         <div class="content ht-100v pd-0">
-            <div class="content-header"></div>
-            <!-- content-header -->
+            <div class="content-header">
+                <div class="content-search">
+                <label for="Periode" class="mg-r-5 nav-link">Periode :</label>
+                <select class="form-select wd-75 border-0 shadow-none bg-transparent">
+                    <option value="2024">2024</option>
+                    <option value="2025" selected>2025</option>
+                </select>
+                </div>
+            </div><!-- content-header -->
             <div class="content-body">
-                <div class="container pd-x-0">
+                <div class="pd-x-0">
                     <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
                         <div>
                             <nav aria-label="breadcrumb">
@@ -231,49 +264,81 @@
                             </nav>
                             <h4 class="mg-b-0 tx-spacing--1">Data Absensi Mesin Harian</h4>
                         </div>
-                        <div class="d-none d-md-block">
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <button class="btn btn-sm pd-x-15 btn-outline-primary btn-uppercase"><i data-feather="upload" class="wd-10"></i></button>
-                                <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="file-text" class="wd-10"></i></button>
+                        <div class="d-none d-md-block"></div>
+                    </div>
+                    <div class="accordion mg-b-20" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button bg-primary text-white tx-14 pd-13" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <i class="fas fa-filter mg-r-5"></i> Filter Data
+                            </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="row row-sm">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                    <label for="formGroup" class="d-block">SKPD</label>
+                                    <select class="form-select select2">
+                                        <option label="Pilih SKPD"></option>
+                                        <option value="Dinas">Dinas Kantor</option>
+                                        <option value="WFH">Work From Home (WFH)</option>
+                                        <option value="WFA">Work From Anyware (WFA)</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                    <label for="formGroup" class="d-block">Unit Kerja</label>
+                                    <select class="form-select select2">
+                                        <option label="Pilih Unit Kerja"></option>
+                                        <option value="Dinas">Dinas Kantor</option>
+                                        <option value="WFH">Work From Home (WFH)</option>
+                                        <option value="WFA">Work From Anyware (WFA)</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                    <label for="formGroup" class="d-block">Jenis Pegawai</label>
+                                    <select class="form-control select2">
+                                        <option label="Pilih Jenis Pegawai"></option>
+                                        <option value="PNS">PNS</option>
+                                        <option value="PPPK Penuh Waktu">PPPK Penuh Waktu</option>
+                                        <option value="PPPK Paruh Waktu">PPPK Paruh Waktu</option>
+                                        <option value="Non ASN">Non ASN</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="formGroup" class="d-block">Tanggal</label>
+                                        <input type="text" class="form-control" id="Tanggal" placeholder="Pilih Tanggal" required />
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="formGroup" class="d-block">&nbsp;</label>
+                                        <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="refresh-cw" class="wd-10 mg-r-5"></i> Filter</button>
+                                        <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="download" class="wd-10 mg-r-5"></i> Export</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>
                     <div class="row row-xs">
                         <div class="col-sm-12 col-lg-12">
-                            <div data-label="List Data Pegawai" class="df-example demo-table">
-                                <div class="row row-sm mg-b-20">
-                                    <div class="col-lg-4">
-                                        <select class="form-control select2-so">
-                                            <option label="Choose one">Pilih Satuan Organisasi</option>
-                                            <option value="Badan Kepegawaian dan Pengembangan Sumber Daya Manusia">Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <select class="form-control select2-clear">
-                                            <option label="Choose one">Pilih Unit Kerja</option>
-                                            <option value="Sub Bidang Penilaian dan Evaluasi Kinerja Aparatur I">Sub Bidang Penilaian dan Evaluasi Kinerja Aparatur I</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <select class="form-control select2-status">
-                                            <option value="Aktif">Aktif</option>
-                                            <option value="Pensiun">Pensiun</option>
-                                            <option value="Meninggal Dunia">Meninggal Dunia</option>
-                                            <option value="Tugas Belajar">Tugas Belajar</option>
-                                            <option value="Dipekerjakan">Dipekerjakan</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <button class="btn btn-outline-primary btn-uppercase"><i data-feather="refresh-cw" class="wd-10 mg-r-5"></i> Filter</button>
-                                    </div>
-                                </div>
+                            <div data-label="List Data Absensi Mesin Harian" class="df-example demo-table">                                
                                 <!-- row -->
-                                <table id="example2" class="table table-hover" style="width: 100%;">
+                                <table id="datatables" class="table table-hover" style="width: 100%;">
                                     <thead class="thead-primary">
                                         <tr>
                                             <th>No.</th>
-                                            <th>NIP Pegawai</th>
-                                            <th>Nama Lengkap</th>
+                                            <th>Nama Pegawai</th>
+                                            <th>Jenis Pegawai</th>
+                                            <th>Jabatan</th>
                                             <th>Waktu Datang</th>
                                             <th>Waktu Pulang</th>
                                             <th>Device</th>
@@ -284,11 +349,12 @@
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td>196708142001121002</td>
                                             <td>
                                                 <h6 class="tx-13 mg-b-2 tx-primary">Katherine Lumaad</h6>
-                                                <p class="tx-12 mg-b-10">Pengadministrasi Persuratan</p>
+                                                <p class="tx-12 mg-b-10">196708142001121002</p>
                                             </td>
+                                            <td class="text-start">PNS</td>
+                                            <td class="text-start">Analis Sumber Daya Manusia Aparatur Ahli Muda</td>
                                             <td>02/01/2023 07:04:50</td>
                                             <td>02/01/2023 16:04:50</td>
                                             <td>
@@ -335,6 +401,7 @@
         <script src="../lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
         <script src="../lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
         <script src="../lib/select2/js/select2.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
         <script src="../assets/js/dashforge.js"></script>
         <script src="../assets/js/dashforge.aside.js"></script>
@@ -346,7 +413,7 @@
         <script>
             $(function () {
                 "use strict";
-                $("#example2").DataTable({
+                $("#datatables").DataTable({
                     responsive: true,
                     language: {
                         searchPlaceholder: "Pencarian",
@@ -356,46 +423,18 @@
                 });
 
                 $(".select2").select2({
-                    placeholder: "Pilih Status Pegawai",
-                    searchInputPlaceholder: "Pilihan Pencarian",
+                    placeholder: 'Pilihan',
+                    searchInputPlaceholder: 'Search options',
+                    width: '100%'
                 });
 
-                $(".select2-so").select2({
-                    placeholder: "Pilih Satuan Organisasi",
-                    searchInputPlaceholder: "Pilihan Pencarian",
-                    allowClear: true,
-                });
-
-                $(".select2-clear").select2({
-                    minimumResultsForSearch: Infinity,
-                    placeholder: "Pilih Unit Kerja",
-                    allowClear: true,
-                });
-
-                $(".select2-status").select2({
-                    minimumResultsForSearch: Infinity,
-                    placeholder: "Pilih Status",
-                    allowClear: true,
+                flatpickr("#Tanggal", {
+                    minDate: "today",       
+                    dateFormat: "d-m-Y"   
                 });
 
                 // Select2
                 $(".dataTables_length select").select2({ minimumResultsForSearch: Infinity });
-            });
-
-            $(function () {
-                "use strict";
-
-                $("#modal6").on("show.bs.modal", function (event) {
-                    var animation = $(event.relatedTarget).data("animation");
-                    $(this).addClass(animation);
-                });
-
-                // hide modal with effect
-                $("#modal6").on("hidden.bs.modal", function (e) {
-                    $(this).removeClass(function (index, className) {
-                        return (className.match(/(^|\s)effect-\S+/g) || []).join(" ");
-                    });
-                });
             });
         </script>
     </body>

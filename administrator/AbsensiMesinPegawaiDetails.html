@@ -31,7 +31,7 @@
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png" />
 
-        <title>Data Pegawai | Absensi Online</title>
+        <title>Absensi Mesin Pegawai | Absensi Online</title>
 
         <!-- vendor css -->
         <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
@@ -42,6 +42,7 @@
         <link href="../lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" />
         <link href="../lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet" />
         <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
         <!-- DashForge CSS -->
         <link rel="stylesheet" href="../assets/css/dashforge.css" />
@@ -148,7 +149,7 @@
                     <li class="nav-item">
                         <a href="PegawaiAbsensiMobile.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Pegawai Absensi Mobile</span></a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a href="JenisCuti.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Jenis Cuti</span></a>
                     </li>
                     <li class="nav-item">
@@ -217,22 +218,37 @@
         </aside>
 
         <div class="content ht-100v pd-0">
-            <div class="content-header"></div>
-            <!-- content-header -->
+            <div class="content-header">
+                <div class="content-search">
+                <label for="Periode" class="mg-r-5 nav-link">Periode :</label>
+                <select class="form-select wd-75 border-0 shadow-none bg-transparent">
+                    <option value="2024">2024</option>
+                    <option value="2025" selected>2025</option>
+                </select>
+                </div>
+            </div><!-- content-header -->
 
             <div class="content-body">
-                <div class="container pd-x-0">
-                    <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+                <div class="pd-x-0">
+                    <div class="d-sm-flex align-items-center justify-content-between mg-b-10">
                         <div>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb breadcrumb-style1 mg-b-10">
-                                    <li class="breadcrumb-item"><a href="#">Data Kepegawaian</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Data Pegawai ASN</li>
+                                    <li class="breadcrumb-item"><a href="#">Monitoring Absensi</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Absensi Mesin Pegawai</li>
                                 </ol>
                             </nav>
-                            <h4 class="mg-b-0 tx-spacing--1">Data Pegawai ASN</h4>
+                            <h4 class="mg-b-0 tx-spacing--1">Absensi Mesin Pegawai</h4>
                         </div>
                         <div class="d-none d-md-block"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="input-group mb-5">
+                                <input type="text" class="form-control" placeholder="Masukkan NIP Pegawai">
+                                <span class="input-group-text bg-primary text-white">Cari Pegawai</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="row mg-b-25">
                         <div class="col-sm-3 text-center mg-b-15">
@@ -278,26 +294,1089 @@
                             </table>
                         </div>
                     </div>
-                    <div class="card-header d-flex align-items-center justify-content-between pd-r-10">
-                        <h6 class="mg-b-0"></h6>
-                        <div class="d-flex align-items-center tx-16">
+                    <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+                        <div></div>
+                        <div class="d-none d-md-block">
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button class="btn btn-sm pd-x-15 btn-outline-primary btn-uppercase"><i data-feather="upload" class="wd-10"></i></button>
+                                <button class="btn btn-sm pd-x-15 btn-outline-primary btn-uppercase" data-bs-toggle="modal" data-bs-target="#ModalImport"><i data-feather="upload" class="wd-10"></i></button>
                                 <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="file-text" class="wd-10"></i></button>
+                            </div>
+                            <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Tambah Data</button>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="ModalTambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true" data-bs-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content tx-14">
+                                <div class="modal-header">
+                                    <h6 class="modal-title tx-bold" id="exampleModalLabel4">Tambah Absensi Pegawai</h6>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group row">
+                                            <label for="NamaPegawai" class="col-sm-3 col-form-label tx-bold">Nama Pegawai</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="NamaPegawai" value="196708142001121002" placeholder="Katherine Lumaad, S.Kom." readonly />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="TanggalKerja" class="col-sm-3 col-form-label tx-bold">Tanggal Kerja <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="time" step="1" class="form-control" id="Tanggal" placeholder="Pilih Tanggal Kerja" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="WaktuDatang" class="col-sm-3 col-form-label tx-bold">Waktu Datang <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="time" step="1" class="form-control" id="WaktuDatang" placeholder="Masukkan Absen Datang" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="WaktuPulang" class="col-sm-3 col-form-label tx-bold">Waktu Pulang <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="time" step="1" class="form-control" id="WaktuPulang" placeholder="Masukkan Absen Pulang" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="TanggalDinas" class="col-sm-3 col-form-label tx-bold">Registration Device <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control selectPencarian">
+                                                    <option label="Pilih Registration Device"></option>
+                                                    <option value="BWXP184661951">BWXP184661951(125.167.56.16)</option>
+                                                    <option value="BWXP191162257">BWXP191162257(SEKOLAH FILIAL)</option>
+                                                    <option value="BISI181260528">BISI181260528(DPMPTSP 4 FACE)</option>
+                                                    <option value="3397002441094">3397002441094(z DLHK 2 OFF)</option>
+                                                    <option value="3397002441738">3397002441738(z Dinas LHK OFF)</option>
+                                                    <option value="5020192000059">5020192000059(z192.168.1.201.KSG)</option>
+                                                    <option value="6339164800005">6339164800005(z Kel. Sekip Jay OFF)</option>
+                                                    <option value="6339164801102">6339164801102(z Dinas Perdag OFF)</option>
+                                                    <option value="6339164801562">6339164801562(z LAB DLHK off)</option>
+                                                    <option value="6530162400070">6530162400070(z11 Setda Ortala 1)</option>
+                                                    <option value="6530162400071">6530162400071(z192.168.1.201.KSG)</option>
+                                                    <option value="A39N175260111">A39N175260111(Dinas LHK 3)</option>
+                                                    <option value="A4R0173760021">A4R0173760021(z BKPSDM .226 OFF)</option>
+                                                    <option value="A4R0173760196">A4R0173760196(z DINAS KOMINFO2 off)</option>
+                                                    <option value="A4R0173760580">A4R0173760580(z192.168.1.201.KSG)</option>
+                                                    <option value="A4R0173761422">A4R0173761422(z Dinas Koperasi off)</option>
+                                                    <option value="A4R0173761426">A4R0173761426(z RSUD BARI 1 off)</option>
+                                                    <option value="A529181760031">A529181760031(z BPPD Plaju OFF)</option>
+                                                    <option value="A529181760033">A529181760033(z BPPD Kertapati OFF)</option>
+                                                    <option value="A529181760068">A529181760068(z BPPD Kalidoni OFF)</option>
+                                                    <option value="A529181760156">A529181760156(z BPPD Gandus off)</option>
+                                                    <option value="A529181760159">A529181760159(z BPPD IT 2 off)</option>
+                                                    <option value="A529181760171">A529181760171(z BPPD IB 2 off)</option>
+                                                    <option value="A529181760174">A529181760174(z BPPD AlangLbr OFF)</option>
+                                                    <option value="A529181760185">A529181760185(z BPPD S. Borang OFF)</option>
+                                                    <option value="A529181760199">A529181760199(z BPPD Sako OFF)</option>
+                                                    <option value="A529181760222">A529181760222(z BPPD SU 2 off)</option>
+                                                    <option value="A529181760240">A529181760240(z BPPD Kemuning Off)</option>
+                                                    <option value="A529181760253">A529181760253(z BPPD IB 1 off)</option>
+                                                    <option value="A529181760257">A529181760257(z BPPD MERDEKA off)</option>
+                                                    <option value="A529181760259">A529181760259(z BPPD 2 off)</option>
+                                                    <option value="A529181760262">A529181760262(z BPPD IT 1 off)</option>
+                                                    <option value="A529181760285">A529181760285(z BPPD SU 1 OFF)</option>
+                                                    <option value="A529182860046">A529182860046(z BPPDBukitKecil off)</option>
+                                                    <option value="A529182860101">A529182860101(z BPPD Jkbaring OFF)</option>
+                                                    <option value="A529182860288">A529182860288(z BPPD Sukarami OFF)</option>
+                                                    <option value="A529182860382">A529182860382(z BPPD IT 3 off)</option>
+                                                    <option value="ADGE202660656">ADGE202660656(Dinas Kebudayaan)</option>
+                                                    <option value="ADGE202660658">ADGE202660658(Kel. Keramasan)</option>
+                                                    <option value="ADGE223660412">ADGE223660412(Kel. Plaju Darat Fc)</option>
+                                                    <option value="ADGE223660679">ADGE223660679(SD N 172 Face)</option>
+                                                    <option value="ADGE223660680">ADGE223660680(SD N 180 Face)</option>
+                                                    <option value="ADGE223660696">ADGE223660696(SD N 017 Face)</option>
+                                                    <option value="ADGE223660698">ADGE223660698(SD N 142 Face)</option>
+                                                    <option value="ADGE223660699">ADGE223660699(SD N 027 Face)</option>
+                                                    <option value="ADGE223660711">ADGE223660711(SD N 025 Face)</option>
+                                                    <option value="AEWD232660006">AEWD232660006(192.168.1.3)</option>
+                                                    <option value="ADGE232260026">ADGE232260026(SD N 203 Face)</option>
+                                                    <option value="ADGE232260027">ADGE232260027(SD N 237 Face)</option>
+                                                    <option value="ADGE232260030">ADGE232260030(192.168.1.3)</option>
+                                                    <option value="ADGE232260077">ADGE232260077(SD N 247 Face)</option>
+                                                    <option value="ADGE232260289">ADGE232260289(SD N 208 Face)</option>
+                                                    <option value="ADGE232260410">ADGE232260410(SD N 192 Face)</option>
+                                                    <option value="ADGE232260411">ADGE232260411(SD N 068 Face)</option>
+                                                    <option value="ADGE232260415">ADGE232260415(SD N 186 Face)</option>
+                                                    <option value="ADGE232260424">ADGE232260424(192.168.1.3)</option>
+                                                    <option value="ADGE232260426">ADGE232260426(SD N 050 Face)</option>
+                                                    <option value="ADGE232260428">ADGE232260428(SD N 194 Face)</option>
+                                                    <option value="ADGE232260430">ADGE232260430(SD N 174 Face)</option>
+                                                    <option value="ADGE232260450">ADGE232260450(SD N 073 Face)</option>
+                                                    <option value="ADGE232260456">ADGE232260456(SD N 013 Face)</option>
+                                                    <option value="AEWD231860527">AEWD231860527(SD N 130 Face)</option>
+                                                    <option value="AEWD232260316">AEWD232260316(SD N 162 Face)</option>
+                                                    <option value="ADGE232260460">ADGE232260460(SD N 007 Face)</option>
+                                                    <option value="AEWD230760104">AEWD230760104(UPTD CAPIL ZONA 8)</option>
+                                                    <option value="ADGE232360129">ADGE232360129(SD N 146 Face)</option>
+                                                    <option value="ADGE232360137">ADGE232360137(SMP N 47 Face)</option>
+                                                    <option value="ADGE233561429">ADGE233561429(SD N 123 Face)</option>
+                                                    <option value="AEWD174960475">AEWD174960475(SD N 041 Face)</option>
+                                                    <option value="AEWD174960733">AEWD174960733(Dishub Sako)</option>
+                                                    <option value="AEWD180260298">AEWD180260298(Kel. Talang Aman)</option>
+                                                    <option value="AEWD180260321">AEWD180260321(Kel. 20 Ilir D-2)</option>
+                                                    <option value="AEWD180260394">AEWD180260394(Kel. Ario Kemuning)</option>
+                                                    <option value="AEWD180260830">AEWD180260830(Dishub Balai Uji)</option>
+                                                    <option value="AEWD180260833">AEWD180260833(Dishub Ampera 2)</option>
+                                                    <option value="AEWD180260857">AEWD180260857(103.165.236.206)</option>
+                                                    <option value="AEWD180260863">AEWD180260863(Dishub Pusat Fc 1 )</option>
+                                                    <option value="AEWD180260906">AEWD180260906(PKM Pakjo OFF)</option>
+                                                    <option value="AEWD181460162">AEWD181460162(SD N 225 Face)</option>
+                                                    <option value="AEWD184560188">AEWD184560188(z PKM Keramasan OFF)</option>
+                                                    <option value="AEWD184560264">AEWD184560264(PKM Taman Bacaan Fc)</option>
+                                                    <option value="AEWD184660833">AEWD184660833(Pustu Kancil Putih)</option>
+                                                    <option value="AEWD185060277">AEWD185060277(Kel. Bukit LamaRusak)</option>
+                                                    <option value="AEWD185060717">AEWD185060717(z Disnaker OFF)</option>
+                                                    <option value="AEWD185060911">AEWD185060911(SD N 136 Face)</option>
+                                                    <option value="AEWD185060983">AEWD185060983(Kel. 26 Ilir D-1)</option>
+                                                    <option value="AEWD223560110">AEWD223560110(BAPENDA Sukarami)</option>
+                                                    <option value="AEWD185061019">AEWD185061019(Kel. Bukit Baru Fc)</option>
+                                                    <option value="AEWD190360280">AEWD190360280(Kel. Lorok Pakjo Fc)</option>
+                                                    <option value="AEWD190760692">AEWD190760692(PKM Multiwahana Face)</option>
+                                                    <option value="AEWD191260101">AEWD191260101(Kel. Bukit Lama Fc)</option>
+                                                    <option value="AEWD191260307">AEWD191260307(Dishub Plaju)</option>
+                                                    <option value="AEWD193560325">AEWD193560325(Dishub Jakabaring)</option>
+                                                    <option value="AEWD193560567">AEWD193560567(Dishub Lemabang)</option>
+                                                    <option value="AEWD193560723">AEWD193560723(Dishub Sei Lais)</option>
+                                                    <option value="AEWD202760128">AEWD202760128(Kec. IT 2 faceID 1)</option>
+                                                    <option value="AEWD202860542">AEWD202860542(Dinas PUPR 1 FaceID)</option>
+                                                    <option value="AEWD202961061">AEWD202961061(Kel. Demang)</option>
+                                                    <option value="AEWD202961312">AEWD202961312(Kec. Kertapati)</option>
+                                                    <option value="AEWD202961333">AEWD202961333(Kel. Ogan Baru)</option>
+                                                    <option value="AEWD233160041">AEWD233160041(SD N 149 Face)</option>
+                                                    <option value="AEWD202961347">AEWD202961347(1 BKPSDM .236)</option>
+                                                    <option value="AEWD203260351">AEWD203260351(Dinas PUPR 2 FaceID)</option>
+                                                    <option value="AEWD213560002">AEWD213560002(z Dinas Koperasi OFF)</option>
+                                                    <option value="AEWD213960399">AEWD213960399(192.168.0.6)</option>
+                                                    <option value="AEWD213960404">AEWD213960404(DPRD Sekret 2)</option>
+                                                    <option value="AEWD214760282">AEWD214760282(Kel. Kemas Rindo)</option>
+                                                    <option value="AEWD214760289">AEWD214760289(Kel. 11 Ilir Face)</option>
+                                                    <option value="AEWD214760314">AEWD214760314(Dinas Arsip FaceID)</option>
+                                                    <option value="AEWD214760315">AEWD214760315(Kel. 8 Ilir Fc)</option>
+                                                    <option value="AEWD214760397">AEWD214760397(Dinas PRKP FaceID)</option>
+                                                    <option value="AEWD220360061">AEWD220360061(Kec. IT 3 FaceID)</option>
+                                                    <option value="AEWD220360087">AEWD220360087(Kel. Duku Face)</option>
+                                                    <option value="AEWD220360096">AEWD220360096(192.168.110.171)</option>
+                                                    <option value="AEWD220360103">AEWD220360103(Kel. 9 Ilir Fc)</option>
+                                                    <option value="AEWD220360191">AEWD220360191(SD N 126 Face)</option>
+                                                    <option value="AEWD221060028">AEWD221060028(Kel. Kertapati Fc)</option>
+                                                    <option value="AEWD222560039">AEWD222560039(SMP N 43 Face)</option>
+                                                    <option value="AEWD222560040">AEWD222560040(SMP N 16 Face)</option>
+                                                    <option value="AEWD222560091">AEWD222560091(SD N 083 Face)</option>
+                                                    <option value="AEWD222560106">AEWD222560106(SD N 224 Face)</option>
+                                                    <option value="AEWD222560190">AEWD222560190(SD N 085 Face)</option>
+                                                    <option value="AEWD222560192">AEWD222560192(SD N 075 Face)</option>
+                                                    <option value="AEWD222560193">AEWD222560193(SMP N 18 Face)</option>
+                                                    <option value="AEWD222560347">AEWD222560347(z Din Kesehatan OFF)</option>
+                                                    <option value="AEWD222860044">AEWD222860044(Dinas LH Face)</option>
+                                                    <option value="AEWD222860072">AEWD222860072(PKM Padang Selasa Fc)</option>
+                                                    <option value="AEWD223360122">AEWD223360122(Dinas LH Lab Face)</option>
+                                                    <option value="AEWD223360131">AEWD223360131(PKM Kenten Face)</option>
+                                                    <option value="AEWD223360230">AEWD223360230(Dinas LH 2 Face)</option>
+                                                    <option value="AEWD223360292">AEWD223360292(192.168.100.77)</option>
+                                                    <option value="AEWD223360317">AEWD223360317(SD N 200 Face)</option>
+                                                    <option value="AEWD223560042">AEWD223560042(SD N 109 Face)</option>
+                                                    <option value="AEWD223560057">AEWD223560057(BAPENDA Gandus)</option>
+                                                    <option value="AEWD223560058">AEWD223560058(BAPENDA Sako)</option>
+                                                    <option value="AEWD223560062">AEWD223560062(BAPENDA IT 1)</option>
+                                                    <option value="AEWD223560063">AEWD223560063(BAPENDA IT 2)</option>
+                                                    <option value="AEWD223560064">AEWD223560064(192.168.30.10)</option>
+                                                    <option value="AEWD223560067">AEWD223560067(BAPENDA IB 1)</option>
+                                                    <option value="AEWD223560069">AEWD223560069(BAPENDA Bukit Kecil)</option>
+                                                    <option value="AEWD223560105">AEWD223560105(BAPENDA IT 3)</option>
+                                                    <option value="AEWD223560106">AEWD223560106(BAPENDA Plaju)</option>
+                                                    <option value="AEWD223560111">AEWD223560111(BAPENDA Lt. 1)</option>
+                                                    <option value="AEWD223560113">AEWD223560113(BAPENDA IB 2)</option>
+                                                    <option value="AEWD223560114">AEWD223560114(BAPENDA Kertapati)</option>
+                                                    <option value="AEWD223560121">AEWD223560121(BAPENDA Lt. 2)</option>
+                                                    <option value="AEWD223560129">AEWD223560129(Dinas Pariwisata 1)</option>
+                                                    <option value="AEWD223560156">AEWD223560156(Dishub Ampera Face)</option>
+                                                    <option value="AEWD223560382">AEWD223560382(Dinas Kesehatan 2 Fc)</option>
+                                                    <option value="AEWD223560404">AEWD223560404(PKM 5 Ilir Face)</option>
+                                                    <option value="AEWD223560405">AEWD223560405(SMP N 35 Face)</option>
+                                                    <option value="AEWD223560420">AEWD223560420(PKM Kampus)</option>
+                                                    <option value="AEWD223560443">AEWD223560443(Kec. Sukarami Face)</option>
+                                                    <option value="AEWD223560449">AEWD223560449(PKM Sei Selincah Fc)</option>
+                                                    <option value="AEWD223560509">AEWD223560509(PKM OPI FaceID)</option>
+                                                    <option value="AEWD233160084">AEWD233160084(SD N 229 Face)</option>
+                                                    <option value="AEWD223560581">AEWD223560581(BAPENDA Kemuning)</option>
+                                                    <option value="AEWD223560582">AEWD223560582(BAPENDA Jakabaring)</option>
+                                                    <option value="AEWD223560583">AEWD223560583(BAPENDA SU 1)</option>
+                                                    <option value="AEWD223560584">AEWD223560584(BAPENDA Semabor)</option>
+                                                    <option value="AEWD223560587">AEWD223560587(BAPENDA Kalidoni)</option>
+                                                    <option value="AEWD223560588">AEWD223560588(BAPENDA SU 2)</option>
+                                                    <option value="AEWD230760262">AEWD230760262(SD N 080 Face)</option>
+                                                    <option value="AEWD223560707">AEWD223560707(SD N 120 Face)</option>
+                                                    <option value="AEWD223560752">AEWD223560752(PKM Punti Kayu Fc)</option>
+                                                    <option value="AEWD223560760">AEWD223560760(PKM Karya Jaya Face)</option>
+                                                    <option value="AEWD223560761">AEWD223560761(PKM Kalidoni Face)</option>
+                                                    <option value="AEWD223560767">AEWD223560767(PKM Bukit Sangkal Fc)</option>
+                                                    <option value="AEWD223560796">AEWD223560796(Kec. IB 2 FaceID)</option>
+                                                    <option value="AEWD224960095">AEWD224960095(192.168.100.29)</option>
+                                                    <option value="AEWD230760029">AEWD230760029(PKM Gandus Fc)</option>
+                                                    <option value="AEWD230760056">AEWD230760056(PKM 11 Ilir Fc)</option>
+                                                    <option value="AEWD230760100">AEWD230760100(UPTD CAPIL ZONA 2)</option>
+                                                    <option value="AEWD230760101">AEWD230760101(PKM Sei Baung Fc)</option>
+                                                    <option value="AEWD230760105">AEWD230760105(UPTD CAPIL ZONA 5)</option>
+                                                    <option value="AEWD230760106">AEWD230760106(UPTD CAPIL ZONA 6)</option>
+                                                    <option value="AEWD230760107">AEWD230760107(UPTD CAPIL ZONA 3)</option>
+                                                    <option value="AEWD230760109">AEWD230760109(UPTD CAPIL ZONA 7)</option>
+                                                    <option value="AEWD230760110">AEWD230760110(UPTD CAPIL ZONA 1)</option>
+                                                    <option value="AEWD230760203">AEWD230760203(Dispora FaceID)</option>
+                                                    <option value="AEWD230760221">AEWD230760221(PKM Sako Face)</option>
+                                                    <option value="AEWD230760222">AEWD230760222(SD N 116 Face)</option>
+                                                    <option value="AEWD230760223">AEWD230760223(BAPPEDA Litbang 2)</option>
+                                                    <option value="AEWD230760228">AEWD230760228(Kec. Sako FaceID)</option>
+                                                    <option value="AEWD230760229">AEWD230760229(192.168.105.101)</option>
+                                                    <option value="AEWD230760231">AEWD230760231(Kec. Semabor Face)</option>
+                                                    <option value="AEWD230760243">AEWD230760243(PKM Ariodilah Fc)</option>
+                                                    <option value="AEWD230760246">AEWD230760246(SD N 241 Face)</option>
+                                                    <option value="AEWD230760247">AEWD230760247(SD N 127 Face)</option>
+                                                    <option value="AEWD230760256">AEWD230760256(SD N 072 Face)</option>
+                                                    <option value="AEWD230760257">AEWD230760257(SD N 033 Face)</option>
+                                                    <option value="AEWD230760258">AEWD230760258(SD N 088 Face)</option>
+                                                    <option value="AEWD230760263">AEWD230760263(SD N 045 Face)</option>
+                                                    <option value="AEWD230760270">AEWD230760270(RSUD BARI 3 Face)</option>
+                                                    <option value="AEWD230760274">AEWD230760274(RSUD BARI 1 Face)</option>
+                                                    <option value="AEWD230760277">AEWD230760277(RSUD BARI 5 Face)</option>
+                                                    <option value="AEWD230760334">AEWD230760334(UPTD CAPIL ZONA 9)</option>
+                                                    <option value="AEWD230760345">AEWD230760345(PKM Pembina Face)</option>
+                                                    <option value="AEWD230760381">AEWD230760381(SD N 119 Face)</option>
+                                                    <option value="AEWD230760382">AEWD230760382(SMP N 19 Face)</option>
+                                                    <option value="AEWD230760383">AEWD230760383(UPTD CAPIL ZONA 4)</option>
+                                                    <option value="AEWD231360001">AEWD231360001(Sanggar Keg. Belajar)</option>
+                                                    <option value="AEWD231360046">AEWD231360046(SD N 097 Face)</option>
+                                                    <option value="AEWD231360050">AEWD231360050(192.168.1.2)</option>
+                                                    <option value="AEWD231360064">AEWD231360064(SD N 177 Face)</option>
+                                                    <option value="AEWD231360069">AEWD231360069(SD N 060 Face)</option>
+                                                    <option value="AEWD231360070">AEWD231360070(SMP N 14 Face)</option>
+                                                    <option value="AEWD231360071">AEWD231360071(SMP N 26 Face)</option>
+                                                    <option value="AEWD231360072">AEWD231360072(SMP N 15 Face)</option>
+                                                    <option value="AEWD231360074">AEWD231360074(SMP N 59 Face)</option>
+                                                    <option value="AEWD231360075">AEWD231360075(SMP N 20 Face)</option>
+                                                    <option value="AEWD231360106">AEWD231360106(SD N 135 Face)</option>
+                                                    <option value="AEWD231360125">AEWD231360125(SD N 185 Face)</option>
+                                                    <option value="AEWD231360138">AEWD231360138(Kel. Bkt Sangkal Fc)</option>
+                                                    <option value="AEWD231360140">AEWD231360140(192.168.110.62)</option>
+                                                    <option value="AEWD231360148">AEWD231360148(SD N 074 Face)</option>
+                                                    <option value="AEWD231360149">AEWD231360149(Kel. Sei Selincah Fc)</option>
+                                                    <option value="AEWD231360156">AEWD231360156(SD N 039 Face)</option>
+                                                    <option value="AEWD231360161">AEWD231360161(SD N 238 Face)</option>
+                                                    <option value="AEWD231360164">AEWD231360164(SD N 169 Face)</option>
+                                                    <option value="AEWD231360172">AEWD231360172(SD N 066 Face)</option>
+                                                    <option value="AEWD231360173">AEWD231360173(SD N 223 Face)</option>
+                                                    <option value="AEWD231360174">AEWD231360174(SD N 230 Face)</option>
+                                                    <option value="AEWD231360175">AEWD231360175(192.168.0.100)</option>
+                                                    <option value="AEWD231360176">AEWD231360176(SMP N 34 Face)</option>
+                                                    <option value="AEWD231360177">AEWD231360177(SD N 167 Face)</option>
+                                                    <option value="AEWD231360181">AEWD231360181(SD N 070 Face)</option>
+                                                    <option value="AEWD231360233">AEWD231360233(Kel. Sako Baru Face)</option>
+                                                    <option value="AEWD231360242">AEWD231360242(SD N 056 Face)</option>
+                                                    <option value="AEWD231360245">AEWD231360245(SMP N 17 Face)</option>
+                                                    <option value="AEWD231360279">AEWD231360279(SD N 244 Face)</option>
+                                                    <option value="AEWD231360283">AEWD231360283(SD N 246 Face)</option>
+                                                    <option value="AEWD231360287">AEWD231360287(SD N 079 Face)</option>
+                                                    <option value="AEWD231360289">AEWD231360289(SD N 043 Face)</option>
+                                                    <option value="AEWD231360295">AEWD231360295(SD N 227 Face)</option>
+                                                    <option value="AEWD231360297">AEWD231360297(SD N 133 Face)</option>
+                                                    <option value="AEWD231360299">AEWD231360299(192.168.1.2)</option>
+                                                    <option value="AEWD231360300">AEWD231360300(SD N 158 Face)</option>
+                                                    <option value="AEWD231360327">AEWD231360327(SD N 059 Face)</option>
+                                                    <option value="AEWD231360332">AEWD231360332(SD N 054 Face)</option>
+                                                    <option value="AEWD231360352">AEWD231360352(SMP N 52 Face)</option>
+                                                    <option value="AEWD231360357">AEWD231360357(SMP N 38 Face)</option>
+                                                    <option value="AEWD231360358">AEWD231360358(SMP N 22 Face)</option>
+                                                    <option value="AEWD231360359">AEWD231360359(SD N 204 Face)</option>
+                                                    <option value="AEWD231360376">AEWD231360376(SD N 122 Face)</option>
+                                                    <option value="AEWD231360412">AEWD231360412(SMP N 50 Face)</option>
+                                                    <option value="AEWD231360414">AEWD231360414(SMP N 30 Face)</option>
+                                                    <option value="AEWD231360433">AEWD231360433(SD N 143 Face)</option>
+                                                    <option value="AEWD231360434">AEWD231360434(SD N 236 Face)</option>
+                                                    <option value="AEWD231360439">AEWD231360439(z SD N 026 Face OFF)</option>
+                                                    <option value="AEWD231360446">AEWD231360446(SD N 235 Face)</option>
+                                                    <option value="AEWD231360453">AEWD231360453(SMP N 11 Face)</option>
+                                                    <option value="AEWD231360454">AEWD231360454(SD N 140 Face)</option>
+                                                    <option value="AEWD231660535">AEWD231660535(z SD N 164 Face)</option>
+                                                    <option value="AEWD231860503">AEWD231860503(SD N 048 Face)</option>
+                                                    <option value="AEWD231860504">AEWD231860504(SD N 134 Face)</option>
+                                                    <option value="AEWD231860505">AEWD231860505(SD N 121 Face)</option>
+                                                    <option value="AEWD231860508">AEWD231860508(SD N 055 Face)</option>
+                                                    <option value="AEWD231860510">AEWD231860510(SD N 042 Face)</option>
+                                                    <option value="AEWD231860513">AEWD231860513(SD N 077 Face)</option>
+                                                    <option value="AEWD231860519">AEWD231860519(PKM Talang Betutu Fc)</option>
+                                                    <option value="AEWD231860523">AEWD231860523(SD N 046 Face)</option>
+                                                    <option value="AEWD231860524">AEWD231860524(SD N 112 Face)</option>
+                                                    <option value="AEWD231860525">AEWD231860525(SMP N 56 Face)</option>
+                                                    <option value="AEWD231860526">AEWD231860526(SD N 151 Face)</option>
+                                                    <option value="AEWD231860529">AEWD231860529(Kec. Gandus FaceID)</option>
+                                                    <option value="AEWD231860534">AEWD231860534(SD N 084 Face)</option>
+                                                    <option value="AEWD231860535">AEWD231860535(SD N 164 Face)</option>
+                                                    <option value="AEWD231860536">AEWD231860536(SMP N 28 Face)</option>
+                                                    <option value="AEWD231860538">AEWD231860538(SD N 206 Face)</option>
+                                                    <option value="AEWD231860544">AEWD231860544(SD N 239 Face)</option>
+                                                    <option value="AEWD231860563">AEWD231860563(SMP N 23 Face)</option>
+                                                    <option value="AEWD231860565">AEWD231860565(SD N 105 Face)</option>
+                                                    <option value="AEWD231860569">AEWD231860569(SD N 103 Face)</option>
+                                                    <option value="AEWD231860578">AEWD231860578(SD N 096 Face)</option>
+                                                    <option value="AEWD231860581">AEWD231860581(SD N 217 Face)</option>
+                                                    <option value="AEWD231860590">AEWD231860590(SD N 157 Face)</option>
+                                                    <option value="AEWD231860591">AEWD231860591(SD N 222 Face)</option>
+                                                    <option value="AEWD231860608">AEWD231860608(SMP N 37 Face)</option>
+                                                    <option value="AEWD231860610">AEWD231860610(SMP N 05 Face)</option>
+                                                    <option value="AEWD231860612">AEWD231860612(SD N 095 Face)</option>
+                                                    <option value="AEWD231860616">AEWD231860616(SMP N 13 Face)</option>
+                                                    <option value="AEWD231860617">AEWD231860617(192.168.1.48)</option>
+                                                    <option value="AEWD231860618">AEWD231860618(SD N 035 Face)</option>
+                                                    <option value="AEWD231860620">AEWD231860620(SD N 216 Face)</option>
+                                                    <option value="AEWD231860622">AEWD231860622(SD N 118 Face)</option>
+                                                    <option value="AEWD231860624">AEWD231860624(SD N 110 Face)</option>
+                                                    <option value="AEWD231860630">AEWD231860630(Kel. Sako Face)</option>
+                                                    <option value="AEWD231860641">AEWD231860641(192.168.1.3)</option>
+                                                    <option value="AEWD231860655">AEWD231860655(SD N 231 Face)</option>
+                                                    <option value="AEWD231860673">AEWD231860673(SD N 053 Face)</option>
+                                                    <option value="AEWD231860676">AEWD231860676(SD N 099 Face)</option>
+                                                    <option value="AEWD231860679">AEWD231860679(SMP N 55 Face)</option>
+                                                    <option value="AEWD231860680">AEWD231860680(SD N 094 Face)</option>
+                                                    <option value="AEWD231860685">AEWD231860685(SMP N 06 Face)</option>
+                                                    <option value="AEWD231860706">AEWD231860706(SD N 019 Face)</option>
+                                                    <option value="AEWD233160068">AEWD233160068(Kel. Karya Mulya Fc)</option>
+                                                    <option value="AEWD231860711">AEWD231860711(SMP N 57 Face)</option>
+                                                    <option value="AEWD231860716">AEWD231860716(SD N 161 Face)</option>
+                                                    <option value="AEWD231860719">AEWD231860719(192.168.3.200)</option>
+                                                    <option value="AEWD231860722">AEWD231860722(SMP N 42 Face)</option>
+                                                    <option value="AEWD231860723">AEWD231860723(SD N 213 Face)</option>
+                                                    <option value="AEWD231860778">AEWD231860778(SD N 107 Face)</option>
+                                                    <option value="AEWD231860785">AEWD231860785(SMP N 21 Face)</option>
+                                                    <option value="AEWD231860787">AEWD231860787(SMP N 41 Face)</option>
+                                                    <option value="AEWD231860789">AEWD231860789(SD N 108 Face)</option>
+                                                    <option value="AEWD231860796">AEWD231860796(192.168.1.27)</option>
+                                                    <option value="AEWD231860799">AEWD231860799(SMP N 40 Face)</option>
+                                                    <option value="AEWD232260015">AEWD232260015(SD N 234 Face)</option>
+                                                    <option value="AEWD232260029">AEWD232260029(SD N 030 Face)</option>
+                                                    <option value="AEWD232260038">AEWD232260038(192.168.0.101)</option>
+                                                    <option value="AEWD232260055">AEWD232260055(SD N 207 Face)</option>
+                                                    <option value="AEWD232260056">AEWD232260056(Kel. Sukajaya Face)</option>
+                                                    <option value="AEWD232260060">AEWD232260060(Kel. Sukabangun Fc)</option>
+                                                    <option value="AEWD232260068">AEWD232260068(Kel. Sentosa Face)</option>
+                                                    <option value="AEWD232260069">AEWD232260069(SD N 129 Face)</option>
+                                                    <option value="AEWD232260082">AEWD232260082(SD N 076 Face)</option>
+                                                    <option value="AEWD232260088">AEWD232260088(SD N 215 Face)</option>
+                                                    <option value="AEWD232260103">AEWD232260103(Kel. Karang Anyar Fc)</option>
+                                                    <option value="AEWD232260105">AEWD232260105(RSUD Gandus FaceID)</option>
+                                                    <option value="AEWD232260129">AEWD232260129(Kel. 15 ulu Face)</option>
+                                                    <option value="AEWD232260130">AEWD232260130(SD N 137 Face)</option>
+                                                    <option value="AEWD232260131">AEWD232260131(Kel. 8 Ulu Face)</option>
+                                                    <option value="AEWD232260132">AEWD232260132(Kel. Pulokerto Face)</option>
+                                                    <option value="AEWD232260133">AEWD232260133(Kel. Gandus Face)</option>
+                                                    <option value="AEWD232260135">AEWD232260135(Kec. Alang Lebar Fc)</option>
+                                                    <option value="AEWD232260144">AEWD232260144(SD N 071 Face)</option>
+                                                    <option value="AEWD232260208">AEWD232260208(Kel. Silaberanti Fc)</option>
+                                                    <option value="AEWD232260209">AEWD232260209(PKM Talang Ratu Face)</option>
+                                                    <option value="AEWD232260214">AEWD232260214(SD N 202 Face)</option>
+                                                    <option value="AEWD232260219">AEWD232260219(Kel. 9/10 Ulu Fc)</option>
+                                                    <option value="AEWD232260224">AEWD232260224(SMP N 04 Face)</option>
+                                                    <option value="AEWD232260228">AEWD232260228(192.168.100.182)</option>
+                                                    <option value="AEWD232260229">AEWD232260229(SMP N 27 Face)</option>
+                                                    <option value="AEWD232260231">AEWD232260231(Kel. 14 Ulu FaceID)</option>
+                                                    <option value="AEWD232260232">AEWD232260232(Kel. Tuan Kentang Fc)</option>
+                                                    <option value="AEWD232260234">AEWD232260234(Kel. Sukamaju Face)</option>
+                                                    <option value="AEWD232260291">AEWD232260291(SD N 092 Face)</option>
+                                                    <option value="AEWD232260293">AEWD232260293(SD N 100 Face)</option>
+                                                    <option value="AEWD232260294">AEWD232260294(PKM 1 Ulu Face)</option>
+                                                    <option value="AEWD232260295">AEWD232260295(SD N 087 Face)</option>
+                                                    <option value="AEWD232260296">AEWD232260296(Dinas PPKB Face)</option>
+                                                    <option value="AEWD232260307">AEWD232260307(SD N 057 Face)</option>
+                                                    <option value="AEWD232260317">AEWD232260317(Kel. 36 Ilir Face)</option>
+                                                    <option value="AEWD232260320">AEWD232260320(SMP N 53 Face)</option>
+                                                    <option value="AEWD232260327">AEWD232260327(SMP N 07 Face)</option>
+                                                    <option value="AEWD232260338">AEWD232260338(Kel. Talang Jambe Fc)</option>
+                                                    <option value="AEWD232260340">AEWD232260340(Kel. Sukodadi Face)</option>
+                                                    <option value="AEWD232260342">AEWD232260342(Kel. Talan Betutu Fc)</option>
+                                                    <option value="AEWD232260343">AEWD232260343(SD N 218 Face)</option>
+                                                    <option value="AEWD232260344">AEWD232260344(SD N 091 Face)</option>
+                                                    <option value="AEWD232260352">AEWD232260352(Kel. Kebun Bunga Fc)</option>
+                                                    <option value="AEWD232260367">AEWD232260367(Kel. Sukarami Face)</option>
+                                                    <option value="AEWD232260380">AEWD232260380(SD N 211 Face)</option>
+                                                    <option value="AEWD232260393">AEWD232260393(SMP N 10 Face)</option>
+                                                    <option value="AEWD231860511">AEWD231860511(SD N 093 Face)</option>
+                                                    <option value="AEWD232360116">AEWD232360116(SD N 061 Face)</option>
+                                                    <option value="AEWD232360125">AEWD232360125(SD N 150 Face)</option>
+                                                    <option value="AEWD232360127">AEWD232360127(SD N 141 Face)</option>
+                                                    <option value="AEWD232360128">AEWD232360128(z SD N 195 Face OFF)</option>
+                                                    <option value="AEWD232360135">AEWD232360135(192.168.100.201)</option>
+                                                    <option value="AEWD232360156">AEWD232360156(SD N 166 Face)</option>
+                                                    <option value="AEWD232360157">AEWD232360157(SD N 067 Face)</option>
+                                                    <option value="AEWD232360161">AEWD232360161(SD N 038 Face)</option>
+                                                    <option value="AEWD232360164">AEWD232360164(SD N 163 Face)</option>
+                                                    <option value="AEWD232360172">AEWD232360172(SD N 145 Face)</option>
+                                                    <option value="AEWD232360179">AEWD232360179(192.168.1.2)</option>
+                                                    <option value="AEWD232360180">AEWD232360180(192.168.1.100)</option>
+                                                    <option value="AEWD232360189">AEWD232360189(SD N 243 Face)</option>
+                                                    <option value="AEWD232360190">AEWD232360190(SD N 221 Face)</option>
+                                                    <option value="AEWD232360193">AEWD232360193(SD N 165 Face)</option>
+                                                    <option value="AEWD232360198">AEWD232360198(SD N 226 Face)</option>
+                                                    <option value="AEWD232360202">AEWD232360202(SD N 155 Face)</option>
+                                                    <option value="AEWD232660007">AEWD232660007(Kel. Sei Selayur Fc)</option>
+                                                    <option value="AEWD232660025">AEWD232660025(SD N 036 Face)</option>
+                                                    <option value="AEWD232660027">AEWD232660027(SD N 125 Face)</option>
+                                                    <option value="AEWD231860615">AEWD231860615(SMP N 39 Face)</option>
+                                                    <option value="AEWD232660033">AEWD232660033(SD N 089 Face)</option>
+                                                    <option value="AEWD232660035">AEWD232660035(SD N 212 Face)</option>
+                                                    <option value="AEWD232660052">AEWD232660052(Kel. Sialang Face)</option>
+                                                    <option value="AEWD232360133">AEWD232360133(SD N 228 Face)</option>
+                                                    <option value="AEWD232660068">AEWD232660068(SD N 128 Face)</option>
+                                                    <option value="AEWD232660095">AEWD232660095(SD N 248 Face)</option>
+                                                    <option value="AEWD232660100">AEWD232660100(SD N 205 Face)</option>
+                                                    <option value="AEWD233160002">AEWD233160002(Kel. 22 Ilir Face)</option>
+                                                    <option value="AEWD232260065">AEWD232260065(Kec. SU 2 FaceID)</option>
+                                                    <option value="AEWD233160003">AEWD233160003(Kel. Sukamulya Face)</option>
+                                                    <option value="AEWD233160005">AEWD233160005(Kel. 19 Ilir Face)</option>
+                                                    <option value="AEWD233160012">AEWD233160012(Kec. IT 2 faceID 2)</option>
+                                                    <option value="AEWD233160013">AEWD233160013(192.168.110.247)</option>
+                                                    <option value="AEWD233160014">AEWD233160014(Kel. 26 Ilir Face)</option>
+                                                    <option value="AEWD233160017">AEWD233160017(Kel. 24 Ilir Face)</option>
+                                                    <option value="AEWD233160018">AEWD233160018(Kel. Lebung Gajah Fc)</option>
+                                                    <option value="AEWD233160019">AEWD233160019(SD N 090 Face)</option>
+                                                    <option value="AEWD233160024">AEWD233160024(Kel. 23 Ilir Face OF)</option>
+                                                    <option value="AEWD233160027">AEWD233160027(SMP N 32 Face)</option>
+                                                    <option value="AEWD231860554">AEWD231860554(SD N 117 Face)</option>
+                                                    <option value="AEWD233160038">AEWD233160038(SMP N 03 Face)</option>
+                                                    <option value="AEWD233160039">AEWD233160039(SMP N 36 Face)</option>
+                                                    <option value="AEWD233160042">AEWD233160042(SD N 249 Face)</option>
+                                                    <option value="AEWD233160044">AEWD233160044(SD N 154 Face)</option>
+                                                    <option value="AEWD233160063">AEWD233160063(Kel. Srimulya Face)</option>
+                                                    <option value="AEWD233160080">AEWD233160080(SD N 219 Face)</option>
+                                                    <option value="AEWD233160125">AEWD233160125(Kel. Tangga Takat Fc)</option>
+                                                    <option value="AEWD233160129">AEWD233160129(Kel. 16 Ulu Face)</option>
+                                                    <option value="AEWD233160132">AEWD233160132(Kel. 13 Ulu Face)</option>
+                                                    <option value="AEWD233160151">AEWD233160151(Kel. 12 Ulu Face)</option>
+                                                    <option value="AEWD233160168">AEWD233160168(z Kel. 14 Ulu Face)</option>
+                                                    <option value="AEWD233160179">AEWD233160179(SD N 138 Face)</option>
+                                                    <option value="AEWD233160188">AEWD233160188(Kel. 11 Ulu Fc)</option>
+                                                    <option value="AEWD233160235">AEWD233160235(SD N 198 Face)</option>
+                                                    <option value="AEWD233160239">AEWD233160239(Kel. Tlg Kelapa Fc)</option>
+                                                    <option value="AEWD233160241">AEWD233160241(SD N 196 Face)</option>
+                                                    <option value="AEWD233160243">AEWD233160243(Kel. Karya Baru Fc)</option>
+                                                    <option value="AEWD233160244">AEWD233160244(Kel. Alang Lebar Fc)</option>
+                                                    <option value="AEWD233160247">AEWD233160247(Kel. Srijaya Face)</option>
+                                                    <option value="AEWD233160264">AEWD233160264(Dishub Pusat Fc 2)</option>
+                                                    <option value="AEWD233160289">AEWD233160289(SMP N 46 Face)</option>
+                                                    <option value="AEWD233160300">AEWD233160300(Kel. Karang Jaya)</option>
+                                                    <option value="AEWD233460516">AEWD233460516(SMP N 02 Face)</option>
+                                                    <option value="CLX8204360636">CLX8204360636(SD N 028 Face)</option>
+                                                    <option value="AEWD233460782">AEWD233460782(SD N 004 Face)</option>
+                                                    <option value="AEWD233460789">AEWD233460789(192.168.0.118)</option>
+                                                    <option value="AEWD233460891">AEWD233460891(Disnaker FaceID)</option>
+                                                    <option value="AEWD233460905">AEWD233460905(Kel. Sekip Jaya Fc)</option>
+                                                    <option value="AEWD233460944">AEWD233460944(SMP N 09 Face)</option>
+                                                    <option value="AEWD233460994">AEWD233460994(SD N 015 Face)</option>
+                                                    <option value="AEWD233461310">AEWD233461310(Dinas Pariwisata 2)</option>
+                                                    <option value="AEYU173760063">AEYU173760063(192.168.1.1)</option>
+                                                    <option value="AEYU175260354">AEYU175260354(z Dinas Capil 2 OFF)</option>
+                                                    <option value="AEYU175260695">AEYU175260695(Dinas Dukcapil OFF)</option>
+                                                    <option value="AEYU182060278">AEYU182060278(z PKM Kenten OFF)</option>
+                                                    <option value="AEYU182460282">AEYU182460282(z Dinas Pendidik OFF)</option>
+                                                    <option value="AEYU182460333">AEYU182460333(Dishub Ampera)</option>
+                                                    <option value="AEYU182460514">AEYU182460514(z Dinas Pendidik OFF)</option>
+                                                    <option value="AEYU183860042">AEYU183860042(Dinas Perindustrian)</option>
+                                                    <option value="AEYU183860191">AEYU183860191(z Badan Kesbang OFF)</option>
+                                                    <option value="AEYU203960182">AEYU203960182(PKM Merdeka Face)</option>
+                                                    <option value="AEYU203960293">AEYU203960293(PKM Alang Lebar Face)</option>
+                                                    <option value="AEYU204960056">AEYU204960056(PKM 4 Ulu Face)</option>
+                                                    <option value="AEYU212260464">AEYU212260464(Dinas Sosial)</option>
+                                                    <option value="AEYU220260247">AEYU220260247(Dinas Kominfo 1)</option>
+                                                    <option value="AEYU220260268">AEYU220260268(Kel. 3-4 Ulu)</option>
+                                                    <option value="AEYU220260270">AEYU220260270(Kec. SU 1 Face)</option>
+                                                    <option value="AEYU220760130">AEYU220760130(Kel. 2 Ulu Fc)</option>
+                                                    <option value="AEYU220760173">AEYU220760173(Kel. 5 Ulu Fc)</option>
+                                                    <option value="AEYU220760174">AEYU220760174(Kel. 7 Ulu)</option>
+                                                    <option value="AEYU220760176">AEYU220760176(Kel. 1 Ulu)</option>
+                                                    <option value="AEYU222960184">AEYU222960184(PKM Dempo Face)</option>
+                                                    <option value="AEYU230760035">AEYU230760035(z PKM Semabor fc OFF)</option>
+                                                    <option value="AEYU230760039">AEYU230760039(PKM Sosial Face)</option>
+                                                    <option value="AEYU230760075">AEYU230760075(PKM Plaju Face)</option>
+                                                    <option value="AEYU230760113">AEYU230760113(PKM Sukarami Face)</option>
+                                                    <option value="AEYU230760141">AEYU230760141(PKM Kertapati Face)</option>
+                                                    <option value="AEWD233460849">AEWD233460849(192.168.1.2)</option>
+                                                    <option value="AEYU230760144">AEYU230760144(PKM Boom Baru Face)</option>
+                                                    <option value="AEWD223560285">AEWD223560285(Dinas PPPA FaceID)</option>
+                                                    <option value="AEYU230760150">AEYU230760150(PKM Basuki Rahmat Fc)</option>
+                                                    <option value="AEYU230760162">AEYU230760162(PKM Sekip Face)</option>
+                                                    <option value="AEYU230760359">AEYU230760359(PKM Sabokingking Fc)</option>
+                                                    <option value="AEYU230960129">AEYU230960129(PKM Nagaswidak Face)</option>
+                                                    <option value="AEWD231360288">AEWD231360288(SD N 111 Face)</option>
+                                                    <option value="AEYU230960133">AEYU230960133(SAT POL PP 1 face)</option>
+                                                    <option value="AEYU230960137">AEYU230960137(SD N 190 Face OFF)</option>
+                                                    <option value="AEYU231260036">AEYU231260036(Kec. Kalidoni Face)</option>
+                                                    <option value="AEYU231260043">AEYU231260043(SD N 081 Face)</option>
+                                                    <option value="AEWD185061007">AEWD185061007(Kel. Siring Agung Fc)</option>
+                                                    <option value="AEYU231260077">AEYU231260077(Dinas Kominfo 2)</option>
+                                                    <option value="AEYU231860159">AEYU231860159(SD N 132 Face)</option>
+                                                    <option value="AEYU231860167">AEYU231860167(SMP N 01 Face)</option>
+                                                    <option value="AEYU231960142">AEYU231960142(SAT POL PP 2 face)</option>
+                                                    <option value="AEYU233960205">AEYU233960205(Dinas Koperasi Face)</option>
+                                                    <option value="AF39180360399">AF39180360399(z Dishub ASDP off)</option>
+                                                    <option value="AF39181360136">AF39181360136(z Dishub Dalops OFF)</option>
+                                                    <option value="AF39191860356">AF39191860356(z Disnaker Face OFF)</option>
+                                                    <option value="AF6P202260402">AF6P202260402(PKM 23 Ilir Face)</option>
+                                                    <option value="ASNM190361532">ASNM190361532(PKM Makrayu lama)</option>
+                                                    <option value="BISI181260123">BISI181260123(BPKAD)</option>
+                                                    <option value="BISI181260183">BISI181260183(Penilik PAUD/Dikmas)</option>
+                                                    <option value="BISI181260419">BISI181260419(BPKAD 2)</option>
+                                                    <option value="BISI181260430">BISI181260430(BPKAD 3)</option>
+                                                    <option value="CKO9230760253">CKO9230760253(DPKP 09 FACE)</option>
+                                                    <option value="BWXP185060168">BWXP185060168(z SD N 188)</option>
+                                                    <option value="BWXP185060169">BWXP185060169(z SD N 104)</option>
+                                                    <option value="BWXP185060170">BWXP185060170(z SD N 164)</option>
+                                                    <option value="BWXP185060224">BWXP185060224(z SD N 062)</option>
+                                                    <option value="BWXP185060233">BWXP185060233(z SD N 112)</option>
+                                                    <option value="BWXP185060250">BWXP185060250(z SD N 247)</option>
+                                                    <option value="BWXP185060267">BWXP185060267(z SD N 006 off)</option>
+                                                    <option value="BWXP185060281">BWXP185060281(z SD N 024 off)</option>
+                                                    <option value="BWXP185060293">BWXP185060293(z SD N 091)</option>
+                                                    <option value="BWXP185060310">BWXP185060310(z SD N 126)</option>
+                                                    <option value="BWXP185060314">BWXP185060314(z SD N 060 off)</option>
+                                                    <option value="BWXP185060325">BWXP185060325(z SD N 198)</option>
+                                                    <option value="BWXP185060332">BWXP185060332(z SD N 167)</option>
+                                                    <option value="BWXP185060334">BWXP185060334(z SD N 044 off)</option>
+                                                    <option value="BWXP185060335">BWXP185060335(z SD N 200)</option>
+                                                    <option value="BWXP185060378">BWXP185060378(z SD N 088)</option>
+                                                    <option value="BWXP185060396">BWXP185060396(z SD N 148 off)</option>
+                                                    <option value="BWXP185060414">BWXP185060414(z SD N 155)</option>
+                                                    <option value="BWXP185060429">BWXP185060429(z SD N 109)</option>
+                                                    <option value="BWXP185060437">BWXP185060437(z SD N 118)</option>
+                                                    <option value="BWXP185060448">BWXP185060448(z SD N 115)</option>
+                                                    <option value="BWXP185060455">BWXP185060455(z SD N 134)</option>
+                                                    <option value="BWXP185060456">BWXP185060456(z SD N 245)</option>
+                                                    <option value="BWXP185060463">BWXP185060463(z SD N 190 OFF)</option>
+                                                    <option value="BWXP185060469">BWXP185060469(z SD N 106 off)</option>
+                                                    <option value="BWXP185060474">BWXP185060474(z SD N 035)</option>
+                                                    <option value="BWXP185060478">BWXP185060478(z SD N 036 off)</option>
+                                                    <option value="BWXP185060481">BWXP185060481(z SD N 110)</option>
+                                                    <option value="BWXP185060482">BWXP185060482(z SD N 037 off)</option>
+                                                    <option value="BWXP185060484">BWXP185060484(z Kel. Srimulya OFF)</option>
+                                                    <option value="BWXP185060485">BWXP185060485(z SD N 205)</option>
+                                                    <option value="BWXP185060487">BWXP185060487(z SD N 095)</option>
+                                                    <option value="BWXP185060493">BWXP185060493(z SD N 113)</option>
+                                                    <option value="BWXP185060499">BWXP185060499(z Kel. Sukamulya OFF)</option>
+                                                    <option value="BWXP185060502">BWXP185060502(z SD N 108)</option>
+                                                    <option value="BWXP185060503">BWXP185060503(SMP PRAMULA)</option>
+                                                    <option value="BWXP185060505">BWXP185060505(z SD N 185)</option>
+                                                    <option value="BWXP185060507">BWXP185060507(z192.168.1.201.KSG)</option>
+                                                    <option value="BWXP185060509">BWXP185060509(z Kel.Kary Mulya OFF)</option>
+                                                    <option value="BWXP185060515">BWXP185060515(z SD N 187)</option>
+                                                    <option value="BWXP185060519">BWXP185060519(z SD N 105)</option>
+                                                    <option value="BWXP185060670">BWXP185060670(z SD N 149)</option>
+                                                    <option value="BWXP185060679">BWXP185060679(z PKM Sekip OFF)</option>
+                                                    <option value="BWXP185060683">BWXP185060683(z PKM ALANG LEBA off)</option>
+                                                    <option value="BWXP185060687">BWXP185060687(z PKM Sukarami OFF)</option>
+                                                    <option value="BWXP185060692">BWXP185060692(z PKM Sako OFF)</option>
+                                                    <option value="BWXP185060693">BWXP185060693(z PKM 5 Ilir OFF)</option>
+                                                    <option value="BWXP185060696">BWXP185060696(z PKM Talan Ratu OFF)</option>
+                                                    <option value="BWXP185060703">BWXP185060703(z SD N 159)</option>
+                                                    <option value="BWXP185060705">BWXP185060705(z SD N 212)</option>
+                                                    <option value="BWXP185060708">BWXP185060708(z SD N 094)</option>
+                                                    <option value="BWXP185060714">BWXP185060714(SD KmB 1 TK KmB 4)</option>
+                                                    <option value="BWXP185060719">BWXP185060719(z SD N 098)</option>
+                                                    <option value="BWXP185060722">BWXP185060722(z SMP N 38)</option>
+                                                    <option value="BWXP185060743">BWXP185060743(z SD N 111)</option>
+                                                    <option value="BWXP185060745">BWXP185060745(z SD N 009 off)</option>
+                                                    <option value="BWXP185060749">BWXP185060749(z Kel.Lebun Gaja OFF)</option>
+                                                    <option value="BWXP185060757">BWXP185060757(z Dinas PPPAPM off)</option>
+                                                    <option value="BWXP185060759">BWXP185060759(z SD N 038 off)</option>
+                                                    <option value="BWXP185060760">BWXP185060760(z SD N 144 off)</option>
+                                                    <option value="BWXP185060771">BWXP185060771(SD N 009)</option>
+                                                    <option value="BWXP185060807">BWXP185060807(z SD N 043 off)</option>
+                                                    <option value="BWXP185060824">BWXP185060824(z SD N 016 off)</option>
+                                                    <option value="BWXP185060825">BWXP185060825(z SD N 085)</option>
+                                                    <option value="BWXP185060827">BWXP185060827(z SD N 207)</option>
+                                                    <option value="BWXP185060834">BWXP185060834(z Dinas Perikan UPT)</option>
+                                                    <option value="BWXP185060910">BWXP185060910(z SD N 183)</option>
+                                                    <option value="BWXP185060912">BWXP185060912(z SD N 178)</option>
+                                                    <option value="BWXP185060924">BWXP185060924(z SD N 165)</option>
+                                                    <option value="BWXP185060960">BWXP185060960(z SD N 175)</option>
+                                                    <option value="BWXP185060961">BWXP185060961(z PKM Nagaswidak OFF)</option>
+                                                    <option value="BWXP185061011">BWXP185061011(z SD N 172)</option>
+                                                    <option value="BWXP185061020">BWXP185061020(z SD N 031 off)</option>
+                                                    <option value="BWXP185061037">BWXP185061037(z Kecamatan Plaju)</option>
+                                                    <option value="BWXP185061038">BWXP185061038(z SD N 074)</option>
+                                                    <option value="BWXP185061076">BWXP185061076(z SD N 192)</option>
+                                                    <option value="BWXP185061080">BWXP185061080(z SD N 181)</option>
+                                                    <option value="BWXP185061087">BWXP185061087(z SD N 004 off)</option>
+                                                    <option value="BWXP185061089">BWXP185061089(z SD N 003 off)</option>
+                                                    <option value="BWXP185061107">BWXP185061107(z SD N 216 OFF)</option>
+                                                    <option value="BWXP185061116">BWXP185061116(z SD N 096)</option>
+                                                    <option value="BWXP185061160">BWXP185061160(z192.168.1.201.KSG)</option>
+                                                    <option value="BWXP185061165">BWXP185061165(z SD N 193)</option>
+                                                    <option value="BWXP185061176">BWXP185061176(SD N 015)</option>
+                                                    <option value="BWXP185061188">BWXP185061188(PKM Karyajaya Rusak)</option>
+                                                    <option value="BWXP185061282">BWXP185061282(z SD N 140)</option>
+                                                    <option value="BWXP185061284">BWXP185061284(z SD N 022 OFF)</option>
+                                                    <option value="BWXP185061287">BWXP185061287(z SD N 064)</option>
+                                                    <option value="BWXP185061310">BWXP185061310(z SD N 032 off)</option>
+                                                    <option value="BWXP185061318">BWXP185061318(z SD N 102 OFF)</option>
+                                                    <option value="BWXP185061330">BWXP185061330(SD N 214)</option>
+                                                    <option value="BWXP185061358">BWXP185061358(z SD N 141)</option>
+                                                    <option value="BWXP185061361">BWXP185061361(z SD N 223)</option>
+                                                    <option value="BWXP185061366">BWXP185061366(z SD N 206)</option>
+                                                    <option value="BWXP185061382">BWXP185061382(z SD N 173 off)</option>
+                                                    <option value="BWXP185061442">BWXP185061442(SD N 029)</option>
+                                                    <option value="BWXP185061497">BWXP185061497(z SD N 097)</option>
+                                                    <option value="BWXP185061516">BWXP185061516(z SD N 119)</option>
+                                                    <option value="BWXP185061521">BWXP185061521(SD N 139)</option>
+                                                    <option value="BWXP185061522">BWXP185061522(z SD N 127)</option>
+                                                    <option value="BWXP185061564">BWXP185061564(z PKM OPI off)</option>
+                                                    <option value="BWXP185061585">BWXP185061585(z SD N 039 off)</option>
+                                                    <option value="BWXP185061603">BWXP185061603(z SMP N 22)</option>
+                                                    <option value="BWXP185061609">BWXP185061609(z PKM 23 Ilir OFF)</option>
+                                                    <option value="BWXP185061612">BWXP185061612(z SD N 028 off)</option>
+                                                    <option value="BWXP185061615">BWXP185061615(z PKM Boom Baru OFF)</option>
+                                                    <option value="BWXP185061616">BWXP185061616(z SD N 204)</option>
+                                                    <option value="BWXP185061619">BWXP185061619(SMP N 31)</option>
+                                                    <option value="BWXP185061628">BWXP185061628(z PKM Karya Jaya OFF)</option>
+                                                    <option value="BWXP185061630">BWXP185061630(z PKM 11 ILIR off)</option>
+                                                    <option value="BWXP185061657">BWXP185061657(z PKM Pd Selasa OFF)</option>
+                                                    <option value="BWXP185061658">BWXP185061658(z PKM Sabokingki OFF)</option>
+                                                    <option value="BWXP185061678">BWXP185061678(z192.168.1.201.KSG)</option>
+                                                    <option value="BWXP185061695">BWXP185061695(z SD N 235)</option>
+                                                    <option value="BWXP185061700">BWXP185061700(z PKM Kalidoni OFF)</option>
+                                                    <option value="BWXP185061713">BWXP185061713(z SD N 234 off)</option>
+                                                    <option value="BWXP185061717">BWXP185061717(z SMP N 51)</option>
+                                                    <option value="BWXP185061721">BWXP185061721(z PKM SeiSelincahOFF)</option>
+                                                    <option value="BWXP185061726">BWXP185061726(z PKM Plaju)</option>
+                                                    <option value="BWXP185061745">BWXP185061745(z SD N 099)</option>
+                                                    <option value="BWXP185061752">BWXP185061752(z Dinas PerikananOFF)</option>
+                                                    <option value="BWXP185061755">BWXP185061755(z SD N 236)</option>
+                                                    <option value="BWXP185061771">BWXP185061771(SD N 240 mesin lama)</option>
+                                                    <option value="BWXP185061801">BWXP185061801(z SD N 050 off)</option>
+                                                    <option value="BWXP185061817">BWXP185061817(z SD N 017 off)</option>
+                                                    <option value="BWXP185061853">BWXP185061853(z SD N 146 OFF)</option>
+                                                    <option value="BWXP185061872">BWXP185061872(z SD N 013 OFF)</option>
+                                                    <option value="BWXP185061875">BWXP185061875(z SD N 114)</option>
+                                                    <option value="BWXP185061877">BWXP185061877(z SD N 021 off)</option>
+                                                    <option value="BWXP185061879">BWXP185061879(z SD N 162)</option>
+                                                    <option value="BWXP185061880">BWXP185061880(z SD N 083)</option>
+                                                    <option value="BWXP185061881">BWXP185061881(z SD N 065)</option>
+                                                    <option value="BWXP185061883">BWXP185061883(z SD N 019 off)</option>
+                                                    <option value="BWXP185061884">BWXP185061884(z SD N 145)</option>
+                                                    <option value="BWXP185061886">BWXP185061886(z SD N 135)</option>
+                                                    <option value="BWXP185061887">BWXP185061887(z SD N 231)</option>
+                                                    <option value="BWXP185061888">BWXP185061888(z SD N 063 OFF)</option>
+                                                    <option value="BWXP185061889">BWXP185061889(z TK Pembina 2 OFF)</option>
+                                                    <option value="BWXP185061890">BWXP185061890(z SMP N 34)</option>
+                                                    <option value="BWXP185061891">BWXP185061891(z SMP N 52)</option>
+                                                    <option value="BWXP185061893">BWXP185061893(z SMP N 60)</option>
+                                                    <option value="BWXP185061894">BWXP185061894(z SD N 177)</option>
+                                                    <option value="BWXP185061895">BWXP185061895(z SD N 103)</option>
+                                                    <option value="BWXP185061898">BWXP185061898(z SD N 161)</option>
+                                                    <option value="BWXP185061900">BWXP185061900(SD Islam Az Zahra)</option>
+                                                    <option value="BWXP185061903">BWXP185061903(z SD N 180)</option>
+                                                    <option value="BWXP185061905">BWXP185061905(z SMP N 04)</option>
+                                                    <option value="BWXP185061906">BWXP185061906(z SD N 171)</option>
+                                                    <option value="BWXP185061911">BWXP185061911(z SD N 163)</option>
+                                                    <option value="BWXP185061913">BWXP185061913(z SD N 230)</option>
+                                                    <option value="BWXP185061918">BWXP185061918(z SD N 194 off)</option>
+                                                    <option value="BWXP185061928">BWXP185061928(z SMP N 56)</option>
+                                                    <option value="BWXP185061930">BWXP185061930(z SMP N 57)</option>
+                                                    <option value="BWXP185061932">BWXP185061932(z SMP N 43)</option>
+                                                    <option value="BWXP185061937">BWXP185061937(z SD N 176)</option>
+                                                    <option value="BWXP185061941">BWXP185061941(z SMP N 58)</option>
+                                                    <option value="BWXP185061943">BWXP185061943(z SMP N 06)</option>
+                                                    <option value="BWXP185061958">BWXP185061958(z PKM Sei Baung OFF)</option>
+                                                    <option value="BWXP185061963">BWXP185061963(z SD N 132)</option>
+                                                    <option value="BWXP185061970">BWXP185061970(z SMP N 47)</option>
+                                                    <option value="BWXP185061974">BWXP185061974(z SD N 033 off)</option>
+                                                    <option value="BWXP185061989">BWXP185061989(z SD N 067)</option>
+                                                    <option value="BWXP185062007">BWXP185062007(z SD N 066)</option>
+                                                    <option value="BWXP185062028">BWXP185062028(z SD N 081)</option>
+                                                    <option value="BWXP185062029">BWXP185062029(z SD N 233)</option>
+                                                    <option value="BWXP185062047">BWXP185062047(z SD N 227)</option>
+                                                    <option value="BWXP185062049">BWXP185062049(z SD N 222)</option>
+                                                    <option value="BWXP185062095">BWXP185062095(SD N 152)</option>
+                                                    <option value="BWXP185062098">BWXP185062098(SMP Muhammadiyah 10)</option>
+                                                    <option value="BWXP185062118">BWXP185062118(z SD N 151)</option>
+                                                    <option value="BWXP185062123">BWXP185062123(z SD N 008 off)</option>
+                                                    <option value="BWXP185062135">BWXP185062135(z SD N 090)</option>
+                                                    <option value="BWXP185062162">BWXP185062162(z PKM 1 Ulu OFF)</option>
+                                                    <option value="BWXP185062178">BWXP185062178(z SD N 219 off)</option>
+                                                    <option value="BWXP185062238">BWXP185062238(z SD N 142)</option>
+                                                    <option value="BWXP185062241">BWXP185062241(z SD N 147 OFF)</option>
+                                                    <option value="BWXP185062260">BWXP185062260(z SD N 077)</option>
+                                                    <option value="BWXP185062264">BWXP185062264(z SD N 084)</option>
+                                                    <option value="BWXP185062272">BWXP185062272(SD N 082)</option>
+                                                    <option value="BWXP185062309">BWXP185062309(z SD N 042 off)</option>
+                                                    <option value="BWXP185062313">BWXP185062313(z SD N 045 off)</option>
+                                                    <option value="BWXP185062315">BWXP185062315(z SD N 040 off)</option>
+                                                    <option value="BWXP185062319">BWXP185062319(z SD N 089)</option>
+                                                    <option value="BWXP185062322">BWXP185062322(z SD N 079)</option>
+                                                    <option value="BWXP185062324">BWXP185062324(z SD N 208)</option>
+                                                    <option value="BWXP185062338">BWXP185062338(z SD N 168)</option>
+                                                    <option value="BWXP185062345">BWXP185062345(z SD N 228)</option>
+                                                    <option value="BWXP185062347">BWXP185062347(z SD N 057 off)</option>
+                                                    <option value="BWXP185062434">BWXP185062434(z SD N 100)</option>
+                                                    <option value="BWXP185062452">BWXP185062452(z SD N 093)</option>
+                                                    <option value="BWXP185062453">BWXP185062453(z SD N 202)</option>
+                                                    <option value="BWXP185062472">BWXP185062472(z SD N 131)</option>
+                                                    <option value="BWXP185062476">BWXP185062476(z SD N 025 off)</option>
+                                                    <option value="BWXP185062479">BWXP185062479(SD N 153)</option>
+                                                    <option value="BWXP185160001">BWXP185160001(z SD N 010 off)</option>
+                                                    <option value="BWXP185160020">BWXP185160020(z SD N 239)</option>
+                                                    <option value="BWXP185160021">BWXP185160021(z SD N 055 off)</option>
+                                                    <option value="BWXP185160022">BWXP185160022(z SD N 059 off)</option>
+                                                    <option value="BWXP185160023">BWXP185160023(z SD N 002 off)</option>
+                                                    <option value="BWXP185160027">BWXP185160027(z SMP N 35)</option>
+                                                    <option value="BWXP185160081">BWXP185160081(z SD N 075)</option>
+                                                    <option value="BWXP185160107">BWXP185160107(z SD N 218 off)</option>
+                                                    <option value="BWXP185160112">BWXP185160112(z SD N 196)</option>
+                                                    <option value="BWXP185160113">BWXP185160113(z SD N 221)</option>
+                                                    <option value="BWXP185160119">BWXP185160119(z SD N 191)</option>
+                                                    <option value="BWXP185160120">BWXP185160120(z SD N 197 OFF)</option>
+                                                    <option value="BWXP185160122">BWXP185160122(0.0.0.0)</option>
+                                                    <option value="BWXP185160170">BWXP185160170(z SD N 078)</option>
+                                                    <option value="BWXP185160184">BWXP185160184(z SD N 189)</option>
+                                                    <option value="BWXP185160213">BWXP185160213(z SD N 007 off)</option>
+                                                    <option value="BWXP185160234">BWXP185160234(z SD N 047 off)</option>
+                                                    <option value="BWXP185160241">BWXP185160241(z SD N 001 off)</option>
+                                                    <option value="BWXP185160242">BWXP185160242(z SD N 243)</option>
+                                                    <option value="BWXP185160254">BWXP185160254(z SD N 030 off)</option>
+                                                    <option value="BWXP185160258">BWXP185160258(z SD N 056 off)</option>
+                                                    <option value="BWXP185160276">BWXP185160276(z SD N 012 OFF)</option>
+                                                    <option value="BWXP185160277">BWXP185160277(z SD N 005 off)</option>
+                                                    <option value="BWXP185160278">BWXP185160278(z SD N 248)</option>
+                                                    <option value="BWXP185160291">BWXP185160291(SD N 203)</option>
+                                                    <option value="BWXP185160292">BWXP185160292(z SD N 246)</option>
+                                                    <option value="BWXP185160294">BWXP185160294(z SD N 086 OFF)</option>
+                                                    <option value="BWXP185160303">BWXP185160303(z SD N 011 OFF)</option>
+                                                    <option value="BWXP185160304">BWXP185160304(SMP YWKA)</option>
+                                                    <option value="BWXP185160305">BWXP185160305(z192.168.1.201.KSG)</option>
+                                                    <option value="BWXP185160308">BWXP185160308(z SD N 217)</option>
+                                                    <option value="BWXP185160324">BWXP185160324(z SD N 072)</option>
+                                                    <option value="BWXP185160332">BWXP185160332(z SD N 069)</option>
+                                                    <option value="BWXP185160334">BWXP185160334(z SD N 201)</option>
+                                                    <option value="BWXP185160343">BWXP185160343(z SD N 071 off)</option>
+                                                    <option value="BWXP185160358">BWXP185160358(z SD N 209)</option>
+                                                    <option value="BWXP185160452">BWXP185160452(z SD N 211 OFF)</option>
+                                                    <option value="BWXP185160453">BWXP185160453(z SD N 073 OFF)</option>
+                                                    <option value="BWXP185160475">BWXP185160475(z SD N 034 off)</option>
+                                                    <option value="BWXP185160484">BWXP185160484(z SD N 023 off)</option>
+                                                    <option value="BWXP185160489">BWXP185160489(z SD N 210 off)</option>
+                                                    <option value="BWXP185160490">BWXP185160490(z SD N 076 OFF)</option>
+                                                    <option value="BWXP185160497">BWXP185160497(z SD N 051 off)</option>
+                                                    <option value="BWXP185160499">BWXP185160499(z Dinas PRKP OFF)</option>
+                                                    <option value="BWXP185160500">BWXP185160500(z SD N 070)</option>
+                                                    <option value="BWXP185160506">BWXP185160506(z SD N 215 OFF)</option>
+                                                    <option value="BWXP185160514">BWXP185160514(z SD N 213)</option>
+                                                    <option value="BWXP185160517">BWXP185160517(zzSD N 220off)</option>
+                                                    <option value="BWXP185160530">BWXP185160530(z SD N 061)</option>
+                                                    <option value="BWXP185160533">BWXP185160533(z SD N 048 off)</option>
+                                                    <option value="BWXP185160537">BWXP185160537(z SD N 128)</option>
+                                                    <option value="BWXP185160546">BWXP185160546(z SD N 053 OFF)</option>
+                                                    <option value="BWXP185160547">BWXP185160547(z SD N 018 off)</option>
+                                                    <option value="BWXP185160564">BWXP185160564(BAPPEDA Lama)</option>
+                                                    <option value="BWXP185160591">BWXP185160591(z SD N 125)</option>
+                                                    <option value="BWXP185160603">BWXP185160603(z SD N 170)</option>
+                                                    <option value="BWXP185160604">BWXP185160604(z SD N 229)</option>
+                                                    <option value="BWXP185160606">BWXP185160606(z SD N 027 off)</option>
+                                                    <option value="BWXP185160620">BWXP185160620(z SD N 199 OFF)</option>
+                                                    <option value="BWXP185160756">BWXP185160756(z PKM Merdeka OFF)</option>
+                                                    <option value="BWXP185160804">BWXP185160804(z PKM Ariodillah OFF)</option>
+                                                    <option value="BWXP185160811">BWXP185160811(z PKM Dempo OFF)</option>
+                                                    <option value="BWXP185160819">BWXP185160819(z PKM SemaBor OFF)</option>
+                                                    <option value="BWXP185160840">BWXP185160840(z SD N 087 OFF)</option>
+                                                    <option value="BWXP185160844">BWXP185160844(z DPMPTSP 3 OFF)</option>
+                                                    <option value="BWXP185160846">BWXP185160846(z SD N 232)</option>
+                                                    <option value="BWXP185160847">BWXP185160847(z DPMPTSP 2 OFF)</option>
+                                                    <option value="BWXP185160849">BWXP185160849(z DPMPTSP OFF)</option>
+                                                    <option value="BWXP185160851">BWXP185160851(z TK Pembina 1 OFF)</option>
+                                                    <option value="BWXP185160888">BWXP185160888(z SD N 160)</option>
+                                                    <option value="BWXP185160892">BWXP185160892(z SD N 157)</option>
+                                                    <option value="BWXP185160894">BWXP185160894(z SD N 166)</option>
+                                                    <option value="BWXP185160897">BWXP185160897(z SD N 158)</option>
+                                                    <option value="BWXP185160900">BWXP185160900(z SD N 156 OFF)</option>
+                                                    <option value="BWXP185160938">BWXP185160938(z SD N 052 off)</option>
+                                                    <option value="BWXP185160964">BWXP185160964(PKM Makrayu lama)</option>
+                                                    <option value="BWXP185160966">BWXP185160966(z SD N 068)</option>
+                                                    <option value="BWXP185160994">BWXP185160994(z SD N 242)</option>
+                                                    <option value="BWXP185160999">BWXP185160999(z SD N 224)</option>
+                                                    <option value="BWXP190360112">BWXP190360112(SMP SRIGUNA)</option>
+                                                    <option value="BWXP190360185">BWXP190360185(z PKM Makrayu OFF)</option>
+                                                    <option value="BWXP190360492">BWXP190360492(z Dinas Perdag OFF)</option>
+                                                    <option value="BWXP190360995">BWXP190360995(z RSUD Gandus OFF)</option>
+                                                    <option value="BWXP190361001">BWXP190361001(z RSUD BARI 3 off)</option>
+                                                    <option value="BWXP190361008">BWXP190361008(z RSUD BARI 2 off)</option>
+                                                    <option value="BWXP190361030">BWXP190361030(z PKPB POS KMNG off)</option>
+                                                    <option value="BWXP190362291">BWXP190362291(SD Kartika II-2)</option>
+                                                    <option value="BWXP190362741">BWXP190362741(z SD N 020 off)</option>
+                                                    <option value="BWXP190365499">BWXP190365499(z Kel. Kertapati OFF)</option>
+                                                    <option value="BWXP190365742">BWXP190365742(z Kel.Bkt Sangka OFF)</option>
+                                                    <option value="BWXP190365794">BWXP190365794(z Kel. Sei Lais OFF)</option>
+                                                    <option value="BWXP190365795">BWXP190365795(z Kel.Sei Selayu OFF)</option>
+                                                    <option value="BWXP190365800">BWXP190365800(z Kel.Sei Selinc OFF)</option>
+                                                    <option value="BWXP190365893">BWXP190365893(z Kel. Kalidoni OFF)</option>
+                                                    <option value="BWXP190460376">BWXP190460376(z192.168.1.201.KSG)</option>
+                                                    <option value="BWXP190760012">BWXP190760012(z SD N 154)</option>
+                                                    <option value="BWXP190760019">BWXP190760019(z SMP N 31)</option>
+                                                    <option value="BWXP190760367">BWXP190760367(z192.168.1.201.KSG)</option>
+                                                    <option value="BWXP190761165">BWXP190761165(z192.168.1.201.KSG)</option>
+                                                    <option value="BWXP191161625">BWXP191161625(Korwil 2 lama)</option>
+                                                    <option value="BWXP191161726">BWXP191161726(z Kel. AlangLebr OFF)</option>
+                                                    <option value="BWXP191161737">BWXP191161737(z Kel.Tala Kelap OFF)</option>
+                                                    <option value="BWXP212260874">BWXP212260874(z SD N 080 off)</option>
+                                                    <option value="BWXP221661337">BWXP221661337(z PERTA BPP SEKO off)</option>
+                                                    <option value="BWXP221661339">BWXP221661339(z PERTA BPP S.ULUoff)</option>
+                                                    <option value="BWXP223460201">BWXP223460201(z SD N 053 off)</option>
+                                                    <option value="CKEB212260017">CKEB212260017(z UPTD CAPIL ZO 6off)</option>
+                                                    <option value="CKEB212260069">CKEB212260069(z UPTD CAPIL ZO 8off)</option>
+                                                    <option value="CKEB212260072">CKEB212260072(z UPTD CAPIL ZO 1off)</option>
+                                                    <option value="CKEB212360046">CKEB212360046(z UPTD CAPIL ZO 5off)</option>
+                                                    <option value="CKEB214560200">CKEB214560200(z UPTD CAPIL ZO 9off)</option>
+                                                    <option value="CKEB214560237">CKEB214560237(z UPTD CAPIL ZO 3off)</option>
+                                                    <option value="CKEB214560242">CKEB214560242(z SD N 216)</option>
+                                                    <option value="CKEB214560246">CKEB214560246(z UPTD CAPIL ZO 4off)</option>
+                                                    <option value="CKEB214560248">CKEB214560248(z UPTD CAPIL ZO 7off)</option>
+                                                    <option value="CKEB215061289">CKEB215061289(z Kec. Alang Leb OFF)</option>
+                                                    <option value="CKO9224960037">CKO9224960037(PKM Keramasan Face)</option>
+                                                    <option value="CKO9230760032">CKO9230760032(DPKP 01 FACE)</option>
+                                                    <option value="CKO9230760126">CKO9230760126(DPKP 02 FACE)</option>
+                                                    <option value="CKO9230760135">CKO9230760135(DPKP 03 FACE)</option>
+                                                    <option value="CKO9230760176">CKO9230760176(DPKP 04 FACE)</option>
+                                                    <option value="CKO9230760248">CKO9230760248(Kec. IT 1 faceID)</option>
+                                                    <option value="AEWD220360101">AEWD220360101(Kel. 10 Ilir)</option>
+                                                    <option value="CKO9230760249">CKO9230760249(DPKP 05 FACE)</option>
+                                                    <option value="CKO9230760250">CKO9230760250(DPKP 06 FACE)</option>
+                                                    <option value="CKO9230760251">CKO9230760251(DPKP 07 FACE)</option>
+                                                    <option value="CKO9230760252">CKO9230760252(DPKP 08 FACE)</option>
+                                                    <option value="CLX8204360701">CLX8204360701(SD N 034 Face)</option>
+                                                    <option value="CLX8204060659">CLX8204060659(SD N 171 Face)</option>
+                                                    <option value="CLX8204360924">CLX8204360924(SD N 005 Face OFF)</option>
+                                                    <option value="BISI181260795">BISI181260795(DPMPTSP 2 FACE)</option>
+                                                    <option value="CLX8204360585">CLX8204360585(Kec. Plaju FaceID)</option>
+                                                    <option value="OID6070066062400104">OID6070066062400104(z Kel. Pahlawan OFF)</option>
+                                                    <option value="CLX8204360887">CLX8204360887(SD N 051 Face)</option>
+                                                    <option value="CQLN230660017">CQLN230660017(a SETDA FaceID Lt.2)</option>
+                                                    <option value="ADGE233160052">ADGE233160052(SD N 001 Face)</option>
+                                                    <option value="CLX8204360888">CLX8204360888(SD N 009 Face)</option>
+                                                    <option value="BWXP184661916">BWXP184661916(z0.0.0.0)</option>
+                                                    <option value="BISI181260797">BISI181260797(DPMPTSP 1 FACE)</option>
+                                                    <option value="AEYU230960135">AEYU230960135(192.168.0.100)</option>
+                                                    <option value="CLX8204360963">CLX8204360963(Kel. Bagus Kuning Fc)</option>
+                                                    <option value="CQLN230660015">CQLN230660015(a SETDA FaceID Umum)</option>
+                                                    <option value="CLX8204360920">CLX8204360920(Kel. Komperta Face)</option>
+                                                    <option value="CQLN230660020">CQLN230660020(a SETDA FaceID Keu)</option>
+                                                    <option value="CLX8204360837">CLX8204360837(SMP N 24 Face)</option>
+                                                    <option value="AEWD230760206">AEWD230760206(Dinas PPPA FaceID 2)</option>
+                                                    <option value="CLX8204360933">CLX8204360933(SD N 023 Face)</option>
+                                                    <option value="CLX8204360626">CLX8204360626(SD N 032 Face)</option>
+                                                    <option value="CLX8204360898">CLX8204360898(SD N 242 Face)</option>
+                                                    <option value="AEWD231860788">AEWD231860788(SD N 047 Face)</option>
+                                                    <option value="BISI181260742">BISI181260742(DPMPTSP 3 FACE)</option>
+                                                    <option value="BRM9214960453">BRM9214960453(PERTA BPP TALANG BET)</option>
+                                                    <option value="AEYU231960140">AEYU231960140(SAT POL PP 3 face)</option>
+                                                    <option value="CLX8204060615">CLX8204060615(SD N 175 Face)</option>
+                                                    <option value="BWXP184661062">BWXP184661062(Gudang Farmasi)</option>
+                                                    <option value="CLX8204360901">CLX8204360901(SD N 003 Face)</option>
+                                                    <option value="CLX8204360137">CLX8204360137(SD N 024 Face)</option>
+                                                    <option value="CLX8204360199">CLX8204360199(SD N 178 Face)</option>
+                                                    <option value="OID6030066013001023">OID6030066013001023(z INSPEKTORAT off)</option>
+                                                    <option value="CLX8204360128">CLX8204360128(SD N 173 Face)</option>
+                                                    <option value="BRM9214960211">BRM9214960211(Dinas Perikanan)</option>
+                                                    <option value="CLX8204060234">CLX8204060234(SD N 131 Face)</option>
+                                                    <option value="CLX8204360836">CLX8204360836(SD N 031 Face)</option>
+                                                    <option value="CLX8204060331">CLX8204060331(SD N 006 Face)</option>
+                                                    <option value="CLX8204360161">CLX8204360161(SD N 191 Face)</option>
+                                                    <option value="BRM9180360056">BRM9180360056(BAPPEDA LITBANG)</option>
+                                                    <option value="BISI181260770">BISI181260770(DPMPTSP 5 FACE)</option>
+                                                    <option value="CLX8204360640">CLX8204360640(SD N 189 Face)</option>
+                                                    <option value="CLX8204360136">CLX8204360136(SMP N 48 Face)</option>
+                                                    <option value="CLX8204060072">CLX8204060072(SD N 176 Face)</option>
+                                                    <option value="BWXP191360020">BWXP191360020(SD Kartika II-3)</option>
+                                                    <option value="CLX8204360937">CLX8204360937(Kel. Plaju Ulu Fc)</option>
+                                                    <option value="CLX8204360905">CLX8204360905(SD N 188 Face)</option>
+                                                    <option value="CLX8204360488">CLX8204360488(Kel. Talang Bubuk Fc)</option>
+                                                    <option value="CLX8204360669">CLX8204360669(SD N 245 Face)</option>
+                                                    <option value="BRM9214460103">BRM9214460103(PERTA BPP S. ULU)</option>
+                                                    <option value="BRM9214460099">BRM9214460099(PERTA BPP SEKOJO)</option>
+                                                    <option value="CLX8204360925">CLX8204360925(Kel. Plaju Ilir Fc)</option>
+                                                    <option value="CLX8204360714">CLX8204360714(SD N 018 Face)</option>
+                                                    <option value="BRM9214960171">BRM9214960171(Dinas Pertanian Face)</option>
+                                                    <option value="OID6090066090600320">OID6090066090600320(Kel. Pipa Reja Fc)</option>
+                                                    <option value="CLX8204060647">CLX8204060647(SD N 016 Face)</option>
+                                                    <option value="CKO9230760277">CKO9230760277(DPKP 10 Face)</option>
+                                                    <option value="CLX8204360940">CLX8204360940(Kel. Talang Putri Fc)</option>
+                                                    <option value="CLX8204360992">CLX8204360992(SD N 193 Face)</option>
+                                                    <option value="CPAK223660159">CPAK223660159(RSUD BARI 6 Face)</option>
+                                                    <option value="CLX8204360122">CLX8204360122(SD N 037 Face)</option>
+                                                    <option value="CLX8204360144">CLX8204360144(SD N 168 Face)</option>
+                                                    <option value="CLX8204360424">CLX8204360424(SD N 052 Face)</option>
+                                                    <option value="CLX8204360922">CLX8204360922(SD N 020 Face)</option>
+                                                    <option value="OID7040067032500487">OID7040067032500487(PKM Tegal Binangn Fc)</option>
+                                                    <option value="ADGE223661374">ADGE223661374(SD N 069 Face)</option>
+                                                    <option value="CLX8204360919">CLX8204360919(SD N 010 Face)</option>
+                                                    <option value="AEWD231360077">AEWD231360077(SMP N 60 face)</option>
+                                                    <option value="CLX8204360038">CLX8204360038(SD N 201 Face)</option>
+                                                    <option value="CLX8204360921">CLX8204360921(SD N 182 Face)</option>
+                                                    <option value="AEWD233460933">AEWD233460933(Dishub ASDP face)</option>
+                                                    <option value="ADGE233560850">ADGE233560850(SD N 144 Face)</option>
+                                                    <option value="CLX8204360683">CLX8204360683(SMP N 61 Face)</option>
+                                                    <option value="TES3234500030">TES3234500030(Badan Kesbangpol Fc)</option>
+                                                    <option value="AEWD233460934">AEWD233460934(Dishub Lemabang Face)</option>
+                                                    <option value="CLX8204360529">CLX8204360529(SD N 170 Face)</option>
+                                                    <option value="ADGE232260025">ADGE232260025(SD N 011 Face)</option>
+                                                    <option value="BWXP183160998">BWXP183160998(DPKP Pos Kertapati)</option>
+                                                    <option value="BWXP183260163">BWXP183260163(z PKM Pembina OFF)</option>
+                                                    <option value="CLX8204360713">CLX8204360713(SD N 022 Face)</option>
+                                                    <option value="ADGE233160263">ADGE233160263(TK Pembina 7 fc)</option>
+                                                    <option value="BWXP184663581">BWXP184663581(114.125.230.143)</option>
+                                                    <option value="AEWD233460886">AEWD233460886(Dinas PUPR Sarpras)</option>
+                                                    <option value="ADGE232260283">ADGE232260283(SD N 197 Face)</option>
+                                                    <option value="AEWD233460700">AEWD233460700(SD N 101 Face)</option>
+                                                    <option value="ADGE232260281">ADGE232260281(SD N 102 Face)</option>
+                                                    <option value="CLX8204360253">CLX8204360253(SD N 014 Face)</option>
+                                                    <option value="AEWD232260319">AEWD232260319(SD N 086 Face)</option>
+                                                    <option value="ADGE233560852">ADGE233560852(TK Pembina 5 Fc)</option>
+                                                    <option value="ADGE233560849">ADGE233560849(TK Pembina 4 Fc)</option>
+                                                    <option value="ADGE233160261">ADGE233160261(TK Pembina 2 fc)</option>
+                                                    <option value="CLX8204360024">CLX8204360024(SD N 187 Face)</option>
+                                                    <option value="CLX8204360904">CLX8204360904(SD N 021 Face)</option>
+                                                    <option value="CLX8204360123">CLX8204360123(SD N 078 Face)</option>
+                                                    <option value="AEWD233461227">AEWD233461227(SD N 195 Face)</option>
+                                                    <option value="AEWD233460822">AEWD233460822(SD N 026 Face)</option>
+                                                    <option value="AEWD232260377">AEWD232260377(SD N 199 Face)</option>
+                                                    <option value="ADGE233560869">ADGE233560869(TK Pembina 1 Fc)</option>
+                                                    <option value="BWXP184663856">BWXP184663856(z Kec. IT 1 OFF)</option>
+                                                    <option value="CLX8204060636">CLX8204060636(SD N 179 Face)</option>
+                                                    <option value="AEYU233960210">AEYU233960210(INSPEKTORAT fc)</option>
+                                                    <option value="ADGE223661000">ADGE223661000(SD N 012 Face)</option>
+                                                    <option value="AEWD231860613">AEWD231860613(SD N 156 Face)</option>
+                                                    <option value="AEWD233460767">AEWD233460767(103.136.162.94)</option>
+                                                    <option value="AEWD233460856">AEWD233460856(Dinas Kesehatan 3 Fc)</option>
+                                                    <option value="AEWD231360350">AEWD231360350(SD N 240 Face)</option>
+                                                    <option value="AEWD203260174">AEWD203260174(Kec. SU 1 FaceID)</option>
+                                                    <option value="AEWD193560411">AEWD193560411(103.136.162.94)</option>
+                                                    <option value="AEWD230760273">AEWD230760273(RSUD BARI 4 Face)</option>
+                                                    <option value="AEWD230760275">AEWD230760275(RSUD BARI 2 Face)</option>
+                                                    <option value="ZTC8235200396">ZTC8235200396(PKM Semabor Face)</option>
+                                                    <option value="AEWD232360162">AEWD232360162(SD N 160 Face)</option>
+                                                    <option value="AEWD231860725">AEWD231860725(SMP N 49 Face)</option>
+                                                    <option value="JHG3235300660">JHG3235300660(SD N 147 Face)</option>
+                                                    <option value="JHG3235300236">JHG3235300236(SD N 120 Face)</option>
+                                                    <option value="AEWD232260138">AEWD232260138(SD N 063 Face)</option>
+                                                    <option value="ZTC8234500569">ZTC8234500569(SD N 176 Face)</option>
+                                                    <option value="ADGE232360133">ADGE232360133(SD N 065 Face)</option>
+                                                    <option value="AEWD231860797">AEWD231860797(SD N 058 Face)</option>
+                                                    <option value="ADGE223661397">ADGE223661397(SMP N 51 Face)</option>
+                                                    <option value="ADGE223661398">ADGE223661398(SD N 044 Face)</option>
+                                                    <option value="ZTC8234500570">ZTC8234500570(Kel. Pahlawan Fc)</option>
+                                                    <option value="CLX8204060639">CLX8204060639(SMP N 33 Face)</option>
+                                                    <option value="AEWD231360178">AEWD231360178(SD N 232 Face)</option>
+                                                    <option value="JYK8235200006">JYK8235200006(zSETDA FaceID Umum2)</option>
+                                                    <option value="ADGE232260464">ADGE232260464(SD N 183 Face)</option>
+                                                    <option value="AEWD231360153">AEWD231360153(SMP N 08 Face)</option>
+                                                    <option value="UCR6243600014">UCR6243600014(DPKP 11 FACE)</option>
+                                                    <option value="AEWD231360459">AEWD231360459(Dinas Dukcapil)</option>
+                                                    <option value="ZTC8242800187">ZTC8242800187(SD N 148 Face)</option>
+                                                    <option value="ZTC8243600660">ZTC8243600660(UPTD PRKP Zona Timur)</option>
+                                                    <option value="AEYU231260038">AEYU231260038(SAT POL PP 5 face)</option>
+                                                    <option value="ZTC8243600761">ZTC8243600761(UPTD PRKP Zona Barat)</option>
+                                                    <option value="ADGE233561894">ADGE233561894(SD N 062 Face)</option>
+                                                    <option value="AEYU231260041">AEYU231260041(SAT POL PP 6 face)</option>
+                                                    <option value="ZTC8243601731">ZTC8243601731(UPTD PRKP Rusunawa)</option>
+                                                    <option value="CLX8204360885">CLX8204360885(SD N 008 Face)</option>
+                                                    <option value="CLX8204360574">CLX8204360574(SD N 064 Face)</option>
+                                                    <option value="ZTC8243601446">ZTC8243601446(Kel. 23 Ilir Face)</option>
+                                                    <option value="AEYU231860161">AEYU231860161(SAT POL PP 4 face)</option>
+                                                    <option value="ADGE233561821">ADGE233561821(SD N 206 Face)</option>
+                                                    <option value="TES3243500449">TES3243500449(Dinas Pendidikan)</option>
+                                                    <option value="JHG3235300860">JHG3235300860(Dishub Jakabaring Fc)</option>
+                                                    <option value="AEWD231360366">AEWD231360366(SD N 209 Face)</option>
+                                                    <option value="AEWD231360163">AEWD231360163(SD N 113 Face)</option>
+                                                    <option value="AEWD233460850">AEWD233460850(Dinkes PSC)</option>
+                                                    <option value="ZTC8243600310">ZTC8243600310(SD N 005 Face)</option>
+                                                    <option value="AEWD222860255">AEWD222860255(PKM Talang Jambe Fc)</option>
+                                                    <option value="AEWD231360157">AEWD231360157(SD N 040 Face)</option>
+                                                    <option value="AEWD233160051">AEWD233160051(SMP N 45 Face)</option>
+                                                    <option value="AEWD231860781">AEWD231860781(SD N 104 Face)</option>
+                                                    <option value="AEWD232360175">AEWD232360175(SD N 106 Face)</option>
+                                                    <option value="AEWD185060974">AEWD185060974(Kec. IB 1 faceID)</option>
+                                                    <option value="AEYU222960183">AEYU222960183(Dinas Perdagangan)</option>
+                                                    <option value="AEWD233160173">AEWD233160173(SMP N 58 Face)</option>
+                                                    <option value="JHG3243600172">JHG3243600172(SD N 190 Face)</option>
+                                                    <option value="TES3244900139">TES3244900139(PKM Pakjo Face)</option>
+                                                    <option value="ADGE233560532">ADGE233560532(SD N 029 Face)</option>
+                                                    <option value="ZTC8243600827">ZTC8243600827(SD N 220 Face)</option>
+                                                    <option value="AEWD232260395">AEWD232260395(SD N 124 Face)</option>
+                                                    <option value="JHG3235300060">JHG3235300060(Kel. Kemang Agung Fc)</option>
+                                                    </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="Foto" class="col-sm-3 col-form-label tx-bold">Foto <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="file" class="form-control" id="Foto" required />
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Close</button>
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Simpan</button>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="modal fade" id="ModalHapus" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h6 class="modal-title">Konfirmasi Hapus</h6>
+                                <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </a>
+                            </div>
+                            <div class="modal-body">
+                                <p class="mg-b-0">Apakah anda yakin akan menghapus yang Dipilih?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
+                                <button type="button" class="btn btn-sm pd-x-15 btn-danger btn-uppercase"><i data-feather="trash" class="wd-10 mg-r-5"></i> Hapus</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- Modal Hapus -->
+                        <div class="modal fade" id="ModalImport" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h6 class="modal-title">Import Data</h6>
+                                <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </a>
+                            </div>
+                            <div class="modal-body">
+                                <input class="form-control" type="file" id="formFile" />
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
+                                <button type="button" class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="upload" class="wd-10 mg-r-5"></i> Import</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- Modal Import -->   
                     <div class="row row-xs">
                         <div class="col-sm-12 col-lg-12">
-                            <div data-label="List Data Pegawai" class="df-example demo-table">
+                            <div data-label="List Absensi Mesin Pegawai" class="df-example demo-table">
                                 <table id="example2" class="table table-hover" style="width: 100%;">
                                     <thead class="thead-primary">
                                         <tr>
                                             <th>Tanggal</th>
                                             <th>Waktu Datang</th>
                                             <th>Waktu Pulang</th>
-                                            <th>Device</th>
-                                            <th>File</th>
+                                            <th>Registration Device</th>
+                                            <th>Foto</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -307,7 +1386,6 @@
                                             <td>16:04:50</td>
                                             <td>
                                                 <h6 class="tx-13 mg-b-2 tx-dark tx-medium">CQLN230660015(a SETDA FaceID Umum)</h6>
-                                                <p class="tx-12 mg-b-10">Fingerprint</p>
                                             </td>
                                             <td>
                                                 <a
@@ -318,23 +1396,9 @@
                                                     <img src="http://103.165.236.206:8081/iclock/file/upload/thumbnail/CQLN230660017/2025/0321/164256_198202122001121004.jpg" class="img-fit-cover" alt="" />
                                                 </a>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td>02/01/2023</td>
-                                            <td>07:04:50</td>
-                                            <td>16:04:50</td>
                                             <td>
-                                                <h6 class="tx-13 mg-b-2 tx-dark tx-medium">CQLN230660015(a SETDA FaceID Umum)</h6>
-                                                <p class="tx-12 mg-b-10">Fingerprint</p>
-                                            </td>
-                                            <td>
-                                                <a
-                                                    href="http://103.165.236.206:8081/iclock/file/upload/thumbnail/CQLN230660017/2025/0321/164256_198202122001121004.jpg"
-                                                    target="_blank"
-                                                    class="wd-100 wd-md-50 wd-lg-100 ht-60 ht-md-40 ht-lg-60"
-                                                >
-                                                    <img src="http://103.165.236.206:8081/iclock/file/upload/thumbnail/CQLN230660017/2025/0321/164256_198202122001121004.jpg" class="img-fit-cover" alt="" />
-                                                </a>
+                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
+                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalHapus"><i data-feather="trash"></i></button>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -366,6 +1430,7 @@
         <script src="../lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
         <script src="../lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
         <script src="../lib/select2/js/select2.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
         <script src="../assets/js/dashforge.js"></script>
         <script src="../assets/js/dashforge.aside.js"></script>
@@ -386,27 +1451,22 @@
                     },
                 });
 
-                $(".select2").select2({
-                    placeholder: "Pilih Status Pegawai",
-                    searchInputPlaceholder: "Pilihan Pencarian",
+                $('.select2').select2({
+                    placeholder: 'Pilihan',
+                    searchInputPlaceholder: 'Search options',
+                    width: '100%'
+                });
+                
+                $('.selectPencarian').select2({
+                    placeholder: 'Pilihan',
+                    searchInputPlaceholder: 'Pencarian',
+                    width: '100%',
+                    dropdownParent: $('#ModalTambah')
                 });
 
-                $(".select2-so").select2({
-                    placeholder: "Pilih Satuan Organisasi",
-                    searchInputPlaceholder: "Pilihan Pencarian",
-                    allowClear: true,
-                });
-
-                $(".select2-clear").select2({
-                    minimumResultsForSearch: Infinity,
-                    placeholder: "Pilih Unit Kerja",
-                    allowClear: true,
-                });
-
-                $(".select2-status").select2({
-                    minimumResultsForSearch: Infinity,
-                    placeholder: "Pilih Status",
-                    allowClear: true,
+                flatpickr("#Tanggal", {
+                    minDate: "today",       
+                    dateFormat: "d-m-Y"   
                 });
 
                 // Select2

@@ -31,7 +31,7 @@
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png" />
 
-        <title>Rekap Dinas Pegawai | Absensi Online</title>
+        <title>Pengajuan Cuti | Absensi Online</title>
 
         <!-- vendor css -->
         <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
@@ -166,12 +166,12 @@
 
                     <!-- Pengajuan Ketidakhadiran -->
                     <li class="nav-label mg-t-25">Pengajuan Ketidakhadiran</li>
-                    <li class="nav-item with-sub active show">
+                    <li class="nav-item with-sub">
                         <a href="" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas</span></a>
                         <ul>
                             <li><a href="PengajuanDinas.html">Pengajuan</a></li>
                             <li><a href="RekapDinasSKPD.html">Rekap Dinas SKPD</a></li>
-                            <li class="active"><a href="RekapDinasPegawai.html">Rekap Dinas Pegawai</a></li>
+                            <li><a href="RekapDinasPegawai.html">Rekap Dinas Pegawai</a></li>
                         </ul>
                     </li>
                     <li class="nav-item with-sub">
@@ -190,15 +190,14 @@
                             <li><a href="RekapSakitPegawai.html">Rekap Sakit Pegawai</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item with-sub">
+                    <li class="nav-item with-sub active show">
                         <a href="" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
                         <ul>
-                            <li><a href="PengajuanCuti.html">Pengajuan</a></li>
+                            <li class="active"><a href="PengajuanCuti.html">Pengajuan</a></li>
                             <li><a href="RekapCutiSKPD.html">Rekap Cuti SKPD</a></li>
                             <li><a href="RekapCutiPegawai.html">Rekap Cuti Pegawai</a></li>
                         </ul>
                     </li>
-                    
                     
                     <!-- Monitoring Absensi -->
                     <li class="nav-label mg-t-25">Monitoring Absensi</li>
@@ -265,18 +264,84 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb breadcrumb-style1 mg-b-10">
                                     <li class="breadcrumb-item"><a href="#">Pengajuan Ketidakhadiran</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Rekap Dinas Pegawai</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data Pengajuan Cuti</li>
                                 </ol>
                             </nav>
-                            <h4 class="mg-b-0 tx-spacing--1">Rekap Dinas Pegawai</h4>
+                            <h4 class="mg-b-0 tx-spacing--1">Data Pengajuan Cuti</h4>
                         </div>
                         <div class="d-none d-md-block">
-                            <div class="btn-group" role="group" aria-label="Basic example"></div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button class="btn btn-sm pd-x-15 btn-outline-primary btn-uppercase" data-bs-toggle="modal" data-bs-target="#ModalImport"><i data-feather="upload" class="wd-10"></i></button>
+                                <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="file-text" class="wd-10"></i></button>
+                            </div>
+                            <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Tambah Data</button>
                         </div>
-                    </div>             
+                    </div>
+                    <div class="modal fade" id="ModalTambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true" data-bs-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content tx-14">
+                                <div class="modal-header">
+                                    <h6 class="modal-title tx-bold" id="exampleModalLabel4">Tambah Pengajuan Cuti</h6>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group row">
+                                            <label for="NamaPegawai" class="col-sm-3 col-form-label tx-bold">Nama Pegawai <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-select selectPencarian" id="NamaPegawai" name="NamaPegawai" required>
+                                                    <option label="Pilihan"></option>
+                                                    <option value="198305102003122002">198305102003122002 - Sri Yuwati</option>
+                                                    <option value="198305102003122002">196907161997031002 - Iman Hadiyat</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="TipeCuti" class="col-sm-3 col-form-label tx-bold">Tipe Cuti <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-select selectPencarian" id="TipeCuti" name="TipeCuti" required>
+                                                    <option label="Pilihan"></option>
+                                                    <option value="Cuti Tahunan">Cuti Tahunan</option>
+                                                    <option value="Cuti Sakit">Cuti Sakit</option>
+                                                    <option value="Cuti Alasan Penting">Cuti Alasan Penting</option>
+                                                    <option value="Cuti Melahirkan">Cuti Melahirkan</option>
+                                                    <option value="Cuti Besar">Cuti Besar</option>
+                                                    <option value="Cuti Diluar Tanggungan Negara">Cuti Diluar Tanggungan Negara</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="TanggalCuti" class="col-sm-3 col-form-label tx-bold">Tanggal Cuti <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="Tanggal" placeholder="Pilih Tanggal Cuti" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="Keterangan" class="col-sm-3 col-form-label tx-bold">Keterangan/Alasan <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <textarea class="form-control" rows="2" placeholder="Masukkan Keterangan/Alasan Cuti" name="Keterangan" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="LampiranDokumen" class="col-sm-3 col-form-label tx-bold">Lampiran Dokumen <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="file" class="form-control" id="LampiranDokumen" required />
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Close</button>
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Simpan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
                     <div class="row row-xs">
                         <div class="col-sm-12 col-lg-12">
-                            <div data-label="List Rekap Dinas SKPD" class="df-example demo-table">
+                            <div data-label="List Data Pengajuan Cuti" class="df-example demo-table">
                                 <div class="accordion mg-b-20" id="accordionExample">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
@@ -321,23 +386,34 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-3">
+                                                    <div class="col-lg-2">
                                                         <div class="form-group">
-                                                            <label for="formGroup" class="d-block">Tipe Dinas</label>
-                                                            <select class="form-select select2">
-                                                                <option label="Pilih Tipe Dinas"></option>
-                                                                <option value="Dinas Luar Full">Dinas Luar Full</option>
-                                                                <option value="Dinas Luar, Tidak Absen Masuk">Dinas Luar, Tidak Absen Masuk</option>
-                                                                <option value="Dinas Luar, Tidak Absen Pulang">Dinas Luar, Tidak Absen Pulang</option>
-                                                                <option value="Tugas Lain Full">Tugas Lain Full</option>
-                                                                <option value="Tugas Lain, Tidak Absen Masuk">Tugas Lain, Tidak Absen Masuk</option>
-                                                                <option value="Tugas Lain, Tidak Absen Pulang">Tugas Lain, Tidak Absen Pulang</option>
-                                                                <option value="Tugas Lain, Apel Gabungan">Tugas Lain, Apel Gabungan</option>
-                                                                <option value="Tugas Lain, Gotong Royong">Tugas Lain, Gotong Royong</option>
+                                                            <label for="formGroup" class="d-block">Tipe Cuti</label>
+                                                            <select class="form-control select2" required>
+                                                                <option label="Pilihan"></option>
+                                                                <option value="Cuti Tahunan">Cuti Tahunan</option>
+                                                                <option value="Cuti Sakit">Cuti Sakit</option>
+                                                                <option value="Cuti Alasan Penting">Cuti Alasan Penting</option>
+                                                                <option value="Cuti Melahirkan">Cuti Melahirkan</option>
+                                                                <option value="Cuti Besar">Cuti Besar</option>
+                                                                <option value="Cuti Diluar Tanggungan Negara">Cuti Diluar Tanggungan Negara</option>
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-3">
+                                                    <div class="col-lg-2">
+                                                        <div class="form-group">
+                                                            <label for="formGroup" class="d-block">Status Validasi</label>
+                                                            <select class="form-select select2">
+                                                                <option label="Pilih Status Validasi"></option>
+                                                                <option value="Vlidasi Atasan">Validasi Atasan</option>
+                                                                <option value="Menunggu Validasi">Menunggu Validasi</option>
+                                                                <option value="Tolak Validasi">Tolak Validasi</option>
+                                                                <option value="Divalidasi Sistem">Divalidasi Sistem</option>
+                                                                <option value="Input Operator">Input Operator</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2">
                                                         <div class="form-group">
                                                             <label for="formGroup" class="d-block">Bulan</label>
                                                             <select class="form-control select2">
@@ -370,53 +446,131 @@
                                     </div>
                                 </div>                         
                                 <!-- row -->
-                                <div class="table-responsive">
-                                    <table id="datatables" class="table table-hover table-bordered" style="width: 100%;">
-                                        <thead class="thead-primary">
-                                            <tr>
-                                                <th rowspan="2">Nama Pegawai</th>
-                                                <th rowspan="2">Jenis Pegawai</th>
-                                                <th rowspan="2">Jabatan</th>
-                                                <th colspan="4" class="text-center">Dinas Luar</th>
-                                                <th colspan="6" class="text-center">Tugas Lain</th>
-                                                <th rowspan="2">Persentase</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Dinas Luar Full</th>
-                                                <th>Dinas Luar, Tidak Absen Masuk</th>
-                                                <th>Dinas Luar, Tidak Absen Pulang</th>
-                                                <th>Total</th>
-                                                <th>Tugas Lain Full</th>
-                                                <th>Tugas Lain, Tidak Absen Masuk</th>
-                                                <th>Tugas Lain, Tidak Absen Pulang</th>
-                                                <th>Tugas Lain, Apel Gabungan</th>
-                                                <th>Tugas Lain, Gotong Royong</th>
-                                                <th>Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <h6 class="tx-13 mg-b-2 tx-primary">Katherine Lumaad</h6>
-                                                    <p class="tx-12 mg-b-10">196708142001121002</p>
-                                                </td>
-                                                <td class="text-start">PNS</td>
-                                                <td class="text-start">Analis Sumber Daya Manusia Aparatur Ahli Muda</td>
-                                                <td class="text-end">10</td>
-                                                <td class="text-end">10</td>
-                                                <td class="text-end">10</td>
-                                                <td class="text-end">10</td>
-                                                <td class="text-end">10</td>
-                                                <td class="text-end">10</td>
-                                                <td class="text-end">10</td>
-                                                <td class="text-end">10</td>
-                                                <td class="text-end">10</td>
-                                                <td class="text-end">10</td>
-                                                <td class="text-end">10%</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="modal fade" id="ModalHapus" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
+                                    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h6 class="modal-title">Konfirmasi Hapus</h6>
+                                            <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </a>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="mg-b-0">Apakah anda yakin akan menghapus yang Dipilih?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
+                                            <button type="button" class="btn btn-sm pd-x-15 btn-danger btn-uppercase"><i data-feather="trash" class="wd-10 mg-r-5"></i> Hapus</button>
+                                        </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <!-- Modal Hapus -->
+                                <div class="modal fade" id="ModalImport" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
+                                    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h6 class="modal-title">Import Data</h6>
+                                            <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </a>
+                                        </div>
+                                        <div class="modal-body">
+                                            <input class="form-control" type="file" id="formFile">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
+                                            <button type="button" class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="upload" class="wd-10 mg-r-5"></i> Import</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal Import -->
+                                <table id="datatables" class="table table-hover" style="width: 100%;">
+                                    <thead class="thead-primary">
+                                        <tr>
+                                            <th class="text-center"><input type="checkbox" class="custom-control-input" id="checkAll" onclick="checkAll(this)"></th>
+                                            <th>No.</th>
+                                            <th>Nama Pegawai</th>
+                                            <th>Jenis Pegawai</th>
+                                            <th>Jabatan</th>
+                                            <th>Tipe Cuti</th>
+                                            <th>Tanggal Cuti</th>
+                                            <th>Keterangan</th>
+                                            <th>Dokumen Pendukung</th>
+                                            <th>Status</th>
+                                            <th>Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center"><input type="checkbox" class="custom-control-input" onchange="toggleHapusButton()"></td>
+                                            <td>1</td>
+                                            <td>
+                                                <h6 class="tx-13 mg-b-2 tx-primary">Katherine Lumaad</h6>
+                                                <p class="tx-12 mg-b-10">196708142001121002</p>
+                                            </td>
+                                            <td class="text-start">PNS</td>
+                                            <td class="text-start">Analis Sumber Daya Manusia Aparatur Ahli Muda</td>
+                                            <td>
+                                                Sakit Full
+                                            </td>
+                                            <td>
+                                                <p class="mg-0">28/07/2025, 29/07/2025, 30/07/2025</p>
+                                                <small class="tx-12 mg-0">
+                                                    <strong>Dibuat Tanggal :</strong> 27/07/2025 10:02:20
+                                                </small>   
+                                                <p class="tx-12 mg-0"><strong>Divalidasi Tanggal :</strong> 27/07/2025 10:02:20</p>
+                                            </td>
+                                            <td>Kordinasi Ke Kemendagri</td>
+                                            <td>
+                                                <a href="#" target="_blank" class="tx-medium d-flex align-items-center gap-1 text-decoration-underline">Lihat Dokumen <ion-icon name="arrow-forward-outline" aria-label="arrow forward outline" role="img" class="md hydrated"></ion-icon></a>
+                                            </td>
+                                            <td>
+                                                <span class="badge text-bg-success">Validasi Atasan</span>
+                                                <h6 class="tx-13 mg-0 tx-primary">Katherine Lumaad</h6>
+                                                <p class="tx-12 mg-b-10">196708142001121002</p>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
+                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalHapus"><i data-feather="trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><input type="checkbox" class="custom-control-input" onchange="toggleHapusButton()"></td>
+                                            <td>2</td>
+                                            <td>
+                                                <h6 class="tx-13 mg-b-2 tx-primary">Katherine Lumaad</h6>
+                                                <p class="tx-12 mg-b-10">196708142001121002</p>
+                                            </td>
+                                            <td class="text-start">PNS</td>
+                                            <td class="text-start">Analis Sumber Daya Manusia Aparatur Ahli Muda</td>
+                                            <td>
+                                                Sakit, Pulang Sebelum Waktu
+                                            </td>
+                                            <td>
+                                                <p class="mg-0">28/07/2025, 29/07/2025, 30/07/2025</p>
+                                                <small class="tx-12 mg-0">
+                                                    <strong>Dibuat Tanggal :</strong> 27/07/2025 10:02:20
+                                                </small>   
+                                                <p class="tx-12 mg-0"><strong>Divalidasi Tanggal :</strong> 27/07/2025 10:02:20</p>
+                                            </td>
+                                            <td>Kordinasi Ke Kemendagri</td>
+                                            <td>
+                                                <a href="#" target="_blank" class="tx-medium d-flex align-items-center gap-1 text-decoration-underline">Lihat Dokumen <ion-icon name="arrow-forward-outline" aria-label="arrow forward outline" role="img" class="md hydrated"></ion-icon></a>
+                                            </td>
+                                            <td>
+                                                <span class="badge text-bg-success">Validasi Atasan</span>
+                                                <h6 class="tx-13 mg-0 tx-primary">Katherine Lumaad</h6>
+                                                <p class="tx-12 mg-b-10">196708142001121002</p>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
+                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalHapus"><i data-feather="trash"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                             <!-- df-example -->
                         </div>
@@ -456,6 +610,13 @@
         <script src="../assets/js/dashboard-one.js"></script>
         <script>
             $(function () {
+                function toggleHapusButton() {
+                    const adaYangDicek = $('.data-check:checked').length > 0;
+                    $('#hapusBtn').prop('disabled', !adaYangDicek);
+                }
+
+
+
                 "use strict";
                 $("#datatables").DataTable({
                     order: [],
@@ -489,7 +650,7 @@
                     placeholder: 'Choose one'
                 });
 
-                flatpickr("#TanggalDinas", {
+                flatpickr("#Tanggal", {
                     mode: "multiple",       // ⬅️ untuk multi tanggal
                     dateFormat: "Y-m-d",    // format tanggal
                 });
@@ -498,6 +659,37 @@
                 $(".dataTables_length select").select2({ minimumResultsForSearch: Infinity });
             });
 
+            function checkAll(box) {
+                let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                for (let i = 0; i < checkboxes.length; i++) {
+                    if (checkboxes[i].type == 'checkbox') {
+                    checkboxes[i].checked = box.checked;
+                    }
+                }
+                toggleHapusButton(); // Pastikan tombol diperbarui
+                }
+
+                function toggleHapusButton() {
+                    let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                    let hapusButton = document.getElementById('HapusAll');
+
+                    const isAnyChecked = Array.from(checkboxes).some(cb =>
+                        cb.id !== 'checkAll' && cb.checked
+                    );
+
+                    if (isAnyChecked) {
+                        hapusButton.classList.remove('disabled');
+                        hapusButton.setAttribute('aria-disabled', 'false');
+                    } else {
+                        hapusButton.classList.add('disabled');
+                        hapusButton.setAttribute('aria-disabled', 'true');
+                    }
+                }
+
+                // Nonaktifkan tombol saat pertama kali halaman dimuat
+                document.addEventListener('DOMContentLoaded', function () {
+                toggleHapusButton();
+            });
         </script>
     </body>
 </html>

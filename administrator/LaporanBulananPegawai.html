@@ -31,7 +31,7 @@
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png" />
 
-        <title>Data Pegawai | Absensi Online</title>
+        <title>Absensi Mesin Pegawai | Absensi Online</title>
 
         <!-- vendor css -->
         <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
@@ -42,6 +42,7 @@
         <link href="../lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" />
         <link href="../lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet" />
         <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
         <!-- DashForge CSS -->
         <link rel="stylesheet" href="../assets/css/dashforge.css" />
@@ -148,7 +149,7 @@
                     <li class="nav-item">
                         <a href="PegawaiAbsensiMobile.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Pegawai Absensi Mobile</span></a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a href="JenisCuti.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Jenis Cuti</span></a>
                     </li>
                     <li class="nav-item">
@@ -188,11 +189,11 @@
                     <li class="nav-item">
                         <a href="KeluarKantor.html" class="nav-link"><i data-feather="external-link"></i> <span>Keluar Kantor</span></a>
                     </li>
-                    <li class="nav-item with-sub active show">
+                    <li class="nav-item with-sub">
                         <a href="" class="nav-link"><i data-feather="database"></i> <span>Mesin Absensi</span></a>
                         <ul>
                             <li><a href="AbsensiMesinHarian.html">Absensi Mesin Harian</a></li>
-                            <li class="active"><a href="AbsensiMesinPegawai.html">Absensi Mesin Pegawai</a></li>
+                            <li><a href="AbsensiMesinPegawai.html">Absensi Mesin Pegawai</a></li>
                         </ul>
                     </li>
                     <li class="nav-item with-sub">
@@ -202,11 +203,10 @@
                             <li><a href="AbsensiMobilePegawai.html">Absensi Mobile Pegawai</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item with-sub">
+                    <li class="nav-item with-sub active show">
                         <a href="" class="nav-link"><i data-feather="book"></i> <span>Laporan Presensi</span></a>
                         <ul>
-                            <li><a href="LaporanHarian.html">Laporan Harian</a></li>
-                            <li><a href="LaporanBulanan.html">Laporan Bulanan</a></li>
+                            <li class="active"><a href="LaporanBulanan.html">Laporan Bulanan</a></li>
                             <li><a href="LaporanTahunan.html">Laporan Tahunan</a></li>
                             <li><a href="LaporanBermasalah.html">Laporan Bermasalah</a></li>
                             <li><a href="LogAbsensiMobile.html">Log Absensi Mobile</a></li>
@@ -217,83 +217,140 @@
         </aside>
 
         <div class="content ht-100v pd-0">
-            <div class="content-header"></div>
-            <!-- content-header -->
+            <div class="content-header">
+                <div class="content-search">
+                <label for="Periode" class="mg-r-5 nav-link">Periode :</label>
+                <select class="form-select wd-75 border-0 shadow-none bg-transparent">
+                    <option value="2024">2024</option>
+                    <option value="2025" selected>2025</option>
+                </select>
+                </div>
+            </div><!-- content-header -->
 
             <div class="content-body">
-                <div class="container pd-x-0">
-                    <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+                <div class="pd-x-0">
+                    <div class="d-sm-flex align-items-center justify-content-between mg-b-20">
                         <div>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb breadcrumb-style1 mg-b-10">
-                                    <li class="breadcrumb-item"><a href="#">Mesin Absensi</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Absensi Mesin Pegawai</li>
+                                    <li class="breadcrumb-item"><a href="#">Monitoring Absensi</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Laporan Presensi</li>
                                 </ol>
                             </nav>
-                            <h4 class="mg-b-0 tx-spacing--1">Data Absensi Mesin Pegawai</h4>
+                            <h4 class="mg-b-0 tx-spacing--1">Laporan Presensi Pegawai</h4>
                         </div>
+                        <div class="d-none d-md-block"></div>
+                    </div>
+                    <div class="row mg-b-25">
+                        <div class="col-sm-3 text-center mg-b-15">
+                            <img src="../assets/img/profile-default.png" class="img wd-100 ht-100" alt="" />
+                        </div>
+                        <div class="col-sm-9">
+                            <table>
+                                <tr>
+                                    <td class="tx-bold wd-20p">NIP Pegawai</td>
+                                    <td class="text-center">:</td>
+                                    <td class="wd-100p">196708142001121002</td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-bold wd-20p">Nama Pegawai</td>
+                                    <td class="text-center">:</td>
+                                    <td class="wd-100p">Katherine Lumaad, S.Kom.</td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-bold wd-20p">Jenis Pegawai</td>
+                                    <td class="text-center">:</td>
+                                    <td class="wd-100p">PPPK Penuh Waktu</td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-bold wd-20p">Satuan Organisasi</td>
+                                    <td class="text-center">:</td>
+                                    <td class="wd-100p">Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-bold wd-20p">Unit Kerja</td>
+                                    <td class="text-center">:</td>
+                                    <td class="wd-100p">Sub Bagian Umum dan Kepegawaian</td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-bold wd-20p">Nama Jabatan</td>
+                                    <td class="text-center">:</td>
+                                    <td class="wd-100p">Pengadministrasi Persuratan</td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-bold wd-20p">Bulan</td>
+                                    <td class="text-center">:</td>
+                                    <td class="wd-100p">Agustus</td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-bold wd-20p">Tahun</td>
+                                    <td class="text-center">:</td>
+                                    <td class="wd-100p">2025</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="d-sm-flex align-items-center justify-content-between mg-b-15">
+                        <div></div>
                         <div class="d-none d-md-block">
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button class="btn btn-sm pd-x-15 btn-outline-primary btn-uppercase"><i data-feather="upload" class="wd-10"></i></button>
-                                <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="file-text" class="wd-10"></i></button>
+                                <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="download" class="wd-10 mg-r-2"></i> Export</button>
                             </div>
                         </div>
                     </div>
                     <div class="row row-xs">
                         <div class="col-sm-12 col-lg-12">
-                            <div data-label="List Data Absensi Mesin Pegawai" class="df-example demo-table">
-                                <div class="row row-sm mg-b-20">
-                                    <div class="col-lg-4">
-                                        <select class="form-control select2-so">
-                                            <option label="Choose one">Pilih Satuan Organisasi</option>
-                                            <option value="Badan Kepegawaian dan Pengembangan Sumber Daya Manusia">Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <select class="form-control select2-clear">
-                                            <option label="Choose one">Pilih Unit Kerja</option>
-                                            <option value="Sub Bidang Penilaian dan Evaluasi Kinerja Aparatur I">Sub Bidang Penilaian dan Evaluasi Kinerja Aparatur I</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <select class="form-control select2-status">
-                                            <option value="Aktif">Aktif</option>
-                                            <option value="Pensiun">Pensiun</option>
-                                            <option value="Meninggal Dunia">Meninggal Dunia</option>
-                                            <option value="Tugas Belajar">Tugas Belajar</option>
-                                            <option value="Dipekerjakan">Dipekerjakan</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <button class="btn btn-outline-primary btn-uppercase"><i data-feather="refresh-cw" class="wd-10 mg-r-5"></i> Filter</button>
-                                    </div>
+                            <div data-label="Laporan Presensi Pegawai" class="df-example demo-table">
+                                <div class="table-responsive">
+                                    <table id="example2" class="table table-hover table-bordered" style="width: 100%;">
+                                        <thead class="thead-primary">
+                                            <tr>
+                                                <th rowspan="2" class="text-center">Tanggal</th>
+                                                <th rowspan="2" class="text-center">Waktu Datang</th>
+                                                <th rowspan="2" class="text-center">Waktu Pulang</th>
+                                                <th colspan="3" class="text-center">
+                                                    Tanpa Keterangan
+                                                    </br>
+                                                    Dalam Menit (M)
+                                                </th>
+                                                <th rowspan="2" class="text-center">Agenda</th>
+                                                <th rowspan="2" class="text-center">Rev</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-center">Alpa</th>
+                                                <th class="text-center">Terlambat</th>
+                                                <th class="text-center">PSW</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">01/01/2023</td>
+                                                <td class="text-center">
+                                                    <p class="mg-0">09:04:50</p>
+                                                    <small class="tx-12 mg-b-0">(Tugas Lain, Gotong Royong)</small>
+                                                </td>
+                                                <td class="text-center">16:04:50</td>
+                                                <td class="text-center">0</td>
+                                                <td class="text-center">0</td>
+                                                <td class="text-center">0</td>
+                                                <td class="text-center">Dinas Kantor</td>
+                                                <td class="text-center">Mesin</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">02/01/2023</td>
+                                                <td class="text-center">
+                                                    <p class="mg-0">07:34:50</p>
+                                                </td>
+                                                <td class="text-center">16:05:50</td>
+                                                <td class="text-center">0</td>
+                                                <td class="text-center">4,83</td>
+                                                <td class="text-center">0</td>
+                                                <td class="text-center">Dinas Kantor</td>
+                                                <td class="text-center">Mesin</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <!-- row -->
-                                <table id="example2" class="table table-hover" style="width: 100%;">
-                                    <thead class="thead-primary">
-                                        <tr>
-                                            <th>No.</th>
-                                            <th>Nama Lengkap</th>
-                                            <th>Satuan Organisasi</th>
-                                            <th>Unit Kerja</th>
-                                            <th>Nama Jabatan</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td class="text-nowrap">
-                                                <a href="AbsensiMesinPegawaiDetails.html">
-                                                    <p class="tx-13 tx-medium mg-b-0 tx-primary">Katherine Lumaad, S.Kom.</p>
-                                                    <p class="mg-b-0 tx-12 tx-dark">196708142001121002</p>
-                                                </a>
-                                            </td>
-                                            <td>Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</td>
-                                            <td>Sub Bagian Umum dan Kepegawaian</td>
-                                            <td>Pengadministrasi Persuratan</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
                             </div>
                             <!-- df-example -->
                         </div>
@@ -321,6 +378,7 @@
         <script src="../lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
         <script src="../lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
         <script src="../lib/select2/js/select2.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
         <script src="../assets/js/dashforge.js"></script>
         <script src="../assets/js/dashforge.aside.js"></script>
@@ -341,27 +399,22 @@
                     },
                 });
 
-                $(".select2").select2({
-                    placeholder: "Pilih Status Pegawai",
-                    searchInputPlaceholder: "Pilihan Pencarian",
+                $('.select2').select2({
+                    placeholder: 'Pilihan',
+                    searchInputPlaceholder: 'Search options',
+                    width: '100%'
+                });
+                
+                $('.selectPencarian').select2({
+                    placeholder: 'Pilihan',
+                    searchInputPlaceholder: 'Pencarian',
+                    width: '100%',
+                    dropdownParent: $('#ModalTambah')
                 });
 
-                $(".select2-so").select2({
-                    placeholder: "Pilih Satuan Organisasi",
-                    searchInputPlaceholder: "Pilihan Pencarian",
-                    allowClear: true,
-                });
-
-                $(".select2-clear").select2({
-                    minimumResultsForSearch: Infinity,
-                    placeholder: "Pilih Unit Kerja",
-                    allowClear: true,
-                });
-
-                $(".select2-status").select2({
-                    minimumResultsForSearch: Infinity,
-                    placeholder: "Pilih Status",
-                    allowClear: true,
+                flatpickr("#Tanggal", {
+                    minDate: "today",       
+                    dateFormat: "d-m-Y"   
                 });
 
                 // Select2

@@ -107,10 +107,7 @@
           <!-- DATA MASTER KEPEGAWAIAN -->
           <li class="nav-label mg-t-25">Data Master Kepegawaian</li>
           <li class="nav-item">
-            <a href="data-pegawai.html" class="nav-link"><i data-feather="user-plus"></i> <span>Pegawai ASN</span></a>
-          </li>
-          <li class="nav-item">
-            <a href="PegawaiNonAsn.html" class="nav-link"><i data-feather="user-minus"></i> <span>Pegawai Non ASN</span></a>
+            <a href="data-pegawai.html" class="nav-link"><i data-feather="user"></i> <span>Pegawai ASN</span></a>
           </li>
           <li class="nav-item">
             <a href="StrukturOrganisasi.html" class="nav-link"><i data-feather="layout"></i> <span>Struktur Organisasi</span></a>
@@ -132,6 +129,9 @@
           </li>
           <li class="nav-item">
             <a href="MutasiPegawai.html" class="nav-link"><i data-feather="repeat"></i> <span>Mutasi Pegawai</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="OperatorPD.html" class="nav-link"><i data-feather="users"></i> <span>Operator PD</span></a>
           </li>
 
           <!-- Master Absensi-->
@@ -160,29 +160,53 @@
 
           <!-- Pengajuan Ketidakhadiran -->
           <li class="nav-label mg-t-25">Pengajuan Ketidakhadiran</li>
-          <li class="nav-item">
-            <a href="PengajuanDinas.html" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas </span></a>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas</span></a>
+            <ul>
+              <li><a href="PengajuanDinas.html">Pengajuan</a></li>
+              <li><a href="RekapDinasSKPD.html">Rekap Dinas SKPD</a></li>
+              <li><a href="RekapDinasPegawai.html">Rekap Dinas Pegawai</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a href="PengajuanIzin.html" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin </span></a>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin</span></a>
+            <ul>
+              <li><a href="PengajuanIzin.html">Pengajuan</a></li>
+              <li><a href="RekapIzinSKPD.html">Rekap Izin SKPD</a></li>
+              <li><a href="RekapIzinPegawai.html">Rekap Izin Pegawai</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a href="PengajuanSakit.html" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
+            <ul>
+              <li><a href="PengajuanSakit.html">Pengajuan</a></li>
+              <li><a href="RekapSakitSKPD.html">Rekap Sakit SKPD</a></li>
+              <li><a href="RekapSakitPegawai.html">Rekap Sakit Pegawai</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a href="PengajuanCuti.html" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
+            <ul>
+              <li><a href="PengajuanCuti.html">Pengajuan</a></li>
+              <li><a href="RekapCutiSKPD.html">Rekap Cuti SKPD</a></li>
+              <li><a href="RekapCutiPegawai.html">Rekap Cuti Pegawai</a></li>
+            </ul>
           </li>
 
           <!-- Monitoring Absensi -->
           <li class="nav-label mg-t-25">Monitoring Absensi</li>
-          <li class="nav-item">
-            <a href="AgendaPegawai.html" class="nav-link"><i data-feather="archive"></i> <span>Agenda Pegawai</span></a>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="clock"></i> <span>Shift Pegawai</span></a>
+            <ul>
+              <li><a href="ShiftUtama.html">Shift Utama</a></li>
+              <li><a href="ShiftTambahan.html">Shift Tambahan</a></li>
+            </ul>
           </li>
           <li class="nav-item with-sub">
-            <a href="" class="nav-link"><i data-feather="clock"></i> <span>Jadwal Pegawai</span></a>
+            <a href="" class="nav-link"><i data-feather="archive"></i> <span>Agenda Absensi</span></a>
             <ul>
-              <li><a href="JadwalUtama.html">Jadwal Utama</a></li>
-              <li><a href="JadwalTambahan.html">Jadwal Tambahan</a></li>
+              <li><a href="AgendaSKPD.html">Agenda SKPD</a></li>
+              <li><a href="AgendaPegawai.html">Agenda Pegawai</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -205,7 +229,6 @@
           <li class="nav-item with-sub">
             <a href="" class="nav-link"><i data-feather="book"></i> <span>Laporan Presensi</span></a>
             <ul>
-              <li><a href="LaporanHarian.html">Laporan Harian</a></li>
               <li><a href="LaporanBulanan.html">Laporan Bulanan</a></li>
               <li><a href="LaporanTahunan.html">Laporan Tahunan</a></li>
               <li><a href="LaporanBermasalah.html">Laporan Bermasalah</a></li>
@@ -228,7 +251,7 @@
       </div><!-- content-header -->
 
       <div class="content-body">
-        <div class="container pd-x-0">
+        <div class="pd-x-0">
           <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
             <div>
               <nav aria-label="breadcrumb">
@@ -437,81 +460,82 @@
               <h6 class="mg-b-0"></h6>
               <div class="d-flex align-items-center tx-16">
                 <div class="btn-group" role="group" aria-label="Basic example">
-                  <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="file-text" class="wd-10 mg-r-2"></i> Export</button>
+                  <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="download" class="wd-10 mg-r-2"></i> Export</button>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card">
                 <div data-label="Rekap Kehadiran Pegawai" class="df-example demo-table">
-                  <table id="example2" class="table table-hover table-bordered" style="width: 100%;">
-                    <thead class="thead-primary">
-                      <tr>
-                        <th rowspan="2">Rank</th>
-                        <th rowspan="2">Nama SKPD</th>
-                        <th rowspan="2">Pegawai</th>
-                        <th colspan="3" class="text-center">Kehadiran</th>
-                        <th colspan="5" class="text-center">Absen Kantor</th>
-                        <th rowspan="2">Persentase</th>
-                      </tr>
-                      <tr>
-                        <th>Kantor</th>
-                        <th>WFH/WFA</th>
-                        <th>Total</th>
-                        <th>Alpha</th>
-                        <th>DL/Tugas Lain</th>
-                        <th>Izi/Sakit</th>
-                        <th>Cuti</th>
-                        <th>Total</th>
-                      </tr>
-                    </thead>
-                    <thead class="bg-transparent">
-                      <tr>
-                        <td class="text-start"><strong>Urutan</strong></td>
-                        <td class="text-start"><strong>Total</strong></td>
-                        <td class="text-end"><strong>22</strong></td>
-                        <td class="text-end"><strong>5,628</strong></td>
-                        <td class="text-end"><strong>25.60%</strong></td>
-                        <td class="text-end"><strong>1.92</strong></td>
-                        <td class="text-end"><strong>00:01:05</strong></td>
-                        <td class="text-end"><strong>340,103</strong></td>
-                        <td class="text-end"><strong>$2.65M</strong></td>
-                        <td class="text-end"><strong>4.50%</strong></td>
-                        <td class="text-end"><strong>$2.65M</strong></td>
-                        <td class="text-end"><strong>4.50%</strong></td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="text-start">1</td>
-                        <td class="text-start">Dinas Pendidikan</td>
-                        <td class="text-end">7,800</td>
-                        <td class="text-end">5,628</td>
-                        <td class="text-end">25.60%</td>
-                        <td class="text-end">1.92</td>
-                        <td class="text-end">190,92</td>
-                        <td class="text-end">340,103</td>
-                        <td class="text-end">$2.65M</td>
-                        <td class="text-end">4.50%</td>
-                        <td class="text-end">$2.65M</td>
-                        <td class="text-end">4.50%</td>
-                      </tr>
-                      <tr>
-                        <td class="text-start">2</td>
-                        <td class="text-start">Dinas Kesehatan</td>
-                        <td class="text-end">7,800</td>
-                        <td class="text-end">5,628</td>
-                        <td class="text-end">25.60%</td>
-                        <td class="text-end">1.92</td>
-                        <td class="text-end">190,92</td>
-                        <td class="text-end">340,103</td>
-                        <td class="text-end">$2.65M</td>
-                        <td class="text-end">4.50%</td>
-                        <td class="text-end">$2.65M</td>
-                        <td class="text-end">4.50%</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="table-responsive">
+                    <table id="dataTables" class="table table-hover table-bordered" style="width: 100%;">
+                      <thead class="thead-primary">
+                        <tr>
+                          <th rowspan="2">Rank</th>
+                          <th rowspan="2">Nama SKPD</th>
+                          <th rowspan="2">Pegawai</th>
+                          <th colspan="3" class="text-center">Kehadiran</th>
+                          <th colspan="5" class="text-center">Absen Kantor</th>
+                          <th rowspan="2">Persentase</th>
+                        </tr>
+                        <tr>
+                          <th>Kantor</th>
+                          <th>WFH/WFA</th>
+                          <th>Total</th>
+                          <th>Alpha</th>
+                          <th>DL/Tugas Lain</th>
+                          <th>Izi/Sakit</th>
+                          <th>Cuti</th>
+                          <th>Total</th>
+                        </tr>
+                      </thead>
+                      <thead class="bg-transparent">
+                        <tr>
+                          <td class="text-start"><strong>Urutan</strong></td>
+                          <td class="text-start"><strong>Total</strong></td>
+                          <td class="text-end"><strong>22</strong></td>
+                          <td class="text-end"><strong>5,628</strong></td>
+                          <td class="text-end"><strong>25.60%</strong></td>
+                          <td class="text-end"><strong>1.92</strong></td>
+                          <td class="text-end"><strong>00:01:05</strong></td>
+                          <td class="text-end"><strong>340,103</strong></td>
+                          <td class="text-end"><strong>$2.65M</strong></td>
+                          <td class="text-end"><strong>4.50%</strong></td>
+                          <td class="text-end"><strong>$2.65M</strong></td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-start">1</td>
+                          <td class="text-start">Dinas Pendidikan</td>
+                          <td class="text-end">7,800</td>
+                          <td class="text-end">5,628</td>
+                          <td class="text-end">25.60%</td>
+                          <td class="text-end">1.92</td>
+                          <td class="text-end">190,92</td>
+                          <td class="text-end">340,103</td>
+                          <td class="text-end">$2.65M</td>
+                          <td class="text-end">4.50%</td>
+                          <td class="text-end">$2.65M</td>
+                          <td class="text-end">4.50%</td>
+                        </tr>
+                        <tr>
+                          <td class="text-start">2</td>
+                          <td class="text-start">Dinas Kesehatan</td>
+                          <td class="text-end">7,800</td>
+                          <td class="text-end">5,628</td>
+                          <td class="text-end">25.60%</td>
+                          <td class="text-end">1.92</td>
+                          <td class="text-end">190,92</td>
+                          <td class="text-end">340,103</td>
+                          <td class="text-end">$2.65M</td>
+                          <td class="text-end">4.50%</td>
+                          <td class="text-end">$2.65M</td>
+                          <td class="text-end">4.50%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
                 <!-- df-example -->
               </div>
@@ -549,7 +573,7 @@
     <script>
       $(function () {
         "use strict";
-        $("#example2").DataTable({
+        $("#dataTables").DataTable({
           responsive: true,
           language: {
             searchPlaceholder: "Pencarian",
