@@ -252,7 +252,7 @@
                                 <div class="modal-body">
                                     <form>
                                         <div class="form-group row">
-                                            <label for="NamaSkema" class="col-sm-3 col-form-label tx-bold">Nama Skema <span class="tx-danger">*</span></label>
+                                            <label for="NamaSkema" class="col-sm-3 col-form-label tx-bold">Nama Skema Kerja <span class="tx-danger">*</span></label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" id="NamaSkema" placeholder="Masukkan Nama Skema" required />
                                             </div>
@@ -261,36 +261,36 @@
                                             <label for="Hari" class="col-sm-3 col-form-label tx-bold">Hari Kerja <span class="tx-danger">*</span></label>
                                             <div class="col-sm-9">
                                                 <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" name="HariKerja[]" id="checkAllHariKerja" value="Semua">
-                                                    <label class="custom-control-label">Semua</label>
+                                                    <input type="checkbox" class="custom-control-input" name="HariKerja[]" id="checkAll" value="Semua">
+                                                    <label class="custom-control-label" for="checkAll">Semua</label>
                                                 </div>
                                                 <div class="form-check-inline">
-                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" value="Senin">
-                                                    <label class="custom-control-label">Senin</label>
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Senin" value="Senin">
+                                                    <label class="custom-control-label" for="Senin">Senin</label>
                                                 </div>
                                                 <div class="form-check-inline">
-                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" value="Selasa">
-                                                    <label class="custom-control-label">Selasa</label>
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Selasa" value="Selasa">
+                                                    <label class="custom-control-label" for="Selasa">Selasa</label>
                                                 </div>
                                                 <div class="form-check-inline">
-                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" value="Rabu">
-                                                    <label class="custom-control-label">Rabu</label>
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Rabu" value="Rabu">
+                                                    <label class="custom-control-label" for="Rabu">Rabu</label>
                                                 </div>
                                                 <div class="form-check-inline">
-                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" value="Kamis">
-                                                    <label class="custom-control-label">Kamis</label>
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Kamis" value="Kamis">
+                                                    <label class="custom-control-label" for="Kamis">Kamis</label>
                                                 </div>
                                                 <div class="form-check-inline">
-                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" value="Jumat">
-                                                    <label class="custom-control-label">Jumat</label>
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Jumat" value="Jumat">
+                                                    <label class="custom-control-label" for="Jumat">Jumat</label>
                                                 </div>
                                                 <div class="form-check-inline">
-                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" value="Sabtu">
-                                                    <label class="custom-control-label">Sabtu</label>
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Sabtu" value="Sabtu">
+                                                    <label class="custom-control-label" for="Sabtu">Sabtu</label>
                                                 </div>
                                                 <div class="form-check-inline">
-                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" value="Minggu">
-                                                    <label class="custom-control-label">Minggu</label>
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Minggu" value="Minggu">
+                                                    <label class="custom-control-label" for="Minggu">Minggu</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -333,7 +333,7 @@
                                     <thead class="thead-primary">
                                         <tr>
                                             <th>No.</th>
-                                            <th>Nama Skema</th>
+                                            <th>Nama Skema Kerja</th>
                                             <th>Hari</th>
                                             <th>Waktu Datang</th>
                                             <th>Waktu Pulang</th>
@@ -414,20 +414,42 @@
                     },
                 });
 
-                document.getElementById('checkAllHariKerja').addEventListener('change', function () {
-                    const allCheckboxes = document.querySelectorAll('.hariKerja');
-                    allCheckboxes.forEach(cb => cb.checked = this.checked);
-                });
+                /*
+                $(document).ready(function () {
+                    // Ketika checkbox "Semua" diklik
+                    $('#checkAll').on('change', function () {
+                        $('.hariKerja').prop('checked', this.checked);
+                    });
 
-                // Sinkronisasi checkbox utama jika user uncheck salah satu
-                const hariCheckboxes = document.querySelectorAll('.hariKerja');
-                hariCheckboxes.forEach(cb => {
-                    cb.addEventListener('change', () => {
-                    const allChecked = [...hariCheckboxes].every(c => c.checked);
-                    document.getElementById('checkAllHariKerja').checked = allChecked;
+                    // Jika semua checkbox hari dicentang manual → centang otomatis "Semua"
+                    $('.hariKerja').on('change', function () {
+                        const total = $('.hariKerja').length;
+                        const checked = $('.hariKerja:checked').length;
+                        $('#checkAll').prop('checked', total === checked);
                     });
                 });
+                */
+                $(document).ready(function () {
+                    let clickedAll = false; // flag manual klik checkbox "Semua"
 
+                    // Saat checkbox "Semua" diklik
+                    $('#checkAll').on('change', function () {
+                        clickedAll = true; // tandai bahwa user memang klik "Semua"
+                        $('.hariKerja').prop('checked', this.checked);
+                        clickedAll = false;
+                    });
+
+                    // Saat checkbox hari kerja diubah
+                    $('.hariKerja').on('change', function () {
+                        const total = $('.hariKerja').length;
+                        const checked = $('.hariKerja:checked').length;
+
+                        // Hanya update checkbox "Semua" kalau memang user klik langsung checkbox "Semua"
+                        if (!clickedAll) {
+                        $('#checkAll').prop('checked', false); // Jangan auto-centang
+                        }
+                    });
+                });
                 $('.select2').select2({
                     placeholder: 'Pilihan',
                     searchInputPlaceholder: 'Pencarian',
