@@ -221,7 +221,7 @@
             <!-- content-header -->
 
             <div class="content-body">
-                <div class="container pd-x-0">
+                <div class="pd-x-0">
                     <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
                         <div>
                             <nav aria-label="breadcrumb">
@@ -234,7 +234,7 @@
                         </div>
                         <div class="d-none d-md-block">
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button class="btn btn-sm pd-x-15 btn-outline-primary btn-uppercase"><i data-feather="upload" class="wd-10"></i></button>
+                                <button class="btn btn-sm pd-x-15 btn-outline-primary btn-uppercase" data-bs-toggle="modal" data-bs-target="#ModalImport"><i data-feather="upload" class="wd-10"></i></button>
                                 <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="file-text" class="wd-10"></i></button>
                             </div>
                             <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Tambah Data</button>
@@ -313,7 +313,47 @@
                                 </div>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
+                    <div class="modal fade" id="ModalHapus" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h6 class="modal-title">Konfirmasi Hapus</h6>
+                                    <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </a>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="mg-b-0">Apakah anda yakin akan menghapus yang Dipilih?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-danger btn-uppercase"><i data-feather="trash" class="wd-10 mg-r-5"></i> Hapus</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal Hapus -->
+                    <div class="modal fade" id="ModalImport" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h6 class="modal-title">Import Data</h6>
+                                    <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </a>
+                                </div>
+                                <div class="modal-body">
+                                    <input class="form-control" type="file" id="formFile" />
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="upload" class="wd-10 mg-r-5"></i> Import</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal Import -->                      
                     <div class="row row-xs">
                         <div class="col-sm-12 col-lg-12">
                             <div data-label="List Data Skema Kerja" class="df-example demo-table">
@@ -342,11 +382,11 @@
                                             <td>Ya</td>
                                             <td>
                                                 <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
-                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
+                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalHapus"><i data-feather="trash"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>1</td>
+                                            <td>2</td>
                                             <td>Dinas Kantor</td>
                                             <td>Jumat (5 Hari Kerja)</td>
                                             <td>Dinas Pendidikan, Dinas Kesehatan</td>
@@ -355,7 +395,7 @@
                                             <td>Ya</td>
                                             <td>
                                                 <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
-                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4"><i data-feather="trash"></i></button>
+                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalHapus"><i data-feather="trash"></i></button>
                                             </td>
                                         </tr>
                                     </tbody>
