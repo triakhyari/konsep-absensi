@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Twitter -->
+        <meta name="twitter:site" content="@themepixels" />
+        <meta name="twitter:creator" content="@themepixels" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="DashForge" />
+        <meta name="twitter:description" content="Responsive Bootstrap 5 Dashboard Template" />
+        <meta name="twitter:image" content="http://themepixels.me/dashforge/img/dashforge-social.png" />
+
+        <!-- Facebook -->
+        <meta property="og:url" content="http://themepixels.me/dashforge" />
+        <meta property="og:title" content="DashForge" />
+        <meta property="og:description" content="Responsive Bootstrap 5 Dashboard Template" />
+
+        <meta property="og:image" content="http://themepixels.me/dashforge/img/dashforge-social.png" />
+        <meta property="og:image:secure_url" content="http://themepixels.me/dashforge/img/dashforge-social.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
+
+        <!-- Meta -->
+        <meta name="description" content="Responsive Bootstrap 5 Dashboard Template" />
+        <meta name="author" content="ThemePixels" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png" />
+
+        <title>Tugas Tambahan | Absensi Online</title>
+
+        <!-- vendor css -->
+        <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+        <link href="../lib/typicons.font/src/font/typicons.css" rel="stylesheet" />
+        <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet" />
+        <link href="../lib/remixicon/fonts/remixicon.css" rel="stylesheet" />
+        <link href="../lib/prismjs/themes/prism-vs.css" rel="stylesheet" />
+        <link href="../lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" />
+        <link href="../lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet" />
+        <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />        
+
+        <!-- DashForge CSS -->
+        <link rel="stylesheet" href="../assets/css/dashforge.css" />
+        <link rel="stylesheet" href="../assets/css/dashforge.dashboard.css" />
+
+        <!-- DashForge CSS -->
+        <link rel="stylesheet" href="../assets/css/dashforge.css" />
+        <link rel="stylesheet" href="../assets/css/skin.deepblue.css" />
+        <link rel="stylesheet" href="../assets/css/dashforge.demo.css" />
+        <style>
+            .accordion-button::after {
+                display: none !important;
+            }
+        </style>
+    </head>
+    <body>
+        <aside class="aside aside-fixed">
+            <div class="aside-header">
+                <a href="../index.html" class="aside-logo">K-<span>Mob</span></a>
+                <a href="" class="aside-menu-link">
+                    <i data-feather="menu"></i>
+                    <i data-feather="x"></i>
+                </a>
+            </div>
+            <div class="aside-body">
+                <div class="aside-loggedin">
+                    <div class="d-flex align-items-center justify-content-start">
+                        <a href="" class="avatar"><img src="../assets/img/profile-default.png" class="rounded-circle" alt="" /></a>
+                        <div class="aside-alert-link">
+                            <a href="../page-signin.html" data-bs-toggle="tooltip" title="Sign out"><i data-feather="log-out"></i></a>
+                        </div>
+                    </div>
+                    <div class="aside-loggedin-user">
+                        <a href="#loggedinMenu" class="d-flex align-items-center justify-content-between mg-b-2" data-bs-toggle="collapse">
+                            <h6 class="tx-semibold mg-b-0">Tri Akhyari Romadhon</h6>
+                            <i data-feather="chevron-down"></i>
+                        </a>
+                        <p class="tx-color-03 tx-12 mg-b-0">Super Administrator</p>
+                    </div>
+                    <div class="collapse" id="loggedinMenu">
+                        <ul class="nav nav-aside mg-b-0">
+                            <li class="nav-item">
+                                <a href="profile.html" class="nav-link"><i data-feather="user"></i> <span>View Profile</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="LogAktivitas.html" class="nav-link"><i data-feather="info"></i> <span>Log Aktivitas</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="UbahPassword.html" class="nav-link"><i data-feather="edit"></i> <span>Ubah Password</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../page-signin.html" class="nav-link"><i data-feather="log-out"></i> <span>Sign Out</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="nav nav-aside">
+                    <li class="nav-label">Dashboard</li>
+                    <li class="nav-item">
+                        <a href="dashboard-one.html" class="nav-link"><i data-feather="activity"></i> <span>Lap Utama Harian </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dashboard-two.html" class="nav-link"><i data-feather="bar-chart-2"></i> <span>Statistik Bulanan</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dashboard-three.html" class="nav-link"><i data-feather="pie-chart"></i> <span>Statistik Pegawai</span></a>
+                    </li>
+                    <!-- DATA MASTER KEPEGAWAIAN -->
+                    <li class="nav-label mg-t-25">Data Master Kepegawaian</li>
+                    <li class="nav-item">
+                        <a href="data-pegawai.html" class="nav-link"><i data-feather="user-plus"></i> <span>Pegawai ASN</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="StrukturOrganisasi.html" class="nav-link"><i data-feather="layout"></i> <span>Struktur Organisasi</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="SatuanOrganisasi.html" class="nav-link"><i data-feather="layers"></i> <span>Satuan Organisasi</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="UnitKerja.html" class="nav-link"><i data-feather="file"></i> <span>Unit Kerja</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="JenisJabatan.html" class="nav-link"><i data-feather="file-text"></i> <span>Jenis Jabatan</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="NamaJabatan.html" class="nav-link"><i data-feather="clipboard"></i> <span>Nama Jabatan</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="TugasTambahan.html" class="nav-link"><i data-feather="file-plus"></i> <span>Tugas Tambahan</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="MutasiPegawai.html" class="nav-link"><i data-feather="repeat"></i> <span>Mutasi Pegawai</span></a>
+                    </li>
+
+                    <!-- Master Absensi-->
+                    <li class="nav-label mg-t-25">Master Absensi</li>
+                    <li class="nav-item">
+                        <a href="TipeKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Tipe Kerja</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="WaktuKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Waktu Kerja</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="SkemaKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Skema Waktu Kerja</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PegawaiAbsensiMobile.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Pegawai Absensi Mobile</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="JenisCuti.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Jenis Cuti</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="JenisKetidakhadiran.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Jenis Ketidakhadiran</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PemotonganAbsensi.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Pemotongan Absensi</span></a>
+                    </li>
+
+                    <!-- Pengajuan Ketidakhadiran -->
+                    <li class="nav-label mg-t-25">Pengajuan Ketidakhadiran</li>
+                    <li class="nav-item">
+                        <a href="PengajuanDinas.html" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PengajuanIzin.html" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PengajuanSakit.html" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PengajuanCuti.html" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
+                    </li>
+
+                    <!-- Monitoring Absensi -->
+                    <li class="nav-label mg-t-25">Monitoring Absensi</li>
+                    <li class="nav-item">
+                        <a href="AgendaPegawai.html" class="nav-link"><i data-feather="archive"></i> <span>Agenda Pegawai</span></a>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="clock"></i> <span>Jadwal Pegawai</span></a>
+                        <ul>
+                            <li><a href="JadwalUtama.html">Jadwal Utama</a></li>
+                            <li><a href="JadwalTambahan.html">Jadwal Tambahan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="KeluarKantor.html" class="nav-link"><i data-feather="external-link"></i> <span>Keluar Kantor</span></a>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="database"></i> <span>Mesin Absensi</span></a>
+                        <ul>
+                            <li><a href="AbsensiMesinHarian.html">Absensi Mesin Harian</a></li>
+                            <li><a href="AbsensiMesinPegawai.html">Absensi Mesin Pegawai</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="smartphone"></i> <span>Absensi Mobile</span></a>
+                        <ul>
+                            <li><a href="AbsensiMobileHarian.html">Absensi Mobile Harian</a></li>
+                            <li><a href="AbsensiMobilePegawai.html">Absensi Mobile Pegawai</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="book"></i> <span>Laporan Presensi</span></a>
+                        <ul>
+                            <li><a href="LaporanHarian.html">Laporan Harian</a></li>
+                            <li><a href="LaporanBulanan.html">Laporan Bulanan</a></li>
+                            <li><a href="LaporanTahunan.html">Laporan Tahunan</a></li>
+                            <li><a href="LaporanBermasalah.html">Laporan Bermasalah</a></li>
+                            <li><a href="LogAbsensiMobile.html">Log Absensi Mobile</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="content ht-100v pd-0">
+            <div class="content-header">
+                <div class="content-search">
+                    <label for="Periode" class="mg-r-5 nav-link">Periode :</label>
+                    <select class="form-select wd-75 border-0 shadow-none bg-transparent">
+                        <option value="2024">2024</option>
+                        <option value="2025" selected>2025</option>
+                    </select>
+                </div>
+            </div>
+            <!-- content-header -->
+
+            <div class="content-body">
+                <div class="pd-x-0">
+                    <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+                        <div>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+                                    <li class="breadcrumb-item"><a href="#">Data Master Kepegawaian</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data Tugas Tambahan</li>
+                                </ol>
+                            </nav>
+                            <h4 class="mg-b-0 tx-spacing--1">Data Tugas Tambahan</h4>
+                        </div>
+                        <div class="d-none d-md-block">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button class="btn btn-sm pd-x-15 btn-outline-primary btn-uppercase" data-bs-toggle="modal" data-bs-target="#ModalImport"><i data-feather="upload" class="wd-10"></i></button>
+                                <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="file-text" class="wd-10"></i></button>
+                            </div>
+                            <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Tambah Data</button>
+                        </div>
+                    </div>
+                    <!--Modal Tambah --> 
+                    <div class="modal fade" id="ModalTambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true" data-bs-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content tx-14">
+                                <div class="modal-header">
+                                    <h6 class="modal-title tx-bold" id="exampleModalLabel4">Tambah Tugas Tambahan</h6>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group row">
+                                            <label for="NamaTugasTambahan" class="col-sm-3 col-form-label tx-bold">Nama Tugas Tambahan <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <textarea class="form-control" rows="2" placeholder="Masukkan Nama Tugas Tambahan" name="NamaTugasTambahan" required></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary tx-13" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success tx-13"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Simpan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="ModalHapus" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h6 class="modal-title">Konfirmasi Hapus</h6>
+                                    <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </a>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="mg-b-0">Apakah anda yakin akan menghapus yang Dipilih?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-danger btn-uppercase"><i data-feather="trash" class="wd-10 mg-r-5"></i> Hapus</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal Hapus -->
+                    <div class="modal fade" id="ModalImport" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h6 class="modal-title">Import Data</h6>
+                                    <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </a>
+                                </div>
+                                <div class="modal-body">
+                                    <input class="form-control" type="file" id="formFile" />
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="upload" class="wd-10 mg-r-5"></i> Import</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal Import -->                    
+                    <div class="row row-xs">
+                        <div class="col-sm-12 col-lg-12">
+                            <div data-label="Data Tugas Tambahan" class="df-example demo-table">
+                                <!-- row -->
+                                <table id="datatables" class="table table-hover" style="width: 100%;">
+                                    <thead class="thead-primary">
+                                        <tr>
+                                            <th>Kode Tugas Tambahan</th>
+                                            <th>Nama Tugas Tambahan</th>
+                                            <th>Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Kepala Sekolah</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
+                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalHapus"><i data-feather="trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Kepala Puskesmas</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
+                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalHapus"><i data-feather="trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Kepala Sub Bagian Tata Usaha Puskesmas</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
+                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalHapus"><i data-feather="trash"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- df-example -->
+                        </div>
+                        <!-- col -->
+                    </div>
+                    <!-- row -->
+                </div>
+                <!-- container -->
+            </div>
+        </div>
+
+        <script src="../lib/jquery/jquery.min.js"></script>
+        <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../lib/feather-icons/feather.min.js"></script>
+        <script src="../lib/ionicons/ionicons/ionicons.esm.js" type="module"></script>
+        <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <script src="../lib/jquery.flot/jquery.flot.js"></script>
+        <script src="../lib/jquery.flot/jquery.flot.stack.js"></script>
+        <script src="../lib/jquery.flot/jquery.flot.resize.js"></script>
+        <script src="../lib/jqvmap/jquery.vmap.min.js"></script>
+        <script src="../lib/jqvmap/maps/jquery.vmap.usa.js"></script>
+        <script src="../lib/prismjs/prism.js"></script>
+        <script src="../lib/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="../lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+        <script src="../lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="../lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+        <script src="../lib/select2/js/select2.min.js"></script>
+
+        <script src="../assets/js/dashforge.js"></script>
+        <script src="../assets/js/dashforge.aside.js"></script>
+        <script src="../assets/js/dashforge.sampledata.js"></script>
+
+        <!-- append theme customizer -->
+        <script src="../lib/js-cookie/js.cookie.js"></script>
+        <script src="../assets/js/dashboard-one.js"></script>
+        <script>
+            $(function () {
+                "use strict";
+                $("#datatables").DataTable({
+                    responsive: true,
+                    language: {
+                        searchPlaceholder: "Pencarian",
+                        sSearch: "",
+                        lengthMenu: "_MENU_ items/page",
+                    },
+                });
+
+
+                //Select
+                $(".select2").select2({
+                    placeholder: "Pilihan",
+                    searchInputPlaceholder: "Search options",
+                    width: "100%",
+                });
+
+                $('.selectPencarian').select2({
+                    placeholder: 'Pilihan',
+                    searchInputPlaceholder: 'Pencarian',
+                    minimumResultsForSearch: Infinity,
+                    width: '100%',
+                    dropdownParent: $('#ModalTambah')
+                });
+                // Select2
+                $(".dataTables_length select").select2({ minimumResultsForSearch: Infinity });
+            });
+        </script>
+    </body>
+</html>

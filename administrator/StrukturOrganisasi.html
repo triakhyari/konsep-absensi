@@ -118,7 +118,7 @@
                         <a href="StrukturOrganisasi.html" class="nav-link"><i data-feather="layout"></i> <span>Struktur Organisasi</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="SatuanOrgnisasi.html" class="nav-link"><i data-feather="layers"></i> <span>Satuan Organisasi</span></a>
+                        <a href="SatuanOrganisasi.html" class="nav-link"><i data-feather="layers"></i> <span>Satuan Organisasi</span></a>
                     </li>
                     <li class="nav-item">
                         <a href="UnitKerja.html" class="nav-link"><i data-feather="file"></i> <span>Unit Kerja</span></a>
@@ -250,6 +250,7 @@
                             <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Tambah Data</button>
                         </div>
                     </div>
+                    <!--Modal Tambah Pejabat--> 
                     <div class="modal fade" id="ModalTambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true" data-bs-backdrop="static">
                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                             <div class="modal-content tx-14">
@@ -300,12 +301,11 @@
                                         <div class="form-group row">
                                             <label for="NIPPemangkuJabatan" class="col-sm-3 col-form-label tx-bold">NIP Pemangku Jabatan <span class="tx-danger">*</span></label>
                                             <div class="col-sm-9">
-                                                <select class="form-select selectPencarian" id="NIPPemangkuJabatan" name="NIPPemangkuJabatan" required>
+                                                <select class="form-select selectPencarian" multiple id="skpd" name="skpd" required>
                                                     <option label="Pilihan"></option>
-                                                    <option value="PNS">PNS</option>
-                                                    <option value="PPPK Penuh Waktu">PPPK Penuh Waktu</option>
-                                                    <option value="PPPK Paruh Waktu">PPPK Paruh Waktu</option>
-                                                    <option value="Non ASN">Non ASN</option>
+                                                    <option value="Senin">Pilih Semua</option>
+                                                    <option value="Dinas Pendidikan">Dinas Pendidikan</option>
+                                                    <option value="Dinas Kesehatan">Dinas Kesehatan</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -313,6 +313,57 @@
                                             <label for="NamaPejabat" class="col-sm-3 col-form-label tx-bold">Nama Pejabat <span class="tx-danger">*</span></label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" id="NamaPejabat" required readonly disabled/>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary tx-13" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success tx-13"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Simpan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Modal Tambah Staf--> 
+                    <div class="modal fade" id="ModalTambahStaf" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true" data-bs-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content tx-14">
+                                <div class="modal-header">
+                                    <h6 class="modal-title tx-bold" id="exampleModalLabel4">Tambah Staf</h6>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group row">
+                                            <label for="SKPD" class="col-sm-3 col-form-label tx-bold">SKPD <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="SKPD" value="Sekretariat Daerah" readonly disabled/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="Atasan" class="col-sm-3 col-form-label tx-bold">ID Organisasi <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="SKPD" value="01.A01.01.00" readonly disabled/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="IDOrganisasi" class="col-sm-3 col-form-label tx-bold">Atasan <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="SKPD" value="Sekretaris Daerah" readonly disabled/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="Staf" class="col-sm-3 col-form-label tx-bold">Staf <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-select selectPencarian" multiple id="Staf" name="Staf" required>
+                                                    <option label="Pilihan"></option>
+                                                    <option value="PNS">PNS</option>
+                                                    <option value="PPPK Penuh Waktu">PPPK Penuh Waktu</option>
+                                                    <option value="PPPK Paruh Waktu">PPPK Paruh Waktu</option>
+                                                    <option value="Non ASN">Non ASN</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </form>
@@ -448,7 +499,7 @@
                                             </td>
                                             <td>-</td>
                                             <td>
-                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
+                                                <button type="button" class="btn btn-outline-success btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambahStaf"><i data-feather="user-plus"></i></button>
                                                 <button type="button" class="btn btn-outline-danger btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalHapus"><i data-feather="trash"></i></button>
                                             </td>
                                         </tr>
@@ -509,11 +560,20 @@
                     width: "100%",
                 });
 
-                $(".selectPencarian").select2({
-                    placeholder: "Pilihan",
-                    searchInputPlaceholder: "Pencarian",
-                    width: "100%",
-                    dropdownParent: $("#ModalTambah"),
+                $('.selectPencarian').select2({
+                    placeholder: 'Pilihan',
+                    searchInputPlaceholder: 'Pencarian',
+                    minimumResultsForSearch: Infinity,
+                    width: '100%',
+                    dropdownParent: $('#ModalTambah')
+                });
+
+                $('.selectPencarian').select2({
+                    placeholder: 'Pilihan',
+                    searchInputPlaceholder: 'Pencarian',
+                    minimumResultsForSearch: Infinity,
+                    width: '100%',
+                    dropdownParent: $('#ModalTambahStaf')
                 });
                 // Select2
                 $(".dataTables_length select").select2({ minimumResultsForSearch: Infinity });
