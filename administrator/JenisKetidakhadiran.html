@@ -196,19 +196,19 @@
                         </ul>
                     </li>
                     <li class="nav-item with-sub">
-                        <a href="" class="nav-link"><i data-feather="archive"></i> <span>Agenda Absensi</span></a>
-                        <ul>
-                            <li><a href="AgendaSKPD.html">Agenda SKPD</a></li>
-                            <li><a href="AgendaPegawai.html">Agenda Pegawai</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item with-sub">
-                        <a href="" class="nav-link"><i data-feather="clock"></i> <span>Jadwal Pegawai</span></a>
-                        <ul>
-                            <li><a href="JadwalUtama.html">Jadwal Utama</a></li>
-                            <li><a href="JadwalTambahan.html">Jadwal Tambahan</a></li>
-                        </ul>
-                    </li>
+            <a href="" class="nav-link"><i data-feather="clock"></i> <span>Shift Pegawai</span></a>
+            <ul>
+              <li><a href="ShiftUtama.html">Shift Utama</a></li>
+              <li><a href="ShiftTambahan.html">Shift Tambahan</a></li>
+            </ul>
+          </li>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="archive"></i> <span>Agenda Absensi</span></a>
+            <ul>
+              <li><a href="AgendaSKPD.html">Agenda SKPD</a></li>
+              <li><a href="AgendaPegawai.html">Agenda Pegawai</a></li>
+            </ul>
+          </li>
                     <li class="nav-item">
                         <a href="KeluarKantor.html" class="nav-link"><i data-feather="external-link"></i> <span>Keluar Kantor</span></a>
                     </li>
@@ -240,7 +240,15 @@
         </aside>
 
         <div class="content ht-100v pd-0">
-            <div class="content-header"></div>
+            <div class="content-header">
+                <div class="content-search">
+                    <label for="Periode" class="mg-r-5 nav-link">Periode :</label>
+                    <select class="form-select wd-75 border-0 shadow-none bg-transparent">
+                        <option value="2024">2024</option>
+                        <option value="2025" selected>2025</option>
+                    </select>
+                </div>
+            </div>
             <!-- content-header -->
 
             <div class="content-body">
