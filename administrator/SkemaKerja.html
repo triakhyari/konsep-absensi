@@ -136,10 +136,13 @@
                         <a href="TugasTambahan.html" class="nav-link"><i data-feather="file-plus"></i> <span>Tugas Tambahan</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="MutasiPegawai.html" class="nav-link"><i data-feather="repeat"></i> <span>Mutasi Pegawai</span></a>
-                    </li>
+            <a href="MutasiPegawai.html" class="nav-link"><i data-feather="repeat"></i> <span>Mutasi Pegawai</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="OperatorPD.html" class="nav-link"><i data-feather="users"></i> <span>Operator PD</span></a>
+          </li>
 
-                    <!-- Master Absensi-->
+          <!-- Master Absensi-->
                     <li class="nav-label mg-t-25">Master Absensi</li>
                     <li class="nav-item">
                         <a href="TipeKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Tipe Kerja</span></a>
@@ -165,17 +168,37 @@
 
                     <!-- Pengajuan Ketidakhadiran -->
                     <li class="nav-label mg-t-25">Pengajuan Ketidakhadiran</li>
-                    <li class="nav-item">
-                        <a href="PengajuanDinas.html" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas </span></a>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas</span></a>
+                        <ul>
+                            <li><a href="PengajuanDinas.html">Pengajuan</a></li>
+                            <li><a href="RekapDinasSKPD.html">Rekap Dinas SKPD</a></li>
+                            <li><a href="RekapDinasPegawai.html">Rekap Dinas Pegawai</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="PengajuanIzin.html" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin </span></a>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin</span></a>
+                        <ul>
+                            <li><a href="PengajuanIzin.html">Pengajuan</a></li>
+                            <li><a href="RekapIzinSKPD.html">Rekap Izin SKPD</a></li>
+                            <li><a href="RekapIzinPegawai.html">Rekap Izin Pegawai</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="PengajuanSakit.html" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
+                        <ul>
+                            <li><a href="PengajuanSakit.html">Pengajuan</a></li>
+                            <li><a href="RekapSakitSKPD.html">Rekap Sakit SKPD</a></li>
+                            <li><a href="RekapSakitPegawai.html">Rekap Sakit Pegawai</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="PengajuanCuti.html" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
+                        <ul>
+                            <li><a href="PengajuanCuti.html">Pengajuan</a></li>
+                            <li><a href="RekapCutiSKPD.html">Rekap Cuti SKPD</a></li>
+                            <li><a href="RekapCutiPegawai.html">Rekap Cuti Pegawai</a></li>
+                        </ul>
                     </li>
 
                     <!-- Monitoring Absensi -->
@@ -279,6 +302,16 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
+                                            <label for="skpd" class="col-sm-3 col-form-label tx-bold">SKPD <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-select select2" multiple id="skpd" name="skpd" required>
+                                                    <option label="Pilihan"></option>
+                                                    <option value="Dinas Pendidikan">Dinas Pendidikan</option>
+                                                    <option value="Dinas Kesehatan">Dinas Kesehatan</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
                                             <label for="NamaSkema" class="col-sm-3 col-form-label tx-bold">Skema Kerja <span class="tx-danger">*</span></label>
                                             <div class="col-sm-9">
                                                 <select class="form-select select2">
@@ -289,13 +322,36 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="skpd" class="col-sm-3 col-form-label tx-bold">SKPD <span class="tx-danger">*</span></label>
+                                            <label for="Hari" class="col-sm-3 col-form-label tx-bold">Hari Kerja</label>
                                             <div class="col-sm-9">
-                                                <select class="form-select select2" multiple id="skpd" name="skpd" required>
-                                                    <option label="Pilihan"></option>
-                                                    <option value="Dinas Pendidikan">Dinas Pendidikan</option>
-                                                    <option value="Dinas Kesehatan">Dinas Kesehatan</option>
-                                                </select>
+                                                <div class="form-check-inline">
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Senin" value="Senin" checked disabled>
+                                                    <label class="custom-control-label" for="Senin">Senin</label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Selasa" value="Selasa" checked disabled>
+                                                    <label class="custom-control-label" for="Selasa">Selasa</label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Rabu" value="Rabu" checked disabled>
+                                                    <label class="custom-control-label" for="Rabu">Rabu</label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Kamis" value="Kamis" checked disabled>
+                                                    <label class="custom-control-label" for="Kamis">Kamis</label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Jumat" value="Jumat" checked disabled>
+                                                    <label class="custom-control-label" for="Jumat">Jumat</label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Sabtu" value="Sabtu" disabled>
+                                                    <label class="custom-control-label" for="Sabtu">Sabtu</label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Minggu" value="Minggu" disabled>
+                                                    <label class="custom-control-label" for="Minggu">Minggu</label>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">

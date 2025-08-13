@@ -31,7 +31,7 @@
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png" />
 
-        <title>Rekap Cuti SKPD | Absensi Online</title>
+        <title>Detail Bulanan Pegawai | Absensi Online</title>
 
         <!-- vendor css -->
         <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
@@ -41,7 +41,7 @@
         <link href="../lib/prismjs/themes/prism-vs.css" rel="stylesheet" />
         <link href="../lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" />
         <link href="../lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet" />
-        <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />        
+        <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
         <!-- DashForge CSS -->
@@ -52,11 +52,6 @@
         <link rel="stylesheet" href="../assets/css/dashforge.css" />
         <link rel="stylesheet" href="../assets/css/skin.deepblue.css" />
         <link rel="stylesheet" href="../assets/css/dashforge.demo.css" />
-        <style>
-            .accordion-button::after {
-                display: none !important;
-            }
-        </style>
     </head>
     <body>
         <aside class="aside aside-fixed">
@@ -111,14 +106,14 @@
                         <a href="statistik-pegawai.html" class="nav-link"><i data-feather="pie-chart"></i> <span>Statistik Pegawai</span></a>
                     </li>
                     <!-- Pengaturan -->
-          <li class="nav-label mg-t-25">Pengaturan</li>
-          <li class="nav-item">
-            <a href="pengumuman.html" class="nav-link"><i data-feather="bell"></i> <span>Pengumuman </span></a>
-          </li>
-          <li class="nav-item">
-            <a href="API-Kepegawaian.html" class="nav-link"><i data-feather="link-2"></i> <span>API Kepegawaian </span></a>
-          </li>
-          <!-- DATA MASTER KEPEGAWAIAN -->
+                    <li class="nav-label mg-t-25">Pengaturan</li>
+                    <li class="nav-item">
+                        <a href="pengumuman.html" class="nav-link"><i data-feather="bell"></i> <span>Pengumuman </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="API-Kepegawaian.html" class="nav-link"><i data-feather="link-2"></i> <span>API Kepegawaian </span></a>
+                    </li>
+                    <!-- DATA MASTER KEPEGAWAIAN -->
                     <li class="nav-label mg-t-25">Data Master Kepegawaian</li>
                     <li class="nav-item">
                         <a href="data-pegawai.html" class="nav-link"><i data-feather="user-plus"></i> <span>Pegawai ASN</span></a>
@@ -142,13 +137,13 @@
                         <a href="TugasTambahan.html" class="nav-link"><i data-feather="file-plus"></i> <span>Tugas Tambahan</span></a>
                     </li>
                     <li class="nav-item">
-            <a href="MutasiPegawai.html" class="nav-link"><i data-feather="repeat"></i> <span>Mutasi Pegawai</span></a>
-          </li>
-          <li class="nav-item">
-            <a href="OperatorPD.html" class="nav-link"><i data-feather="users"></i> <span>Operator PD</span></a>
-          </li>
+                        <a href="MutasiPegawai.html" class="nav-link"><i data-feather="repeat"></i> <span>Mutasi Pegawai</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="OperatorPD.html" class="nav-link"><i data-feather="users"></i> <span>Operator PD</span></a>
+                    </li>
 
-          <!-- Master Absensi-->
+                    <!-- Master Absensi-->
                     <li class="nav-label mg-t-25">Master Absensi</li>
                     <li class="nav-item">
                         <a href="TipeKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Tipe Kerja</span></a>
@@ -206,57 +201,23 @@
                             <li><a href="RekapCutiPegawai.html">Rekap Cuti Pegawai</a></li>
                         </ul>
                     </li>
-                    <li class="nav-label mg-t-25">Pengajuan Ketidakhadiran</li>
-                    <li class="nav-item with-sub">
-                        <a href="" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas</span></a>
-                        <ul>
-                            <li><a href="PengajuanDinas.html">Pengajuan</a></li>
-                            <li><a href="RekapDinasSKPD.html">Rekap Dinas SKPD</a></li>
-                            <li><a href="RekapDinasPegawai.html">Rekap Dinas Pegawai</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item with-sub">
-                        <a href="" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin</span></a>
-                        <ul>
-                            <li><a href="PengajuanIzin.html">Pengajuan</a></li>
-                            <li><a href="RekapIzinSKPD.html">Rekap Izin SKPD</a></li>
-                            <li><a href="RekapIzinPegawai.html">Rekap Izin Pegawai</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item with-sub">
-                        <a href="" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
-                        <ul>
-                            <li><a href="PengajuanSakit.html">Pengajuan</a></li>
-                            <li><a href="RekapSakitSKPD.html">Rekap Sakit SKPD</a></li>
-                            <li><a href="RekapSakitPegawai.html">Rekap Sakit Pegawai</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item with-sub active show">
-                        <a href="" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
-                        <ul>
-                            <li><a href="PengajuanCuti.html">Pengajuan</a></li>
-                            <li class="active"><a href="RekapCutiSKPD.html">Rekap Cuti SKPD</a></li>
-                            <li><a href="RekapCutiPegawai.html">Rekap Cuti Pegawai</a></li>
-                        </ul>
-                    </li>
-                    
-                    
+
                     <!-- Monitoring Absensi -->
                     <li class="nav-label mg-t-25">Monitoring Absensi</li>
                     <li class="nav-item with-sub">
-            <a href="" class="nav-link"><i data-feather="clock"></i> <span>Shift Pegawai</span></a>
-            <ul>
-              <li><a href="ShiftUtama.html">Shift Utama</a></li>
-              <li><a href="ShiftTambahan.html">Shift Tambahan</a></li>
-            </ul>
-          </li>
-          <li class="nav-item with-sub">
-            <a href="" class="nav-link"><i data-feather="archive"></i> <span>Agenda Absensi</span></a>
-            <ul>
-              <li><a href="AgendaSKPD.html">Agenda SKPD</a></li>
-              <li><a href="AgendaPegawai.html">Agenda Pegawai</a></li>
-            </ul>
-          </li>
+                        <a href="" class="nav-link"><i data-feather="archive"></i> <span>Agenda Absensi</span></a>
+                        <ul>
+                            <li><a href="AgendaSKPD.html">Agenda SKPD</a></li>
+                            <li><a href="AgendaPegawai.html">Agenda Pegawai</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="clock"></i> <span>Jadwal Pegawai</span></a>
+                        <ul>
+                            <li><a href="JadwalUtama.html">Jadwal Utama</a></li>
+                            <li><a href="JadwalTambahan.html">Jadwal Tambahan</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
                         <a href="KeluarKantor.html" class="nav-link"><i data-feather="external-link"></i> <span>Keluar Kantor</span></a>
                     </li>
@@ -274,10 +235,10 @@
                             <li><a href="AbsensiMobilePegawai.html">Absensi Mobile Pegawai</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item with-sub">
+                    <li class="nav-item with-sub active show">
                         <a href="" class="nav-link"><i data-feather="book"></i> <span>Laporan Presensi</span></a>
                         <ul>
-                            <li><a href="LaporanBulanan.html">Laporan Bulanan</a></li>
+                            <li class="active"><a href="LaporanBulanan.html">Laporan Bulanan</a></li>
                             <li><a href="LaporanTahunan.html">Laporan Tahunan</a></li>
                             <li><a href="LaporanBermasalah.html">Laporan Bermasalah</a></li>
                             <li><a href="RiwayatLogAbsensi.html">Log Absensi Mobile</a></li>
@@ -300,115 +261,150 @@
 
             <div class="content-body">
                 <div class="pd-x-0">
-                    <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+                    <div class="d-sm-flex align-items-center justify-content-between mg-b-20">
                         <div>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb breadcrumb-style1 mg-b-10">
-                                    <li class="breadcrumb-item"><a href="#">Pengajuan Ketidakhadiran</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Rekap Cuti SKPD</li>
+                                    <li class="breadcrumb-item"><a href="#">Monitoring Absensi</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Detail Bulanan Pegawai</li>
                                 </ol>
                             </nav>
-                            <h4 class="mg-b-0 tx-spacing--1">Rekap Cuti SKPD</h4>
+                            <h4 class="mg-b-0 tx-spacing--1">Detail Bulanan Pegawai</h4>
                         </div>
+                        <div class="d-none d-md-block"></div>
+                    </div>
+                    <div class="row mg-b-25">
+                        <div class="col-sm-4 text-center mg-b-15">
+                            <img src="../assets/img/profile-default.png" class="img wd-100 ht-100" alt="" />
+                        </div>
+                        <div class="col-sm-8">
+                            <table>
+                                <tr>
+                                    <td class="tx-bold wd-20p">NIP Pegawai</td>
+                                    <td class="text-center">:</td>
+                                    <td class="wd-100p">196708142001121002</td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-bold wd-20p">Nama Pegawai</td>
+                                    <td class="text-center">:</td>
+                                    <td class="wd-100p">Katherine Lumaad, S.Kom.</td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-bold wd-20p">Jenis Pegawai</td>
+                                    <td class="text-center">:</td>
+                                    <td class="wd-100p">PPPK Penuh Waktu</td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-bold wd-20p">Satuan Organisasi</td>
+                                    <td class="text-center">:</td>
+                                    <td class="wd-100p">Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-bold wd-20p">Unit Kerja</td>
+                                    <td class="text-center">:</td>
+                                    <td class="wd-100p">Sub Bagian Umum dan Kepegawaian</td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-bold wd-20p">Nama Jabatan</td>
+                                    <td class="text-center">:</td>
+                                    <td class="wd-100p">Pengadministrasi Persuratan</td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-bold wd-20p">Bulan</td>
+                                    <td class="text-center">:</td>
+                                    <td class="wd-100p">Agustus</td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-bold wd-20p">Tahun</td>
+                                    <td class="text-center">:</td>
+                                    <td class="wd-100p">2025</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="d-sm-flex align-items-center justify-content-between mg-b-15">
+                        <div></div>
                         <div class="d-none d-md-block">
-                            <div class="btn-group" role="group" aria-label="Basic example"></div>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="download" class="wd-10 mg-r-2"></i> Export</button>
+                            </div>
                         </div>
-                    </div>             
+                    </div>
                     <div class="row row-xs">
                         <div class="col-sm-12 col-lg-12">
-                            <div data-label="List Rekap Cuti SKPD" class="df-example demo-table">
-                                <div class="accordion mg-b-20" id="accordionExample">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                        <button class="accordion-button bg-primary text-white tx-14 pd-13" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            <i class="fas fa-filter mg-r-5"></i> Filter Data
-                                        </button>
-                                        </h2>
-                                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <div class="row row-sm">
-                                                    <div class="col-lg-3">
-                                                        <div class="form-group">
-                                                            <label for="formGroup" class="d-block">Tipe Cuti</label>
-                                                            <select class="form-select select2">
-                                                                <option label="Pilih Tipe Sakit"></option>
-                                                                <option value="Cuti Tahunan">Cuti Tahunan</option>
-                                                                <option value="Cuti Sakit">Cuti Sakit</option>
-                                                                <option value="Cuti Alasan Penting">Cuti Alasan Penting</option>
-                                                                <option value="Cuti Melahirkan">Cuti Melahirkan</option>
-                                                                <option value="Cuti Besar">Cuti Besar</option>
-                                                                <option value="Cuti Diluar Tanggungan Negara">Cuti Diluar Tanggungan Negara</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-2">
-                                                        <div class="form-group">
-                                                            <label for="formGroup" class="d-block">Bulan</label>
-                                                            <select class="form-control select2">
-                                                                <option label="Pilih Bulan"></option>
-                                                                <option value="Januari">Januari</option>
-                                                                <option value="Februari">Februari</option>
-                                                                <option value="Maret">Maret</option>
-                                                                <option value="April">April</option>
-                                                                <option value="Mei">Mei</option>
-                                                                <option value="Juni">Juni</option>
-                                                                <option value="Juli">Juli</option>
-                                                                <option value="Agustus">Agustus</option>
-                                                                <option value="September">September</option>
-                                                                <option value="Oktober">Oktober</option>
-                                                                <option value="November">November</option>
-                                                                <option value="Desember">Desember</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="form-group">
-                                                            <label for="formGroup" class="d-block">&nbsp;</label>
-                                                            <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="refresh-cw" class="wd-10 mg-r-5"></i> Filter</button>
-                                                            <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="download" class="wd-10 mg-r-5"></i> Export</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>                         
-                                <!-- row -->
-                                <table id="datatables" class="table table-hover" style="width: 100%;">
-                                    <thead class="thead-primary">
-                                        <tr>
-                                            <th rowspan="2">Rank</th>
-                                            <th rowspan="2" class="text-nowrap">Nama SKPD</th>
-                                            <th colspan="7" class="text-center">Cuti</th>
-                                            <th rowspan="2">Persentase</th>
-                                        </tr>
-                                        <tr>
-                                            <th>Cuti Tahunan</th>
-                                            <th>Cuti Sakit</th>
-                                            <th>Cuti Alasan Penting</th>
-                                            <th>Cuti Melahirkan</th>
-                                            <th>Cuti Besar</th>
-                                            <th>Cuti Diluar Tanggungan Negara</th>
-                                            <th>Total</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>
-                                                <h6 class="tx-13 mg-b-2 tx-primary">Dinas Pendidikan</h6>
-                                            </td>
-                                            <td class="text-end">10</td>
-                                            <td class="text-end">10</td>
-                                            <td class="text-end">10</td>
-                                            <td class="text-end">10</td>
-                                            <td class="text-end">10</td>
-                                            <td class="text-end">10</td>
-                                            <td class="text-end">10</td>
-                                            <td class="text-end">10%</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div data-label="Detail Bulanan Pegawai" class="df-example demo-table">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-bordered" style="width: 100%;">
+                                        <thead class="thead-primary">
+                                            <tr>
+                                                <th>INDIKATOR NILAI</th>
+                                                <th>NILAI</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><label class="tx-bold">Total Akhir Persentase Absensi</label></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label class="tx-bold">Total Persentase (Kehadiran - Potongan)</label></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label class="tx-bold">Hari Kerja</label></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label class="tx-bold">Kehadiran</label></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hadir</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cuti</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Izin/Sakit</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dinas Luar</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tugas Lain</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label class="tx-bold">Potongan</label></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Alpa</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Terlambat</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>PSW (Pulang Sebelum Waktu)</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Meninggalkan Kantor Tanpa Alasan</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Lainnya</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                             <!-- df-example -->
                         </div>
@@ -421,7 +417,6 @@
         </div>
 
         <script src="../lib/jquery/jquery.min.js"></script>
-        <script src="../lib/jqueryui/jquery-ui.min.js"></script>
         <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="../lib/feather-icons/feather.min.js"></script>
         <script src="../lib/ionicons/ionicons/ionicons.esm.js" type="module"></script>
@@ -449,11 +444,7 @@
         <script>
             $(function () {
                 "use strict";
-                $("#datatables").DataTable({
-                    order: [],
-                    columnDefs: [
-                        { orderable: false, targets: 0 }
-                    ],
+                $("#example2").DataTable({
                     responsive: true,
                     language: {
                         searchPlaceholder: "Pencarian",
@@ -461,35 +452,44 @@
                         lengthMenu: "_MENU_ items/page",
                     },
                 });
-                
-                //Select
-                 $('.select2').select2({
+
+                $('.select2').select2({
                     placeholder: 'Pilihan',
                     searchInputPlaceholder: 'Search options',
                     width: '100%'
                 });
                 
-                 $('.selectPencarian').select2({
+                $('.selectPencarian').select2({
                     placeholder: 'Pilihan',
                     searchInputPlaceholder: 'Pencarian',
                     width: '100%',
                     dropdownParent: $('#ModalTambah')
                 });
-                // Disable search
-                $('.select2-no-search').select2({
-                    minimumResultsForSearch: Infinity,
-                    placeholder: 'Choose one'
-                });
 
-                flatpickr("#TanggalDinas", {
-                    mode: "multiple",       // ⬅️ untuk multi tanggal
-                    dateFormat: "Y-m-d",    // format tanggal
+                flatpickr("#Tanggal", {
+                    minDate: "today",       
+                    dateFormat: "d-m-Y"   
                 });
 
                 // Select2
                 $(".dataTables_length select").select2({ minimumResultsForSearch: Infinity });
             });
 
+            $(function () {
+                "use strict";
+
+                $("#modal6").on("show.bs.modal", function (event) {
+                    var animation = $(event.relatedTarget).data("animation");
+                    $(this).addClass(animation);
+                });
+
+                // hide modal with effect
+                $("#modal6").on("hidden.bs.modal", function (e) {
+                    $(this).removeClass(function (index, className) {
+                        return (className.match(/(^|\s)effect-\S+/g) || []).join(" ");
+                    });
+                });
+            });
         </script>
     </body>
 </html>

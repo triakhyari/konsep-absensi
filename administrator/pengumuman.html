@@ -31,7 +31,7 @@
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png" />
 
-        <title>Rekap Cuti SKPD | Absensi Online</title>
+        <title>Pengumuman | Absensi Online</title>
 
         <!-- vendor css -->
         <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
@@ -41,8 +41,10 @@
         <link href="../lib/prismjs/themes/prism-vs.css" rel="stylesheet" />
         <link href="../lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" />
         <link href="../lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet" />
-        <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />        
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />  
+        <link href="../lib/quill/quill.core.css" rel="stylesheet">
+        <link href="../lib/quill/quill.snow.css" rel="stylesheet">
+        <link href="../lib/quill/quill.bubble.css" rel="stylesheet">      
 
         <!-- DashForge CSS -->
         <link rel="stylesheet" href="../assets/css/dashforge.css" />
@@ -52,11 +54,6 @@
         <link rel="stylesheet" href="../assets/css/dashforge.css" />
         <link rel="stylesheet" href="../assets/css/skin.deepblue.css" />
         <link rel="stylesheet" href="../assets/css/dashforge.demo.css" />
-        <style>
-            .accordion-button::after {
-                display: none !important;
-            }
-        </style>
     </head>
     <body>
         <aside class="aside aside-fixed">
@@ -111,14 +108,14 @@
                         <a href="statistik-pegawai.html" class="nav-link"><i data-feather="pie-chart"></i> <span>Statistik Pegawai</span></a>
                     </li>
                     <!-- Pengaturan -->
-          <li class="nav-label mg-t-25">Pengaturan</li>
-          <li class="nav-item">
-            <a href="pengumuman.html" class="nav-link"><i data-feather="bell"></i> <span>Pengumuman </span></a>
-          </li>
-          <li class="nav-item">
-            <a href="API-Kepegawaian.html" class="nav-link"><i data-feather="link-2"></i> <span>API Kepegawaian </span></a>
-          </li>
-          <!-- DATA MASTER KEPEGAWAIAN -->
+                    <li class="nav-label mg-t-25">Pengaturan</li>
+                    <li class="nav-item active">
+                        <a href="pengumuman.html" class="nav-link"><i data-feather="bell"></i> <span>Pengumuman</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="API-Kepegawaian.html" class="nav-link"><i data-feather="link-2"></i> <span>API Kepegawaian</span></a>
+                    </li>
+                    <!-- DATA MASTER KEPEGAWAIAN -->
                     <li class="nav-label mg-t-25">Data Master Kepegawaian</li>
                     <li class="nav-item">
                         <a href="data-pegawai.html" class="nav-link"><i data-feather="user-plus"></i> <span>Pegawai ASN</span></a>
@@ -206,57 +203,23 @@
                             <li><a href="RekapCutiPegawai.html">Rekap Cuti Pegawai</a></li>
                         </ul>
                     </li>
-                    <li class="nav-label mg-t-25">Pengajuan Ketidakhadiran</li>
-                    <li class="nav-item with-sub">
-                        <a href="" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas</span></a>
-                        <ul>
-                            <li><a href="PengajuanDinas.html">Pengajuan</a></li>
-                            <li><a href="RekapDinasSKPD.html">Rekap Dinas SKPD</a></li>
-                            <li><a href="RekapDinasPegawai.html">Rekap Dinas Pegawai</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item with-sub">
-                        <a href="" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin</span></a>
-                        <ul>
-                            <li><a href="PengajuanIzin.html">Pengajuan</a></li>
-                            <li><a href="RekapIzinSKPD.html">Rekap Izin SKPD</a></li>
-                            <li><a href="RekapIzinPegawai.html">Rekap Izin Pegawai</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item with-sub">
-                        <a href="" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
-                        <ul>
-                            <li><a href="PengajuanSakit.html">Pengajuan</a></li>
-                            <li><a href="RekapSakitSKPD.html">Rekap Sakit SKPD</a></li>
-                            <li><a href="RekapSakitPegawai.html">Rekap Sakit Pegawai</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item with-sub active show">
-                        <a href="" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
-                        <ul>
-                            <li><a href="PengajuanCuti.html">Pengajuan</a></li>
-                            <li class="active"><a href="RekapCutiSKPD.html">Rekap Cuti SKPD</a></li>
-                            <li><a href="RekapCutiPegawai.html">Rekap Cuti Pegawai</a></li>
-                        </ul>
-                    </li>
-                    
-                    
+
                     <!-- Monitoring Absensi -->
                     <li class="nav-label mg-t-25">Monitoring Absensi</li>
                     <li class="nav-item with-sub">
-            <a href="" class="nav-link"><i data-feather="clock"></i> <span>Shift Pegawai</span></a>
-            <ul>
-              <li><a href="ShiftUtama.html">Shift Utama</a></li>
-              <li><a href="ShiftTambahan.html">Shift Tambahan</a></li>
-            </ul>
-          </li>
-          <li class="nav-item with-sub">
-            <a href="" class="nav-link"><i data-feather="archive"></i> <span>Agenda Absensi</span></a>
-            <ul>
-              <li><a href="AgendaSKPD.html">Agenda SKPD</a></li>
-              <li><a href="AgendaPegawai.html">Agenda Pegawai</a></li>
-            </ul>
-          </li>
+                        <a href="" class="nav-link"><i data-feather="clock"></i> <span>Shift Pegawai</span></a>
+                        <ul>
+                            <li><a href="ShiftUtama.html">Shift Utama</a></li>
+                            <li><a href="ShiftTambahan.html">Shift Tambahan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="archive"></i> <span>Agenda Absensi</span></a>
+                        <ul>
+                        <li><a href="AgendaSKPD.html">Agenda SKPD</a></li>
+                        <li><a href="AgendaPegawai.html">Agenda Pegawai</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
                         <a href="KeluarKantor.html" class="nav-link"><i data-feather="external-link"></i> <span>Keluar Kantor</span></a>
                     </li>
@@ -290,13 +253,14 @@
         <div class="content ht-100v pd-0">
             <div class="content-header">
                 <div class="content-search">
-                <label for="Periode" class="mg-r-5 nav-link">Periode :</label>
-                <select class="form-select wd-75 border-0 shadow-none bg-transparent">
-                    <option value="2024">2024</option>
-                    <option value="2025" selected>2025</option>
-                </select>
+                    <label for="Periode" class="mg-r-5 nav-link">Periode :</label>
+                    <select class="form-select wd-75 border-0 shadow-none bg-transparent">
+                        <option value="2024">2024</option>
+                        <option value="2025" selected>2025</option>
+                    </select>
                 </div>
-            </div><!-- content-header -->
+            </div>
+            <!-- content-header -->
 
             <div class="content-body">
                 <div class="pd-x-0">
@@ -304,108 +268,163 @@
                         <div>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb breadcrumb-style1 mg-b-10">
-                                    <li class="breadcrumb-item"><a href="#">Pengajuan Ketidakhadiran</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Rekap Cuti SKPD</li>
+                                    <li class="breadcrumb-item"><a href="#">Pengaturan</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data Pengumuman</li>
                                 </ol>
                             </nav>
-                            <h4 class="mg-b-0 tx-spacing--1">Rekap Cuti SKPD</h4>
+                            <h4 class="mg-b-0 tx-spacing--1">Data Pengumuman</h4>
                         </div>
                         <div class="d-none d-md-block">
                             <div class="btn-group" role="group" aria-label="Basic example"></div>
+                            <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Tambah Data</button>
                         </div>
-                    </div>             
-                    <div class="row row-xs">
-                        <div class="col-sm-12 col-lg-12">
-                            <div data-label="List Rekap Cuti SKPD" class="df-example demo-table">
-                                <div class="accordion mg-b-20" id="accordionExample">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                        <button class="accordion-button bg-primary text-white tx-14 pd-13" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            <i class="fas fa-filter mg-r-5"></i> Filter Data
-                                        </button>
-                                        </h2>
-                                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <div class="row row-sm">
-                                                    <div class="col-lg-3">
-                                                        <div class="form-group">
-                                                            <label for="formGroup" class="d-block">Tipe Cuti</label>
-                                                            <select class="form-select select2">
-                                                                <option label="Pilih Tipe Sakit"></option>
-                                                                <option value="Cuti Tahunan">Cuti Tahunan</option>
-                                                                <option value="Cuti Sakit">Cuti Sakit</option>
-                                                                <option value="Cuti Alasan Penting">Cuti Alasan Penting</option>
-                                                                <option value="Cuti Melahirkan">Cuti Melahirkan</option>
-                                                                <option value="Cuti Besar">Cuti Besar</option>
-                                                                <option value="Cuti Diluar Tanggungan Negara">Cuti Diluar Tanggungan Negara</option>
-                                                            </select>
-                                                        </div>
+                    </div>
+                    <div class="modal fade" id="ModalTambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true" data-bs-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content tx-14">
+                                <div class="modal-header">
+                                    <h6 class="modal-title tx-bold" id="exampleModalLabel4">Tambah Pengumuman</h6>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group row">
+                                            <label for="Judul" class="col-sm-3 col-form-label tx-bold">Judul <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="Judul" placeholder="Masukkan Judul" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="Pengumuman" class="col-sm-3 col-form-label tx-bold">Pengumuman <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <div class="tx-13">
+                                                    <div id="toolbar-container">
+                                                        <span class="ql-formats">
+                                                        <select class="ql-font"></select>
+                                                        <select class="ql-size"></select>
+                                                        </span>
+                                                        <span class="ql-formats">
+                                                        <button class="ql-bold"></button>
+                                                        <button class="ql-italic"></button>
+                                                        <button class="ql-underline"></button>
+                                                        <button class="ql-strike"></button>
+                                                        </span>
+                                                        <span class="ql-formats">
+                                                        <select class="ql-color"></select>
+                                                        <select class="ql-background"></select>
+                                                        </span>
+                                                        <span class="ql-formats">
+                                                        <button class="ql-script" value="sub"></button>
+                                                        <button class="ql-script" value="super"></button>
+                                                        </span>
+                                                        <span class="ql-formats">
+                                                        <button class="ql-header" value="1"></button>
+                                                        <button class="ql-header" value="2"></button>
+                                                        <button class="ql-blockquote"></button>
+                                                        <button class="ql-code-block"></button>
+                                                        </span>
+                                                        <span class="ql-formats">
+                                                        <button class="ql-list" value="ordered"></button>
+                                                        <button class="ql-list" value="bullet"></button>
+                                                        <button class="ql-indent" value="-1"></button>
+                                                        <button class="ql-indent" value="+1"></button>
+                                                        </span>
+                                                        <span class="ql-formats">
+                                                        <button class="ql-direction" value="rtl"></button>
+                                                        <select class="ql-align"></select>
+                                                        </span>
+                                                        <span class="ql-formats">
+                                                        <button class="ql-link"></button>
+                                                        <button class="ql-image"></button>
+                                                        <button class="ql-video"></button>
+                                                        <button class="ql-formula"></button>
+                                                        </span>
+                                                        <span class="ql-formats">
+                                                        <button class="ql-clean"></button>
+                                                        </span>
                                                     </div>
-                                                    <div class="col-lg-2">
-                                                        <div class="form-group">
-                                                            <label for="formGroup" class="d-block">Bulan</label>
-                                                            <select class="form-control select2">
-                                                                <option label="Pilih Bulan"></option>
-                                                                <option value="Januari">Januari</option>
-                                                                <option value="Februari">Februari</option>
-                                                                <option value="Maret">Maret</option>
-                                                                <option value="April">April</option>
-                                                                <option value="Mei">Mei</option>
-                                                                <option value="Juni">Juni</option>
-                                                                <option value="Juli">Juli</option>
-                                                                <option value="Agustus">Agustus</option>
-                                                                <option value="September">September</option>
-                                                                <option value="Oktober">Oktober</option>
-                                                                <option value="November">November</option>
-                                                                <option value="Desember">Desember</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="form-group">
-                                                            <label for="formGroup" class="d-block">&nbsp;</label>
-                                                            <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="refresh-cw" class="wd-10 mg-r-5"></i> Filter</button>
-                                                            <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="download" class="wd-10 mg-r-5"></i> Export</button>
-                                                        </div>
-                                                    </div>
+                                                    <div id="text-editor" class="ht-200"></div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>                         
+                                        <div class="form-group row">
+                                            <label for="Status" class="col-sm-3 col-form-label tx-bold">Status <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control select2">
+                                                    <option label="Pilih Status"></option>
+                                                    <option value="Aktif" selected>Aktif</option>
+                                                    <option value="Tidak Aktif">Tidak Aktif</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="TipeUser" class="col-sm-3 col-form-label tx-bold">Tipe User <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control select2">
+                                                    <option label="Pilih Tipe User"></option>
+                                                    <option value="Pegawai" selected>Pegawai</option>
+                                                    <option value="Operator">Operator</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary tx-13" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success tx-13"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Simpan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="ModalHapus" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
+                        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h6 class="modal-title">Konfirmasi Hapus</h6>
+                                    <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </a>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="mg-b-0">Apakah anda yakin akan menghapus yang Dipilih?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-danger btn-uppercase"><i data-feather="trash" class="wd-10 mg-r-5"></i> Hapus</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal Hapus -->                    
+                    <div class="row row-xs">
+                        <div class="col-sm-12 col-lg-12">
+                            <div data-label="Data Pengumuman" class="df-example demo-table">
                                 <!-- row -->
                                 <table id="datatables" class="table table-hover" style="width: 100%;">
                                     <thead class="thead-primary">
                                         <tr>
-                                            <th rowspan="2">Rank</th>
-                                            <th rowspan="2" class="text-nowrap">Nama SKPD</th>
-                                            <th colspan="7" class="text-center">Cuti</th>
-                                            <th rowspan="2">Persentase</th>
-                                        </tr>
-                                        <tr>
-                                            <th>Cuti Tahunan</th>
-                                            <th>Cuti Sakit</th>
-                                            <th>Cuti Alasan Penting</th>
-                                            <th>Cuti Melahirkan</th>
-                                            <th>Cuti Besar</th>
-                                            <th>Cuti Diluar Tanggungan Negara</th>
-                                            <th>Total</th>
+                                            <th>No.</th>
+                                            <th>Pengumuman</th>
+                                            <th>Tipe User</th>
+                                            <th>Status</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
                                             <td>
-                                                <h6 class="tx-13 mg-b-2 tx-primary">Dinas Pendidikan</h6>
+                                                <p class="mg-0">ASN Awards</p>
+                                                <a href="#" target="_blank" class="tx-medium d-flex align-items-center gap-1 text-decoration-underline">Lihat Dokumen <ion-icon name="arrow-forward-outline" aria-label="arrow forward outline" role="img" class="md hydrated"></ion-icon></a>
                                             </td>
-                                            <td class="text-end">10</td>
-                                            <td class="text-end">10</td>
-                                            <td class="text-end">10</td>
-                                            <td class="text-end">10</td>
-                                            <td class="text-end">10</td>
-                                            <td class="text-end">10</td>
-                                            <td class="text-end">10</td>
-                                            <td class="text-end">10%</td>
+                                            <td>Pegawai</td>
+                                            <td>Ya</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
+                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalHapus"><i data-feather="trash"></i></button>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -421,7 +440,6 @@
         </div>
 
         <script src="../lib/jquery/jquery.min.js"></script>
-        <script src="../lib/jqueryui/jquery-ui.min.js"></script>
         <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="../lib/feather-icons/feather.min.js"></script>
         <script src="../lib/ionicons/ionicons/ionicons.esm.js" type="module"></script>
@@ -437,7 +455,7 @@
         <script src="../lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
         <script src="../lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
         <script src="../lib/select2/js/select2.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="../lib/quill/quill.min.js"></script>
 
         <script src="../assets/js/dashforge.js"></script>
         <script src="../assets/js/dashforge.aside.js"></script>
@@ -448,12 +466,17 @@
         <script src="../assets/js/dashboard-one.js"></script>
         <script>
             $(function () {
+                //text-editor
                 "use strict";
+                var quill = new Quill('#text-editor', {
+                modules: {
+                    toolbar: '#toolbar-container'
+                },
+                placeholder: '',
+                theme: 'snow'
+                });
+
                 $("#datatables").DataTable({
-                    order: [],
-                    columnDefs: [
-                        { orderable: false, targets: 0 }
-                    ],
                     responsive: true,
                     language: {
                         searchPlaceholder: "Pencarian",
@@ -461,35 +484,18 @@
                         lengthMenu: "_MENU_ items/page",
                     },
                 });
-                
-                //Select
-                 $('.select2').select2({
-                    placeholder: 'Pilihan',
-                    searchInputPlaceholder: 'Search options',
-                    width: '100%'
-                });
-                
-                 $('.selectPencarian').select2({
+
+                $('.select2').select2({
                     placeholder: 'Pilihan',
                     searchInputPlaceholder: 'Pencarian',
+                    minimumResultsForSearch: Infinity,
                     width: '100%',
                     dropdownParent: $('#ModalTambah')
-                });
-                // Disable search
-                $('.select2-no-search').select2({
-                    minimumResultsForSearch: Infinity,
-                    placeholder: 'Choose one'
-                });
-
-                flatpickr("#TanggalDinas", {
-                    mode: "multiple",       // ⬅️ untuk multi tanggal
-                    dateFormat: "Y-m-d",    // format tanggal
                 });
 
                 // Select2
                 $(".dataTables_length select").select2({ minimumResultsForSearch: Infinity });
             });
-
         </script>
     </body>
 </html>

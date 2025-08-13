@@ -206,6 +206,39 @@
                             <li><a href="RekapCutiPegawai.html">Rekap Cuti Pegawai</a></li>
                         </ul>
                     </li>
+                    <li class="nav-label mg-t-25">Pengajuan Ketidakhadiran</li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas</span></a>
+                        <ul>
+                            <li><a href="PengajuanDinas.html">Pengajuan</a></li>
+                            <li><a href="RekapDinasSKPD.html">Rekap Dinas SKPD</a></li>
+                            <li><a href="RekapDinasPegawai.html">Rekap Dinas Pegawai</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin</span></a>
+                        <ul>
+                            <li><a href="PengajuanIzin.html">Pengajuan</a></li>
+                            <li><a href="RekapIzinSKPD.html">Rekap Izin SKPD</a></li>
+                            <li><a href="RekapIzinPegawai.html">Rekap Izin Pegawai</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
+                        <ul>
+                            <li><a href="PengajuanSakit.html">Pengajuan</a></li>
+                            <li><a href="RekapSakitSKPD.html">Rekap Sakit SKPD</a></li>
+                            <li><a href="RekapSakitPegawai.html">Rekap Sakit Pegawai</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
+                        <ul>
+                            <li><a href="PengajuanCuti.html">Pengajuan</a></li>
+                            <li><a href="RekapCutiSKPD.html">Rekap Cuti SKPD</a></li>
+                            <li><a href="RekapCutiPegawai.html">Rekap Cuti Pegawai</a></li>
+                        </ul>
+                    </li>
 
                     <!-- Monitoring Absensi -->
                     <li class="nav-label mg-t-25">Monitoring Absensi</li>
@@ -281,7 +314,54 @@
                     </div>
                     <div class="row row-xs">
                         <div class="col-sm-12 col-lg-12">
-                            <div class="accordion mg-b-20" id="accordionExample">
+                            <div class="row">
+                                <div class="col-sm-2 text-start">
+                                    <img src="../assets/img/logo-palembang.png" class="img wd-70 valign-top-f" alt="" />
+                                </div>
+                                <div class="col-sm-8 tx-center">
+                                    <h4 class="tx-20 mg-0 tx-uppercase">Pemerintah Kota Palembang</h6>
+                                    <h5 class="tx-20 mg-0 tx-uppercase">Dinas Pendidikan</h6>
+                                    <h4 class="tx-20 mg-0 tx-uppercase">Laporan Absensi Bulanan</h6>
+                                </div>
+                                <div class="col-sm-2 text-end">
+                                    
+                                </div>
+                            </div>
+                            <hr class="bd-1 mg-t-10 mg-b-10 bd-gray-500">
+                            <div class="row">
+                                <div class="col-sm-8 text-start">
+                                    <table>
+                                        <tr>
+                                            <td class="tx-bold wd-20p">Nama SKPD</td>
+                                            <td class="text-center">:</td>
+                                            <td class="wd-100p tx-uppercase">Dinas Pendidikan</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tx-bold wd-20p">Unit Kerja</td>
+                                            <td class="text-center">:</td>
+                                            <td class="wd-100p tx-uppercase">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tx-bold wd-20p">Bulan/Tahun</td>
+                                            <td class="text-center">:</td>
+                                            <td class="wd-100p tx-uppercase">Agustus 2025</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-sm-4 text-start">
+                                    <table>
+                                        <tr>
+                                            Keterangan :
+                                        </tr>
+                                        <tr>
+                                            <td class="tx-bold wd-10p">PSW</td>
+                                            <td class="text-center">=</td>
+                                            <td class="wd-100p">Pulang Sebelum Waktu</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>                            
+                            <div class="accordion mg-t-20 mg-b-20" id="accordionExample">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button class="accordion-button bg-primary text-white tx-14 pd-13" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -296,9 +376,8 @@
                                                         <label for="formGroup" class="d-block">SKPD</label>
                                                         <select class="form-select select2">
                                                             <option label="Pilih SKPD"></option>
-                                                            <option value="Dinas">Dinas Kantor</option>
-                                                            <option value="WFH">Work From Home (WFH)</option>
-                                                            <option value="WFA">Work From Anyware (WFA)</option>
+                                                            <option value="Dinas Pendidikan" selected>Dinas Pendidikan</option>
+                                                            <option value="Dinas Kesehatan">Dinas Kesehatan</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -368,8 +447,8 @@
                                                 <th rowspan="2">Jabatan</th>
                                                 <th rowspan="2">HK</th>
                                                 <th colspan="5" class="text-center">Kehadiran</th>
-                                                <th colspan="4" class="text-center">Potongan</th>
-                                                <th colspan="3" class="text-center">Perhitungan Persentase</th>
+                                                <th colspan="5" class="text-center">Potongan</th>
+                                                <th colspan="4" class="text-center">Perhitungan Persentase</th>
                                             </tr>
                                             <tr>
                                                 <th>Hadir</th>
@@ -381,9 +460,11 @@
                                                 <th>Terlambat</th>
                                                 <th>PSW</th>
                                                 <th>Meninggalkan Kantor Tanpa Alasan</th>
+                                                <th>Lainnya</th>
                                                 <th>Persentase Kehadiran</th>
                                                 <th>Persentase Potongan</th>
-                                                <th>Total Akhir Persentase (Kehadiran - Potongan)</th>
+                                                <th>Total Persentase (Kehadiran - Potongan)</th>
+                                                <th>Total Akhir Persentase Absensi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -409,7 +490,9 @@
                                                 <td class="text-end">1</td>
                                                 <td class="text-end">1</td>
                                                 <td class="text-end">1</td>
-                                                <td class="text-end">1%</td>
+                                                <td class="text-end">1</td>
+                                                <td class="text-end">100%</td>
+                                                <td class="text-end">40%</td>
                                             </tr>
                                         </tbody>
                                     </table>

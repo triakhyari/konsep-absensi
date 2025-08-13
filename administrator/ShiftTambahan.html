@@ -173,39 +173,39 @@
                 </li>
 
                 <!-- Pengajuan Ketidakhadiran -->
-                <li class="nav-label mg-t-25">Pengajuan Ketidakhadiran</li>
-                <li class="nav-item with-sub">
-                    <a href="" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas</span></a>
-                    <ul>
-                    <li><a href="PengajuanDinas.html">Pengajuan</a></li>
-                    <li><a href="RekapDinasSKPD.html">Rekap Dinas SKPD</a></li>
-                    <li><a href="RekapDinasPegawai.html">Rekap Dinas Pegawai</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item with-sub">
-                    <a href="" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin</span></a>
-                    <ul>
-                    <li><a href="PengajuanIzin.html">Pengajuan</a></li>
-                    <li><a href="RekapIzinSKPD.html">Rekap Izin SKPD</a></li>
-                    <li><a href="RekapIzinPegawai.html">Rekap Izin Pegawai</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item with-sub">
-                    <a href="" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
-                    <ul>
-                    <li><a href="PengajuanSakit.html">Pengajuan</a></li>
-                    <li><a href="RekapSakitSKPD.html">Rekap Sakit SKPD</a></li>
-                    <li><a href="RekapSakitPegawai.html">Rekap Sakit Pegawai</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item with-sub">
-                    <a href="" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
-                    <ul>
-                    <li><a href="PengajuanCuti.html">Pengajuan</a></li>
-                    <li><a href="RekapCutiSKPD.html">Rekap Cuti SKPD</a></li>
-                    <li><a href="RekapCutiPegawai.html">Rekap Cuti Pegawai</a></li>
-                    </ul>
-                </li>
+                    <li class="nav-label mg-t-25">Pengajuan Ketidakhadiran</li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas</span></a>
+                        <ul>
+                            <li><a href="PengajuanDinas.html">Pengajuan</a></li>
+                            <li><a href="RekapDinasSKPD.html">Rekap Dinas SKPD</a></li>
+                            <li><a href="RekapDinasPegawai.html">Rekap Dinas Pegawai</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin</span></a>
+                        <ul>
+                            <li><a href="PengajuanIzin.html">Pengajuan</a></li>
+                            <li><a href="RekapIzinSKPD.html">Rekap Izin SKPD</a></li>
+                            <li><a href="RekapIzinPegawai.html">Rekap Izin Pegawai</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
+                        <ul>
+                            <li><a href="PengajuanSakit.html">Pengajuan</a></li>
+                            <li><a href="RekapSakitSKPD.html">Rekap Sakit SKPD</a></li>
+                            <li><a href="RekapSakitPegawai.html">Rekap Sakit Pegawai</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
+                        <ul>
+                            <li><a href="PengajuanCuti.html">Pengajuan</a></li>
+                            <li><a href="RekapCutiSKPD.html">Rekap Cuti SKPD</a></li>
+                            <li><a href="RekapCutiPegawai.html">Rekap Cuti Pegawai</a></li>
+                        </ul>
+                    </li>
 
                 <!-- Monitoring Absensi -->
                 <li class="nav-label mg-t-25">Monitoring Absensi</li>
@@ -317,7 +317,13 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="Tanggal" class="col-sm-3 col-form-label tx-bold">Tanggal Kerja <span class="tx-danger">*</span></label>
+                                            <label for="Tanggal" class="col-sm-3 col-form-label tx-bold">Tanggal Masuk Kerja <span class="tx-danger">*</span></label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="Tanggal" placeholder="Pilih Tanggal" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="Tanggal" class="col-sm-3 col-form-label tx-bold">Tanggal Pulang Kerja <span class="tx-danger">*</span></label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" id="Tanggal" placeholder="Pilih Tanggal" required />
                                             </div>
@@ -495,9 +501,8 @@
                                             <th>Jenis Pegawai</th>
                                             <th>Jabatan</th>
                                             <th>Tipe Kerja</th>
-                                            <th>Tanggal Kerja</th>
-                                            <th>Waktu Datang</th>
-                                            <th>Waktu Pulang</th>
+                                            <th>Tanggal Masuk Kerja</th>
+                                            <th>Tanggal Pulang Kerja</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -515,10 +520,9 @@
                                                 Dinas Kantor
                                             </td>
                                             <td>
-                                                01/07/2025</p>
+                                                01/07/2025 - 07:30:00</p>
                                             </td>
-                                            <td>07:30:00</td>
-                                            <td>16:00:00</td>
+                                            <td>01/07/2025 - 16:00:00</td>
                                             <td>
                                                 <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
                                                 <button type="button" class="btn btn-outline-danger btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalHapus"><i data-feather="trash"></i></button>

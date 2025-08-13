@@ -136,10 +136,13 @@
                         <a href="TugasTambahan.html" class="nav-link"><i data-feather="file-plus"></i> <span>Tugas Tambahan</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="MutasiPegawai.html" class="nav-link"><i data-feather="repeat"></i> <span>Mutasi Pegawai</span></a>
-                    </li>
+            <a href="MutasiPegawai.html" class="nav-link"><i data-feather="repeat"></i> <span>Mutasi Pegawai</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="OperatorPD.html" class="nav-link"><i data-feather="users"></i> <span>Operator PD</span></a>
+          </li>
 
-                    <!-- Master Absensi-->
+          <!-- Master Absensi-->
                     <li class="nav-label mg-t-25">Master Absensi</li>
                     <li class="nav-item">
                         <a href="TipeKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Tipe Kerja</span></a>
@@ -165,17 +168,37 @@
 
                     <!-- Pengajuan Ketidakhadiran -->
                     <li class="nav-label mg-t-25">Pengajuan Ketidakhadiran</li>
-                    <li class="nav-item">
-                        <a href="PengajuanDinas.html" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas </span></a>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas</span></a>
+                        <ul>
+                            <li><a href="PengajuanDinas.html">Pengajuan</a></li>
+                            <li><a href="RekapDinasSKPD.html">Rekap Dinas SKPD</a></li>
+                            <li><a href="RekapDinasPegawai.html">Rekap Dinas Pegawai</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="PengajuanIzin.html" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin </span></a>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin</span></a>
+                        <ul>
+                            <li><a href="PengajuanIzin.html">Pengajuan</a></li>
+                            <li><a href="RekapIzinSKPD.html">Rekap Izin SKPD</a></li>
+                            <li><a href="RekapIzinPegawai.html">Rekap Izin Pegawai</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="PengajuanSakit.html" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
+                        <ul>
+                            <li><a href="PengajuanSakit.html">Pengajuan</a></li>
+                            <li><a href="RekapSakitSKPD.html">Rekap Sakit SKPD</a></li>
+                            <li><a href="RekapSakitPegawai.html">Rekap Sakit Pegawai</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="PengajuanCuti.html" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
+                    <li class="nav-item with-sub">
+                        <a href="" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
+                        <ul>
+                            <li><a href="PengajuanCuti.html">Pengajuan</a></li>
+                            <li><a href="RekapCutiSKPD.html">Rekap Cuti SKPD</a></li>
+                            <li><a href="RekapCutiPegawai.html">Rekap Cuti Pegawai</a></li>
+                        </ul>
                     </li>
 
                     <!-- Monitoring Absensi -->
@@ -274,7 +297,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="Hari" class="col-sm-3 col-form-label tx-bold">Hari Kerja <span class="tx-danger">*</span></label>
+                                            <label for="Hari" class="col-sm-3 col-form-label tx-bold">Hari Kerja</label>
                                             <div class="col-sm-9">
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" name="HariKerja[]" id="checkAll" value="Semua">
