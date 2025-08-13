@@ -115,7 +115,7 @@
           <!-- DATA MASTER KEPEGAWAIAN -->
           <li class="nav-label mg-t-25">Data Master Kepegawaian</li>
           <li class="nav-item">
-            <a href="data-pegawai.html" class="nav-link"><i data-feather="user-plus"></i> <span>Pegawai ASN</span></a>
+            <a href="data-pegawai.html" class="nav-link"><i data-feather="user"></i> <span>Pegawai ASN</span></a>
           </li>
           <li class="nav-item">
             <a href="StrukturOrganisasi.html" class="nav-link"><i data-feather="layout"></i> <span>Struktur Organisasi</span></a>
@@ -137,6 +137,9 @@
           </li>
           <li class="nav-item">
             <a href="MutasiPegawai.html" class="nav-link"><i data-feather="repeat"></i> <span>Mutasi Pegawai</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="OperatorPD.html" class="nav-link"><i data-feather="users"></i> <span>Operator PD</span></a>
           </li>
 
           <!-- Master Absensi-->
@@ -165,29 +168,53 @@
 
           <!-- Pengajuan Ketidakhadiran -->
           <li class="nav-label mg-t-25">Pengajuan Ketidakhadiran</li>
-          <li class="nav-item">
-            <a href="PengajuanDinas.html" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas </span></a>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="map"></i> <span>Pengajuan Dinas</span></a>
+            <ul>
+              <li><a href="PengajuanDinas.html">Pengajuan</a></li>
+              <li><a href="RekapDinasSKPD.html">Rekap Dinas SKPD</a></li>
+              <li><a href="RekapDinasPegawai.html">Rekap Dinas Pegawai</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a href="PengajuanIzin.html" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin </span></a>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="alert-circle"></i> <span>Pengajuan Izin</span></a>
+            <ul>
+              <li><a href="PengajuanIzin.html">Pengajuan</a></li>
+              <li><a href="RekapIzinSKPD.html">Rekap Izin SKPD</a></li>
+              <li><a href="RekapIzinPegawai.html">Rekap Izin Pegawai</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a href="PengajuanSakit.html" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="thermometer"></i> <span>Pengajuan Sakit</span></a>
+            <ul>
+              <li><a href="PengajuanSakit.html">Pengajuan</a></li>
+              <li><a href="RekapSakitSKPD.html">Rekap Sakit SKPD</a></li>
+              <li><a href="RekapSakitPegawai.html">Rekap Sakit Pegawai</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a href="PengajuanCuti.html" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="calendar"></i> <span>Pengajuan Cuti</span></a>
+            <ul>
+              <li><a href="PengajuanCuti.html">Pengajuan</a></li>
+              <li><a href="RekapCutiSKPD.html">Rekap Cuti SKPD</a></li>
+              <li><a href="RekapCutiPegawai.html">Rekap Cuti Pegawai</a></li>
+            </ul>
           </li>
 
           <!-- Monitoring Absensi -->
           <li class="nav-label mg-t-25">Monitoring Absensi</li>
-          <li class="nav-item">
-            <a href="AgendaPegawai.html" class="nav-link"><i data-feather="archive"></i> <span>Agenda Pegawai</span></a>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="clock"></i> <span>Shift Pegawai</span></a>
+            <ul>
+              <li><a href="ShiftUtama.html">Shift Utama</a></li>
+              <li><a href="ShiftTambahan.html">Shift Tambahan</a></li>
+            </ul>
           </li>
           <li class="nav-item with-sub">
-            <a href="" class="nav-link"><i data-feather="clock"></i> <span>Jadwal Pegawai</span></a>
+            <a href="" class="nav-link"><i data-feather="archive"></i> <span>Agenda Absensi</span></a>
             <ul>
-              <li><a href="JadwalUtama.html">Jadwal Utama</a></li>
-              <li><a href="JadwalTambahan.html">Jadwal Tambahan</a></li>
+              <li><a href="AgendaSKPD.html">Agenda SKPD</a></li>
+              <li><a href="AgendaPegawai.html">Agenda Pegawai</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -210,11 +237,10 @@
           <li class="nav-item with-sub">
             <a href="" class="nav-link"><i data-feather="book"></i> <span>Laporan Presensi</span></a>
             <ul>
-              <li><a href="LaporanHarian.html">Laporan Harian</a></li>
               <li><a href="LaporanBulanan.html">Laporan Bulanan</a></li>
               <li><a href="LaporanTahunan.html">Laporan Tahunan</a></li>
               <li><a href="LaporanBermasalah.html">Laporan Bermasalah</a></li>
-              <li><a href="RiwayatLogAbsensi.html">Log Absensi Mobile</a></li>
+              <li><a href="RiwayatLogAbsensi.html">Riwayat Log Absensi</a></li>
             </ul>
           </li>
         </ul>
