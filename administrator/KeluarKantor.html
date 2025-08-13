@@ -31,7 +31,7 @@
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png" />
 
-        <title>Mutasi Pegawai | Absensi Online</title>
+        <title>Keluar Kantor | Absensi Online</title>
 
         <!-- vendor css -->
         <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
@@ -41,8 +41,8 @@
         <link href="../lib/prismjs/themes/prism-vs.css" rel="stylesheet" />
         <link href="../lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" />
         <link href="../lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet" />
-        <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+        <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
         <!-- DashForge CSS -->
         <link rel="stylesheet" href="../assets/css/dashforge.css" />
@@ -136,7 +136,7 @@
                     <li class="nav-item">
                         <a href="TugasTambahan.html" class="nav-link"><i data-feather="file-plus"></i> <span>Tugas Tambahan</span></a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a href="MutasiPegawai.html" class="nav-link"><i data-feather="repeat"></i> <span>Mutasi Pegawai</span></a>
                     </li>
 
@@ -198,7 +198,7 @@
                             <li><a href="RekapCutiPegawai.html">Rekap Cuti Pegawai</a></li>
                         </ul>
                     </li>
-
+                    
                     <!-- Monitoring Absensi -->
                     <li class="nav-label mg-t-25">Monitoring Absensi</li>
                     <li class="nav-item with-sub">
@@ -215,7 +215,7 @@
                             <li><a href="JadwalTambahan.html">Jadwal Tambahan</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a href="KeluarKantor.html" class="nav-link"><i data-feather="external-link"></i> <span>Keluar Kantor</span></a>
                     </li>
                     <li class="nav-item with-sub">
@@ -235,7 +235,6 @@
                     <li class="nav-item with-sub">
                         <a href="" class="nav-link"><i data-feather="book"></i> <span>Laporan Presensi</span></a>
                         <ul>
-                            <li><a href="LaporanHarian.html">Laporan Harian</a></li>
                             <li><a href="LaporanBulanan.html">Laporan Bulanan</a></li>
                             <li><a href="LaporanTahunan.html">Laporan Tahunan</a></li>
                             <li><a href="LaporanBermasalah.html">Laporan Bermasalah</a></li>
@@ -249,14 +248,13 @@
         <div class="content ht-100v pd-0">
             <div class="content-header">
                 <div class="content-search">
-                    <label for="Periode" class="mg-r-5 nav-link">Periode :</label>
-                    <select class="form-select wd-75 border-0 shadow-none bg-transparent">
-                        <option value="2024">2024</option>
-                        <option value="2025" selected>2025</option>
-                    </select>
+                <label for="Periode" class="mg-r-5 nav-link">Periode :</label>
+                <select class="form-select wd-75 border-0 shadow-none bg-transparent">
+                    <option value="2024">2024</option>
+                    <option value="2025" selected>2025</option>
+                </select>
                 </div>
-            </div>
-            <!-- content-header -->
+            </div><!-- content-header -->
 
             <div class="content-body">
                 <div class="pd-x-0">
@@ -264,11 +262,11 @@
                         <div>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb breadcrumb-style1 mg-b-10">
-                                    <li class="breadcrumb-item"><a href="#">Data Master Kepegawaian</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Data Mutasi Pegawai</li>
+                                    <li class="breadcrumb-item"><a href="#">Monitoring Absensi</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data Keluar Kantor</li>
                                 </ol>
                             </nav>
-                            <h4 class="mg-b-0 tx-spacing--1">Data Mutasi Pegawai</h4>
+                            <h4 class="mg-b-0 tx-spacing--1">Data Keluar Kantor</h4>
                         </div>
                         <div class="d-none d-md-block">
                             <div class="btn-group" role="group" aria-label="Basic example">
@@ -282,7 +280,7 @@
                         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                             <div class="modal-content tx-14">
                                 <div class="modal-header">
-                                    <h6 class="modal-title tx-bold" id="exampleModalLabel4">Tambah Mutasi Pegawai</h6>
+                                    <h6 class="modal-title tx-bold" id="exampleModalLabel4">Tambah Keluar Kantor</h6>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true"></span>
                                     </button>
@@ -300,52 +298,21 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="SKPDAwal" class="col-sm-3 col-form-label tx-bold">SKPD Awal <span class="tx-danger">*</span></label>
+                                            <label for="TanggalKeluarKantor" class="col-sm-3 col-form-label tx-bold">Tanggal Keluar Kantor <span class="tx-danger">*</span></label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="SKPDAwal" value="Dinas Pendidikan" readonly />
+                                                <input type="text" class="form-control" id="Tanggal" placeholder="Pilih Tanggal Keluar Kantor" required />
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="JabatanAwal" class="col-sm-3 col-form-label tx-bold">Jabatan Awal <span class="tx-danger">*</span></label>
+                                            <label for="Keterangan" class="col-sm-3 col-form-label tx-bold">Keterangan/Alasan <span class="tx-danger">*</span></label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="JabatanAwal" value="Analis Sumber Daya Manusia Aparatur Ahli Muda" readonly />
+                                                <textarea class="form-control" rows="2" placeholder="Masukkan Keterangan/Alasan Keluar Kantor" name="Keterangan" required></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="SKPD" class="col-sm-3 col-form-label tx-bold">SKPD Tujuan<span class="tx-danger">*</span></label>
+                                            <label for="DokumenPendukung" class="col-sm-3 col-form-label tx-bold">Dokumen Pendukung <span class="tx-danger">*</span></label>
                                             <div class="col-sm-9">
-                                                <select class="form-select selectPencarian" id="SKPD" name="SKPD" required>
-                                                    <option label="Pilihan"></option>
-                                                    <option value="Dinas Pendidikan">Dinas Pendidikan</option>
-                                                    <option value="Dinas Kesehatan">Dinas Kesehatan</option>
-                                                </select>
-                                            </div>
-                                        </div><div class="form-group row">
-                                            <label for="JenisJabatan" class="col-sm-3 col-form-label tx-bold">Jenis Jabatan Tujuan<span class="tx-danger">*</span></label>
-                                            <div class="col-sm-9">
-                                                <select class="form-select selectPencarian" id="JenisJabatan" name="JenisJabatan" required>
-                                                    <option label="Pilihan"></option>
-                                                    <option value="Fungsional Tertentu">Fungsional Tertentu</option>
-                                                    <option value="Pelaksana">Pelaksana</option>
-                                                    <option value="Struktural">Struktural</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="NamaJabatan" class="col-sm-3 col-form-label tx-bold">Nama Jabatan Tujuan<span class="tx-danger">*</span></label>
-                                            <div class="col-sm-9">
-                                                <select class="form-select selectPencarian" id="NamaJabatan" name="NamaJabatan" required>
-                                                    <option label="Pilihan"></option>
-                                                    <option value="Fungsional Tertentu">Fungsional Tertentu</option>
-                                                    <option value="Pelaksana">Pelaksana</option>
-                                                    <option value="Struktural">Struktural</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="LampiranDokumen" class="col-sm-3 col-form-label tx-bold">Lampiran Dokumen <span class="tx-danger">*</span></label>
-                                            <div class="col-sm-9">
-                                                <input type="file" class="form-control" id="LampiranDokumen" required />
+                                                <input type="file" class="form-control" id="DokumenPendukung" required />
                                             </div>
                                         </div>
                                     </form>
@@ -356,27 +323,115 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="accordion mg-b-20" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-primary text-white tx-14 pd-13" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="fas fa-filter mg-r-5"></i> Filter Data
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row row-sm">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="formGroup" class="d-block">SKPD</label>
+                                                <select class="form-select select2">
+                                                    <option label="Pilih SKPD"></option>
+                                                    <option value="Dinas">Dinas Kantor</option>
+                                                    <option value="WFH">Work From Home (WFH)</option>
+                                                    <option value="WFA">Work From Anyware (WFA)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="formGroup" class="d-block">Unit Kerja</label>
+                                                <select class="form-select select2">
+                                                    <option label="Pilih Unit Kerja"></option>
+                                                    <option value="Dinas">Dinas Kantor</option>
+                                                    <option value="WFH">Work From Home (WFH)</option>
+                                                    <option value="WFA">Work From Anyware (WFA)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form-group">
+                                                <label for="formGroup" class="d-block">Jenis Pegawai</label>
+                                                <select class="form-control select2">
+                                                    <option label="Pilih Bulan"></option>
+                                                    <option value="PNS">PNS</option>
+                                                    <option value="PPPK Penuh Waktu">PPPK Penuh Waktu</option>
+                                                    <option value="PPPK Paruh Waktu">PPPK Paruh Waktu</option>
+                                                    <option value="Non ASN">Non ASN</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form-group">
+                                            <label for="formGroup" class="d-block">Status</label>
+                                            <select class="form-select select2">
+                                                <option label="Pilih Status"></option>
+                                                <option value="Usul Atasan">Usul Atasan</option>
+                                                <option value="Input Operator">Input Operator</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form-group">
+                                                <label for="formGroup" class="d-block">Bulan</label>
+                                                <select class="form-control select2">
+                                                    <option label="Pilih Bulan"></option>
+                                                    <option value="Januari">Januari</option>
+                                                    <option value="Februari">Februari</option>
+                                                    <option value="Maret">Maret</option>
+                                                    <option value="April">April</option>
+                                                    <option value="Mei">Mei</option>
+                                                    <option value="Juni">Juni</option>
+                                                    <option value="Juli">Juli</option>
+                                                    <option value="Agustus">Agustus</option>
+                                                    <option value="September">September</option>
+                                                    <option value="Oktober">Oktober</option>
+                                                    <option value="November">November</option>
+                                                    <option value="Desember">Desember</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="formGroup" class="d-block">&nbsp;</label>
+                                                <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="refresh-cw" class="wd-10 mg-r-5"></i> Filter</button>
+                                                <button class="btn btn-sm pd-x-15 btn-danger btn-uppercase disabled" id="HapusAll" data-bs-toggle="modal" data-bs-target="#ModalHapus" aria-disabled="true">
+                                                    <i data-feather="trash" class="wd-10 mg-r-5"></i> Hapus Data
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>                    
                     <div class="row row-xs">
-                        <div class="col-sm-12 col-lg-12">                            
-                            <div data-label="Data Nama Jabatan" class="df-example demo-table">
+                        <div class="col-sm-12 col-lg-12">
+                            <div data-label="Data Keluar Kantor" class="df-example demo-table">                         
                                 <!-- row -->
                                 <div class="modal fade" id="ModalHapus" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
                                     <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
                                         <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h6 class="modal-title">Konfirmasi Hapus</h6>
-                                                <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </a>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p class="mg-b-0">Apakah anda yakin akan menghapus yang Dipilih?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
-                                                <button type="button" class="btn btn-sm pd-x-15 btn-danger btn-uppercase"><i data-feather="trash" class="wd-10 mg-r-5"></i> Hapus</button>
-                                            </div>
+                                        <div class="modal-header">
+                                            <h6 class="modal-title">Konfirmasi Hapus</h6>
+                                            <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </a>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="mg-b-0">Apakah anda yakin akan menghapus yang Dipilih?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
+                                            <button type="button" class="btn btn-sm pd-x-15 btn-danger btn-uppercase"><i data-feather="trash" class="wd-10 mg-r-5"></i> Hapus</button>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -384,19 +439,19 @@
                                 <div class="modal fade" id="ModalImport" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
                                     <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
                                         <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h6 class="modal-title">Import Data</h6>
-                                                <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </a>
-                                            </div>
-                                            <div class="modal-body">
-                                                <input class="form-control" type="file" id="formFile" />
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
-                                                <button type="button" class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="upload" class="wd-10 mg-r-5"></i> Import</button>
-                                            </div>
+                                        <div class="modal-header">
+                                            <h6 class="modal-title">Import Data</h6>
+                                            <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </a>
+                                        </div>
+                                        <div class="modal-body">
+                                            <input class="form-control" type="file" id="formFile">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
+                                            <button type="button" class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="upload" class="wd-10 mg-r-5"></i> Import</button>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -404,27 +459,69 @@
                                 <table id="datatables" class="table table-hover" style="width: 100%;">
                                     <thead class="thead-primary">
                                         <tr>
+                                            <th class="text-center"><input type="checkbox" class="custom-control-input" id="checkAll" onclick="checkAll(this)"></th>
                                             <th>No.</th>
                                             <th>Nama Pegawai</th>
                                             <th>Jenis Pegawai</th>
-                                            <th>SKPD Awal</th>
-                                            <th>SKPD Tujuan</th>
+                                            <th>Jabatan</th>
+                                            <th>Tanggal Keluar Kantor</th>
+                                            <th>Keterangan</th>
                                             <th>Lampiran Dokumen</th>
+                                            <th>Status</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
+                                            <td class="text-center"><input type="checkbox" class="custom-control-input" onchange="toggleHapusButton()"></td>
                                             <td>1</td>
                                             <td>
-                                                <h6 class="tx-13 mg-2 tx-primary">Katherine Lumaad</h6>
-                                                <p class="tx-12 mg-2">196708142001121002</p>
+                                                <h6 class="tx-13 mg-b-2 tx-primary">Katherine Lumaad</h6>
+                                                <p class="tx-12 mg-b-10">196708142001121002</p>
                                             </td>
                                             <td class="text-start">PNS</td>
-                                            <td class="text-start">Dinas Pendidikan - Kepala Dinas Pendidikan</td>
-                                            <td class="text-start">Dinas Kesehatan - Analis Sumber Daya Manusia Aparatur Ahli Muda</td>
+                                            <td class="text-start">Dinas Pendidikan - Analis Sumber Daya Manusia Aparatur Ahli Muda</td>
                                             <td>
-                                                <span class="tx-medium d-flex align-items-center gap-1 text-decoration-line-through tx-primary ">Lihat Dokumen</span>
+                                                <p class="mg-0">28/07/2025, 29/07/2025, 30/07/2025</p>
+                                                <small class="tx-12 mg-0">
+                                                    <strong>Diusul Tanggal :</strong> 27/07/2025 10:02:20
+                                                </small>   
+                                            </td>
+                                            <td>Izin Terlambat Karena Pecah Ban</td>
+                                            <td>
+                                                <a href="#" target="_blank" class="tx-medium d-flex align-items-center gap-1 text-decoration-underline">Lihat Dokumen <ion-icon name="arrow-forward-outline" aria-label="arrow forward outline" role="img" class="md hydrated"></ion-icon></a>
+                                            </td>
+                                            <td>
+                                                <span class="badge text-bg-success">Usul Atasan</span>
+                                                <h6 class="tx-13 mg-0 tx-primary">Katherine Lumaad</h6>
+                                                <p class="tx-12 mg-b-10">196708142001121002</p>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
+                                                <button type="button" class="btn btn-outline-danger btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalHapus"><i data-feather="trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><input type="checkbox" class="custom-control-input" onchange="toggleHapusButton()"></td>
+                                            <td>2</td>
+                                            <td>
+                                                <h6 class="tx-13 mg-b-2 tx-primary">Katherine Lumaad</h6>
+                                                <p class="tx-12 mg-b-10">196708142001121002</p>
+                                            </td>
+                                            <td class="text-start">PNS</td>
+                                            <td class="text-start">Dinas Pendidikan - Analis Sumber Daya Manusia Aparatur Ahli Muda</td>
+                                            <td>
+                                                <p class="mg-0">28/07/2025, 29/07/2025, 30/07/2025</p>
+                                                <small class="tx-12 mg-0">
+                                                    <strong>Dibuat Tanggal :</strong> 27/07/2025 10:02:20
+                                                </small>   
+                                            </td>
+                                            <td>Izin Ada Urusan Keluarga</td>
+                                            <td>
+                                                <a href="#" target="_blank" class="tx-medium d-flex align-items-center gap-1 text-decoration-underline">Lihat Dokumen <ion-icon name="arrow-forward-outline" aria-label="arrow forward outline" role="img" class="md hydrated"></ion-icon></a>
+                                            </td>
+                                            <td>
+                                                <span class="badge text-bg-dark">Input Operator</span>
                                             </td>
                                             <td>
                                                 <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
@@ -473,14 +570,18 @@
         <script>
             $(function () {
                 function toggleHapusButton() {
-                    const adaYangDicek = $(".data-check:checked").length > 0;
-                    $("#hapusBtn").prop("disabled", !adaYangDicek);
+                    const adaYangDicek = $('.data-check:checked').length > 0;
+                    $('#hapusBtn').prop('disabled', !adaYangDicek);
                 }
 
-                ("use strict");
+
+
+                "use strict";
                 $("#datatables").DataTable({
                     order: [],
-                    columnDefs: [{ orderable: false, targets: 0 }],
+                    columnDefs: [
+                        { orderable: false, targets: 0 }
+                    ],
                     responsive: true,
                     language: {
                         searchPlaceholder: "Pencarian",
@@ -488,23 +589,65 @@
                         lengthMenu: "_MENU_ items/page",
                     },
                 });
-
+                
                 //Select
-                $(".select2").select2({
-                    placeholder: "Pilihan",
-                    searchInputPlaceholder: "Search options",
-                    width: "100%",
+                 $('.select2').select2({
+                    placeholder: 'Pilihan',
+                    searchInputPlaceholder: 'Search options',
+                    width: '100%'
+                });
+                
+                 $('.selectPencarian').select2({
+                    placeholder: 'Pilihan',
+                    searchInputPlaceholder: 'Pencarian',
+                    width: '100%',
+                    dropdownParent: $('#ModalTambah')
+                });
+                // Disable search
+                $('.select2-no-search').select2({
+                    minimumResultsForSearch: Infinity,
+                    placeholder: 'Choose one'
                 });
 
-                $(".selectPencarian").select2({
-                    placeholder: "Pilihan",
-                    searchInputPlaceholder: "Pencarian",
-                    width: "100%",
-                    dropdownParent: $("#ModalTambah"),
+                flatpickr("#Tanggal", {
+                    mode: "multiple",       // ⬅️ untuk multi tanggal
+                    dateFormat: "Y-m-d",    // format tanggal
                 });
 
                 // Select2
                 $(".dataTables_length select").select2({ minimumResultsForSearch: Infinity });
+            });
+
+            function checkAll(box) {
+                let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                for (let i = 0; i < checkboxes.length; i++) {
+                    if (checkboxes[i].type == 'checkbox') {
+                    checkboxes[i].checked = box.checked;
+                    }
+                }
+                toggleHapusButton(); // Pastikan tombol diperbarui
+                }
+
+                function toggleHapusButton() {
+                    let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                    let hapusButton = document.getElementById('HapusAll');
+
+                    const isAnyChecked = Array.from(checkboxes).some(cb =>
+                        cb.id !== 'checkAll' && cb.checked
+                    );
+
+                    if (isAnyChecked) {
+                        hapusButton.classList.remove('disabled');
+                        hapusButton.setAttribute('aria-disabled', 'false');
+                    } else {
+                        hapusButton.classList.add('disabled');
+                        hapusButton.setAttribute('aria-disabled', 'true');
+                    }
+                }
+
+                // Nonaktifkan tombol saat pertama kali halaman dimuat
+                document.addEventListener('DOMContentLoaded', function () {
+                toggleHapusButton();
             });
         </script>
     </body>
