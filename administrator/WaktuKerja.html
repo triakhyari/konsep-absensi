@@ -248,7 +248,6 @@
     </aside>
 
     <div class="content ht-100v pd-0">
-      <div class="content-header"></div>
       <div class="content-header">
         <div class="content-search">
           <label for="Periode" class="mg-r-5 nav-link">Periode :</label>
@@ -341,9 +340,21 @@
                       </div>
                     </div>
                     <div class="form-group row">
+                      <label for="AbsenDatang" class="col-sm-3 col-form-label tx-bold">Mulai Absen Datang <span class="tx-danger">*</span></label>
+                      <div class="col-sm-9">
+                        <input type="time" step="1" class="form-control" id="AbsenDatang" placeholder="Masukkan Mulai Absen Datang" required />
+                      </div>
+                    </div>
+                    <div class="form-group row">
                       <label for="AbsenPulang" class="col-sm-3 col-form-label tx-bold">Absen Pulang <span class="tx-danger">*</span></label>
                       <div class="col-sm-9">
                         <input type="time" step="1" class="form-control" id="AbsenPulang" placeholder="Masukkan Absen Pulang" required />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="AbsenPulang" class="col-sm-3 col-form-label tx-bold">Tutup Absen Pulang <span class="tx-danger">*</span></label>
+                      <div class="col-sm-9">
+                        <input type="time" step="1" class="form-control" id="AbsenPulang" placeholder="Masukkan Tutup Absen Pulang" required />
                       </div>
                     </div>
                     <div class="form-group row">
@@ -417,8 +428,10 @@
                       <th>No.</th>
                       <th>Nama Skema Kerja</th>
                       <th>Hari</th>
-                      <th>Waktu Datang</th>
-                      <th>Waktu Pulang</th>
+                      <th>Absen Datang</th>
+                      <th>Mulai Absen Datang</th>
+                      <th>Absen Pulang</th>
+                      <th>Tutup Absen Pulang</th>
                       <th>Status</th>
                       <th>Aksi</th>
                     </tr>
@@ -429,8 +442,10 @@
                       <td>Senin-Kamis (5 Hari Kerja 07:30:00 - 16:00:00)</td>
                       <td>["Senin","Selasa","Rabu","Kamis"]</td>
                       <td>07:30:00</td>
+                      <td>05:30:00</td>
                       <td>16:00:00</td>
-                      <td>Ya</td>
+                      <td>00:00:00</td>
+                      <td>Aktif</td>
                       <td>
                         <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
                         <button type="button" class="btn btn-outline-danger btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalHapus"><i data-feather="trash"></i></button>
@@ -441,8 +456,10 @@
                       <td>Jumat (5 Hari Kerja 07:30:00 - 16:30:00)</td>
                       <td>["Jumat"]</td>
                       <td>07:30:00</td>
+                      <td>05:30:00</td>
                       <td>16:30:00</td>
-                      <td>Ya</td>
+                      <td>00:00:00</td>
+                      <td>Aktif</td>
                       <td>
                         <button type="button" class="btn btn-outline-primary btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="edit"></i></button>
                         <button type="button" class="btn btn-outline-danger btn-icon mg-b-4" data-bs-toggle="modal" data-bs-target="#ModalHapus"><i data-feather="trash"></i></button>

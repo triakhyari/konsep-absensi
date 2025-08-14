@@ -42,7 +42,7 @@
         <link href="../lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" />
         <link href="../lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet" />
         <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 
         <!-- DashForge CSS -->
         <link rel="stylesheet" href="../assets/css/dashforge.css" />
@@ -106,14 +106,14 @@
                         <a href="statistik-pegawai.html" class="nav-link"><i data-feather="pie-chart"></i> <span>Statistik Pegawai</span></a>
                     </li>
                     <!-- Pengaturan -->
-          <li class="nav-label mg-t-25">Pengaturan</li>
-          <li class="nav-item">
-            <a href="pengumuman.html" class="nav-link"><i data-feather="bell"></i> <span>Pengumuman </span></a>
-          </li>
-          <li class="nav-item">
-            <a href="API-Kepegawaian.html" class="nav-link"><i data-feather="link-2"></i> <span>API Kepegawaian </span></a>
-          </li>
-          <!-- DATA MASTER KEPEGAWAIAN -->
+                    <li class="nav-label mg-t-25">Pengaturan</li>
+                    <li class="nav-item">
+                        <a href="pengumuman.html" class="nav-link"><i data-feather="bell"></i> <span>Pengumuman </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="API-Kepegawaian.html" class="nav-link"><i data-feather="link-2"></i> <span>API Kepegawaian </span></a>
+                    </li>
+                    <!-- DATA MASTER KEPEGAWAIAN -->
                     <li class="nav-label mg-t-25">Data Master Kepegawaian</li>
                     <li class="nav-item">
                         <a href="data-pegawai.html" class="nav-link"><i data-feather="user-plus"></i> <span>Pegawai ASN</span></a>
@@ -137,13 +137,13 @@
                         <a href="TugasTambahan.html" class="nav-link"><i data-feather="file-plus"></i> <span>Tugas Tambahan</span></a>
                     </li>
                     <li class="nav-item">
-            <a href="MutasiPegawai.html" class="nav-link"><i data-feather="repeat"></i> <span>Mutasi Pegawai</span></a>
-          </li>
-          <li class="nav-item">
-            <a href="OperatorPD.html" class="nav-link"><i data-feather="users"></i> <span>Operator PD</span></a>
-          </li>
+                        <a href="MutasiPegawai.html" class="nav-link"><i data-feather="repeat"></i> <span>Mutasi Pegawai</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="OperatorPD.html" class="nav-link"><i data-feather="users"></i> <span>Operator PD</span></a>
+                    </li>
 
-          <!-- Master Absensi-->
+                    <!-- Master Absensi-->
                     <li class="nav-label mg-t-25">Master Absensi</li>
                     <li class="nav-item">
                         <a href="TipeKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Tipe Kerja</span></a>
@@ -214,8 +214,8 @@
                     <li class="nav-item with-sub">
                         <a href="" class="nav-link"><i data-feather="archive"></i> <span>Agenda Absensi</span></a>
                         <ul>
-                        <li><a href="AgendaSKPD.html">Agenda SKPD</a></li>
-                        <li><a href="AgendaPegawai.html">Agenda Pegawai</a></li>
+                            <li><a href="AgendaSKPD.html">Agenda SKPD</a></li>
+                            <li><a href="AgendaPegawai.html">Agenda Pegawai</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -251,13 +251,14 @@
         <div class="content ht-100v pd-0">
             <div class="content-header">
                 <div class="content-search">
-                <label for="Periode" class="mg-r-5 nav-link">Periode :</label>
-                <select class="form-select wd-75 border-0 shadow-none bg-transparent">
-                    <option value="2024">2024</option>
-                    <option value="2025" selected>2025</option>
-                </select>
+                    <label for="Periode" class="mg-r-5 nav-link">Periode :</label>
+                    <select class="form-select wd-75 border-0 shadow-none bg-transparent">
+                        <option value="2024">2024</option>
+                        <option value="2025" selected>2025</option>
+                    </select>
                 </div>
-            </div><!-- content-header -->
+            </div>
+            <!-- content-header -->
 
             <div class="content-body">
                 <div class="pd-x-0">
@@ -276,7 +277,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="input-group mb-5">
-                                <input type="text" class="form-control" placeholder="Masukkan NIP Pegawai">
+                                <input type="text" class="form-control" placeholder="Masukkan NIP Pegawai" />
                                 <span class="input-group-text bg-primary text-white">Cari Pegawai</span>
                             </div>
                         </div>
@@ -334,8 +335,7 @@
                         <div></div>
                         <div class="d-none d-md-block">
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button class="btn btn-sm pd-x-15 btn-outline-primary btn-uppercase" data-bs-toggle="modal" data-bs-target="#ModalImport"><i data-feather="upload" class="wd-10"></i></button>
-                                <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="file-text" class="wd-10"></i></button>
+                                <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="download" class="wd-10 mg-r-5"></i> Export</button>
                             </div>
                             <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5" data-bs-toggle="modal" data-bs-target="#ModalTambah"><i data-feather="plus-circle" class="wd-10 mg-r-5"></i> Tambah Data</button>
                         </div>
@@ -1343,7 +1343,7 @@
                                                     <option value="ZTC8243600827">ZTC8243600827(SD N 220 Face)</option>
                                                     <option value="AEWD232260395">AEWD232260395(SD N 124 Face)</option>
                                                     <option value="JHG3235300060">JHG3235300060(Kel. Kemang Agung Fc)</option>
-                                                    </select>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -1364,46 +1364,46 @@
                     <div class="modal fade" id="ModalHapus" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
                         <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
                             <div class="modal-content">
-                            <div class="modal-header">
-                                <h6 class="modal-title">Konfirmasi Hapus</h6>
-                                <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </a>
-                            </div>
-                            <div class="modal-body">
-                                <p class="mg-b-0">Apakah anda yakin akan menghapus yang Dipilih?</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
-                                <button type="button" class="btn btn-sm pd-x-15 btn-danger btn-uppercase"><i data-feather="trash" class="wd-10 mg-r-5"></i> Hapus</button>
-                            </div>
+                                <div class="modal-header">
+                                    <h6 class="modal-title">Konfirmasi Hapus</h6>
+                                    <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </a>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="mg-b-0">Apakah anda yakin akan menghapus yang Dipilih?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-danger btn-uppercase"><i data-feather="trash" class="wd-10 mg-r-5"></i> Hapus</button>
+                                </div>
                             </div>
                         </div>
-                        </div>
-                        <!-- Modal Hapus -->
-                        <div class="modal fade" id="ModalImport" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
+                    </div>
+                    <!-- Modal Hapus -->
+                    <div class="modal fade" id="ModalImport" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
                         <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
                             <div class="modal-content">
-                            <div class="modal-header">
-                                <h6 class="modal-title">Import Data</h6>
-                                <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </a>
-                            </div>
-                            <div class="modal-body">
-                                <input class="form-control" type="file" id="formFile" />
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
-                                <button type="button" class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="upload" class="wd-10 mg-r-5"></i> Import</button>
-                            </div>
+                                <div class="modal-header">
+                                    <h6 class="modal-title">Import Data</h6>
+                                    <a href="" class="close text-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </a>
+                                </div>
+                                <div class="modal-body">
+                                    <input class="form-control" type="file" id="formFile" />
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-secondary btn-uppercase" data-bs-dismiss="modal"><i data-feather="skip-back" class="wd-10 mg-r-5"></i> Batal</button>
+                                    <button type="button" class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="upload" class="wd-10 mg-r-5"></i> Import</button>
+                                </div>
                             </div>
                         </div>
-                        </div>
-                        <!-- Modal Import -->   
+                    </div>
+                    <!-- Modal Import -->
                     <div class="row row-xs">
                         <div class="col-sm-12 col-lg-12">
-                            <div data-label="List Absensi Mesin Pegawai" class="df-example demo-table">
+                            <div data-label="Data Absensi Mesin Pegawai" class="df-example demo-table">
                                 <table id="example2" class="table table-hover" style="width: 100%;">
                                     <thead class="thead-primary">
                                         <tr>
@@ -1487,22 +1487,21 @@
                     },
                 });
 
-                $('.select2').select2({
-                    placeholder: 'Pilihan',
-                    searchInputPlaceholder: 'Search options',
-                    width: '100%'
+                $(".select2").select2({
+                    placeholder: "Pilihan",
+                    searchInputPlaceholder: "Search options",
+                    width: "100%",
                 });
-                
-                $('.selectPencarian').select2({
-                    placeholder: 'Pilihan',
-                    searchInputPlaceholder: 'Pencarian',
-                    width: '100%',
-                    dropdownParent: $('#ModalTambah')
+
+                $(".selectPencarian").select2({
+                    placeholder: "Pilihan",
+                    searchInputPlaceholder: "Pencarian",
+                    width: "100%",
+                    dropdownParent: $("#ModalTambah"),
                 });
 
                 flatpickr("#Tanggal", {
-                    minDate: "today",       
-                    dateFormat: "d-m-Y"   
+                    dateFormat: "d-m-Y",
                 });
 
                 // Select2

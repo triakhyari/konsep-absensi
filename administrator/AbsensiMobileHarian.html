@@ -31,7 +31,7 @@
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png" />
 
-        <title>Data Absensi Mesin Pegawai | Absensi Online</title>
+        <title>Data Absensi Mobile Harian | Absensi Online</title>
 
         <!-- vendor css -->
         <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
@@ -226,17 +226,17 @@
                     <li class="nav-item">
                         <a href="KeluarKantor.html" class="nav-link"><i data-feather="external-link"></i> <span>Keluar Kantor</span></a>
                     </li>
-                    <li class="nav-item with-sub active show">
+                    <li class="nav-item with-sub">
                         <a href="" class="nav-link"><i data-feather="database"></i> <span>Mesin Absensi</span></a>
                         <ul>
                             <li><a href="AbsensiMesinHarian.html">Absensi Mesin Harian</a></li>
-                            <li class="active"><a href="AbsensiMesinPegawai.html">Absensi Mesin Pegawai</a></li>
+                            <li><a href="AbsensiMesinPegawai.html">Absensi Mesin Pegawai</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item with-sub">
+                    <li class="nav-item with-sub active show">
                         <a href="" class="nav-link"><i data-feather="smartphone"></i> <span>Absensi Mobile</span></a>
                         <ul>
-                            <li><a href="AbsensiMobileHarian.html">Absensi Mobile Harian</a></li>
+                            <li class="active"><a href="AbsensiMobileHarian.html">Absensi Mobile Harian</a></li>
                             <li><a href="AbsensiMobilePegawai.html">Absensi Mobile Pegawai</a></li>
                         </ul>
                     </li>
@@ -264,7 +264,6 @@
                 </div>
             </div>
             <!-- content-header -->
-
             <div class="content-body">
                 <div class="pd-x-0">
                     <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
@@ -272,115 +271,107 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb breadcrumb-style1 mg-b-10">
                                     <li class="breadcrumb-item"><a href="#">Monitoring Absensi</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Absensi Mesin Pegawai</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data Absensi Mobile Harian</li>
                                 </ol>
                             </nav>
-                            <h4 class="mg-b-0 tx-spacing--1">Data Absensi Mesin Pegawai</h4>
+                            <h4 class="mg-b-0 tx-spacing--1">Data Absensi Mobile Harian</h4>
                         </div>
-                        <div class="d-none d-md-block">
-                            <div class="btn-group" role="group" aria-label="Basic example"></div>
-                        </div>
+                        <div class="d-none d-md-block"></div>
                     </div>
-                    <div class="row row-xs">
-                        <div class="accordion mg-b-20" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button bg-primary text-white tx-14 pd-13" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <i class="fas fa-filter mg-r-5"></i> Filter Data
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <div class="row row-sm">
-                                            <div class="col-lg-6">
-                                                <div class="form-group">
-                                                    <label for="formGroup" class="d-block">SKPD</label>
-                                                    <select class="form-select select2">
-                                                        <option label="Pilih SKPD"></option>
-                                                        <option value="Dinas Pendidikan">Dinas Pendidikan</option>
-                                                        <option value="Dinas Kesehatan">Dinas Kesehatan</option>
-                                                    </select>
-                                                </div>
+                    <div class="accordion mg-b-20" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-primary text-white tx-14 pd-13" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="fas fa-filter mg-r-5"></i> Filter Data
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row row-sm">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="formGroup" class="d-block">SKPD</label>
+                                                <select class="form-select select2">
+                                                    <option label="Pilih SKPD"></option>
+                                                    <option value="Dinas">Dinas Kantor</option>
+                                                    <option value="WFH">Work From Home (WFH)</option>
+                                                    <option value="WFA">Work From Anyware (WFA)</option>
+                                                </select>
                                             </div>
-                                            <div class="col-lg-6">
-                                                <div class="form-group">
-                                                    <label for="formGroup" class="d-block">Unit Kerja</label>
-                                                    <select class="form-select select2">
-                                                        <option label="Pilih Unit Kerja"></option>
-                                                        <option value="Dinas">Dinas Kantor</option>
-                                                        <option value="WFH">Work From Home (WFH)</option>
-                                                        <option value="WFA">Work From Anyware (WFA)</option>
-                                                    </select>
-                                                </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="formGroup" class="d-block">Unit Kerja</label>
+                                                <select class="form-select select2">
+                                                    <option label="Pilih Unit Kerja"></option>
+                                                    <option value="Dinas">Dinas Kantor</option>
+                                                    <option value="WFH">Work From Home (WFH)</option>
+                                                    <option value="WFA">Work From Anyware (WFA)</option>
+                                                </select>
                                             </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <label for="formGroup" class="d-block">Jenis Pegawai</label>
-                                                    <select class="form-control select2">
-                                                        <option label="Pilih Jenis Pegawai"></option>
-                                                        <option value="PNS">PNS</option>
-                                                        <option value="PPPK Penuh Waktu">PPPK Penuh Waktu</option>
-                                                        <option value="PPPK Paruh Waktu">PPPK Paruh Waktu</option>
-                                                        <option value="Non ASN">Non ASN</option>
-                                                    </select>
-                                                </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="formGroup" class="d-block">Jenis Pegawai</label>
+                                                <select class="form-control select2">
+                                                    <option label="Pilih Jenis Pegawai"></option>
+                                                    <option value="PNS">PNS</option>
+                                                    <option value="PPPK Penuh Waktu">PPPK Penuh Waktu</option>
+                                                    <option value="PPPK Paruh Waktu">PPPK Paruh Waktu</option>
+                                                    <option value="Non ASN">Non ASN</option>
+                                                </select>
                                             </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <label for="formGroup" class="d-block">Bulan</label>
-                                                    <select class="form-control select2">
-                                                        <option label="Pilihan"></option>
-                                                        <option value="Januari">Januari</option>
-                                                        <option value="Februari">Februari</option>
-                                                        <option value="Maret">Maret</option>
-                                                        <option value="April">April</option>
-                                                        <option value="Mei">Mei</option>
-                                                        <option value="Juni">Juni</option>
-                                                        <option value="Juli">Juli</option>
-                                                        <option value="Agustus">Agustus</option>
-                                                        <option value="September">September</option>
-                                                        <option value="Oktober">Oktober</option>
-                                                        <option value="November">November</option>
-                                                        <option value="Desember">Desember</option>
-                                                    </select>
-                                                </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="formGroup" class="d-block">Tanggal</label>
+                                                <input type="text" class="form-control" id="Tanggal" placeholder="Pilih Tanggal" required />
                                             </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <label for="formGroup" class="d-block">&nbsp;</label>
-                                                    <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="refresh-cw" class="wd-10 mg-r-5"></i> Filter</button>
-                                                </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="formGroup" class="d-block">&nbsp;</label>
+                                                <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="refresh-cw" class="wd-10 mg-r-5"></i> Filter</button>
+                                                <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="download" class="wd-10 mg-r-5"></i> Export</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="row row-xs">
                         <div class="col-sm-12 col-lg-12">
-                            <div data-label="Data Absensi Mesin Pegawai" class="df-example demo-table">
+                            <div data-label="Data Absensi Mobile Harian" class="df-example demo-table">
                                 <!-- row -->
-                                <table id="example2" class="table table-hover" style="width: 100%;">
+                                <table id="datatables" class="table table-hover" style="width: 100%;">
                                     <thead class="thead-primary">
                                         <tr>
                                             <th>No.</th>
-                                            <th>Nama Lengkap</th>
+                                            <th>Nama Pegawai</th>
                                             <th>Jenis Pegawai</th>
                                             <th>Jabatan</th>
-                                            <th>Unit Kerja</th>
+                                            <th>Waktu Datang</th>
+                                            <th>Waktu Pulang</th>
+                                            <th>Registration Device</th>
+                                            <th>Rev</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td class="text-nowrap">
-                                                <a href="AbsensiMesinPegawaiDetails.html">
-                                                    <p class="tx-13 tx-medium mg-b-0 tx-primary">Katherine Lumaad, S.Kom.</p>
-                                                    <p class="mg-b-0 tx-12 tx-dark">196708142001121002</p>
-                                                </a>
+                                            <td>
+                                                <h6 class="tx-13 mg-b-2 tx-primary">Katherine Lumaad</h6>
+                                                <p class="tx-12 mg-b-10">196708142001121002</p>
                                             </td>
-                                            <td>PNS</td>
-                                            <td>Dinas Pendidikan - Pengadministrasi Persuratan</td>
-                                            <td>Sub Bagian Umum dan Kepegawaian</td>
+                                            <td class="text-start">PNS</td>
+                                            <td class="text-start">Dinas Pendidikan - Analis Sumber Daya Manusia Aparatur Ahli Muda</td>
+                                            <td>02/01/2023 07:04:50</td>
+                                            <td>02/01/2023 16:04:50</td>
+                                            <td>
+                                                <h6 class="tx-13 mg-b-2 tx-dark tx-medium">Android Samsung S-24</h6>
+                                            </td>
+                                            <td>Mobile</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -423,7 +414,7 @@
         <script>
             $(function () {
                 "use strict";
-                $("#example2").DataTable({
+                $("#datatables").DataTable({
                     responsive: true,
                     language: {
                         searchPlaceholder: "Pencarian",
@@ -432,47 +423,18 @@
                     },
                 });
 
-                //Select
                 $(".select2").select2({
                     placeholder: "Pilihan",
                     searchInputPlaceholder: "Search options",
                     width: "100%",
                 });
 
-                $(".selectPencarian").select2({
-                    placeholder: "Pilihan",
-                    searchInputPlaceholder: "Pencarian",
-                    width: "100%",
-                    dropdownParent: $("#ModalTambah"),
-                });
-                // Disable search
-                $(".select2-no-search").select2({
-                    minimumResultsForSearch: Infinity,
-                    placeholder: "Choose one",
-                });
-
                 flatpickr("#Tanggal", {
-                    dateFormat: "d-m-Y", // format tanggal
+                    dateFormat: "d-m-Y",
                 });
 
                 // Select2
                 $(".dataTables_length select").select2({ minimumResultsForSearch: Infinity });
-            });
-
-            $(function () {
-                "use strict";
-
-                $("#modal6").on("show.bs.modal", function (event) {
-                    var animation = $(event.relatedTarget).data("animation");
-                    $(this).addClass(animation);
-                });
-
-                // hide modal with effect
-                $("#modal6").on("hidden.bs.modal", function (e) {
-                    $(this).removeClass(function (index, className) {
-                        return (className.match(/(^|\s)effect-\S+/g) || []).join(" ");
-                    });
-                });
             });
         </script>
     </body>
