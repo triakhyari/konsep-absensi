@@ -31,7 +31,7 @@
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png" />
 
-        <title>Data Absensi Mesin Harian | Absensi Online</title>
+        <title>Pemotongan Absensi | Absensi Online</title>
 
         <!-- vendor css -->
         <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
@@ -168,7 +168,7 @@
                     <li class="nav-item">
                         <a href="JenisKetidakhadiran.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Jenis Ketidakhadiran</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a href="PemotonganAbsensi.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Pemotongan Absensi</span></a>
                     </li>
 
@@ -226,10 +226,10 @@
                     <li class="nav-item">
                         <a href="KeluarKantor.html" class="nav-link"><i data-feather="external-link"></i> <span>Keluar Kantor</span></a>
                     </li>
-                    <li class="nav-item with-sub active show">
+                    <li class="nav-item with-sub">
                         <a href="" class="nav-link"><i data-feather="database"></i> <span>Mesin Absensi</span></a>
                         <ul>
-                            <li class="active"><a href="AbsensiMesinHarian.html">Absensi Mesin Harian</a></li>
+                            <li><a href="AbsensiMesinHarian.html">Absensi Mesin Harian</a></li>
                             <li><a href="AbsensiMesinPegawai.html">Absensi Mesin Pegawai</a></li>
                         </ul>
                     </li>
@@ -264,128 +264,146 @@
                 </div>
             </div>
             <!-- content-header -->
+
             <div class="content-body">
                 <div class="pd-x-0">
                     <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
                         <div>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb breadcrumb-style1 mg-b-10">
-                                    <li class="breadcrumb-item"><a href="#">Mesin Absensi</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Data Absensi Mesin Harian</li>
+                                    <li class="breadcrumb-item"><a href="#">Master Absensi</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Pemotongan Absensi</li>
                                 </ol>
                             </nav>
-                            <h4 class="mg-b-0 tx-spacing--1">Data Absensi Mesin Harian</h4>
+                            <h4 class="mg-b-0 tx-spacing--1">Pemotongan Absensi</h4>
                         </div>
-                        <div class="d-none d-md-block"></div>
-                    </div>
-                    <div class="accordion mg-b-20" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button bg-primary text-white tx-14 pd-13" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <i class="fas fa-filter mg-r-5"></i> Filter Data
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="row row-sm">
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label for="formGroup" class="d-block">SKPD</label>
-                                                <select class="form-select select2">
-                                                    <option label="Pilih SKPD"></option>
-                                                    <option value="Dinas">Dinas Kantor</option>
-                                                    <option value="WFH">Work From Home (WFH)</option>
-                                                    <option value="WFA">Work From Anyware (WFA)</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label for="formGroup" class="d-block">Unit Kerja</label>
-                                                <select class="form-select select2">
-                                                    <option label="Pilih Unit Kerja"></option>
-                                                    <option value="Dinas">Dinas Kantor</option>
-                                                    <option value="WFH">Work From Home (WFH)</option>
-                                                    <option value="WFA">Work From Anyware (WFA)</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-group">
-                                                <label for="formGroup" class="d-block">Jenis Pegawai</label>
-                                                <select class="form-control select2">
-                                                    <option label="Pilih Jenis Pegawai"></option>
-                                                    <option value="PNS">PNS</option>
-                                                    <option value="PPPK Penuh Waktu">PPPK Penuh Waktu</option>
-                                                    <option value="PPPK Paruh Waktu">PPPK Paruh Waktu</option>
-                                                    <option value="Non ASN">Non ASN</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-group">
-                                                <label for="formGroup" class="d-block">Tanggal</label>
-                                                <input type="text" class="form-control" id="Tanggal" placeholder="Pilih Tanggal" required />
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-group">
-                                                <label for="formGroup" class="d-block">&nbsp;</label>
-                                                <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="refresh-cw" class="wd-10 mg-r-5"></i> Filter</button>
-                                                <button class="btn btn-sm pd-x-15 btn-outline-success btn-uppercase"><i data-feather="download" class="wd-10 mg-r-5"></i> Export</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="d-none d-md-block">
+                            <div class="btn-group" role="group" aria-label="Basic example"></div>
                         </div>
                     </div>
                     <div class="row row-xs">
                         <div class="col-sm-12 col-lg-12">
-                            <div data-label="Data Absensi Mesin Harian" class="df-example demo-table">
-                                <!-- row -->
-                                <table id="datatables" class="table table-hover" style="width: 100%;">
-                                    <thead class="thead-primary">
-                                        <tr>
-                                            <th>No.</th>
-                                            <th>Nama Pegawai</th>
-                                            <th>Jenis Pegawai</th>
-                                            <th>Jabatan</th>
-                                            <th>Waktu Datang</th>
-                                            <th>Waktu Pulang</th>
-                                            <th>Device</th>
-                                            <th>File</th>
-                                            <th>Rev</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>
-                                                <h6 class="tx-13 mg-b-2 tx-primary">Katherine Lumaad</h6>
-                                                <p class="tx-12 mg-b-10">196708142001121002</p>
-                                            </td>
-                                            <td class="text-start">PNS</td>
-                                            <td class="text-start">Dinas Pendidikan - Analis Sumber Daya Manusia Aparatur Ahli Muda</td>
-                                            <td>02/01/2023 07:04:50</td>
-                                            <td>02/01/2023 16:04:50</td>
-                                            <td>
-                                                <h6 class="tx-13 mg-b-2 tx-dark tx-medium">CQLN230660015(a SETDA FaceID Umum)</h6>
-                                                <p class="tx-12 mg-b-10">Fingerprint</p>
-                                            </td>
-                                            <td>
-                                                <a
-                                                    href="http://103.165.236.206:8081/iclock/file/upload/thumbnail/CQLN230660017/2025/0321/164256_198202122001121004.jpg"
-                                                    target="_blank"
-                                                    class="wd-100 wd-md-50 wd-lg-100 ht-60 ht-md-40 ht-lg-60"
-                                                >
-                                                    <img src="http://103.165.236.206:8081/iclock/file/upload/thumbnail/CQLN230660017/2025/0321/164256_198202122001121004.jpg" class="img-fit-cover" alt="" />
-                                                </a>
-                                            </td>
-                                            <td>Mesin</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div data-label="Form Pemotongan Absensi" class="df-example demo-table">
+                                <form>                                    
+                                    <h4 id="section1" class="mg-b-10">Tidak Hadir/Absen</h4>
+                                    <div class="form-group row">
+                                        <div class="col-sm-12">
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" placeholder="Masukkan Persentase Pemotongan" value="3">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                            <div class="tx-gray-500 tx-italic mb-3">Koma ditulis dengan titik. Contoh: 0.5</div>
+                                        </div>
+                                    </div>
+                                    <h4 id="section1" class="mg-b-10">Pegawai Terlambat Masuk Kerja</h4>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <label class="d-block">Pemotongan TL 1 (1 Menit Sd < 31 Menit)</label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" placeholder="Masukkan Pemotongan TL 1" value="0.5">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                            <div class="tx-gray-500 tx-italic mb-3">Koma ditulis dengan titik. Contoh: 0.5</div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label class="d-block">Pemotongan TL 2 (31 Menit sd < 61 Menit)</label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" placeholder="Masukkan Pemotongan TL 2" value="1">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                            <div class="tx-gray-500 tx-italic mb-3">Koma ditulis dengan titik. Contoh: 0.5</div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label class="d-block">Pemotongan TL 3 (61 Menit sd < 91 Menit)</label>
+                                            <div class="input-group">
+                                                <input type="number" step="0.01" class="form-control" placeholder="Masukkan Pemotongan TL 3" value="1.25">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                            <div class="tx-gray-500 tx-italic mb-3">Koma ditulis dengan titik. Contoh: 1.25</div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label class="d-block">Pemotongan TL 4 (≥ 91 Menit dan atau tidak absensi Datang)</label>
+                                            <div class="input-group">
+                                                <input type="number" step="0.01" class="form-control" placeholder="Masukkan Pemotongan TL 4" value="1.5">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                            <div class="tx-gray-500 tx-italic mb-3">Koma ditulis dengan titik. Contoh: 1.5</div>
+                                        </div>
+                                    </div>
+                                    <h4 id="section1" class="mg-b-10">Pulang Kerja Sebelum Waktu (PSW)</h4>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <label class="d-block">Pemotongan PSW 1 (1 Menit Sd < 31 Menit)</label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" placeholder="Masukkan Pemotongan TL 1" value="0.5">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                            <div class="tx-gray-500 tx-italic mb-3">Koma ditulis dengan titik. Contoh: 0.5</div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label class="d-block">Pemotongan PSW 2 (31 Menit sd < 61 Menit)</label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" placeholder="Masukkan Pemotongan TL 2" value="1">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                            <div class="tx-gray-500 tx-italic mb-3">Koma ditulis dengan titik. Contoh: 0.5</div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label class="d-block">Pemotongan PSW 3 (61 Menit sd < 91 Menit)</label>
+                                            <div class="input-group">
+                                                <input type="number" step="0.01" class="form-control" placeholder="Masukkan Pemotongan TL 3" value="1.25">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                            <div class="tx-gray-500 tx-italic mb-3">Koma ditulis dengan titik. Contoh: 1.25</div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label class="d-block">Pemotongan PSW 4 (≥ 91 Menit dan atau tidak absensi Pulang)</label>
+                                            <div class="input-group">
+                                                <input type="number" step="0.01" class="form-control" placeholder="Masukkan Pemotongan TL 4" value="1.5">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                            <div class="tx-gray-500 tx-italic mb-3">Koma ditulis dengan titik. Contoh: 1.5</div>
+                                        </div>
+                                    </div>
+                                    <h4 id="section1" class="mg-b-10">Pegawai Yang Izin/Sakit Lebih Dari 3 Hari</h4>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <label class="d-block">4 - 10 Hari</label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" placeholder="Masukkan Pemotongan TL 1" value="10">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                            <div class="tx-gray-500 tx-italic mb-3">Koma ditulis dengan titik. Contoh: 0.5</div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label class="d-block">11 - Maksimal Hari</label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" placeholder="Masukkan Pemotongan TL 2" value="20">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                            <div class="tx-gray-500 tx-italic mb-3">Koma ditulis dengan titik. Contoh: 0.5</div>
+                                        </div>
+                                    </div>
+                                    <h4 id="section1" class="mg-b-10">Meninggalkan Kantor Tanpa Izin Atasan</h4>
+                                    <div class="form-group row">
+                                        <div class="col-sm-12">
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" placeholder="Masukkan Persentase Pemotongan" value="1">
+                                                <span class="input-group-text">%</span>
+                                            </div>
+                                            <div class="tx-gray-500 tx-italic mb-3">Koma ditulis dengan titik. Contoh: 0.5</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-primary w-100">Update Setting</button>
+                                    </div>
+                                </form>
                             </div>
                             <!-- df-example -->
                         </div>
@@ -395,9 +413,10 @@
                 </div>
                 <!-- container -->
             </div>
-        </div>
+        </div>=
 
         <script src="../lib/jquery/jquery.min.js"></script>
+        <script src="../lib/jqueryui/jquery-ui.min.js"></script>
         <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="../lib/feather-icons/feather.min.js"></script>
         <script src="../lib/ionicons/ionicons/ionicons.esm.js" type="module"></script>
@@ -424,8 +443,15 @@
         <script src="../assets/js/dashboard-one.js"></script>
         <script>
             $(function () {
-                "use strict";
+                function toggleHapusButton() {
+                    const adaYangDicek = $(".data-check:checked").length > 0;
+                    $("#hapusBtn").prop("disabled", !adaYangDicek);
+                }
+
+                ("use strict");
                 $("#datatables").DataTable({
+                    order: [],
+                    columnDefs: [{ orderable: false, targets: 0 }],
                     responsive: true,
                     language: {
                         searchPlaceholder: "Pencarian",
@@ -434,14 +460,25 @@
                     },
                 });
 
+                //Select
                 $(".select2").select2({
                     placeholder: "Pilihan",
                     searchInputPlaceholder: "Search options",
                     width: "100%",
                 });
 
-                flatpickr("#Tanggal", {
-                    dateFormat: "d-m-Y",
+                $(".selectPencarian").select2({
+                    placeholder: "Pilihan",
+                    searchInputPlaceholder: "Pencarian",
+                    width: "100%",
+                    dropdownParent: $("#ModalTambah"),
+                });
+
+                flatpickr("#TanggalAwal", {
+                    dateFormat: "Y-m-d", // format tanggal
+                });
+                flatpickr("#TanggalAkhir", {
+                    dateFormat: "Y-m-d", // format tanggal
                 });
 
                 // Select2

@@ -42,6 +42,7 @@
         <link href="../lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" />
         <link href="../lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet" />
         <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 
         <!-- DashForge CSS -->
         <link rel="stylesheet" href="../assets/css/dashforge.css" />
@@ -105,14 +106,14 @@
                         <a href="statistik-pegawai.html" class="nav-link"><i data-feather="pie-chart"></i> <span>Statistik Pegawai</span></a>
                     </li>
                     <!-- Pengaturan -->
-          <li class="nav-label mg-t-25">Pengaturan</li>
-          <li class="nav-item">
-            <a href="pengumuman.html" class="nav-link"><i data-feather="bell"></i> <span>Pengumuman </span></a>
-          </li>
-          <li class="nav-item">
-            <a href="API-Kepegawaian.html" class="nav-link"><i data-feather="link-2"></i> <span>API Kepegawaian </span></a>
-          </li>
-          <!-- DATA MASTER KEPEGAWAIAN -->
+                    <li class="nav-label mg-t-25">Pengaturan</li>
+                    <li class="nav-item">
+                        <a href="pengumuman.html" class="nav-link"><i data-feather="bell"></i> <span>Pengumuman </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="API-Kepegawaian.html" class="nav-link"><i data-feather="link-2"></i> <span>API Kepegawaian </span></a>
+                    </li>
+                    <!-- DATA MASTER KEPEGAWAIAN -->
                     <li class="nav-label mg-t-25">Data Master Kepegawaian</li>
                     <li class="nav-item">
                         <a href="data-pegawai.html" class="nav-link"><i data-feather="user-plus"></i> <span>Pegawai ASN</span></a>
@@ -136,13 +137,13 @@
                         <a href="TugasTambahan.html" class="nav-link"><i data-feather="file-plus"></i> <span>Tugas Tambahan</span></a>
                     </li>
                     <li class="nav-item">
-            <a href="MutasiPegawai.html" class="nav-link"><i data-feather="repeat"></i> <span>Mutasi Pegawai</span></a>
-          </li>
-          <li class="nav-item">
-            <a href="OperatorPD.html" class="nav-link"><i data-feather="users"></i> <span>Operator PD</span></a>
-          </li>
+                        <a href="MutasiPegawai.html" class="nav-link"><i data-feather="repeat"></i> <span>Mutasi Pegawai</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="OperatorPD.html" class="nav-link"><i data-feather="users"></i> <span>Operator PD</span></a>
+                    </li>
 
-          <!-- Master Absensi-->
+                    <!-- Master Absensi-->
                     <li class="nav-label mg-t-25">Master Absensi</li>
                     <li class="nav-item">
                         <a href="TipeKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Tipe Kerja</span></a>
@@ -156,7 +157,7 @@
                     <li class="nav-item">
                         <a href="PegawaiAbsensiMobile.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Pegawai Absensi Mobile</span></a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a href="JenisCuti.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Jenis Cuti</span></a>
                     </li>
                     <li class="nav-item">
@@ -213,8 +214,8 @@
                     <li class="nav-item with-sub">
                         <a href="" class="nav-link"><i data-feather="archive"></i> <span>Agenda Absensi</span></a>
                         <ul>
-                        <li><a href="AgendaSKPD.html">Agenda SKPD</a></li>
-                        <li><a href="AgendaPegawai.html">Agenda Pegawai</a></li>
+                            <li><a href="AgendaSKPD.html">Agenda SKPD</a></li>
+                            <li><a href="AgendaPegawai.html">Agenda Pegawai</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -260,7 +261,7 @@
             <!-- content-header -->
 
             <div class="content-body">
-                <div class="container pd-x-0">
+                <div class="pd-x-0">
                     <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
                         <div>
                             <nav aria-label="breadcrumb">
@@ -279,43 +280,78 @@
                         </div>
                     </div>
                     <div class="row row-xs">
-                        <div class="col-sm-12 col-lg-12">
-                            <div data-label="Data Absensi Mesin Pegawai" class="df-example demo-table">
-                                <div class="row row-sm mg-b-20">
-                                    <div class="col-lg-4">
-                                        <select class="form-control select2-so">
-                                            <option label="Choose one">Pilih Satuan Organisasi</option>
-                                            <option value="Badan Kepegawaian dan Pengembangan Sumber Daya Manusia">Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <select class="form-control select2-clear">
-                                            <option label="Choose one">Pilih Unit Kerja</option>
-                                            <option value="Sub Bidang Penilaian dan Evaluasi Kinerja Aparatur I">Sub Bidang Penilaian dan Evaluasi Kinerja Aparatur I</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <select class="form-control select2-status">
-                                            <option value="Aktif">Aktif</option>
-                                            <option value="Pensiun">Pensiun</option>
-                                            <option value="Meninggal Dunia">Meninggal Dunia</option>
-                                            <option value="Tugas Belajar">Tugas Belajar</option>
-                                            <option value="Dipekerjakan">Dipekerjakan</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <button class="btn btn-outline-primary btn-uppercase"><i data-feather="refresh-cw" class="wd-10 mg-r-5"></i> Filter</button>
+                        <div class="accordion mg-b-20" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button bg-primary text-white tx-14 pd-13" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="fas fa-filter mg-r-5"></i> Filter Data
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="row row-sm">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label for="formGroup" class="d-block">SKPD</label>
+                                                    <select class="form-select select2">
+                                                        <option label="Pilih SKPD"></option>
+                                                        <option value="Dinas">Dinas Kantor</option>
+                                                        <option value="WFH">Work From Home (WFH)</option>
+                                                        <option value="WFA">Work From Anyware (WFA)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label for="formGroup" class="d-block">Unit Kerja</label>
+                                                    <select class="form-select select2">
+                                                        <option label="Pilih Unit Kerja"></option>
+                                                        <option value="Dinas">Dinas Kantor</option>
+                                                        <option value="WFH">Work From Home (WFH)</option>
+                                                        <option value="WFA">Work From Anyware (WFA)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label for="formGroup" class="d-block">Jenis Pegawai</label>
+                                                    <select class="form-control select2">
+                                                        <option label="Pilih Jenis Pegawai"></option>
+                                                        <option value="PNS">PNS</option>
+                                                        <option value="PPPK Penuh Waktu">PPPK Penuh Waktu</option>
+                                                        <option value="PPPK Paruh Waktu">PPPK Paruh Waktu</option>
+                                                        <option value="Non ASN">Non ASN</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label for="formGroup" class="d-block">Tanggal</label>
+                                                    <input type="text" class="form-control" id="Tanggal" placeholder="Pilih Tanggal" required />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label for="formGroup" class="d-block">&nbsp;</label>
+                                                    <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="refresh-cw" class="wd-10 mg-r-5"></i> Filter</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-12">
+                            <div data-label="Data Absensi Mesin Pegawai" class="df-example demo-table">
                                 <!-- row -->
                                 <table id="example2" class="table table-hover" style="width: 100%;">
                                     <thead class="thead-primary">
                                         <tr>
                                             <th>No.</th>
                                             <th>Nama Lengkap</th>
-                                            <th>Satuan Organisasi</th>
+                                            <th>Jenis Pegawai</th>
+                                            <th>Jabatan</th>
                                             <th>Unit Kerja</th>
-                                            <th>Nama Jabatan</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -327,9 +363,9 @@
                                                     <p class="mg-b-0 tx-12 tx-dark">196708142001121002</p>
                                                 </a>
                                             </td>
-                                            <td>Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</td>
+                                            <td class="text-start">PNS</td>
+                                            <td>Dinas Pendidikan - Pengadministrasi Persuratan</td>
                                             <td>Sub Bagian Umum dan Kepegawaian</td>
-                                            <td>Pengadministrasi Persuratan</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -360,6 +396,7 @@
         <script src="../lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
         <script src="../lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
         <script src="../lib/select2/js/select2.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
         <script src="../assets/js/dashforge.js"></script>
         <script src="../assets/js/dashforge.aside.js"></script>
@@ -380,27 +417,27 @@
                     },
                 });
 
+                //Select
                 $(".select2").select2({
-                    placeholder: "Pilih Status Pegawai",
-                    searchInputPlaceholder: "Pilihan Pencarian",
+                    placeholder: "Pilihan",
+                    searchInputPlaceholder: "Search options",
+                    width: "100%",
                 });
 
-                $(".select2-so").select2({
-                    placeholder: "Pilih Satuan Organisasi",
-                    searchInputPlaceholder: "Pilihan Pencarian",
-                    allowClear: true,
+                $(".selectPencarian").select2({
+                    placeholder: "Pilihan",
+                    searchInputPlaceholder: "Pencarian",
+                    width: "100%",
+                    dropdownParent: $("#ModalTambah"),
                 });
-
-                $(".select2-clear").select2({
+                // Disable search
+                $(".select2-no-search").select2({
                     minimumResultsForSearch: Infinity,
-                    placeholder: "Pilih Unit Kerja",
-                    allowClear: true,
+                    placeholder: "Choose one",
                 });
 
-                $(".select2-status").select2({
-                    minimumResultsForSearch: Infinity,
-                    placeholder: "Pilih Status",
-                    allowClear: true,
+                flatpickr("#Tanggal", {
+                    dateFormat: "d-m-Y", // format tanggal
                 });
 
                 // Select2

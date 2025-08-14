@@ -41,7 +41,7 @@
         <link href="../lib/prismjs/themes/prism-vs.css" rel="stylesheet" />
         <link href="../lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" />
         <link href="../lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet" />
-        <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />        
+        <link href="../lib/select2/css/select2.min.css" rel="stylesheet" />
 
         <!-- DashForge CSS -->
         <link rel="stylesheet" href="../assets/css/dashforge.css" />
@@ -51,6 +51,11 @@
         <link rel="stylesheet" href="../assets/css/dashforge.css" />
         <link rel="stylesheet" href="../assets/css/skin.deepblue.css" />
         <link rel="stylesheet" href="../assets/css/dashforge.demo.css" />
+        <style>
+            .accordion-button::after {
+                display: none !important;
+            }
+        </style>
     </head>
     <body>
         <aside class="aside aside-fixed">
@@ -105,14 +110,14 @@
                         <a href="statistik-pegawai.html" class="nav-link"><i data-feather="pie-chart"></i> <span>Statistik Pegawai</span></a>
                     </li>
                     <!-- Pengaturan -->
-          <li class="nav-label mg-t-25">Pengaturan</li>
-          <li class="nav-item">
-            <a href="pengumuman.html" class="nav-link"><i data-feather="bell"></i> <span>Pengumuman </span></a>
-          </li>
-          <li class="nav-item">
-            <a href="API-Kepegawaian.html" class="nav-link"><i data-feather="link-2"></i> <span>API Kepegawaian </span></a>
-          </li>
-          <!-- DATA MASTER KEPEGAWAIAN -->
+                    <li class="nav-label mg-t-25">Pengaturan</li>
+                    <li class="nav-item">
+                        <a href="pengumuman.html" class="nav-link"><i data-feather="bell"></i> <span>Pengumuman </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="API-Kepegawaian.html" class="nav-link"><i data-feather="link-2"></i> <span>API Kepegawaian </span></a>
+                    </li>
+                    <!-- DATA MASTER KEPEGAWAIAN -->
                     <li class="nav-label mg-t-25">Data Master Kepegawaian</li>
                     <li class="nav-item">
                         <a href="data-pegawai.html" class="nav-link"><i data-feather="user-plus"></i> <span>Pegawai ASN</span></a>
@@ -136,13 +141,13 @@
                         <a href="TugasTambahan.html" class="nav-link"><i data-feather="file-plus"></i> <span>Tugas Tambahan</span></a>
                     </li>
                     <li class="nav-item">
-            <a href="MutasiPegawai.html" class="nav-link"><i data-feather="repeat"></i> <span>Mutasi Pegawai</span></a>
-          </li>
-          <li class="nav-item">
-            <a href="OperatorPD.html" class="nav-link"><i data-feather="users"></i> <span>Operator PD</span></a>
-          </li>
+                        <a href="MutasiPegawai.html" class="nav-link"><i data-feather="repeat"></i> <span>Mutasi Pegawai</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="OperatorPD.html" class="nav-link"><i data-feather="users"></i> <span>Operator PD</span></a>
+                    </li>
 
-          <!-- Master Absensi-->
+                    <!-- Master Absensi-->
                     <li class="nav-label mg-t-25">Master Absensi</li>
                     <li class="nav-item">
                         <a href="TipeKerja.html" class="nav-link"><i data-feather="stop-circle"></i> <span>Tipe Kerja</span></a>
@@ -213,8 +218,8 @@
                     <li class="nav-item with-sub">
                         <a href="" class="nav-link"><i data-feather="archive"></i> <span>Agenda Absensi</span></a>
                         <ul>
-                        <li><a href="AgendaSKPD.html">Agenda SKPD</a></li>
-                        <li><a href="AgendaPegawai.html">Agenda Pegawai</a></li>
+                            <li><a href="AgendaSKPD.html">Agenda SKPD</a></li>
+                            <li><a href="AgendaPegawai.html">Agenda Pegawai</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -293,7 +298,7 @@
                                         <div class="form-group row">
                                             <label for="TipeKerja" class="col-sm-3 col-form-label tx-bold">Tipe Kerja <span class="tx-danger">*</span></label>
                                             <div class="col-sm-9">
-                                                <select class="form-select select2">
+                                                <select class="form-select selectPencarian">
                                                     <option label="Pilih TipeKerja"></option>
                                                     <option value="Dinas">Dinas Kantor</option>
                                                     <option value="WFH">Work From Home (WFH)</option>
@@ -304,7 +309,7 @@
                                         <div class="form-group row">
                                             <label for="skpd" class="col-sm-3 col-form-label tx-bold">SKPD <span class="tx-danger">*</span></label>
                                             <div class="col-sm-9">
-                                                <select class="form-select select2" multiple id="skpd" name="skpd" required>
+                                                <select class="form-select selectPencarian" multiple id="skpd" name="skpd" required>
                                                     <option label="Pilihan"></option>
                                                     <option value="Dinas Pendidikan">Dinas Pendidikan</option>
                                                     <option value="Dinas Kesehatan">Dinas Kesehatan</option>
@@ -314,7 +319,7 @@
                                         <div class="form-group row">
                                             <label for="NamaSkema" class="col-sm-3 col-form-label tx-bold">Skema Kerja <span class="tx-danger">*</span></label>
                                             <div class="col-sm-9">
-                                                <select class="form-select select2">
+                                                <select class="form-select selectPencarian">
                                                     <option label="Pilih Skema Kerja"></option>
                                                     <option value="Senin-Kamis (5 Hari Kerja)" selected>Senin-Kamis (5 Hari Kerja)</option>
                                                     <option value="Jumat (5 Hari Kerja)">Jumat (5 Hari Kerja)</option>
@@ -325,31 +330,31 @@
                                             <label for="Hari" class="col-sm-3 col-form-label tx-bold">Hari Kerja</label>
                                             <div class="col-sm-9">
                                                 <div class="form-check-inline">
-                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Senin" value="Senin" checked disabled>
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Senin" value="Senin" checked disabled />
                                                     <label class="custom-control-label" for="Senin">Senin</label>
                                                 </div>
                                                 <div class="form-check-inline">
-                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Selasa" value="Selasa" checked disabled>
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Selasa" value="Selasa" checked disabled />
                                                     <label class="custom-control-label" for="Selasa">Selasa</label>
                                                 </div>
                                                 <div class="form-check-inline">
-                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Rabu" value="Rabu" checked disabled>
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Rabu" value="Rabu" checked disabled />
                                                     <label class="custom-control-label" for="Rabu">Rabu</label>
                                                 </div>
                                                 <div class="form-check-inline">
-                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Kamis" value="Kamis" checked disabled>
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Kamis" value="Kamis" checked disabled />
                                                     <label class="custom-control-label" for="Kamis">Kamis</label>
                                                 </div>
                                                 <div class="form-check-inline">
-                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Jumat" value="Jumat" checked disabled>
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Jumat" value="Jumat" checked disabled />
                                                     <label class="custom-control-label" for="Jumat">Jumat</label>
                                                 </div>
                                                 <div class="form-check-inline">
-                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Sabtu" value="Sabtu" disabled>
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Sabtu" value="Sabtu" disabled />
                                                     <label class="custom-control-label" for="Sabtu">Sabtu</label>
                                                 </div>
                                                 <div class="form-check-inline">
-                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Minggu" value="Minggu" disabled>
+                                                    <input type="checkbox" class="custom-control-input hariKerja" name="HariKerja[]" id="Minggu" value="Minggu" disabled />
                                                     <label class="custom-control-label" for="Minggu">Minggu</label>
                                                 </div>
                                             </div>
@@ -357,22 +362,22 @@
                                         <div class="form-group row">
                                             <label for="AbsenDatang" class="col-sm-3 col-form-label tx-bold">Absen Datang <span class="tx-danger">*</span></label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="AbsenDatang" value="07:30:00" readonly disabled/>
+                                                <input type="text" class="form-control" id="AbsenDatang" value="07:30:00" readonly disabled />
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="AbsenPulang" class="col-sm-3 col-form-label tx-bold">Absen Pulang <span class="tx-danger">*</span></label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="AbsenPulang" value="16:00:00" readonly disabled/>
+                                                <input type="text" class="form-control" id="AbsenPulang" value="16:00:00" readonly disabled />
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="Status" class="col-sm-3 col-form-label tx-bold">Status <span class="tx-danger">*</span></label>
                                             <div class="col-sm-9">
-                                                <select class="form-select select2">
+                                                <select class="form-select selectPencarian">
                                                     <option label="Pilih Status"></option>
-                                                    <option value="Ya">Ya</option>
-                                                    <option value="Tidak">Tidak</option>
+                                                    <option value="1">Ya</option>
+                                                    <option value="0">Tidak Aktif</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -424,7 +429,59 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Modal Import -->                      
+                    <!-- Modal Import -->
+                    <div class="accordion mg-b-20" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-primary text-white tx-14 pd-13" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="fas fa-filter mg-r-5"></i> Filter Data
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row row-sm">
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="formGroup" class="d-block">SKPD</label>
+                                                <select class="form-select select2">
+                                                    <option label="Pilih SKPD"></option>
+                                                    <option value="Dinas Pendidikan">Dinas Pendidikan</option>
+                                                    <option value="Dinas Kesehatan">Dinas Kesehatan</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form-group">
+                                                <label for="formGroup" class="d-block">Tipe Kerja</label>
+                                                <select class="form-select select2">
+                                                    <option label="Pilih Tipe Kerja"></option>
+                                                    <option value="Dinas">Dinas Kantor</option>
+                                                    <option value="WFH">Work From Home (WFH)</option>
+                                                    <option value="WFA">Work From Anyware (WFA)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div class="form-group">
+                                                <label for="formGroup" class="d-block">Status</label>
+                                                <select class="form-select select2">
+                                                    <option label="Pilih Status"></option>
+                                                    <option value="1">Ya</option>
+                                                    <option value="0">Tidak Aktif</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group">
+                                                <label for="formGroup" class="d-block">&nbsp;</label>
+                                                <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase"><i data-feather="refresh-cw" class="wd-10 mg-r-5"></i> Filter</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row row-xs">
                         <div class="col-sm-12 col-lg-12">
                             <div data-label="Data Skema Kerja" class="df-example demo-table">
@@ -446,7 +503,7 @@
                                         <tr>
                                             <td>1</td>
                                             <td>Dinas Kantor</td>
-                                            <td>Senin-Kamis (5 Hari Kerja)</td>
+                                            <td>Senin-Kamis (5 Hari Kerja 07:30:00 - 16:00:00)</td>
                                             <td>Dinas Pendidikan, Dinas Kesehatan</td>
                                             <td>07:30:00</td>
                                             <td>16:00:00</td>
@@ -459,8 +516,8 @@
                                         <tr>
                                             <td>2</td>
                                             <td>Dinas Kantor</td>
-                                            <td>Jumat (5 Hari Kerja)</td>
-                                            <td>Dinas Pendidikan, Dinas Kesehatan</td>
+                                            <td>Jumat (5 Hari Kerja 07:30:00 - 16:30:00)</td>
+                                            <td>Dinas Pendidikan</td>
                                             <td>07:30:00</td>
                                             <td>16:30:00</td>
                                             <td>Ya</td>
@@ -518,11 +575,16 @@
                     },
                 });
 
-
-                $('.select2').select2({
+                //Select
+                 $('.select2').select2({
+                    placeholder: 'Pilihan',
+                    searchInputPlaceholder: 'Search options',
+                    width: '100%'
+                });
+                
+                 $('.selectPencarian').select2({
                     placeholder: 'Pilihan',
                     searchInputPlaceholder: 'Pencarian',
-                    minimumResultsForSearch: Infinity,
                     width: '100%',
                     dropdownParent: $('#ModalTambah')
                 });
